@@ -1,0 +1,41 @@
+---
+import type { Dict } from "../../i18n";
+import type { SeoPlace } from "../../data/seoPages";
+import { getLocalizedCopy } from "../../data/seoPages";
+
+interface Props {
+  dict: Dict;
+  lang: string;
+  places: SeoPlace[];
+  currentId: string;
+}
+
+const { dict, lang, places, currentId } = Astro.props;
+const c = dict.seoPages.common;
+const currentIndex = places.findIndex((place) => place.id === currentId);
+---
+
+{places.length > 0 && (
+  <section class="section seo-nearby" aria-labelledby="nearby-heading">
+    <div class="wrap">
+      <div class="section-intro reveal">
+        <p class="eyebrow">{c.nearby}</p>
+        <h2 id="nearby-heading">{c.routePreview}</h2>
+      </div>
+      <div class="seo-nearby-grid">
+        {places.map((place) => {
+          const copy = getLocalizedCopy(place, lang);
+          const index = places.findIndex((candidate) => candidate.id === place.id);
+          const state = place.id === currentId ? c.current : index < currentIndex ? c.previous : c.next;
+          return (
+            <a class={`seo-nearby-card${place.id === currentId ? " active" : ""} reveal`} href={`/${lang}/places/${place.slug}`}>
+              <span>{state}</span>
+              <strong>{copy.title}</strong>
+              <small>{copy.subtitle}</small>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+)}

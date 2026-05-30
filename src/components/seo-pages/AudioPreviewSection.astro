@@ -1,0 +1,24 @@
+---
+import type { Dict } from "../../i18n";
+
+interface Props {
+  dict: Dict;
+  audioUrl?: string;
+}
+
+const { dict, audioUrl } = Astro.props;
+const c = dict.seoPages.common;
+---
+
+<section class="section seo-audio-section" aria-labelledby="audio-heading">
+  <div class="wrap">
+    <div class="seo-audio-card reveal">
+      <span aria-hidden="true">▶</span>
+      <div>
+        <p class="eyebrow">{c.audio}</p>
+        <h2 id="audio-heading">{audioUrl ? c.listenPreview : c.comingSoon}</h2>
+      </div>
+      {audioUrl && <a class="btn btn-ghost" href={audioUrl}>{c.listenPreview}</a>}
+    </div>
+  </div>
+</section>

@@ -1,15 +1,30 @@
 ---
 import type { Dict } from "../i18n";
+import { SUPPORTED_LANGS } from "../i18n";
 import "../styles/global.css";
 
 interface Props {
   dict: Dict;
   lang: string;
   canonicalPath?: string;
+  seo?: {
+    title?: string;
+    description?: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    ogImage?: string;
+    type?: string;
+  };
+  jsonLd?: unknown[];
 }
 
-const { dict, lang, canonicalPath = "" } = Astro.props;
+const { dict, lang, canonicalPath = "", seo, jsonLd = [] } = Astro.props;
 const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
+const metaTitle = seo?.title ?? dict.meta.title;
+const metaDescription = seo?.description ?? dict.meta.description;
+const ogTitle = seo?.ogTitle ?? seo?.title ?? dict.meta.ogTitle;
+const ogDescription = seo?.ogDescription ?? seo?.description ?? dict.meta.ogDescription;
+const ogImage = seo?.ogImage;
 ---
 
 <!doctype html>
@@ -19,42 +34,47 @@ const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#030610" />
 
-  <title>{dict.meta.title}</title>
-  <meta name="description" content={dict.meta.description} />
+  <title>{metaTitle}</title>
+  <meta name="description" content={metaDescription} />
 
   <link rel="canonical" href={canonical} />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={dict.meta.ogTitle} />
-  <meta property="og:description" content={dict.meta.ogDescription} />
+  <meta property="og:type" content={seo?.type ?? "website"} />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={ogDescription} />
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="Unlocking Bulgaria" />
+  {ogImage && <meta property="og:image" content={ogImage} />}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={dict.meta.ogTitle} />
-  <meta name="twitter:description" content={dict.meta.ogDescription} />
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={ogDescription} />
+  {ogImage && <meta name="twitter:image" content={ogImage} />}
 
   <!-- hreflang alternates -->
-  {["en","bg","de","fr","es","it","ro","tr","el","pl","ru","ja","sr"].map((l) => (
-    <link rel="alternate" hreflang={l} href={`https://unlockingbulgaria.com/${l}`} />
+  {SUPPORTED_LANGS.map((l) => (
+    <link rel="alternate" hreflang={l} href={`https://unlockingbulgaria.com/${l}${canonicalPath}`} />
   ))}
-  <link rel="alternate" hreflang="x-default" href="https://unlockingbulgaria.com/en" />
+  <link rel="alternate" hreflang="x-default" href={`https://unlockingbulgaria.com/en${canonicalPath}`} />
 
   <!-- Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Structured data -->
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Unlocking Bulgaria",
     "applicationCategory": "TravelApplication",
     "operatingSystem": "iOS, Android",
-    "description": dict.meta.description,
+    "description": metaDescription,
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
     "url": `https://unlockingbulgaria.com/${lang}`
   })} />
+  {jsonLd.map((schema) => (
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
 </head>
 <body>
   <!-- Stars canvas -->

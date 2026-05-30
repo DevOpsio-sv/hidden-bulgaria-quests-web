@@ -1,0 +1,24 @@
+---
+import type { Dict } from "../../i18n";
+import type { LocalizedSeoCopy } from "../../data/seoPages";
+
+interface Props {
+  dict: Dict;
+  copy: LocalizedSeoCopy;
+}
+
+const { dict, copy } = Astro.props;
+const c = dict.seoPages.common;
+---
+
+<section class="section seo-two-col" aria-labelledby="tourism-heading">
+  <div class="wrap seo-two-col-grid">
+    <div class="section-intro reveal">
+      <p class="eyebrow">{c.tourism}</p>
+      <h2 id="tourism-heading">{copy.title}</h2>
+    </div>
+    <div class="seo-copy-card reveal reveal-d1">
+      <p>{copy.tourismSummary}</p>
+    </div>
+  </div>
+</section>

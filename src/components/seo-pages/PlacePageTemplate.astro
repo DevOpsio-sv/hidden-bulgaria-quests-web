@@ -1,0 +1,61 @@
+---
+import type { Dict } from "../../i18n";
+import type { SeoPlace, SeoRoute } from "../../data/seoPages";
+import { getLocalizedCopy, getPlacesForRoute } from "../../data/seoPages";
+import SEOJsonLd from "./SEOJsonLd.astro";
+import PlaceHero from "./PlaceHero.astro";
+import QuickFacts from "./QuickFacts.astro";
+import TourismInfoSection from "./TourismInfoSection.astro";
+import StoryTeaserSection from "./StoryTeaserSection.astro";
+import PracticalInfoSection from "./PracticalInfoSection.astro";
+import MapSection from "./MapSection.astro";
+import MediaSection from "./MediaSection.astro";
+import AudioPreviewSection from "./AudioPreviewSection.astro";
+import NearbyPlacesSection from "./NearbyPlacesSection.astro";
+import RoutePreviewSection from "./RoutePreviewSection.astro";
+import AppCTASection from "./AppCTASection.astro";
+import FAQSection from "./FAQSection.astro";
+
+interface Props {
+  dict: Dict;
+  lang: string;
+  place: SeoPlace;
+  route: SeoRoute;
+  jsonLd: unknown[];
+}
+
+const { dict, lang, place, route, jsonLd } = Astro.props;
+const copy = getLocalizedCopy(place, lang);
+const routePlaces = getPlacesForRoute(place.routeId);
+const nearbyPlaces = routePlaces.filter((candidate) => [place.previousPlace, place.id, place.nextPlace].includes(candidate.id));
+const duration = place.localizedDuration?.[lang as keyof typeof place.localizedDuration] ?? place.duration;
+---
+
+<SEOJsonLd items={jsonLd} />
+<PlaceHero
+  dict={dict}
+  copy={copy}
+  label={dict.seoPages.common.place}
+  status={place.status}
+  type={place.type}
+  primaryHref={place.appDeepLink}
+  secondaryHref="#route"
+/>
+<QuickFacts
+  dict={dict}
+  copy={copy}
+  duration={duration}
+  difficulty={place.difficulty}
+  childFriendly={place.childFriendly}
+  coordinates={place.coordinates}
+/>
+<TourismInfoSection dict={dict} copy={copy} />
+<StoryTeaserSection dict={dict} copy={copy} />
+<PracticalInfoSection dict={dict} copy={copy} />
+<MapSection dict={dict} coordinates={place.coordinates} title={copy.title} />
+<MediaSection dict={dict} title={copy.title} videoUrl={place.videoUrl} />
+<AudioPreviewSection dict={dict} audioUrl={place.audioUrl} />
+<NearbyPlacesSection dict={dict} lang={lang} places={nearbyPlaces} currentId={place.id} />
+<RoutePreviewSection dict={dict} lang={lang} route={route} places={routePlaces} currentId={place.id} />
+<AppCTASection dict={dict} appDeepLink={place.appDeepLink} />
+<FAQSection dict={dict} copy={copy} />

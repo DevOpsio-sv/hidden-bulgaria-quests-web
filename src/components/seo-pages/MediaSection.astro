@@ -1,0 +1,23 @@
+---
+import type { Dict } from "../../i18n";
+
+interface Props {
+  dict: Dict;
+  title: string;
+  videoUrl?: string;
+}
+
+const { dict, title, videoUrl } = Astro.props;
+const c = dict.seoPages.common;
+---
+
+<section class="section seo-media-section" aria-labelledby="media-heading">
+  <div class="wrap">
+    <div class="seo-media-card reveal">
+      <p class="eyebrow">{c.media}</p>
+      <h2 id="media-heading">{title}</h2>
+      <p>{videoUrl ? c.watchPreview : c.comingSoon}</p>
+      {videoUrl && <a class="btn btn-ghost" href={videoUrl}>{c.watchPreview}</a>}
+    </div>
+  </div>
+</section>

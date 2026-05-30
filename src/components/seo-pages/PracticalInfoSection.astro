@@ -1,0 +1,27 @@
+---
+import type { Dict } from "../../i18n";
+import type { LocalizedSeoCopy } from "../../data/seoPages";
+
+interface Props {
+  dict: Dict;
+  copy: LocalizedSeoCopy;
+}
+
+const { dict, copy } = Astro.props;
+const c = dict.seoPages.common;
+---
+
+<section class="section seo-info-pair" aria-labelledby="practical-heading">
+  <div class="wrap seo-info-pair-grid">
+    <article class="seo-copy-card reveal">
+      <p class="eyebrow">{c.history}</p>
+      <h2>{copy.title}</h2>
+      <p>{copy.historySummary}</p>
+    </article>
+    <article class="seo-copy-card reveal reveal-d1">
+      <p class="eyebrow">{c.practical}</p>
+      <h2 id="practical-heading">{c.practical}</h2>
+      <p>{copy.practicalInfo}</p>
+    </article>
+  </div>
+</section>

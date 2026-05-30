@@ -1,0 +1,47 @@
+---
+import { SUPPORTED_LANGS, getDict, type Lang } from "../../i18n";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import DomainPageTemplate from "../../components/seo-pages/DomainPageTemplate.astro";
+import { SEA_DOMAIN_ID, SEA_ROUTE_ID, getLocalizedCopy, getSeoDomain, getSeoRoute } from "../../data/seoPages";
+import { breadcrumbJsonLd, faqJsonLd, placeJsonLd } from "../../utils/seoJsonLd";
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const dict = getDict(lang as Lang);
+const domain = getSeoDomain(SEA_DOMAIN_ID)!;
+const route = getSeoRoute(SEA_ROUTE_ID)!;
+const copy = getLocalizedCopy(domain, lang as string);
+const canonicalPath = "/sea-domain";
+const schemas = [
+  placeJsonLd(domain, copy, lang as string, canonicalPath),
+  breadcrumbJsonLd(lang as string, [
+    { name: "Unlocking Bulgaria", path: "" },
+    { name: copy.title, path: canonicalPath },
+  ]),
+  faqJsonLd(copy),
+].filter(Boolean);
+---
+
+<Base
+  dict={dict}
+  lang={lang as string}
+  canonicalPath={canonicalPath}
+  seo={{
+    title: copy.seoTitle,
+    description: copy.seoDescription,
+    ogTitle: copy.seoTitle,
+    ogDescription: copy.seoDescription,
+    ogImage: domain.images[0],
+  }}
+>
+  <Header dict={dict} lang={lang as string} />
+  <main id="main">
+    <DomainPageTemplate dict={dict} lang={lang as string} domain={domain} route={route} jsonLd={schemas} />
+  </main>
+  <Footer dict={dict} lang={lang as string} />
+</Base>

@@ -1,0 +1,39 @@
+---
+import type { Dict } from "../../i18n";
+import type { SeoPlace, SeoRoute } from "../../data/seoPages";
+import { getLocalizedCopy, getLocalizedRouteCopy } from "../../data/seoPages";
+
+interface Props {
+  dict: Dict;
+  lang: string;
+  route: SeoRoute;
+  places: SeoPlace[];
+  currentId?: string;
+}
+
+const { dict, lang, route, places, currentId } = Astro.props;
+const c = dict.seoPages.common;
+const routeCopy = getLocalizedRouteCopy(route, lang);
+---
+
+<section class="section seo-route-preview" id="route" aria-labelledby="route-preview-heading">
+  <div class="wrap">
+    <div class="section-intro reveal">
+      <p class="eyebrow">{c.routePreview}{route.status === "draft" ? ` · ${c.draft}` : ""}</p>
+      <h2 id="route-preview-heading">{routeCopy.title}</h2>
+      <p class="lede">{routeCopy.shortDescription}</p>
+    </div>
+    <div class="seo-route-list">
+      {places.map((place, index) => {
+        const copy = getLocalizedCopy(place, lang);
+        return (
+          <a class={`seo-route-item reveal${place.id === currentId ? " active" : ""}`} href={`/${lang}/places/${place.slug}`}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <strong>{copy.title}</strong>
+            <small>{copy.shortDescription}</small>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

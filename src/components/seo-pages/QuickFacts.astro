@@ -1,0 +1,38 @@
+---
+import type { Dict } from "../../i18n";
+import type { Difficulty, LocalizedSeoCopy } from "../../data/seoPages";
+
+interface Props {
+  dict: Dict;
+  copy: LocalizedSeoCopy;
+  duration: string;
+  difficulty: Difficulty;
+  childFriendly: boolean;
+  coordinates: { lat: number; lng: number };
+}
+
+const { dict, copy, duration, difficulty, childFriendly, coordinates } = Astro.props;
+const c = dict.seoPages.common;
+const difficultyLabel = difficulty === "hard" ? c.hard : difficulty === "moderate" ? c.moderate : c.easy;
+const facts = [
+  { label: c.duration, value: duration },
+  { label: c.difficulty, value: difficultyLabel },
+  { label: c.childFriendly, value: childFriendly ? c.yes : c.no },
+  { label: c.bestSeason, value: copy.bestSeason },
+  { label: c.coordinates, value: `${coordinates.lat.toFixed(3)}, ${coordinates.lng.toFixed(3)}` },
+];
+---
+
+<section class="section seo-facts" aria-labelledby="quick-facts-heading">
+  <div class="wrap">
+    <p class="eyebrow">{c.quickFacts}</p>
+    <div class="seo-fact-grid reveal">
+      {facts.map((fact) => (
+        <div class="seo-fact">
+          <span>{fact.label}</span>
+          <strong>{fact.value}</strong>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

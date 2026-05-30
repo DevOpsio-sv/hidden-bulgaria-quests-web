@@ -1,0 +1,44 @@
+---
+import type { Dict } from "../../i18n";
+import type { SeoDomain, SeoRoute } from "../../data/seoPages";
+import { getLocalizedCopy, getPlacesForRoute } from "../../data/seoPages";
+import SEOJsonLd from "./SEOJsonLd.astro";
+import PlaceHero from "./PlaceHero.astro";
+import TourismInfoSection from "./TourismInfoSection.astro";
+import StoryTeaserSection from "./StoryTeaserSection.astro";
+import PracticalInfoSection from "./PracticalInfoSection.astro";
+import MapSection from "./MapSection.astro";
+import RoutePreviewSection from "./RoutePreviewSection.astro";
+import AppCTASection from "./AppCTASection.astro";
+import FAQSection from "./FAQSection.astro";
+
+interface Props {
+  dict: Dict;
+  lang: string;
+  domain: SeoDomain;
+  route: SeoRoute;
+  jsonLd: unknown[];
+}
+
+const { dict, lang, domain, route, jsonLd } = Astro.props;
+const copy = getLocalizedCopy(domain, lang);
+const routePlaces = getPlacesForRoute(route.id);
+---
+
+<SEOJsonLd items={jsonLd} />
+<PlaceHero
+  dict={dict}
+  copy={copy}
+  label={dict.seoPages.common.domain}
+  status={domain.status}
+  type="hero"
+  primaryHref={domain.appDeepLink}
+  secondaryHref="#route"
+/>
+<TourismInfoSection dict={dict} copy={copy} />
+<StoryTeaserSection dict={dict} copy={copy} />
+<PracticalInfoSection dict={dict} copy={copy} />
+<MapSection dict={dict} coordinates={domain.coordinates} title={copy.title} />
+<RoutePreviewSection dict={dict} lang={lang} route={route} places={routePlaces} />
+<AppCTASection dict={dict} appDeepLink={domain.appDeepLink} />
+<FAQSection dict={dict} copy={copy} />

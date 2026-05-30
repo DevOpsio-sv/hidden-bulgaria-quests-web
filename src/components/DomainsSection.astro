@@ -20,8 +20,9 @@ const atmoClasses = [
     {d.cards.map((card, i) => {
       const epochLabel = card.epoch === "before" ? d.epochBefore : d.epochAfter;
       const delay = i % 2 === 1 ? " reveal-d1" : "";
-      return (
-        <article class={`domain-cin ${atmoClasses[i]} reveal${delay}`}>
+      const href = i === 2 ? `/${lang}/sea-domain` : undefined;
+      const content = (
+        <>
           <div class="dc-atmo" aria-hidden="true"></div>
           <div class="dc-content">
             <p class="dc-epoch">{epochLabel}</p>
@@ -29,7 +30,12 @@ const atmoClasses = [
             <p class="dc-region">{card.region}</p>
             <p class="dc-lure">{d.lures[i]}</p>
           </div>
-        </article>
+        </>
+      );
+      return href ? (
+        <a class={`domain-cin ${atmoClasses[i]} reveal${delay}`} href={href}>{content}</a>
+      ) : (
+        <article class={`domain-cin ${atmoClasses[i]} reveal${delay}`}>{content}</article>
       );
     })}
   </div>

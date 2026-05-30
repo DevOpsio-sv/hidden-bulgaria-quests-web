@@ -7,12 +7,21 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "typecheck": "astro check",
+    "lint": "astro check",
+    "check:seo-build": "node scripts/check-seo-build.mjs",
+    "check:routes": "node scripts/check-seo-build.mjs",
+    "check:language": "node scripts/check-seo-build.mjs",
+    "check:sitemap": "node scripts/check-seo-build.mjs",
+    "check:links": "node scripts/check-seo-build.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.9.3",
     "wrangler": "latest"
   }
 }

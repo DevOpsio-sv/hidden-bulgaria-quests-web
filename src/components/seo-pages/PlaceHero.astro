@@ -1,0 +1,39 @@
+---
+import type { Dict } from "../../i18n";
+import type { LocalizedSeoCopy, PageStatus, PlaceType } from "../../data/seoPages";
+
+interface Props {
+  dict: Dict;
+  copy: LocalizedSeoCopy;
+  label: string;
+  status: PageStatus;
+  type?: PlaceType;
+  primaryHref: string;
+  secondaryHref: string;
+}
+
+const { dict, copy, label, status, type = "standard", primaryHref, secondaryHref } = Astro.props;
+const c = dict.seoPages.common;
+---
+
+<section class={`seo-hero seo-hero-${type}`} aria-labelledby="seo-hero-heading">
+  <div class="wrap seo-hero-grid">
+    <div class="seo-hero-copy reveal">
+      <p class="eyebrow">{label}{status === "draft" ? ` · ${c.draft}` : ""}</p>
+      <h1 id="seo-hero-heading">{copy.title}</h1>
+      <p class="seo-hero-sub">{copy.subtitle}</p>
+      <p class="lede">{copy.shortDescription}</p>
+      <div class="seo-hero-actions">
+        <a class="btn btn-gold" href={primaryHref}>{c.downloadApp}</a>
+        <a class="btn btn-ghost" href={secondaryHref}>{c.exploreRoute}</a>
+      </div>
+    </div>
+
+    <aside class="seo-device-card reveal reveal-d1" aria-label={c.hiddenTeaserTitle}>
+      <div class="seo-device-orb" aria-hidden="true">◈</div>
+      <p class="eyebrow">{c.hiddenTeaserTitle}</p>
+      <h2>{c.onlyInApp}</h2>
+      <p>{c.onlyInAppBody}</p>
+    </aside>
+  </div>
+</section>

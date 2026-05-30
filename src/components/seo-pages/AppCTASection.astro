@@ -1,0 +1,26 @@
+---
+import type { Dict } from "../../i18n";
+
+interface Props {
+  dict: Dict;
+  appDeepLink: string;
+}
+
+const { dict, appDeepLink } = Astro.props;
+const c = dict.seoPages.common;
+---
+
+<section class="seo-app-cta" aria-labelledby="app-cta-heading">
+  <div class="wrap seo-app-cta-inner reveal">
+    <div>
+      <p class="eyebrow">{c.onlyInApp}</p>
+      <h2 id="app-cta-heading">{c.downloadApp}</h2>
+      <p>{c.onlyInAppBody}</p>
+    </div>
+    <a class="btn btn-gold" href={appDeepLink}>{c.openInApp}</a>
+  </div>
+</section>
+
+<div class="seo-sticky-cta">
+  <a class="btn btn-gold" href={appDeepLink}>{c.downloadApp}</a>
+</div>

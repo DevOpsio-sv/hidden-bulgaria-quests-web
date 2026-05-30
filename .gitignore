@@ -6,3 +6,6 @@ build/
 .DS_Store
 Thumbs.db
 *.log
+
+# Private product planning documents — local only, not committed
+_planning/
