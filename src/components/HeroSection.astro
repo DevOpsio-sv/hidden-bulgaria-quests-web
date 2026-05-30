@@ -1,127 +1,93 @@
 ---
 import type { Dict } from "../i18n";
-
 interface Props { dict: Dict; lang: string; }
 const { dict, lang } = Astro.props;
 const h = dict.hero;
+const a = dict.arrival;
 ---
 
-<section class="section" aria-labelledby="hero-heading" style="padding-top:0">
-  <div class="wrap">
-    <div class="hero-wrap">
-      <!-- Copy -->
-      <div class="hero-copy">
-        <p class="eyebrow">{h.eyebrow}</p>
-        <h1 id="hero-heading" class="hero-headline">
-          {h.line1}<br />{h.line2}<br />{h.line3}
-        </h1>
-        <span class="hero-question" aria-hidden="true">{h.question}</span>
+<section class="arrival-section" aria-label="Arrival">
+  <!-- Animated globe -->
+  <div class="globe-container" aria-hidden="true">
+    <svg
+      id="globe-svg"
+      class="globe-svg"
+      viewBox="0 0 500 500"
+      xmlns="http://www.w3.org/2000/svg"
+      role="presentation"
+    >
+      <defs>
+        <radialGradient id="rg-atmos" cx="50%" cy="50%" r="50%">
+          <stop offset="65%" stop-color="#030610" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#d8b56a" stop-opacity="0.2"/>
+        </radialGradient>
+        <radialGradient id="rg-surface" cx="34%" cy="32%" r="60%">
+          <stop offset="0%" stop-color="#0c1929"/>
+          <stop offset="100%" stop-color="#030814"/>
+        </radialGradient>
+        <radialGradient id="rg-glow" cx="34%" cy="32%" r="55%">
+          <stop offset="0%" stop-color="#d8b56a" stop-opacity="0.06"/>
+          <stop offset="100%" stop-color="#d8b56a" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="globe-clip">
+          <circle cx="250" cy="250" r="190"/>
+        </clipPath>
+      </defs>
 
-        <p class="lede hero-lede">{h.lede}</p>
+      <!-- Outer atmosphere halo -->
+      <circle cx="250" cy="250" r="226" fill="url(#rg-atmos)"/>
 
-        <div class="hero-actions">
-          <a class="btn btn-gold" href={`/${lang}#download`}>{h.ctaPrimary}</a>
-          <a class="btn btn-ghost" href={`/${lang}#how-it-works`}>{h.ctaSecondary}</a>
-        </div>
+      <!-- Planet surface -->
+      <circle cx="250" cy="250" r="190" fill="url(#rg-surface)"/>
+      <circle cx="250" cy="250" r="190" fill="url(#rg-glow)"/>
 
-        <div class="hero-trust" aria-label="Product highlights">
-          {h.trust.map((item: string) => <span>{item}</span>)}
-        </div>
-      </div>
+      <!-- Grid lines — rotated on scroll by JS -->
+      <g id="globe-grid" clip-path="url(#globe-clip)" fill="none" stroke="#d8b56a">
+        <!-- Latitude parallels -->
+        <ellipse cx="250" cy="250" rx="190" ry="36" stroke-width="0.5" stroke-opacity="0.42"/>
+        <ellipse cx="250" cy="250" rx="190" ry="86" stroke-width="0.45" stroke-opacity="0.3"/>
+        <ellipse cx="250" cy="250" rx="190" ry="138" stroke-width="0.4" stroke-opacity="0.22"/>
+        <ellipse cx="250" cy="180" rx="190" ry="36" stroke-width="0.35" stroke-opacity="0.16"/>
+        <ellipse cx="250" cy="322" rx="190" ry="36" stroke-width="0.35" stroke-opacity="0.16"/>
+        <!-- Longitude meridians -->
+        <ellipse cx="250" cy="250" rx="190" ry="190" stroke-width="0.5" stroke-opacity="0.36"/>
+        <ellipse cx="250" cy="250" rx="95" ry="190" stroke-width="0.45" stroke-opacity="0.3"/>
+        <ellipse cx="250" cy="250" rx="48" ry="190" stroke-width="0.35" stroke-opacity="0.2"/>
+        <ellipse cx="250" cy="250" rx="143" ry="190" stroke-width="0.38" stroke-opacity="0.26"/>
+        <!-- Equator -->
+        <line x1="60" y1="250" x2="440" y2="250" stroke-width="0.6" stroke-opacity="0.4"/>
+        <!-- Prime meridian -->
+        <line x1="250" y1="60" x2="250" y2="440" stroke-width="0.5" stroke-opacity="0.32"/>
+      </g>
 
-      <!-- Bulgaria SVG map -->
-      <div class="map-visual reveal" aria-label={h.mapLabel}>
-        <div class="map-svg-wrap">
-          <svg
-            viewBox="0 0 500 300"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label={h.mapLabel}
-          >
-            <defs>
-              <radialGradient id="map-glow-grad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#d8b56a" stop-opacity="0.12"/>
-                <stop offset="100%" stop-color="#d8b56a" stop-opacity="0"/>
-              </radialGradient>
-              <filter id="gold-blur">
-                <feGaussianBlur stdDeviation="3" result="blur"/>
-                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-              </filter>
-            </defs>
+      <!-- Rim -->
+      <circle cx="250" cy="250" r="190" fill="none" stroke="#d8b56a" stroke-width="0.8" stroke-opacity="0.28"/>
 
-            <!-- Glow background -->
-            <ellipse cx="250" cy="150" rx="220" ry="140" fill="url(#map-glow-grad)"/>
-
-            <!-- Subtle grid -->
-            {Array.from({length:8}).map((_,i) => (
-              <line x1={60+i*48} y1="30" x2={60+i*48} y2="270" class="map-grid-line"/>
-            ))}
-            {Array.from({length:6}).map((_,i) => (
-              <line x1="30" y1={50+i*40} x2="470" y2={50+i*40} class="map-grid-line"/>
-            ))}
-
-            <!-- Bulgaria border — glow layer -->
-            <path
-              d="M 38,82 L 65,58 L 98,46 L 136,39 L 173,34 L 210,32 L 247,35 L 280,42 L 310,50 L 340,57 L 368,65 L 400,77 L 418,97 L 426,122 L 428,148 L 421,170 L 410,188 L 395,203 L 370,215 L 340,223 L 308,226 L 276,225 L 245,222 L 214,219 L 183,215 L 153,208 L 124,199 L 97,188 L 70,174 L 48,158 L 32,140 L 28,120 L 32,100 L 38,82 Z"
-              fill="rgba(216,181,106,0.05)"
-              stroke="rgba(216,181,106,0.55)"
-              stroke-width="5"
-              filter="url(#gold-blur)"
-              opacity="0.35"
-            />
-
-            <!-- Bulgaria border — sharp layer -->
-            <path
-              d="M 38,82 L 65,58 L 98,46 L 136,39 L 173,34 L 210,32 L 247,35 L 280,42 L 310,50 L 340,57 L 368,65 L 400,77 L 418,97 L 426,122 L 428,148 L 421,170 L 410,188 L 395,203 L 370,215 L 340,223 L 308,226 L 276,225 L 245,222 L 214,219 L 183,215 L 153,208 L 124,199 L 97,188 L 70,174 L 48,158 L 32,140 L 28,120 L 32,100 L 38,82 Z"
-              class="map-border"
-            />
-
-            <!-- Route paths between historical capitals -->
-            <path d="M 91,138 Q 160,95 236,110" class="route-path"/>
-            <path d="M 236,110 Q 300,85 335,88" class="route-path"/>
-            <path d="M 335,88 Q 375,90 390,110" class="route-path"/>
-            <path d="M 91,138 Q 140,170 183,185" class="route-path"/>
-
-            <!-- Checkpoint: Sofia -->
-            <circle cx="91" cy="138" r="5" class="cp-dot"/>
-            <circle cx="91" cy="138" r="8" class="cp-ring"/>
-            <circle cx="91" cy="138" r="8" class="cp-ring cp-ring-2"/>
-            <text x="91" y="155" class="cp-label">Sofia</text>
-
-            <!-- Checkpoint: Plovdiv -->
-            <circle cx="183" cy="185" r="4.5" class="cp-dot" opacity=".85"/>
-            <circle cx="183" cy="185" r="7" class="cp-ring cp-ring-3"/>
-            <text x="183" y="200" class="cp-label">Plovdiv</text>
-
-            <!-- Checkpoint: Tarnovo -->
-            <circle cx="236" cy="110" r="5" class="cp-dot"/>
-            <circle cx="236" cy="110" r="8" class="cp-ring cp-ring-2"/>
-            <text x="236" y="100" class="cp-label">Tarnovo</text>
-
-            <!-- Checkpoint: Pliska -->
-            <circle cx="335" cy="88" r="4.5" class="cp-dot" opacity=".85"/>
-            <circle cx="335" cy="88" r="7" class="cp-ring"/>
-            <text x="335" y="78" class="cp-label">Pliska</text>
-
-            <!-- Checkpoint: Varna -->
-            <circle cx="390" cy="110" r="4.5" class="cp-dot" opacity=".9"/>
-            <circle cx="390" cy="110" r="7" class="cp-ring cp-ring-3"/>
-            <text x="395" y="126" class="cp-label">Varna</text>
-
-            <!-- Checkpoint: Belogradchik -->
-            <circle cx="52" cy="75" r="4" class="cp-dot" opacity=".7"/>
-            <circle cx="52" cy="75" r="6.5" class="cp-ring cp-ring-2"/>
-
-            <!-- Checkpoint: Burgas -->
-            <circle cx="370" cy="162" r="4" class="cp-dot" opacity=".75"/>
-            <circle cx="370" cy="162" r="6.5" class="cp-ring"/>
-
-            <!-- Central glow pulse -->
-            <circle cx="250" cy="130" r="60" fill="none" stroke="rgba(216,181,106,0.06)" stroke-width="1"/>
-            <circle cx="250" cy="130" r="100" fill="none" stroke="rgba(216,181,106,0.04)" stroke-width="1"/>
-          </svg>
-        </div>
-      </div>
-    </div>
+      <!-- Bulgaria marker (approx. 43°N 25°E on visible face) -->
+      <g class="globe-marker">
+        <circle cx="291" cy="208" r="3.5" fill="#d8b56a" opacity="0.9"/>
+        <circle cx="291" cy="208" r="8" fill="none" stroke="#d8b56a" stroke-width="0.8" stroke-opacity="0.5"/>
+        <circle cx="291" cy="208" r="14" fill="none" stroke="#d8b56a" stroke-width="0.4" stroke-opacity="0.25"/>
+      </g>
+    </svg>
   </div>
+
+  <!-- The Question -->
+  <div class="arrival-copy">
+    <h1 class="arrival-title">
+      <span class="arrival-line al-1">{h.line1}</span>
+      <span class="arrival-line al-2">{h.line2} {h.line3}</span>
+      <span class="arrival-line al-3">{h.question}</span>
+    </h1>
+
+    <a class="arrival-cta" href={`/${lang}#timeline`} aria-label={a.cta}>
+      <span>{a.cta}</span>
+      <svg class="arrival-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <path d="M12 4v16M5 13l7 7 7-7"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Bottom veil fading into next section -->
+  <div class="arrival-veil" aria-hidden="true"></div>
 </section>

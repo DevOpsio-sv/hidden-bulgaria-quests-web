@@ -1,0 +1,14 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const m = dict.memory;
+---
+
+<section class="s-memory" aria-label={m.name}>
+  <div class="memory-wrap reveal">
+    <p class="memory-pre">{m.pre}</p>
+    <h2 class="memory-name">{m.name}</h2>
+    <p class="memory-post">{m.post}</p>
+  </div>
+</section>

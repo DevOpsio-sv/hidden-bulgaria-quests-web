@@ -407,6 +407,25 @@
     "title": "Choose language",
     "close": "Close"
   },
+  "arrival": {
+    "cta": "Reveal the Journey"
+  },
+  "memory": {
+    "pre": "Not a country.",
+    "name": "Bulgaria.",
+    "post": "A mystery that survived thirteen centuries."
+  },
+  "journey": {
+    "eyebrow": "The Path",
+    "heading": "Five discoveries.\nOne transformation.",
+    "items": [
+      { "num": "01", "sym": "✦", "name": "Keeper", "desc": "The title earned by those who complete the full journey. Guardian of Bulgaria's living memory — Пазител." },
+      { "num": "02", "sym": "⌘", "name": "Route", "desc": "Five real places. Connected by history. Walk the route — unlock the story hidden between them." },
+      { "num": "03", "sym": "◈", "name": "Relic", "desc": "Complete a route. Receive a permanent artifact. A piece of Bulgaria's memory that is yours forever." },
+      { "num": "04", "sym": "◉", "name": "Domain", "desc": "Six regions. Each holds its own routes, its own epoch, its own secrets. Reveal a domain — claim a layer." },
+      { "num": "05", "sym": "◎", "name": "Seal", "desc": "The mark of a completed domain. Six seals. Six layers of memory. All six — and Bulgaria is yours." }
+    ]
+  },
   "skipLink": "Skip to content",
   "ariaNav": "Main navigation",
   "ariaFooterNav": "Footer navigation",
