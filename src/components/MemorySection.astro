@@ -5,7 +5,7 @@ const { dict } = Astro.props;
 const m = dict.memory;
 ---
 
-<section class="s-memory" aria-label={m.name}>
+<section class="s-memory" aria-label={`${m.name} ${m.post}`}>
   <div class="memory-wrap reveal">
     <p class="memory-pre">{m.pre}</p>
     <h2 class="memory-name">{m.name}</h2>

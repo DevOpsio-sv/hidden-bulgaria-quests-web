@@ -14,7 +14,8 @@
     "partners": "Partners",
     "faq": "FAQ",
     "download": "Download",
-    "language": "Language"
+    "language": "Language",
+    "menuLabel": "Menu"
   },
   "hero": {
     "eyebrow": "Official product website",
@@ -71,7 +72,7 @@
   },
   "domains": {
     "eyebrow": "Explore domains",
-    "heading": "Every region\nbecomes a domain.",
+    "heading": "Every region\nhides a world.",
     "lede": "Six regional domains form the map of Bulgaria's hidden memory. Each holds its own routes, relics, epoch, and final seal.",
     "explore": "Explore",
     "continue": "Continue",
@@ -79,6 +80,14 @@
     "epochBefore": "Before the Name",
     "epochAfter": "After the Name",
     "routesOf": "of 3 routes completed",
+    "lures": [
+      "Where the Danube met the empire.\nFortresses remember what history forgot.",
+      "Pliska. Preslav. Tarnovo.\nThree capitals. One name that never fell.",
+      "Ancient ports. Island monasteries.\nWhere the sea kept the secrets of the land.",
+      "Tombs of gold. Rose fields.\nThe oldest memory in the land.",
+      "Orpheus walked here.\nThe music still lives in the rocks.",
+      "Roman ruins beneath the city.\nEvery layer tells a different story."
+    ],
     "cards": [
       {
         "region": "Danube & Northwest",
@@ -138,8 +147,11 @@
   },
   "guardianSight": {
     "eyebrow": "Guardian Sight",
-    "heading": "AR that serves\nthe place.",
+    "heading": "See what\nothers cannot.",
     "lede": "Guardian Sight is the optional augmented reality camera mode inside Unlocking Bulgaria. Point it at the world — and see the hidden layer beneath.",
+    "sightBody": "Point the camera at the world.\nThe hidden layer appears beneath the real.",
+    "sightNote": "Optional AR · Every moment has a non-AR path",
+    "ariaVisual": "Guardian Sight AR interface — animated scanning rings",
     "floatTag1": "Hidden layer revealed",
     "floatTag2": "Checkpoint · 82m",
     "centerLabel": "Guardian\nSight",
@@ -168,8 +180,9 @@
   },
   "timeline": {
     "eyebrow": "Historical timeline",
-    "heading": "The memory\nthat survived.",
+    "heading": "The memory\nthat refused to die.",
     "lede": "1345 years of Bulgarian history — compressed into the moments that defined the name, the faith, and the language.",
+    "sub": "Follow the line. See what survived.",
     "events": [
       {
         "year": "681",

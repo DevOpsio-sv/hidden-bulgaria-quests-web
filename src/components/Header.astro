@@ -52,7 +52,7 @@ const currentLabel = LANG_LABELS[lang as keyof typeof LANG_LABELS] ?? "EN";
       data-menu-btn
       aria-expanded="false"
       aria-controls="mobile-nav"
-      aria-label="Menu"
+      aria-label={dict.nav.menuLabel}
     >
       ☰
     </button>
@@ -78,17 +78,18 @@ const currentLabel = LANG_LABELS[lang as keyof typeof LANG_LABELS] ?? "EN";
     <span class="lang-overlay-title">{dict.langSelector.title}</span>
     <button class="lang-close" type="button" data-lang-close>{dict.langSelector.close} ✕</button>
   </div>
-  <div class="lang-grid" role="list">
+  <ul class="lang-grid" role="list">
     {Object.entries(LANG_NAMES).map(([code, name]) => (
-      <button
-        class={`lang-pill${code === lang ? " active" : ""}`}
-        type="button"
-        data-lang-pill={code}
-        role="listitem"
-        lang={code}
-      >
-        {name}
-      </button>
+      <li role="listitem">
+        <button
+          class={`lang-pill${code === lang ? " active" : ""}`}
+          type="button"
+          data-lang-pill={code}
+          lang={code}
+        >
+          {name}
+        </button>
+      </li>
     ))}
-  </div>
+  </ul>
 </div>

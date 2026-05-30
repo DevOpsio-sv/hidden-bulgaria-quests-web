@@ -17,7 +17,7 @@
   --text-1:    #f6ead0;
   --text-2:    #c6b48a;
   --text-3:    #8f815f;
-  --text-4:    #5a4f38;
+  --text-4:    #8a7858;
 
   --border:    rgba(216,181,106,0.22);
   --border-lt: rgba(216,181,106,0.10);
@@ -68,6 +68,11 @@ ul,ol{list-style:none;padding:0}
   position:fixed;z-index:0;
   opacity:.6;
 }
+#dust{
+  inset:0;pointer-events:none;
+  position:fixed;z-index:0;
+  opacity:.55;
+}
 
 /* ─── Skip link ──────────────────────────────────────────────── */
 .skip{
@@ -76,6 +81,9 @@ ul,ol{list-style:none;padding:0}
   padding:10px 16px;position:fixed;top:-80px;z-index:999;
 }
 .skip:focus{top:16px}
+
+/* ─── Scroll anchoring (accounts for fixed header) ──────────── */
+section[id],div[id]{scroll-margin-top:84px}
 
 /* ─── Container ──────────────────────────────────────────────── */
 .wrap{
@@ -416,12 +424,14 @@ h3{
   font-size:clamp(2rem,4vw,4rem);
   font-style:italic;
   font-weight:300;
-  margin-bottom:12px;
+  margin-bottom:14px;
+  white-space:pre-line;
 }
 .tl-intro-sub{
   color:var(--text-3);
   font-size:.88rem;
   letter-spacing:.08em;
+  margin-top:4px;
 }
 .tl-track{
   display:grid;
@@ -609,7 +619,7 @@ h3{
   margin-bottom:clamp(40px,6vw,64px);
   text-align:center;
 }
-.domains-intro h2{font-weight:300;margin-top:12px}
+.domains-intro h2{font-weight:300;margin-top:12px;white-space:pre-line}
 .domains-cinematic{
   display:grid;
   gap:2px;
