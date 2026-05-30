@@ -31,6 +31,8 @@ const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="Unlocking Bulgaria" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={dict.meta.ogTitle} />
+  <meta name="twitter:description" content={dict.meta.ogDescription} />
 
   <!-- hreflang alternates -->
   {["en","bg","de","fr","es","it","ro","tr","el","pl","ru","ja","sr"].map((l) => (
@@ -43,18 +45,16 @@ const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Structured data -->
-  <script type="application/ld+json" is:inline>
-  {
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Unlocking Bulgaria",
     "applicationCategory": "TravelApplication",
     "operatingSystem": "iOS, Android",
-    "description": "A premium mobile application for exploring Bulgaria through real-world quests, historical routes, mythology, culture, optional AR experiences, and cinematic storytelling.",
+    "description": dict.meta.description,
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-    "url": "https://unlockingbulgaria.com/"
-  }
-  </script>
+    "url": `https://unlockingbulgaria.com/${lang}`
+  })} />
 </head>
 <body>
   <!-- Stars canvas -->

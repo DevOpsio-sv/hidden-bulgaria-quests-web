@@ -11,7 +11,7 @@ const currentLabel = LANG_LABELS[lang as keyof typeof LANG_LABELS] ?? "EN";
 ---
 
 <header class="site-header" data-header>
-  <a class="header-brand" href={`/${lang}`} aria-label="Unlocking Bulgaria — home">
+  <a class="header-brand" href={`/${lang}`} aria-label={dict.ariaHome}>
     <span class="brand-mark" aria-hidden="true">UB</span>
     <span>
       <span class="brand-name">Unlocking Bulgaria</span>

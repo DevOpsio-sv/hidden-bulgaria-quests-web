@@ -1,1 +1,449 @@
-﻿{}
+{
+  "lang": "de",
+  "meta": {
+    "title": "Unlocking Bulgaria — Reise durch das verborgene Gedächtnis Bulgariens",
+    "description": "Eine Premium-App für die Erkundung Bulgariens durch echte Quests, cineastisches Storytelling, optionales AR, historische Routen, Relikte und Kulturentdeckungen. Werde ein Hüter.",
+    "ogTitle": "Unlocking Bulgaria — 1345 Jahre. Ein Name überlebte.",
+    "ogDescription": "Reise durch Bulgarien. Enthülle die alten Geheimnisse. Werde ein Hüter."
+  },
+  "nav": {
+    "howItWorks": "Wie es funktioniert",
+    "domains": "Domänen",
+    "guardianSight": "Wächterblick",
+    "timeline": "Zeitleiste",
+    "partners": "Partner",
+    "faq": "FAQ",
+    "download": "Herunterladen",
+    "language": "Sprache",
+    "menuLabel": "Menü"
+  },
+  "hero": {
+    "eyebrow": "Offizielle Produktwebsite",
+    "line1": "1345 Jahre.",
+    "line2": "Ein Name",
+    "line3": "überlebte.",
+    "question": "Wie?",
+    "lede": "Reise durch Bulgarien. Enthülle die alten Geheimnisse. Werde ein Hüter — ein Bewahrer des lebendigen Gedächtnisses, das dreizehn Jahrhunderte überdauert hat.",
+    "ctaPrimary": "App herunterladen",
+    "ctaSecondary": "Die Reise ansehen",
+    "trust": ["Echte Quests", "Cineastisches Storytelling", "Optionales AR", "Familienfreundlich", "13 Sprachen"],
+    "mapLabel": "Interaktive Karte von Bulgariens verborgenem Gedächtnis",
+    "phoneDomain": "Domäne des Namens",
+    "phoneTitle": "Die alten Hauptstädte",
+    "phoneDesc": "Besuche die Orte, an denen Gedächtnis zur Staatlichkeit wurde.",
+    "phoneProgress": "4 von 7 Siegeln entdeckt"
+  },
+  "band": {
+    "sub": "Kein Reiseführer. Keine Karte. Kein Spiel.",
+    "statement": "Eine echte Reise durch das lebendige Gedächtnis Bulgariens."
+  },
+  "howItWorks": {
+    "eyebrow": "Wie es funktioniert",
+    "heading": "Werde ein Hüter,\nein Ort nach dem anderen.",
+    "lede": "Jede Reise in Unlocking Bulgaria folgt einer klaren Progression — von einem einzelnen Kontrollpunkt bis zur vollständigen Freischaltung des verborgenen Gedächtnisses Bulgariens.",
+    "steps": [
+      {
+        "label": "Schritt 1",
+        "title": "Einen Kontrollpunkt besuchen",
+        "desc": "Reise zu einem echten Ort. Aktiviere den Kontrollpunkt durch deine Ankunft. Schalte eine Geschichte, einen Hinweis oder eine verborgene Ebene frei."
+      },
+      {
+        "label": "Schritt 2 — 5 Kontrollpunkte",
+        "title": "Route abschließen → Relikt sammeln",
+        "desc": "Fünf verbundene Kontrollpunkte bilden eine Route. Schließe die Route ab und erhalte ein dauerhaftes digitales Relikt — ein Artefakt aus Bulgariens Geschichte."
+      },
+      {
+        "label": "Schritt 3 — 3 Routen",
+        "title": "Domäne freischalten → Siegel verdienen",
+        "desc": "Drei Routen schalten eine regionale Domäne frei. Verdiene ihr Siegel — ein Symbol der Beherrschung des verborgenen Gedächtnisses dieser Region."
+      },
+      {
+        "label": "Schritt 4 — 6 Domänen",
+        "title": "Nationales Freischalten → Hüter werden",
+        "desc": "Schließe alle sechs Domänen ab. Schalte das vollständige Gedächtnis Bulgariens frei. Erhalte den Titel Hüter — Пазител."
+      }
+    ],
+    "flow": [
+      { "icon": "◉", "name": "Kontrollpunkt", "sub": "Echter Ort · Geschichte · Hinweis" },
+      { "icon": "⌘", "name": "Route + Relikt", "sub": "5 Kontrollpunkte · 1 Artefakt" },
+      { "icon": "◈", "name": "Domäne + Siegel", "sub": "3 Routen · 1 regionales Siegel" },
+      { "icon": "✦", "name": "Hüter — Пазител", "sub": "6 Domänen · Ganz Bulgarien freigeschaltet" }
+    ]
+  },
+  "domains": {
+    "eyebrow": "Domänen erkunden",
+    "heading": "Jede Region\nbirgt eine Welt.",
+    "lede": "Sechs regionale Domänen bilden die Karte von Bulgariens verborgenem Gedächtnis. Jede hält ihre eigenen Routen, Relikte, Epochen und das abschließende Siegel.",
+    "explore": "Erkunden",
+    "continue": "Fortsetzen",
+    "locked": "Gesperrt",
+    "epochBefore": "Vor dem Namen",
+    "epochAfter": "Nach dem Namen",
+    "routesOf": "von 3 Routen abgeschlossen",
+    "lures": [
+      "Wo die Donau das Reich berührte.\nFestungen erinnern, was die Geschichte vergaß.",
+      "Pliska. Preslav. Tarnowo.\nDrei Hauptstädte. Ein Name, der nie fiel.",
+      "Antike Häfen. Inselklöster.\nDas Meer bewahrte die Geheimnisse des Landes.",
+      "Goldene Gräber. Rosenfelder.\nDas älteste Gedächtnis des Landes.",
+      "Orpheus wandelte hier.\nDie Musik lebt noch in den Felsen.",
+      "Römische Ruinen unter der Stadt.\nJede Schicht erzählt eine andere Geschichte."
+    ],
+    "cards": [
+      {
+        "region": "Donau und Nordwest",
+        "name": "Domäne von Stein und Fluss",
+        "epoch": "before",
+        "key": "Festungen, Flüsse, römische Straßen und die Belogradchik-Steinformationen — wo die Donau den Rand des Imperiums markierte.",
+        "progress": 0,
+        "emblem": "🏔",
+        "status": "explore"
+      },
+      {
+        "region": "Die alten Hauptstädte",
+        "name": "Domäne des Namens",
+        "epoch": "after",
+        "key": "Pliska, Preslav, Tarnowo — die drei Hauptstädte, die den Namen Bulgariens durch Eroberung, Feuer und Wiedergeburt trugen.",
+        "progress": 33,
+        "emblem": "⚔",
+        "status": "continue"
+      },
+      {
+        "region": "Schwarzmeerküste",
+        "name": "Domäne des Meerestores",
+        "epoch": "before",
+        "key": "Antike Häfen, Kaps, Salzseen, Inselklöster — wo griechische Kolonien auf thrakische Küsten trafen und das Meer zur Grenze wurde.",
+        "progress": 0,
+        "emblem": "🌊",
+        "status": "explore"
+      },
+      {
+        "region": "Thrakisches Tal",
+        "name": "Domäne der Könige",
+        "epoch": "before",
+        "key": "Thrakische Grabhügel, Ritualhügel, Rosenfelder, Weinland und goldene Artefakte — das älteste im Land bewahrte Gedächtnis.",
+        "progress": 0,
+        "emblem": "🏛",
+        "status": "explore"
+      },
+      {
+        "region": "Rhodopengebirge",
+        "name": "Domäne der Stimme und des Steins",
+        "epoch": "after",
+        "key": "Orpheus-Mythen, heilige Höhlen, alte Brücken, Steindörfer, Wälder und die älteste lebendige Musiktradition Europas.",
+        "progress": 0,
+        "emblem": "♪",
+        "status": "explore"
+      },
+      {
+        "region": "Sofia und Westbulgarien",
+        "name": "Domäne der Kreuzwege",
+        "epoch": "after",
+        "key": "Urbane Schichten, Serdica-Ruinen unter der Stadt, Vitosha-Bergpfade, antike Quellen und lebendige Märkte.",
+        "progress": 0,
+        "emblem": "✦",
+        "status": "explore"
+      }
+    ]
+  },
+  "guardianSight": {
+    "eyebrow": "Wächterblick",
+    "heading": "Sieh, was\nandere nicht können.",
+    "lede": "Der Wächterblick ist der optionale Augmented-Reality-Kameramodus in Unlocking Bulgaria. Richte ihn auf die Welt — und sieh die verborgene Schicht darunter.",
+    "sightBody": "Richte die Kamera auf die Welt.\nDie verborgene Schicht erscheint unter der Realität.",
+    "sightNote": "Optionales AR · Jeder Moment hat einen Nicht-AR-Pfad",
+    "ariaVisual": "Wächterblick AR-Oberfläche — animierte Scan-Ringe",
+    "floatTag1": "Verborgene Schicht enthüllt",
+    "floatTag2": "Kontrollpunkt · 82m",
+    "centerLabel": "Wächter-\nblick",
+    "features": [
+      {
+        "icon": "◈",
+        "title": "Symbolische Spuren",
+        "desc": "Antike Symbole, Glyphen und Routenfragmente erscheinen über der realen Welt an bedeutungsvollen Orten."
+      },
+      {
+        "icon": "◉",
+        "title": "Kontrollpunkt-Präsenz",
+        "desc": "Nahegelegene Kontrollpunkte pulsieren mit Lichtenergie. Je näher du bist, desto stärker das Signal."
+      },
+      {
+        "icon": "✦",
+        "title": "Immer zugänglich",
+        "desc": "AR ist optional. Jeder AR-Moment hat einen vollständigen Nicht-AR-Pfad mit lesbarem Inhalt, Untertiteln und klarer Abschlusslogik."
+      },
+      {
+        "icon": "⌘",
+        "title": "Tiefere Momente an Schlüsselorten",
+        "desc": "Haupt-Kontrollpunkte und Domänen-Finale bieten tiefere AR-Sequenzen — rekonstruierte Szenen, Artefakt-Enthüllungen und cineastische Momente."
+      }
+    ]
+  },
+  "timeline": {
+    "eyebrow": "Historische Zeitleiste",
+    "heading": "Das Gedächtnis,\ndas sich weigerte zu sterben.",
+    "lede": "1345 Jahre bulgarische Geschichte — verdichtet auf die Momente, die den Namen, den Glauben und die Sprache definierten.",
+    "sub": "Folge der Linie. Sieh, was überlebte.",
+    "events": [
+      {
+        "year": "681",
+        "shortName": "Der Staat",
+        "tag": "Gründung Bulgariens",
+        "title": "Khan Asparuh gründet den bulgarischen Staat.",
+        "body": "An der Donau bildet eine Gemeinschaft von Bulgaren und Slawen den ersten bulgarischen Staat — anerkannt vom Byzantinischen Reich nach einem entscheidenden militärischen Sieg. Der Name Bulgarien tritt in die Geschichte ein. Ein Name, der alles Folgende überstehen wird."
+      },
+      {
+        "year": "862",
+        "shortName": "Die Buchstaben",
+        "tag": "Die Heiligen Kyrill und Method",
+        "title": "Ein neues Alphabet entsteht für die slawischen Völker.",
+        "body": "Zwei Brüder aus Thessaloniki schaffen die glagolitische Schrift — die Grundlage des späteren kyrillischen Alphabets. Zum ersten Mal besitzt die slawische Welt eigene Buchstaben. Bulgarien wird dieses Erbe annehmen und jahrhundertelang bewahren."
+      },
+      {
+        "year": "865",
+        "shortName": "Die Taufe",
+        "tag": "Taufe Bulgariens",
+        "title": "Khan Boris I. nimmt das Christentum für Bulgarien an.",
+        "body": "In einem kalkulierten politischen Akt mit tiefgreifenden kulturellen Folgen konvertiert Khan Boris I. Bulgarien zum Christentum. Eine neue Identität formt sich um Glauben und Schriftlichkeit. Pliska und Preslav werden zu Zentren slawisch-christlicher Zivilisation."
+      },
+      {
+        "year": "893",
+        "shortName": "Die Sprache",
+        "tag": "Konzil von Preslav",
+        "title": "Altbulgarisch wird zur Amtssprache von Staat und Kirche.",
+        "body": "Unter Zar Simeon I. blüht die Literaturschule von Preslav auf. Altbulgarisch ersetzt Griechisch in allen offiziellen Kontexten. Bulgarien wird zu einer literarischen und spirituellen Großmacht im Zentrum des mittelalterlichen Europas."
+      },
+      {
+        "year": "1018",
+        "shortName": "Der Fall",
+        "tag": "Byzantinische Eroberung",
+        "title": "Bulgarien fällt — doch der Name überlebt.",
+        "body": "Basileios II. erobert Bulgarien nach jahrzehntelangem Krieg. Der bulgarische Staat hört für 167 Jahre auf zu existieren. Doch der Name, die Sprache und das Gedächtnis überleben — bewahrt in Klöstern, in Dörfern, in mündlicher Überlieferung, in den Steinen selbst."
+      },
+      {
+        "year": "1185",
+        "shortName": "Die Rückkehr",
+        "tag": "Die Brüder Asen",
+        "title": "Das Zweite Bulgarische Reich erhebt sich aus Tarnowo.",
+        "body": "Die Brüder Asen und Peter führen einen Aufstand von den Hügeln Tarnowos. Bulgarien wird wiedergeboren — der einzige mittelalterliche slawische Staat, der sich nach vollständiger Eroberung neu konstituiert hat. Der Name überlebte. Das Gedächtnis kehrte zurück. Die Reise geht weiter."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "App-Funktionen",
+    "heading": "Gebaut für Entdeckung,\nnicht für Ablenkung.",
+    "lede": "Jede Funktion existiert, um deine Verbindung zu den echten Orten, die du besuchst, zu vertiefen.",
+    "items": [
+      { "icon": "◉", "title": "Echte Quests", "desc": "Routen rund um echte GPS-Kontrollpunkte. Die App führt dich zum Ort — der Ort belohnt dich mit seiner Geschichte." },
+      { "icon": "▶", "title": "Cineastisches Storytelling", "desc": "Jeder Kontrollpunkt enthüllt einen Erzählmoment, der in Geschichte, Mythologie, lokalem Gedächtnis oder Naturerbe verwurzelt ist." },
+      { "icon": "◎", "title": "Wächterblick AR", "desc": "Optionale Augmented Reality enthüllt Symbole, Artefakte und verborgene Schichten, die der realen Welt überlagert sind." },
+      { "icon": "⌛", "title": "Historische Zeitleiste", "desc": "Eine interaktive Karte durch 1345 Jahre bulgarisches Gedächtnis — verbunden mit den Routen, die du gehst." },
+      { "icon": "◈", "title": "Relikte und Artefakte", "desc": "Sammle dauerhafte digitale Relikte beim Abschluss einer Route. Baue ein persönliches Archiv der verborgenen Geschichte Bulgariens auf." },
+      { "icon": "✦", "title": "Domänen und Siegel", "desc": "Schließe regionale Domänen ab. Verdiene Siegel. Enthülle schrittweise die vollständige Karte des bulgarischen Gedächtnisses." },
+      { "icon": "⊕", "title": "13 Sprachen", "desc": "Vollständige Mehrsprachigkeit — darunter Bulgarisch, Englisch, Deutsch, Griechisch, Russisch, Japanisch und mehr." },
+      { "icon": "❖", "title": "Familienerkundung", "desc": "Tempoeinstellungen und Inhaltsebenen für Familien, Schulen und Kulturtouristen jeden Alters." },
+      { "icon": "⊞", "title": "Offline-Unterstützung", "desc": "Wichtige Routeninhalte werden für Berg-, Dorf- und Kulturerbestätten mit eingeschränktem Signal vorbereitet." },
+      { "icon": "⊗", "title": "Partner-Routen", "desc": "Gemeinden, Museen und Tourismusunternehmen können Routen mitgestalten, die mit echtem lokalem Erbe verbunden sind." }
+    ]
+  },
+  "download": {
+    "eyebrow": "App herunterladen",
+    "heading": "Werde ein Hüter\nvon Bulgarien.",
+    "lede": "Die App erscheint für iOS und Android. Trage dich in die Startliste ein und sei bereit, die ersten Domänen freizuschalten, wenn die Tore sich öffnen.",
+    "appStore": { "label": "Laden im", "name": "App Store" },
+    "googlePlay": { "label": "Laden bei", "name": "Google Play" },
+    "trust": "iOS und Android · Kostenlose Erkundung · Premium-Routen verfügbar",
+    "comingSoon": "Demnächst verfügbar"
+  },
+  "partners": {
+    "eyebrow": "Für Gemeinden und Partner",
+    "heading": "Verwandle echte Orte in\nunvergessliche Reisen.",
+    "lede": "Unlocking Bulgaria hilft Destinationen, kulturelles Gedächtnis als Premium-Digitalschicht zu verpacken — Besucher zu echten Orten zu führen, lokale Unternehmen zu unterstützen und die regionale Identität zu stärken.",
+    "benefits": [
+      {
+        "icon": "◉",
+        "title": "Tourismusförderung",
+        "desc": "Erstelle moderne Routen, die weniger bekannte Orte leichter entdeckbar machen. Erweitere die Besucherreise über die Hauptattraktionen hinaus."
+      },
+      {
+        "icon": "◈",
+        "title": "Kulturerhalt",
+        "desc": "Übersetze lokale Geschichten, Artefakte, Traditionen und mündliches Erbe in dauerhafte digitale Erlebnisse, die überleben und reisen."
+      },
+      {
+        "icon": "✦",
+        "title": "Besucherengagement",
+        "desc": "Erhöhe Verweildauer, Routenabschluss, Wiederholungsbesuche und Querpromotion mit lokalen Hotels, Restaurants und Guides."
+      }
+    ],
+    "formHeading": "Ein Partnerschaftsgespräch beginnen",
+    "formSub": "Für Gemeinden, Museen, Tourismusverbände, Schulen, Hotels, lokale Guides und Unternehmen.",
+    "fields": {
+      "org": "Organisation",
+      "email": "E-Mail",
+      "region": "Region / Standort",
+      "type": "Partnerschaftsart",
+      "typePlaceholder": "Auswählen…",
+      "typeOptions": [
+        "Gemeinde / Lokale Verwaltung",
+        "Museum oder Kultureinrichtung",
+        "Tourismusunternehmen",
+        "Schule oder Bildungsorganisation",
+        "Hotel oder Unterkunft",
+        "Guide oder Reiseveranstalter",
+        "Medien oder Presse",
+        "Sonstiges"
+      ],
+      "message": "Erzähle uns von deinem Interesse",
+      "submit": "Partnerschaftsanfrage senden",
+      "note": "Wir antworten innerhalb von 2 Werktagen."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Fragen vor\nder Reise.",
+    "items": [
+      {
+        "q": "Was ist Unlocking Bulgaria?",
+        "a": "Unlocking Bulgaria ist eine Premium-Mobile-App zur Erkundung Bulgariens durch echte Quests, cineastisches Storytelling, optionale AR-Schichten, historische Routen, sammelbare Relikte und regionale Domänen. Sie ist um eine zentrale Frage aufgebaut: Wie hat der Name Bulgarien 1345 Jahre überlebt?"
+      },
+      {
+        "q": "Ist es ein Spiel oder ein Reiseführer?",
+        "a": "Keines von beidem. Es nutzt spielähnliche Fortschrittssysteme, Relikte und Belohnungen — aber das eigentliche Produkt ist kulturelle Erkundung an echten Orten. Es ähnelt eher einem cineastischen Museumserlebnis kombiniert mit GPS-Navigation und historischem Storytelling."
+      },
+      {
+        "q": "Muss ich körperlich in Bulgarien sein?",
+        "a": "Der Großteil des Erlebnisses ist für die echte Erkundung ausgelegt — den Besuch tatsächlicher Orte in Bulgarien. Die Zeitleiste, Domänenübersichten und einige Geschichtsinhalte sind jedoch von überall zugänglich, um deine Reise zu planen und vorzubereiten."
+      },
+      {
+        "q": "Ist AR erforderlich, um die App zu nutzen?",
+        "a": "Nein. Der Wächterblick AR ist vollständig optional. Jeder AR-Moment hat eine vollständige Nicht-AR-Alternative mit lesbarem Inhalt, Untertiteln und klarer Abschlusslogik. Das Kern-Quest-Erlebnis funktioniert vollständig ohne AR."
+      },
+      {
+        "q": "Ist die App für Kinder geeignet?",
+        "a": "Ja. Die App ist familienfreundlich gestaltet mit Tempoeinstellungen, Quiz-Inhalten und Belohnungen, die Kinder ansprechen. Routen unterstützen Familiengruppen, Schulausflüge und Kulturtouristen jeden Alters."
+      },
+      {
+        "q": "Welche Sprachen werden unterstützt?",
+        "a": "Die App unterstützt 13 Sprachen: Bulgarisch, Englisch, Deutsch, Französisch, Spanisch, Italienisch, Rumänisch, Türkisch, Griechisch, Polnisch, Russisch, Japanisch und Serbisch."
+      },
+      {
+        "q": "Benötige ich ein Konto?",
+        "a": "Grundlegende Erkundung ist ohne Konto möglich. Ein Konto ist erforderlich, um den Routenfortschritt zu speichern, Relikte zu sammeln, den Domänenabschluss zu verfolgen und geräteübergreifend zu synchronisieren."
+      },
+      {
+        "q": "Wie funktioniert die Preisgestaltung?",
+        "a": "Ausgewählte Kontrollpunkt-Vorschauen sind kostenlos. Vollständiger Routenzugang und Domänenpakete sind über In-App-Käufe verfügbar. Die Preise sind Premium und transparent — zahle für das, was du erkunden möchtest."
+      },
+      {
+        "q": "Können Gemeinden und Unternehmen mit der App kooperieren?",
+        "a": "Ja. Gemeinden, Museen, Schulen, Tourismusunternehmen, Hotels und lokale Guides können bei Routengestaltung, Kulturvalidierung und Besucherengagementprogrammen zusammenarbeiten. Nutze das Partnerschaftsformular, um das Gespräch zu beginnen."
+      },
+      {
+        "q": "Ist die App für Android und iOS verfügbar?",
+        "a": "Ja. Unlocking Bulgaria wird für iOS und Android entwickelt. Trage dich auf dieser Seite in die Startliste ein, um benachrichtigt zu werden, wenn die App in deiner Region verfügbar ist."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "heading": "Support, Partnerschaften\nund Medien.",
+    "cards": [
+      {
+        "icon": "◉",
+        "title": "Nutzersupport",
+        "desc": "Fragen zu Routen, Fortschritt, Relikten, Konten oder dem App-Erlebnis.",
+        "email": "support@unlockingbulgaria.com",
+        "label": "support@unlockingbulgaria.com"
+      },
+      {
+        "icon": "◈",
+        "title": "Partnerschaften",
+        "desc": "Gemeinden, Museen, Tourismusverbände, Schulen und Unternehmen.",
+        "email": "partners@unlockingbulgaria.com",
+        "label": "partners@unlockingbulgaria.com"
+      },
+      {
+        "icon": "✦",
+        "title": "Medien und Presse",
+        "desc": "Pressemappen, Interviews, Berichterstattung und redaktionelle Zusammenarbeit.",
+        "email": "media@unlockingbulgaria.com",
+        "label": "media@unlockingbulgaria.com"
+      },
+      {
+        "icon": "⌘",
+        "title": "Geschäftsanfragen",
+        "desc": "Lizenzierung, White-Label, Investitionen und strategische Gespräche.",
+        "email": "business@unlockingbulgaria.com",
+        "label": "business@unlockingbulgaria.com"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Eine echte Reise durch das verborgene Gedächtnis Bulgariens.",
+    "copyright": "© 2026 Unlocking Bulgaria. Alle Rechte vorbehalten.",
+    "groups": [
+      {
+        "label": "Erkunden",
+        "links": [
+          { "label": "Wie es funktioniert", "href": "#how-it-works" },
+          { "label": "Domänen", "href": "#domains" },
+          { "label": "Wächterblick", "href": "#guardian-sight" },
+          { "label": "Zeitleiste", "href": "#timeline" }
+        ]
+      },
+      {
+        "label": "Produkt",
+        "links": [
+          { "label": "Funktionen", "href": "#features" },
+          { "label": "Herunterladen", "href": "#download" },
+          { "label": "FAQ", "href": "#faq" },
+          { "label": "Support", "href": "#contact" }
+        ]
+      },
+      {
+        "label": "Partner",
+        "links": [
+          { "label": "Partner werden", "href": "#partners" },
+          { "label": "Gemeinden", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Museen", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Medien", "href": "mailto:media@unlockingbulgaria.com" }
+        ]
+      }
+    ],
+    "legal": [
+      { "label": "Datenschutzrichtlinie", "href": "#privacy" },
+      { "label": "Nutzungsbedingungen", "href": "#terms" },
+      { "label": "Cookies", "href": "#cookies" }
+    ]
+  },
+  "langSelector": {
+    "title": "Sprache wählen",
+    "close": "Schließen"
+  },
+  "arrival": {
+    "cta": "Die Reise enthüllen"
+  },
+  "memory": {
+    "pre": "Kein Land.",
+    "name": "Bulgarien.",
+    "post": "Ein Geheimnis, das dreizehn Jahrhunderte überlebte."
+  },
+  "journey": {
+    "eyebrow": "Der Weg",
+    "heading": "Fünf Entdeckungen.\nEine Verwandlung.",
+    "items": [
+      { "num": "01", "sym": "✦", "name": "Hüter", "desc": "Der Titel, den jene verdienen, die die gesamte Reise abgeschlossen haben. Bewahrer des lebendigen Gedächtnisses Bulgariens — Пазител." },
+      { "num": "02", "sym": "⌘", "name": "Route", "desc": "Fünf echte Orte. Verbunden durch Geschichte. Geh die Route — schalte die Geschichte frei, die zwischen ihnen verborgen ist." },
+      { "num": "03", "sym": "◈", "name": "Relikt", "desc": "Schließe eine Route ab. Erhalte ein dauerhaftes Artefakt. Ein Stück bulgarischen Gedächtnisses, das für immer dir gehört." },
+      { "num": "04", "sym": "◉", "name": "Domäne", "desc": "Sechs Regionen. Jede birgt eigene Routen, eigene Epochen, eigene Geheimnisse. Enthülle eine Domäne — beanspruche eine Schicht." },
+      { "num": "05", "sym": "◎", "name": "Siegel", "desc": "Das Zeichen einer abgeschlossenen Domäne. Sechs Siegel. Sechs Schichten des Gedächtnisses. Alle sechs — und Bulgarien gehört dir." }
+    ]
+  },
+  "skipLink": "Zum Inhalt springen",
+  "ariaNav": "Hauptnavigation",
+  "ariaFooterNav": "Fußzeilen-Navigation",
+  "ariaLangNav": "Rechtliche Navigation",
+  "ariaHome": "Unlocking Bulgaria — zur Startseite",
+  "ariaTop": "Unlocking Bulgaria — nach oben",
+  "ariaHero": "Ankunft — Eröffnungskapitel"
+}

@@ -1,1 +1,449 @@
-﻿{}
+{
+  "lang": "tr",
+  "meta": {
+    "title": "Unlocking Bulgaria — Bulgaristan'ın Gizli Belleğinde Bir Yolculuk",
+    "description": "Gerçek görevler, sinematik hikaye anlatımı, isteğe bağlı AR, tarihi rotalar, kutsal emanetler ve kültürel keşiflerle Bulgaristan'ı keşfetmek için premium uygulama. Bir Koruyucu ol.",
+    "ogTitle": "Unlocking Bulgaria — 1345 Yıl. Bir İsim Hayatta Kaldı.",
+    "ogDescription": "Bulgaristan'da yolculuk et. Kadim sırları ortaya çıkar. Bir Koruyucu ol."
+  },
+  "nav": {
+    "howItWorks": "Nasıl çalışır",
+    "domains": "Bölgeler",
+    "guardianSight": "Koruyucunun Bakışı",
+    "timeline": "Kronoloji",
+    "partners": "Ortaklar",
+    "faq": "SSS",
+    "download": "İndir",
+    "language": "Dil",
+    "menuLabel": "Menü"
+  },
+  "hero": {
+    "eyebrow": "Resmi ürün web sitesi",
+    "line1": "1345 Yıl.",
+    "line2": "Bir İsim",
+    "line3": "hayatta kaldı.",
+    "question": "Nasıl?",
+    "lede": "Bulgaristan'da yolculuk et. Kadim sırları ortaya çıkar. On üç yüzyıl boyunca varlığını sürdüren yaşayan belleğin koruyucusu — Bir Koruyucu ol.",
+    "ctaPrimary": "Uygulamayı İndir",
+    "ctaSecondary": "Yolculuğu İzle",
+    "trust": ["Gerçek görevler", "Sinematik hikaye anlatımı", "İsteğe bağlı AR", "Aile dostu", "13 dil"],
+    "mapLabel": "Bulgaristan'ın gizli belleğinin interaktif haritası",
+    "phoneDomain": "İsmin Bölgesi",
+    "phoneTitle": "Eski başkentler",
+    "phoneDesc": "Belleğin devlete dönüştüğü yerleri ziyaret et.",
+    "phoneProgress": "7 mühürden 4'ü keşfedildi"
+  },
+  "band": {
+    "sub": "Bir rehber değil. Bir harita değil. Bir oyun değil.",
+    "statement": "Bulgaristan'ın yaşayan belleğinde gerçek bir yolculuk."
+  },
+  "howItWorks": {
+    "eyebrow": "Nasıl çalışır",
+    "heading": "Bir Koruyucu ol,\nbir yer bir yer.",
+    "lede": "Unlocking Bulgaria'daki her yolculuk açık bir ilerlemeyi takip eder — tek bir kontrol noktasından Bulgaristan'ın gizli belleğinin tam olarak açılmasına kadar.",
+    "steps": [
+      {
+        "label": "Adım 1",
+        "title": "Bir kontrol noktasını ziyaret et",
+        "desc": "Gerçek bir yere git. Varışınla kontrol noktasını etkinleştir. Bir hikaye, ipucu ya da gizli katmanın kilidini aç."
+      },
+      {
+        "label": "Adım 2 — 5 nokta",
+        "title": "Rotayı tamamla → Emanet topla",
+        "desc": "Beş bağlantılı kontrol noktası bir rota oluşturur. Rotayı tamamlayarak kalıcı bir dijital emanet al — Bulgaristan tarihinden bir eser."
+      },
+      {
+        "label": "Adım 3 — 3 rota",
+        "title": "Bir bölgenin kilidini aç → Mühür kazan",
+        "desc": "Üç rota bölgesel bir alanın kilidini açar. Mührünü kazan — o bölgenin gizli belleğine hakim olmanın simgesi."
+      },
+      {
+        "label": "Adım 4 — 6 bölge",
+        "title": "Ulusal kilit açma → Koruyucu ol",
+        "desc": "Altı bölgenin tümünü tamamla. Bulgaristan'ın tam belleğini aç. Koruyucu unvanını al — Пазител."
+      }
+    ],
+    "flow": [
+      { "icon": "◉", "name": "Kontrol noktası", "sub": "Gerçek yer · Hikaye · İpucu" },
+      { "icon": "⌘", "name": "Rota + Emanet", "sub": "5 nokta · 1 eser" },
+      { "icon": "◈", "name": "Bölge + Mühür", "sub": "3 rota · 1 bölgesel mühür" },
+      { "icon": "✦", "name": "Koruyucu — Пазител", "sub": "6 bölge · Tüm Bulgaristan açıldı" }
+    ]
+  },
+  "domains": {
+    "eyebrow": "Bölgeleri keşfet",
+    "heading": "Her bölge\nbir dünya saklar.",
+    "lede": "Altı bölgesel alan, Bulgaristan'ın gizli belleğinin haritasını oluşturur. Her birinin kendine ait rotaları, emanetleri, dönemi ve son mührü vardır.",
+    "explore": "Keşfet",
+    "continue": "Devam et",
+    "locked": "Kilitli",
+    "epochBefore": "İsimden Önce",
+    "epochAfter": "İsimden Sonra",
+    "routesOf": "3 rotadan tamamlandı",
+    "lures": [
+      "Tuna'nın imparatorlukla buluştuğu yer.\nKaleler tarihin unuttuğunu hatırlar.",
+      "Pliska. Preslav. Tarnovo.\nÜç başkent. Asla düşmeyen bir isim.",
+      "Antik limanlar. Ada manastırları.\nDeniz, karanın sırlarını korudu.",
+      "Altın mezarlar. Gül tarlaları.\nBu toprakların en eski belleği.",
+      "Orfeus burada yürüdü.\nMüzik hâlâ kayalarda yaşıyor.",
+      "Şehrin altında Roma kalıntıları.\nHer katman farklı bir hikaye anlatır."
+    ],
+    "cards": [
+      {
+        "region": "Tuna ve Kuzeybatı",
+        "name": "Taş ve Nehir Bölgesi",
+        "epoch": "before",
+        "key": "Kaleler, nehirler, Roma yolları ve Belogradchik kaya oluşumları — Tuna'nın imparatorluğun sınırını çizdiği yer.",
+        "progress": 0,
+        "emblem": "🏔",
+        "status": "explore"
+      },
+      {
+        "region": "Eski başkentler",
+        "name": "İsmin Bölgesi",
+        "epoch": "after",
+        "key": "Pliska, Preslav, Tarnovo — Bulgaristan'ın adını fetihler, ateş ve yeniden doğuş boyunca taşıyan üç başkent.",
+        "progress": 33,
+        "emblem": "⚔",
+        "status": "continue"
+      },
+      {
+        "region": "Karadeniz kıyısı",
+        "name": "Deniz Kapısı Bölgesi",
+        "epoch": "before",
+        "key": "Antik limanlar, burunlar, tuzlu göller, ada manastırları — Yunan kolonilerinin Trak kıyılarıyla buluştuğu ve denizin sınır olduğu yer.",
+        "progress": 0,
+        "emblem": "🌊",
+        "status": "explore"
+      },
+      {
+        "region": "Trakya vadisi",
+        "name": "Krallar Bölgesi",
+        "epoch": "before",
+        "key": "Trak tümülüsleri, ritüel tepeler, gül tarlaları, bağlar ve altın eserler — bu topraklarda korunan en eski bellek.",
+        "progress": 0,
+        "emblem": "🏛",
+        "status": "explore"
+      },
+      {
+        "region": "Rodop Dağları",
+        "name": "Ses ve Taş Bölgesi",
+        "epoch": "after",
+        "key": "Orfeus mitleri, kutsal mağaralar, eski köprüler, taş köyler, ormanlar ve Avrupa'nın en eski yaşayan müzik geleneği.",
+        "progress": 0,
+        "emblem": "♪",
+        "status": "explore"
+      },
+      {
+        "region": "Sofya ve Batı Bulgaristan",
+        "name": "Kavşaklar Bölgesi",
+        "epoch": "after",
+        "key": "Kentsel katmanlar, şehrin altındaki Serdica kalıntıları, Vitosha dağ yolları, antik kaynaklar ve canlı pazarlar.",
+        "progress": 0,
+        "emblem": "✦",
+        "status": "explore"
+      }
+    ]
+  },
+  "guardianSight": {
+    "eyebrow": "Koruyucunun Bakışı",
+    "heading": "Başkalarının göremediğini\ngör.",
+    "lede": "Koruyucunun Bakışı, Unlocking Bulgaria'daki isteğe bağlı artırılmış gerçeklik kamera modudur. Dünyaya doğrult — ve altındaki gizli katmanı gör.",
+    "sightBody": "Kamerayı dünyaya doğrult.\nGizli katman gerçekliğin altında belirir.",
+    "sightNote": "İsteğe bağlı AR · Her anın AR'sız bir yolu var",
+    "ariaVisual": "Koruyucunun Bakışı AR arayüzü — animasyonlu tarama halkaları",
+    "floatTag1": "Gizli katman açığa çıktı",
+    "floatTag2": "Kontrol noktası · 82m",
+    "centerLabel": "Koruyucunun\nBakışı",
+    "features": [
+      {
+        "icon": "◈",
+        "title": "Sembolik izler",
+        "desc": "Kadim semboller, hiyeroglifler ve rota parçaları anlamlı yerlerde gerçek dünya üzerinde beliriyor."
+      },
+      {
+        "icon": "◉",
+        "title": "Kontrol noktası varlığı",
+        "desc": "Yakındaki kontrol noktaları ışık enerjisiyle titreşiyor. Ne kadar yakınsanız, sinyal o kadar güçlü."
+      },
+      {
+        "icon": "✦",
+        "title": "Her zaman erişilebilir",
+        "desc": "AR isteğe bağlıdır. Her AR anının okunabilir içerik, altyazı ve net tamamlama mantığıyla tam bir AR'sız yolu vardır."
+      },
+      {
+        "icon": "⌘",
+        "title": "Kilit noktalarda daha derin anlar",
+        "desc": "Ana kontrol noktaları ve bölge finalleri daha derin AR dizileri sunar — yeniden yapılandırılmış sahneler, eser açıklamaları ve sinematik anlar."
+      }
+    ]
+  },
+  "timeline": {
+    "eyebrow": "Tarihsel kronoloji",
+    "heading": "Ölmeyi reddeden\nbellek.",
+    "lede": "1345 yıllık Bulgar tarihi — ismi, inancı ve dili tanımlayan anlara sıkıştırılmış.",
+    "sub": "Çizgiyi takip et. Neyin hayatta kaldığını gör.",
+    "events": [
+      {
+        "year": "681",
+        "shortName": "Devlet",
+        "tag": "Bulgaristan'ın kuruluşu",
+        "title": "Han Asparuh Bulgar devletini kurar.",
+        "body": "Tuna kıyısında, Bulgarlar ve Slavlardan oluşan bir federasyon, belirleyici bir askeri zaferden sonra Bizans İmparatorluğu tarafından tanınan ilk Bulgar devletini kurar. Bulgaristan adı tarihe girer. Bundan sonra her şeyi atlatacak bir isim."
+      },
+      {
+        "year": "862",
+        "shortName": "Harfler",
+        "tag": "Aziz Kiril ve Metodius",
+        "title": "Slav halkları için yeni bir alfabe doğuyor.",
+        "body": "Selanik'ten iki kardeş, daha sonraki Kiril alfabesinin temelini oluşturan Glagolitik yazıyı yaratır. İlk kez Slav dünyası kendi harflerine kavuşur. Bulgaristan bu mirası yüzyıllarca benimseyecek ve koruyacaktır."
+      },
+      {
+        "year": "865",
+        "shortName": "Vaftiz",
+        "tag": "Bulgaristan'ın vaftizi",
+        "title": "Han Boris I. Bulgaristan için Hristiyanlığı kabul eder.",
+        "body": "Derin kültürel sonuçları olan hesaplı bir siyasi eylemde, Han Boris I. Bulgaristan'ı Hristiyanlığa geçirir. İnanç ve okuryazarlık etrafında yeni bir kimlik oluşur. Pliska ve Preslav, Slav Hristiyan medeniyetinin merkezleri haline gelir."
+      },
+      {
+        "year": "893",
+        "shortName": "Dil",
+        "tag": "Preslav Konseyi",
+        "title": "Eski Bulgarca, devletin ve kilisenin resmi dili olur.",
+        "body": "Çar Simeon I. döneminde Preslav Edebi Okulu gelişir. Eski Bulgarca tüm resmi bağlamlarda Yunancayı geride bırakır. Bulgaristan, Ortaçağ Avrupa'sının kalbinde edebi ve manevi bir güç haline gelir."
+      },
+      {
+        "year": "1018",
+        "shortName": "Düşüş",
+        "tag": "Bizans fethi",
+        "title": "Bulgaristan düşer — ama isim yaşar.",
+        "body": "II. Basileios onlarca yıllık savaşın ardından Bulgaristan'ı fetheder. Bulgar devleti 167 yıl boyunca varlığını yitirir. Yine de isim, dil ve bellek hayatta kalır — manastırlarda, köylerde, sözlü gelenekte, taşların ta kendisinde korunarak."
+      },
+      {
+        "year": "1185",
+        "shortName": "Dönüş",
+        "tag": "Assen Kardeşler",
+        "title": "İkinci Bulgar İmparatorluğu Tarnovo'dan yükseliyor.",
+        "body": "Assen ve Petır kardeşler Tarnovo tepelerinden bir isyan başlatır. Bulgaristan yeniden doğar — tam bir fethin ardından kendini yeniden kuran tek ortaçağ Slav devleti. İsim hayatta kaldı. Bellek geri döndü. Yolculuk devam ediyor."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Uygulama özellikleri",
+    "heading": "Keşif için yapıldı,\ndikkat dağıtmak için değil.",
+    "lede": "Her özellik, ziyaret ettiğin gerçek yerlerle bağını derinleştirmek için var.",
+    "items": [
+      { "icon": "◉", "title": "Gerçek görevler", "desc": "Gerçek GPS noktaları etrafında oluşturulmuş rotalar. Uygulama seni yere yönlendirir — yer seni hikayesiyle ödüllendirir." },
+      { "icon": "▶", "title": "Sinematik hikaye anlatımı", "desc": "Her kontrol noktası tarih, mitoloji, yerel bellek veya doğal mirastan beslenen bir anlatı anı ortaya çıkarır." },
+      { "icon": "◎", "title": "Koruyucunun Bakışı AR", "desc": "İsteğe bağlı artırılmış gerçeklik, gerçek dünya üzerine bindirilen sembolleri, eserleri ve gizli katmanları ortaya çıkarır." },
+      { "icon": "⌛", "title": "Tarihsel kronoloji", "desc": "1345 yıllık Bulgar belleği boyunca interaktif bir harita — yürüdüğün rotalara bağlı." },
+      { "icon": "◈", "title": "Emanetler ve eserler", "desc": "Rota tamamlandığında kalıcı dijital emanetler topla. Bulgaristan'ın gizli tarihinin kişisel bir arşivini oluştur." },
+      { "icon": "✦", "title": "Bölgeler ve mühürler", "desc": "Bölgesel alanları tamamla. Mühürler kazan. Bulgar belleğinin tam haritasını adım adım açığa çıkar." },
+      { "icon": "⊕", "title": "13 dil", "desc": "Tam çok dilli destek — Bulgarca, İngilizce, Almanca, Yunanca, Rusça, Japonca ve daha fazlası dahil." },
+      { "icon": "❖", "title": "Aile keşfi", "desc": "Aileler, okullar ve her yaştan kültürel gezginler için tempo modları ve içerik seviyeleri." },
+      { "icon": "⊞", "title": "Çevrimdışı destek", "desc": "Sınırlı sinyalli dağlık, köy ve miras alanları için temel rota içeriği önceden hazırlanmış." },
+      { "icon": "⊗", "title": "Ortak rotalar", "desc": "Belediyeler, müzeler ve turizm işletmeleri gerçek yerel miras ile bağlantılı rotalar oluşturabilir." }
+    ]
+  },
+  "download": {
+    "eyebrow": "Uygulamayı indir",
+    "heading": "Bulgaristan'ın\nKoruyucusu ol.",
+    "lede": "Uygulama iOS ve Android için geliyor. Başlatma listesine katıl ve kapılar açıldığında ilk bölgelerin kilidini açmaya hazır ol.",
+    "appStore": { "label": "İndir:", "name": "App Store" },
+    "googlePlay": { "label": "İndir:", "name": "Google Play" },
+    "trust": "iOS ve Android · Ücretsiz keşif · Premium rotalar mevcut",
+    "comingSoon": "Yakında"
+  },
+  "partners": {
+    "eyebrow": "Belediyeler ve ortaklar için",
+    "heading": "Gerçek yerleri\nunutulmaz yolculuklara dönüştür.",
+    "lede": "Unlocking Bulgaria, destinasyonların kültürel belleği premium dijital katman olarak sunmasına yardımcı olur — ziyaretçileri gerçek yerlere yönlendirerek, yerel işletmeleri destekleyerek ve bölgesel kimliği güçlendirerek.",
+    "benefits": [
+      {
+        "icon": "◉",
+        "title": "Turizm tanıtımı",
+        "desc": "Daha az bilinen yerleri keşfetmeyi kolaylaştıran modern rotalar oluştur. Ziyaretçi yolculuğunu ana cazibe merkezlerinin ötesine taşı."
+      },
+      {
+        "icon": "◈",
+        "title": "Kültürel koruma",
+        "desc": "Yerel hikayeleri, eserleri, gelenekleri ve sözlü tarihi hayatta kalan ve seyahat eden kalıcı dijital deneyimlere dönüştür."
+      },
+      {
+        "icon": "✦",
+        "title": "Ziyaretçi bağlılığı",
+        "desc": "Kalış süresini, rota tamamlama oranını, tekrarlı ziyaretleri ve yerel oteller, restoranlar ve rehberlerle çapraz tanıtımı artır."
+      }
+    ],
+    "formHeading": "Ortaklık görüşmesi başlat",
+    "formSub": "Belediyeler, müzeler, turizm kurulları, okullar, oteller, yerel rehberler ve işletmeler için.",
+    "fields": {
+      "org": "Kuruluş",
+      "email": "E-posta",
+      "region": "Bölge / Konum",
+      "type": "Ortaklık türü",
+      "typePlaceholder": "Seç…",
+      "typeOptions": [
+        "Belediye / Yerel yönetim",
+        "Müze veya kültürel kurum",
+        "Turizm işletmesi",
+        "Okul veya eğitim kuruluşu",
+        "Otel veya konaklama",
+        "Rehber veya tur operatörü",
+        "Medya veya basın",
+        "Diğer"
+      ],
+      "message": "İlginiz hakkında bize bilgi verin",
+      "submit": "Ortaklık talebi gönder",
+      "note": "2 iş günü içinde yanıt veriyoruz."
+    }
+  },
+  "faq": {
+    "eyebrow": "SSS",
+    "heading": "Yolculuktan önce\nsorular.",
+    "items": [
+      {
+        "q": "Unlocking Bulgaria nedir?",
+        "a": "Unlocking Bulgaria, gerçek görevler, sinematik hikaye anlatımı, isteğe bağlı AR katmanları, tarihi rotalar, koleksiyonluk emanetler ve bölgesel alanlar aracılığıyla Bulgaristan'ı keşfetmek için premium bir mobil uygulamadır. Tek bir merkezi soru etrafında kurulmuştur: Bulgaristan adı 1345 yıl nasıl hayatta kaldı?"
+      },
+      {
+        "q": "Bir oyun mu yoksa seyahat rehberi mi?",
+        "a": "Hiçbiri. Oyun benzeri ilerleme sistemleri, emanetler ve ödüller kullanır — ancak gerçek ürün, gerçek yerlerde kültürel keşiftir. GPS navigasyon ve tarihi hikaye anlatımıyla birleştirilmiş sinematik bir müze deneyimine daha yakındır."
+      },
+      {
+        "q": "Fiziksel olarak Bulgaristan'da olmam gerekiyor mu?",
+        "a": "Deneyimin büyük bölümü gerçek keşif için tasarlanmıştır — Bulgaristan'daki gerçek yerleri ziyaret etmek. Ancak kronoloji, bölge önizlemeleri ve bazı hikaye içerikleri, yolculuğunuzu planlamak ve hazırlamak için her yerden erişilebilir."
+      },
+      {
+        "q": "Uygulamayı kullanmak için AR gerekli mi?",
+        "a": "Hayır. Koruyucunun Bakışı AR tamamen isteğe bağlıdır. Her AR anının okunabilir içerik, altyazı ve net tamamlama mantığıyla tam bir AR'sız alternatifi vardır. Temel görev deneyimi tamamen AR olmadan çalışır."
+      },
+      {
+        "q": "Uygulama çocuklar için uygun mu?",
+        "a": "Evet. Uygulama, çocukları meşgul eden tempo modları, test tarzı içerik ve ödüllerle aile dostu olacak şekilde tasarlanmıştır. Rotalar aile gruplarını, okul gezilerini ve her yaştan kültürel gezgini destekler."
+      },
+      {
+        "q": "Hangi diller destekleniyor?",
+        "a": "Uygulama 13 dili destekler: Bulgarca, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Rumence, Türkçe, Yunanca, Lehçe, Rusça, Japonca ve Sırpça."
+      },
+      {
+        "q": "Bir hesaba ihtiyacım var mı?",
+        "a": "Temel keşif hesap olmadan kullanılabilir. Rota ilerlemesini kaydetmek, emanet toplamak, bölge tamamlamayı takip etmek ve cihazlar arasında senkronize etmek için hesap gereklidir."
+      },
+      {
+        "q": "Fiyatlandırma nasıl işliyor?",
+        "a": "Seçili kontrol noktası önizlemeleri ücretsizdir. Tam rota erişimi ve bölge paketleri uygulama içi satın alma yoluyla mevcuttur. Fiyatlar premium ve şeffaftır — keşfetmek istediğin şey için ödeme yaparsın."
+      },
+      {
+        "q": "Belediyeler ve işletmeler uygulamayla ortaklık kurabilir mi?",
+        "a": "Evet. Belediyeler, müzeler, okullar, turizm işletmeleri, oteller ve yerel rehberler rota tasarımı, kültürel doğrulama ve ziyaretçi bağlılığı programlarında işbirliği yapabilir. Görüşmeyi başlatmak için ortaklık formunu kullan."
+      },
+      {
+        "q": "Uygulama Android ve iOS'ta mevcut mu?",
+        "a": "Evet. Unlocking Bulgaria iOS ve Android için geliştiriliyor. Uygulama bölgende mevcut olduğunda bildirim almak için bu sayfadaki başlatma listesine katıl."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "heading": "Destek, ortaklıklar\nve medya.",
+    "cards": [
+      {
+        "icon": "◉",
+        "title": "Kullanıcı desteği",
+        "desc": "Rotalar, ilerleme, emanetler, hesaplar veya uygulama deneyimi hakkındaki sorular.",
+        "email": "support@unlockingbulgaria.com",
+        "label": "support@unlockingbulgaria.com"
+      },
+      {
+        "icon": "◈",
+        "title": "Ortaklıklar",
+        "desc": "Belediyeler, müzeler, turizm kurulları, okullar ve işletmeler.",
+        "email": "partners@unlockingbulgaria.com",
+        "label": "partners@unlockingbulgaria.com"
+      },
+      {
+        "icon": "✦",
+        "title": "Medya ve basın",
+        "desc": "Basın kitleri, röportajlar, yayınlar ve editoryal işbirliği.",
+        "email": "media@unlockingbulgaria.com",
+        "label": "media@unlockingbulgaria.com"
+      },
+      {
+        "icon": "⌘",
+        "title": "İş talepleri",
+        "desc": "Lisanslama, white-label, yatırımlar ve stratejik görüşmeler.",
+        "email": "business@unlockingbulgaria.com",
+        "label": "business@unlockingbulgaria.com"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Bulgaristan'ın gizli belleğinde gerçek bir yolculuk.",
+    "copyright": "© 2026 Unlocking Bulgaria. Tüm hakları saklıdır.",
+    "groups": [
+      {
+        "label": "Keşfet",
+        "links": [
+          { "label": "Nasıl çalışır", "href": "#how-it-works" },
+          { "label": "Bölgeler", "href": "#domains" },
+          { "label": "Koruyucunun Bakışı", "href": "#guardian-sight" },
+          { "label": "Kronoloji", "href": "#timeline" }
+        ]
+      },
+      {
+        "label": "Ürün",
+        "links": [
+          { "label": "Özellikler", "href": "#features" },
+          { "label": "İndir", "href": "#download" },
+          { "label": "SSS", "href": "#faq" },
+          { "label": "Destek", "href": "#contact" }
+        ]
+      },
+      {
+        "label": "Ortaklar",
+        "links": [
+          { "label": "Ortak ol", "href": "#partners" },
+          { "label": "Belediyeler", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Müzeler", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Medya", "href": "mailto:media@unlockingbulgaria.com" }
+        ]
+      }
+    ],
+    "legal": [
+      { "label": "Gizlilik politikası", "href": "#privacy" },
+      { "label": "Kullanım koşulları", "href": "#terms" },
+      { "label": "Çerezler", "href": "#cookies" }
+    ]
+  },
+  "langSelector": {
+    "title": "Dil seç",
+    "close": "Kapat"
+  },
+  "arrival": {
+    "cta": "Yolculuğu ortaya çıkar"
+  },
+  "memory": {
+    "pre": "Bir ülke değil.",
+    "name": "Bulgaristan.",
+    "post": "On üç yüzyıl boyunca hayatta kalan bir gizem."
+  },
+  "journey": {
+    "eyebrow": "Yol",
+    "heading": "Beş keşif.\nBir dönüşüm.",
+    "items": [
+      { "num": "01", "sym": "✦", "name": "Koruyucu", "desc": "Tüm yolculuğu tamamlayanların kazandığı unvan. Bulgaristan'ın yaşayan belleğinin bekçisi — Пазител." },
+      { "num": "02", "sym": "⌘", "name": "Rota", "desc": "Beş gerçek yer. Tarihle birbirine bağlı. Rotayı kat et — aralarında gizlenen hikayenin kilidini aç." },
+      { "num": "03", "sym": "◈", "name": "Emanet", "desc": "Bir rotayı tamamla. Kalıcı bir eser al. Sonsuza dek sana ait olan Bulgar belleğinin bir parçası." },
+      { "num": "04", "sym": "◉", "name": "Bölge", "desc": "Altı bölge. Her biri kendi rotalarını, dönemini, sırlarını saklar. Bir bölgeyi ortaya çıkar — bir katman kazan." },
+      { "num": "05", "sym": "◎", "name": "Mühür", "desc": "Tamamlanan bir bölgenin işareti. Altı mühür. Altı bellek katmanı. Hepsi — ve Bulgaristan senindir." }
+    ]
+  },
+  "skipLink": "İçeriğe geç",
+  "ariaNav": "Ana navigasyon",
+  "ariaFooterNav": "Alt bilgi navigasyonu",
+  "ariaLangNav": "Yasal navigasyon",
+  "ariaHome": "Unlocking Bulgaria — ana sayfaya git",
+  "ariaTop": "Unlocking Bulgaria — yukarı dön",
+  "ariaHero": "Varış — açılış bölümü"
+}

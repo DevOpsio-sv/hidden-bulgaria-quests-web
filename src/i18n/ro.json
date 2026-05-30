@@ -1,1 +1,449 @@
-﻿{}
+{
+  "lang": "ro",
+  "meta": {
+    "title": "Unlocking Bulgaria — Călătorește prin memoria ascunsă a Bulgariei",
+    "description": "O aplicație premium pentru a explora Bulgaria prin misiuni reale, povestire cinematografică, RA opțională, trasee istorice, relicve și descoperiri culturale. Devino un Pazitor.",
+    "ogTitle": "Unlocking Bulgaria — 1345 de ani. Un Singur Nume a supraviețuit.",
+    "ogDescription": "Călătorește prin Bulgaria. Dezvăluie secretele antice. Devino un Pazitor."
+  },
+  "nav": {
+    "howItWorks": "Cum funcționează",
+    "domains": "Domenii",
+    "guardianSight": "Privirea Pazitorului",
+    "timeline": "Cronologie",
+    "partners": "Parteneri",
+    "faq": "Întrebări",
+    "download": "Descarcă",
+    "language": "Limbă",
+    "menuLabel": "Meniu"
+  },
+  "hero": {
+    "eyebrow": "Site-ul oficial al produsului",
+    "line1": "1345 de ani.",
+    "line2": "Un singur Nume",
+    "line3": "a supraviețuit.",
+    "question": "Cum?",
+    "lede": "Călătorește prin Bulgaria. Dezvăluie secretele antice. Devino un Pazitor — un gardian al memoriei vii care a dăinuit treisprezece secole.",
+    "ctaPrimary": "Descarcă aplicația",
+    "ctaSecondary": "Vezi călătoria",
+    "trust": ["Misiuni reale", "Povestire cinematografică", "RA opțională", "Potrivit pentru familii", "13 limbi"],
+    "mapLabel": "Harta interactivă a memoriei ascunse a Bulgariei",
+    "phoneDomain": "Domeniul Numelui",
+    "phoneTitle": "Vechile capitale",
+    "phoneDesc": "Vizitează locurile unde memoria a devenit stat.",
+    "phoneProgress": "4 din 7 sigilii descoperite"
+  },
+  "band": {
+    "sub": "Nu este un ghid. Nu este o hartă. Nu este un joc.",
+    "statement": "O călătorie reală prin memoria vie a Bulgariei."
+  },
+  "howItWorks": {
+    "eyebrow": "Cum funcționează",
+    "heading": "Devino Pazitor,\nun loc pe rând.",
+    "lede": "Fiecare călătorie în Unlocking Bulgaria urmează o progresie clară — de la un singur punct de control până la deblocarea completă a memoriei ascunse a Bulgariei.",
+    "steps": [
+      {
+        "label": "Pasul 1",
+        "title": "Vizitează un punct de control",
+        "desc": "Călătorește la un loc real. Activează punctul de control la sosire. Deblochează o poveste, un indiciu sau un strat ascuns."
+      },
+      {
+        "label": "Pasul 2 — 5 puncte",
+        "title": "Completează un traseu → Colectează o relicvă",
+        "desc": "Cinci puncte de control conectate formează un traseu. Completează-l pentru a primi o relicvă digitală permanentă — un artefact din istoria Bulgariei."
+      },
+      {
+        "label": "Pasul 3 — 3 trasee",
+        "title": "Deblochează un domeniu → Câștigă o pecete",
+        "desc": "Trei trasee deblochează un domeniu regional. Câștigă pecetea sa — simbol al stăpânirii memoriei ascunse a acelei regiuni."
+      },
+      {
+        "label": "Pasul 4 — 6 domenii",
+        "title": "Deblocare națională → Devino Pazitor",
+        "desc": "Completează toate cele șase domenii. Deblochează întreaga memorie a Bulgariei. Primește titlul de Pazitor — Пазител."
+      }
+    ],
+    "flow": [
+      { "icon": "◉", "name": "Punct de control", "sub": "Loc real · Poveste · Indiciu" },
+      { "icon": "⌘", "name": "Traseu + Relicvă", "sub": "5 puncte · 1 artefact" },
+      { "icon": "◈", "name": "Domeniu + Pecete", "sub": "3 trasee · 1 pecete regională" },
+      { "icon": "✦", "name": "Pazitor — Пазител", "sub": "6 domenii · Bulgaria întreagă deblocată" }
+    ]
+  },
+  "domains": {
+    "eyebrow": "Explorează domeniile",
+    "heading": "Fiecare regiune\nascunde o lume.",
+    "lede": "Șase domenii regionale formează harta memoriei ascunse a Bulgariei. Fiecare deține propriile trasee, relicve, epocă și pecete finală.",
+    "explore": "Explorează",
+    "continue": "Continuă",
+    "locked": "Blocat",
+    "epochBefore": "Înainte de Nume",
+    "epochAfter": "După Nume",
+    "routesOf": "din 3 trasee completate",
+    "lures": [
+      "Acolo unde Dunărea întâlnea imperiul.\nFortărețele țin minte ceea ce istoria a uitat.",
+      "Pliska. Preslav. Tarnovo.\nTrei capitale. Un nume care nu a căzut niciodată.",
+      "Porturi antice. Mănăstiri insulare.\nMarea păstra secretele pământului.",
+      "Morminte de aur. Câmpuri de trandafiri.\nCea mai veche memorie a acestui pământ.",
+      "Orfeu a călcat pe aici.\nMuzica trăiește încă în stânci.",
+      "Ruine romane sub oraș.\nFiecare strat spune o altă poveste."
+    ],
+    "cards": [
+      {
+        "region": "Dunărea și Nord-Vest",
+        "name": "Domeniul Pietrei și Râului",
+        "epoch": "before",
+        "key": "Cetăți, râuri, drumuri romane și formațiunile stâncoase de la Belogradchik — acolo unde Dunărea marca marginea imperiului.",
+        "progress": 0,
+        "emblem": "🏔",
+        "status": "explore"
+      },
+      {
+        "region": "Vechile capitale",
+        "name": "Domeniul Numelui",
+        "epoch": "after",
+        "key": "Pliska, Preslav, Tarnovo — cele trei capitale care au purtat numele Bulgariei prin cuceriri, foc și renaștere.",
+        "progress": 33,
+        "emblem": "⚔",
+        "status": "continue"
+      },
+      {
+        "region": "Coasta Mării Negre",
+        "name": "Domeniul Porții Mării",
+        "epoch": "before",
+        "key": "Porturi antice, capuri, lacuri sărate, mănăstiri insulare — acolo unde coloniile grecești au întâlnit țărmurile trace și marea a devenit graniță.",
+        "progress": 0,
+        "emblem": "🌊",
+        "status": "explore"
+      },
+      {
+        "region": "Valea Traciei",
+        "name": "Domeniul Regilor",
+        "epoch": "before",
+        "key": "Tumuli traci, coline rituale, câmpuri de trandafiri, podgorii și artefacte de aur — cea mai veche memorie păstrată în acest pământ.",
+        "progress": 0,
+        "emblem": "🏛",
+        "status": "explore"
+      },
+      {
+        "region": "Munții Rodopi",
+        "name": "Domeniul Vocii și Pietrei",
+        "epoch": "after",
+        "key": "Mituri ale lui Orfeu, peșteri sacre, poduri antice, sate de piatră, păduri și cea mai veche tradiție muzicală vie din Europa.",
+        "progress": 0,
+        "emblem": "♪",
+        "status": "explore"
+      },
+      {
+        "region": "Sofia și Bulgaria de Vest",
+        "name": "Domeniul Răscrucilor",
+        "epoch": "after",
+        "key": "Straturi urbane, ruinele Serdicăi sub oraș, poteci pe muntele Vitosha, izvoare antice și piețe vii.",
+        "progress": 0,
+        "emblem": "✦",
+        "status": "explore"
+      }
+    ]
+  },
+  "guardianSight": {
+    "eyebrow": "Privirea Pazitorului",
+    "heading": "Vezi ce\nalții nu pot.",
+    "lede": "Privirea Pazitorului este modul opțional de cameră cu realitate augmentată din Unlocking Bulgaria. Îndreptați-o spre lume — și vedeți stratul ascuns dedesubt.",
+    "sightBody": "Îndreptați camera spre lume.\nStratul ascuns apare sub realitate.",
+    "sightNote": "RA opțională · Fiecare moment are o cale fără RA",
+    "ariaVisual": "Interfața RA Privirea Pazitorului — inele de scanare animate",
+    "floatTag1": "Strat ascuns dezvăluit",
+    "floatTag2": "Punct de control · 82m",
+    "centerLabel": "Privirea\nPazitorului",
+    "features": [
+      {
+        "icon": "◈",
+        "title": "Urme simbolice",
+        "desc": "Simboluri antice, glife și fragmente de trasee apar peste lumea reală în locuri semnificative."
+      },
+      {
+        "icon": "◉",
+        "title": "Prezența punctului de control",
+        "desc": "Punctele de control din apropiere pulsează cu energie luminoasă. Cu cât ești mai aproape, cu atât semnalul este mai puternic."
+      },
+      {
+        "icon": "✦",
+        "title": "Întotdeauna accesibil",
+        "desc": "RA este opțională. Fiecare moment RA are o cale completă fără RA cu conținut lizibil, subtitrări și logică clară de finalizare."
+      },
+      {
+        "icon": "⌘",
+        "title": "Momente mai profunde la situri cheie",
+        "desc": "Punctele de control principale și finalele de domeniu oferă secvențe RA mai profunde — scene reconstruite, dezvăluiri de artefacte și momente cinematografice."
+      }
+    ]
+  },
+  "timeline": {
+    "eyebrow": "Cronologie istorică",
+    "heading": "Memoria\ncare a refuzat să moară.",
+    "lede": "1345 de ani de istorie bulgară — condensați în momentele care au definit numele, credința și limba.",
+    "sub": "Urmează linia. Vezi ce a supraviețuit.",
+    "events": [
+      {
+        "year": "681",
+        "shortName": "Statul",
+        "tag": "Întemeierea Bulgariei",
+        "title": "Hanul Asparuh întemeiază statul bulgar.",
+        "body": "Pe malul Dunării, o federație de bulgari și slavi formează primul stat bulgar — recunoscut de Imperiul Bizantin după o victorie militară decisivă. Numele Bulgaria intră în istorie. Un nume care va supraviețui la tot ce urmează."
+      },
+      {
+        "year": "862",
+        "shortName": "Literele",
+        "tag": "Sfinții Chiril și Metodie",
+        "title": "Se naște un nou alfabet pentru popoarele slave.",
+        "body": "Doi frați din Tesalonic creează alfabetul glagolitic — temelia ulterioarului alfabet chirilic. Pentru prima dată, lumea slavă posedă propriile litere. Bulgaria va adopta și va păstra acest moștenire timp de secole."
+      },
+      {
+        "year": "865",
+        "shortName": "Botezul",
+        "tag": "Botezul Bulgariei",
+        "title": "Hanul Boris I adoptă creștinismul pentru Bulgaria.",
+        "body": "Într-un act politic calculat cu profunde consecințe culturale, Hanul Boris I convertește Bulgaria la creștinism. O nouă identitate se formează în jurul credinței și culturii scrise. Pliska și Preslav devin centre ale civilizației creștine slave."
+      },
+      {
+        "year": "893",
+        "shortName": "Limba",
+        "tag": "Sinodul de la Preslav",
+        "title": "Vechea bulgară devine limba oficială a statului și a bisericii.",
+        "body": "Sub Țarul Simeon I, Școala Literară de la Preslav înflorește. Bulgara veche înlocuiește greaca în toate contextele oficiale. Bulgaria devine o putere literară și spirituală în centrul Europei medievale."
+      },
+      {
+        "year": "1018",
+        "shortName": "Căderea",
+        "tag": "Cucerirea bizantină",
+        "title": "Bulgaria cade — dar numele dăinuie.",
+        "body": "Vasile al II-lea cucerește Bulgaria după decenii de război. Statul bulgar încetează să existe timp de 167 de ani. Totuși numele, limba și memoria supraviețuiesc — păstrate în mănăstiri, în sate, în tradiția orală, în pietrele înseși."
+      },
+      {
+        "year": "1185",
+        "shortName": "Întoarcerea",
+        "tag": "Frații Asan",
+        "title": "Al Doilea Imperiu Bulgar se ridică din Tarnovo.",
+        "body": "Frații Asan și Petru conduc o revoltă de pe dealurile Tarnovului. Bulgaria renaște — singurul stat slav medieval care s-a reconstituit după o cucerire completă. Numele a supraviețuit. Memoria a revenit. Călătoria continuă."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Funcționalitățile aplicației",
+    "heading": "Construit pentru descoperire,\nnu pentru distragere.",
+    "lede": "Fiecare funcționalitate există pentru a aprofunda conexiunea ta cu locurile reale pe care le vizitezi.",
+    "items": [
+      { "icon": "◉", "title": "Misiuni reale", "desc": "Trasee construite în jurul unor puncte GPS reale. Aplicația te ghidează la loc — locul te recompensează cu povestea sa." },
+      { "icon": "▶", "title": "Povestire cinematografică", "desc": "Fiecare punct de control dezvăluie un moment narativ înrădăcinat în istorie, mitologie, memorie locală sau patrimoniu natural." },
+      { "icon": "◎", "title": "Privirea Pazitorului RA", "desc": "Realitatea augmentată opțională dezvăluie simboluri, artefacte și straturi ascunse suprapuse lumii reale." },
+      { "icon": "⌛", "title": "Cronologie istorică", "desc": "O hartă interactivă prin 1345 de ani de memorie bulgară — legată de traseele pe care le parcurgi." },
+      { "icon": "◈", "title": "Relicve și artefacte", "desc": "Colecționează relicve digitale permanente la completarea unui traseu. Construiește o arhivă personală a istoriei ascunse a Bulgariei." },
+      { "icon": "✦", "title": "Domenii și peceți", "desc": "Completează domenii regionale. Câștigă peceți. Dezvăluie progresiv harta completă a memoriei bulgare." },
+      { "icon": "⊕", "title": "13 limbi", "desc": "Suport multilingv complet — inclusiv bulgară, engleză, germană, greacă, rusă, japoneză și altele." },
+      { "icon": "❖", "title": "Explorare în familie", "desc": "Moduri de ritm și niveluri de conținut pentru familii, școli și călători culturali de toate vârstele." },
+      { "icon": "⊞", "title": "Suport offline", "desc": "Conținut esențial al traseelor pregătit pentru situri montane, rurale și de patrimoniu cu semnal limitat." },
+      { "icon": "⊗", "title": "Trasee partener", "desc": "Municipalitățile, muzeele și companiile turistice pot co-crea trasee legate de patrimoniul local real." }
+    ]
+  },
+  "download": {
+    "eyebrow": "Descarcă aplicația",
+    "heading": "Devino Pazitor\nal Bulgariei.",
+    "lede": "Aplicația vine pe iOS și Android. Înscrie-te pe lista de lansare și fii gata să deblochezi primele domenii când porțile se deschid.",
+    "appStore": { "label": "Descarcă din", "name": "App Store" },
+    "googlePlay": { "label": "Disponibil pe", "name": "Google Play" },
+    "trust": "iOS și Android · Explorare gratuită · Trasee premium disponibile",
+    "comingSoon": "În curând"
+  },
+  "partners": {
+    "eyebrow": "Pentru municipalități și parteneri",
+    "heading": "Transformă locuri reale în\ncălătorii de neuitat.",
+    "lede": "Unlocking Bulgaria ajută destinațiile să prezinte memoria culturală ca un strat digital premium — trimițând vizitatori în locuri reale, sprijinind afacerile locale și întărind identitatea regională.",
+    "benefits": [
+      {
+        "icon": "◉",
+        "title": "Promovare turistică",
+        "desc": "Creează trasee moderne care fac locurile mai puțin cunoscute mai ușor de descoperit. Extinde călătoria vizitatorului dincolo de atracțiile principale."
+      },
+      {
+        "icon": "◈",
+        "title": "Conservare culturală",
+        "desc": "Transformă povești locale, artefacte, tradiții și istorie orală în experiențe digitale durabile care supraviețuiesc și călătoresc."
+      },
+      {
+        "icon": "✦",
+        "title": "Implicarea vizitatorilor",
+        "desc": "Crește timpul de ședere, rata de finalizare a traseelor, vizitele repetate și promovarea încrucișată cu hoteluri, restaurante și ghizi locali."
+      }
+    ],
+    "formHeading": "Începe o conversație de parteneriat",
+    "formSub": "Pentru municipalități, muzee, birouri de turism, școli, hoteluri, ghizi locali și companii.",
+    "fields": {
+      "org": "Organizație",
+      "email": "E-mail",
+      "region": "Regiune / Localitate",
+      "type": "Tip de parteneriat",
+      "typePlaceholder": "Selectează…",
+      "typeOptions": [
+        "Municipalitate / Guvern local",
+        "Muzeu sau instituție culturală",
+        "Companie turistică",
+        "Școală sau organizație educațională",
+        "Hotel sau cazare",
+        "Ghid sau operator turistic",
+        "Media sau presă",
+        "Altele"
+      ],
+      "message": "Spune-ne despre interesul tău",
+      "submit": "Trimite solicitarea de parteneriat",
+      "note": "Răspundem în 2 zile lucrătoare."
+    }
+  },
+  "faq": {
+    "eyebrow": "Întrebări frecvente",
+    "heading": "Întrebări înainte\nde călătorie.",
+    "items": [
+      {
+        "q": "Ce este Unlocking Bulgaria?",
+        "a": "Unlocking Bulgaria este o aplicație mobilă premium pentru a explora Bulgaria prin misiuni reale, povestire cinematografică, straturi de RA opționale, trasee istorice, relicve de colectat și domenii regionale. Este construită în jurul unei întrebări centrale: cum a supraviețuit numele Bulgariei 1345 de ani?"
+      },
+      {
+        "q": "Este un joc sau un ghid de călătorie?",
+        "a": "Niciuna dintre ele. Folosește sisteme de progresie asemănătoare jocurilor, relicve și recompense — dar produsul real este explorarea culturală în locuri reale. Se apropie mai mult de o experiență muzeală cinematografică combinată cu navigare GPS și povestire istorică."
+      },
+      {
+        "q": "Trebuie să fiu fizic în Bulgaria?",
+        "a": "Cea mai mare parte a experienței este concepută pentru explorarea reală — vizitarea unor locuri reale din Bulgaria. Totuși, cronologia, panoramele domeniilor și unele conținuturi istorice sunt accesibile de oriunde pentru a planifica și pregăti călătoria."
+      },
+      {
+        "q": "Este necesară RA pentru a folosi aplicația?",
+        "a": "Nu. Privirea Pazitorului RA este complet opțională. Fiecare moment RA are o alternativă completă fără RA cu conținut lizibil, subtitrări și logică clară de finalizare. Experiența de misiune principală funcționează complet fără RA."
+      },
+      {
+        "q": "Aplicația este potrivită pentru copii?",
+        "a": "Da. Aplicația este concepută să fie prietenoasă cu familiile, cu moduri de ritm, conținut în stil quiz și recompense care îi angajează pe copii. Traseele sunt potrivite pentru grupuri de familie, excursii școlare și călători culturali de toate vârstele."
+      },
+      {
+        "q": "Ce limbi sunt acceptate?",
+        "a": "Aplicația acceptă 13 limbi: bulgară, engleză, germană, franceză, spaniolă, italiană, română, turcă, greacă, poloneză, rusă, japoneză și sârbă."
+      },
+      {
+        "q": "Am nevoie de un cont?",
+        "a": "Explorarea de bază este disponibilă fără cont. Un cont este necesar pentru a salva progresul traseelor, a colecta relicve, a urmări finalizarea domeniilor și a sincroniza între dispozitive."
+      },
+      {
+        "q": "Cum funcționează prețurile?",
+        "a": "Anumite previzualizări ale punctelor de control sunt gratuite. Accesul complet la trasee și pachetele de domenii sunt disponibile prin achiziții în aplicație. Prețurile sunt premium și transparente — plătești pentru ceea ce vrei să explorezi."
+      },
+      {
+        "q": "Pot municipalitățile și companiile să colaboreze cu aplicația?",
+        "a": "Da. Municipalitățile, muzeele, școlile, companiile turistice, hotelurile și ghizii locali pot colabora la proiectarea traseelor, validarea culturală și programele de implicare a vizitatorilor. Folosește formularul de parteneriat pentru a începe conversația."
+      },
+      {
+        "q": "Aplicația este disponibilă pe Android și iOS?",
+        "a": "Da. Unlocking Bulgaria este dezvoltat pentru iOS și Android. Înscrie-te pe lista de lansare de pe această pagină pentru a fi notificat când aplicația va fi disponibilă în regiunea ta."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Suport, parteneriate\nși media.",
+    "cards": [
+      {
+        "icon": "◉",
+        "title": "Suport utilizatori",
+        "desc": "Întrebări despre trasee, progres, relicve, conturi sau experiența aplicației.",
+        "email": "support@unlockingbulgaria.com",
+        "label": "support@unlockingbulgaria.com"
+      },
+      {
+        "icon": "◈",
+        "title": "Parteneriate",
+        "desc": "Municipalități, muzee, birouri de turism, școli și companii.",
+        "email": "partners@unlockingbulgaria.com",
+        "label": "partners@unlockingbulgaria.com"
+      },
+      {
+        "icon": "✦",
+        "title": "Media și presă",
+        "desc": "Kit-uri de presă, interviuri, acoperire mediatică și colaborare editorială.",
+        "email": "media@unlockingbulgaria.com",
+        "label": "media@unlockingbulgaria.com"
+      },
+      {
+        "icon": "⌘",
+        "title": "Solicitări de afaceri",
+        "desc": "Licențiere, white-label, investiții și conversații strategice.",
+        "email": "business@unlockingbulgaria.com",
+        "label": "business@unlockingbulgaria.com"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "O călătorie reală prin memoria ascunsă a Bulgariei.",
+    "copyright": "© 2026 Unlocking Bulgaria. Toate drepturile rezervate.",
+    "groups": [
+      {
+        "label": "Explorează",
+        "links": [
+          { "label": "Cum funcționează", "href": "#how-it-works" },
+          { "label": "Domenii", "href": "#domains" },
+          { "label": "Privirea Pazitorului", "href": "#guardian-sight" },
+          { "label": "Cronologie", "href": "#timeline" }
+        ]
+      },
+      {
+        "label": "Produs",
+        "links": [
+          { "label": "Funcționalități", "href": "#features" },
+          { "label": "Descarcă", "href": "#download" },
+          { "label": "Întrebări", "href": "#faq" },
+          { "label": "Suport", "href": "#contact" }
+        ]
+      },
+      {
+        "label": "Parteneri",
+        "links": [
+          { "label": "Devino partener", "href": "#partners" },
+          { "label": "Municipalități", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Muzee", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Media", "href": "mailto:media@unlockingbulgaria.com" }
+        ]
+      }
+    ],
+    "legal": [
+      { "label": "Politica de confidențialitate", "href": "#privacy" },
+      { "label": "Termeni de utilizare", "href": "#terms" },
+      { "label": "Cookie-uri", "href": "#cookies" }
+    ]
+  },
+  "langSelector": {
+    "title": "Alege limba",
+    "close": "Închide"
+  },
+  "arrival": {
+    "cta": "Dezvăluie călătoria"
+  },
+  "memory": {
+    "pre": "Nu este o țară.",
+    "name": "Bulgaria.",
+    "post": "Un mister care a supraviețuit treisprezece secole."
+  },
+  "journey": {
+    "eyebrow": "Calea",
+    "heading": "Cinci descoperiri.\nO transformare.",
+    "items": [
+      { "num": "01", "sym": "✦", "name": "Pazitor", "desc": "Titlul câștigat de cei care completează întreaga călătorie. Gardian al memoriei vii a Bulgariei — Пазител." },
+      { "num": "02", "sym": "⌘", "name": "Traseu", "desc": "Cinci locuri reale. Unite de istorie. Parcurge traseul — deblochează povestea ascunsă între ele." },
+      { "num": "03", "sym": "◈", "name": "Relicvă", "desc": "Completează un traseu. Primești un artefact permanent. O bucată din memoria Bulgariei care îți aparține pentru totdeauna." },
+      { "num": "04", "sym": "◉", "name": "Domeniu", "desc": "Șase regiuni. Fiecare ascunde propriile trasee, propria epocă, propriile secrete. Dezvăluie un domeniu — revendică un strat." },
+      { "num": "05", "sym": "◎", "name": "Pecete", "desc": "Marca unui domeniu completat. Șase peceți. Șase straturi de memorie. Toate șase — și Bulgaria este a ta." }
+    ]
+  },
+  "skipLink": "Salt la conținut",
+  "ariaNav": "Navigare principală",
+  "ariaFooterNav": "Navigare subsol",
+  "ariaLangNav": "Navigare legală",
+  "ariaHome": "Unlocking Bulgaria — mergi la pagina principală",
+  "ariaTop": "Unlocking Bulgaria — înapoi sus",
+  "ariaHero": "Sosire — capitolul de deschidere"
+}

@@ -442,5 +442,8 @@
   "skipLink": "Skip to content",
   "ariaNav": "Main navigation",
   "ariaFooterNav": "Footer navigation",
-  "ariaLangNav": "Legal navigation"
+  "ariaLangNav": "Legal navigation",
+  "ariaHome": "Unlocking Bulgaria — go to homepage",
+  "ariaTop": "Unlocking Bulgaria — back to top",
+  "ariaHero": "Arrival — opening chapter"
 }
