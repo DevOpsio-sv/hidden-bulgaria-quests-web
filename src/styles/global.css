@@ -27,6 +27,11 @@
   --glow-md:   0 0 44px rgba(216,181,106,0.28);
   --glow-lg:   0 0 80px rgba(216,181,106,0.18);
 
+  --btn-ghost-bg:     rgba(3,6,16,0.78);
+  --btn-ghost-bg-hov: rgba(216,181,106,0.14);
+  --btn-ghost-border: rgba(216,181,106,0.64);
+  --btn-ghost-text:   #f5e2a8;
+
   --ff-display:"Cormorant Garamond","Georgia",serif;
   --ff-title:  "Cinzel","Georgia",serif;
   --ff-body:   "Inter",ui-sans-serif,system-ui,sans-serif;
@@ -154,6 +159,7 @@ h3{
   transition:transform var(--fast) var(--ease),
              box-shadow var(--fast) var(--ease),
              background var(--fast) var(--ease),
+             border-color var(--fast) var(--ease),
              color var(--fast) var(--ease);
 }
 /* .btn-gold — was font-size:.82rem (~14px), bumped to .92rem */
@@ -165,9 +171,23 @@ h3{
   font-weight:700;letter-spacing:.1em;text-transform:uppercase;
 }
 .btn-gold:hover{box-shadow:var(--glow-md);transform:translateY(-2px)}
-/* .btn-ghost — was font-size:.88rem, bumped to .96rem */
-.btn-ghost{border:1px solid var(--border);color:var(--text-2);font-size:.96rem}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold-lt);transform:translateY(-2px)}
+/* Secondary CTA: readable on both dark hero sections and lighter card surfaces. */
+.btn-ghost{
+  background:var(--btn-ghost-bg);
+  border:1px solid var(--btn-ghost-border);
+  box-shadow:0 10px 28px rgba(3,6,16,0.22);
+  color:var(--btn-ghost-text);
+  font-size:.96rem;
+  font-weight:700;
+}
+.btn-ghost:hover,
+.btn-ghost:focus-visible{
+  background:var(--btn-ghost-bg-hov);
+  border-color:var(--gold-lt);
+  box-shadow:var(--glow-sm);
+  color:var(--gold-lt);
+  transform:translateY(-2px);
+}
 
 /* ─── Gold divider ───────────────────────────────────────────── */
 /* Opacity lifted from .22 to .38 for better section separation */
