@@ -44,10 +44,11 @@ npm run check
 npm run deploy
 ```
 
-For the Cloudflare Pages dashboard, use:
+For Cloudflare's Wrangler deploy flow, the committed `wrangler.jsonc` points static assets at the repository root so the deploy does not depend on a generated directory.
 
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Root directory: leave empty
+For the Cloudflare Pages dashboard, use either:
+
+- Build command: leave empty, build output directory: `.`
+- Or build command: `npm run build`, build output directory: `dist`
 
 The project is configured as a static Cloudflare Pages site.
