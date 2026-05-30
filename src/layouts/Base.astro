@@ -90,13 +90,13 @@ const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
         s.a+=s.sp*.007*s.d;
         if(s.a>1||s.a<0)s.d*=-1;
         x.beginPath();x.arc(s.x,s.y,s.r,0,Math.PI*2);
-        x.fillStyle="rgba(245,226,168,"+s.a*.52+")";x.fill();
+        x.fillStyle="rgba(245,226,168,"+s.a*.7+")";x.fill();
       });
       requestAnimationFrame(draw);
     }
-    resize();make(200);draw();
+    resize();make(280);draw();
     var t;window.addEventListener("resize",function(){
-      clearTimeout(t);t=setTimeout(function(){resize();make(200);},180);
+      clearTimeout(t);t=setTimeout(function(){resize();make(280);},180);
     });
   })();
   </script>
@@ -113,12 +113,12 @@ const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
     }
     function make(){
       P=[];
-      for(var i=0;i<22;i++)P.push({
+      for(var i=0;i<48;i++)P.push({
         x:Math.random()*W,y:Math.random()*H,
-        r:Math.random()*.7+.2,
-        vx:(Math.random()-.5)*.12,
-        vy:(Math.random()-.5)*.08,
-        a:Math.random()*.055+.01
+        r:Math.random()*1.2+.35,
+        vx:(Math.random()-.5)*.14,
+        vy:(Math.random()-.5)*.09,
+        a:Math.random()*.09+.02
       });
     }
     function draw(){
