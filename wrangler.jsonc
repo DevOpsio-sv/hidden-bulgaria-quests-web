@@ -1,5 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
+  // Build command runs astro build, then wrangler deploys dist/
   "name": "hidden-bulgaria-quests-web",
   "compatibility_date": "2026-05-30",
   "observability": {

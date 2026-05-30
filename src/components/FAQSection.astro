@@ -1,0 +1,36 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const d = dict.faq;
+---
+
+<section class="section" id="faq" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <div class="section-intro reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="faq-heading">{d.heading}</h2>
+    </div>
+
+    <div class="faq-list reveal reveal-d1" data-faq>
+      {d.items.map((item, i) => (
+        <div class="faq-item" data-faq-item>
+          <button
+            class="faq-q"
+            type="button"
+            aria-expanded="false"
+            data-faq-btn
+            id={`faq-q-${i}`}
+            aria-controls={`faq-a-${i}`}
+          >
+            <span>{item.q}</span>
+            <span class="faq-chevron" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id={`faq-a-${i}`} role="region" aria-labelledby={`faq-q-${i}`}>
+            <p>{item.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

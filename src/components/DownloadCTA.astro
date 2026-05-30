@@ -1,0 +1,35 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const d = dict.download;
+---
+
+<div class="dl-band" id="download">
+  <div class="wrap">
+    <p class="eyebrow" style="text-align:center">{d.eyebrow}</p>
+    <h2 class="reveal">{d.heading}</h2>
+    <p class="lede reveal reveal-d1">{d.lede}</p>
+
+    <div class="store-row reveal reveal-d2">
+      <a
+        class="store-btn"
+        href="#"
+        aria-label={`${d.appStore.label} ${d.appStore.name} — ${d.comingSoon}`}
+      >
+        <span class="store-lbl">{d.appStore.label}</span>
+        <span class="store-name">{d.appStore.name}</span>
+      </a>
+      <a
+        class="store-btn"
+        href="#"
+        aria-label={`${d.googlePlay.label} ${d.googlePlay.name} — ${d.comingSoon}`}
+      >
+        <span class="store-lbl">{d.googlePlay.label}</span>
+        <span class="store-name">{d.googlePlay.name}</span>
+      </a>
+    </div>
+
+    <p class="dl-trust reveal reveal-d3">{d.trust}</p>
+  </div>
+</div>

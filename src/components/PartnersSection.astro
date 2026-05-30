@@ -1,0 +1,67 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const d = dict.partners;
+const f = d.fields;
+---
+
+<section class="section" id="partners" aria-labelledby="partners-heading">
+  <div class="wrap">
+    <div class="partners-hd section-intro reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="partners-heading">{d.heading}</h2>
+      <p class="lede">{d.lede}</p>
+    </div>
+
+    <div class="benefit-grid">
+      {d.benefits.map((b, i) => {
+        const delay = i === 1 ? "reveal-d1" : i === 2 ? "reveal-d2" : "";
+        return (
+          <article class={`benefit-card reveal ${delay}`}>
+            <div class="benefit-icon" aria-hidden="true">{b.icon}</div>
+            <h3>{b.title}</h3>
+            <p>{b.desc}</p>
+          </article>
+        );
+      })}
+    </div>
+
+    <div class="form-wrap reveal">
+      <h3>{d.formHeading}</h3>
+      <p class="form-sub">{d.formSub}</p>
+
+      <form class="form-grid" data-partner-form novalidate aria-label={d.formHeading}>
+        <div class="form-group">
+          <label class="form-label" for="p-org">{f.org}</label>
+          <input class="form-control" id="p-org" name="org" autocomplete="organization" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="p-email">{f.email}</label>
+          <input class="form-control" id="p-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="p-region">{f.region}</label>
+          <input class="form-control" id="p-region" name="region" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="p-type">{f.type}</label>
+          <select class="form-control" id="p-type" name="type">
+            <option value="">{f.typePlaceholder}</option>
+            {f.typeOptions.map((opt: string) => (
+              <option value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+        <div class="form-group full">
+          <label class="form-label" for="p-msg">{f.message}</label>
+          <textarea class="form-control" id="p-msg" name="message" rows={4} required></textarea>
+        </div>
+        <div class="form-group actions">
+          <button class="btn btn-gold" type="submit">{f.submit}</button>
+          <p class="form-note" data-form-note>{f.note}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

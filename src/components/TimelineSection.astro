@@ -1,0 +1,55 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const d = dict.timeline;
+---
+
+<section class="section" id="timeline" aria-labelledby="tl-heading">
+  <div class="wrap">
+    <div class="section-intro reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="tl-heading">{d.heading}</h2>
+      <p class="lede">{d.lede}</p>
+    </div>
+
+    <div class="tl-grid">
+      <!-- Year nav -->
+      <ul class="tl-nav" role="tablist" aria-label="Historical events">
+        {d.events.map((ev, i) => (
+          <li role="presentation">
+            <button
+              class={`tl-btn${i === 0 ? " active" : ""}`}
+              type="button"
+              role="tab"
+              aria-selected={i === 0 ? "true" : "false"}
+              aria-controls={`tl-${ev.year}`}
+              data-tl-btn={ev.year}
+            >
+              <span class="tl-year">{ev.year}</span>
+              <span class="tl-name">{ev.shortName}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Story panels -->
+      <div class="tl-panel reveal reveal-d1">
+        {d.events.map((ev, i) => (
+          <div
+            class={`tl-entry${i === 0 ? " active" : ""}`}
+            id={`tl-${ev.year}`}
+            role="tabpanel"
+            aria-labelledby={`tl-btn-${ev.year}`}
+          >
+            <div class="tl-entry-glow" aria-hidden="true"></div>
+            <span class="tl-bg-year" aria-hidden="true">{ev.year}</span>
+            <p class="tl-tag">{ev.tag}</p>
+            <h3 class="tl-title">{ev.title}</h3>
+            <p class="tl-body">{ev.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

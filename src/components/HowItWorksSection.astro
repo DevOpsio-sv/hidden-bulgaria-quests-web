@@ -1,0 +1,48 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const d = dict.howItWorks;
+---
+
+<section class="section" id="how-it-works" aria-labelledby="hiw-heading">
+  <div class="wrap">
+    <div class="hiw-grid">
+      <!-- Left: text + steps -->
+      <div class="hiw-text">
+        <p class="eyebrow">{d.eyebrow}</p>
+        <h2 id="hiw-heading" class="reveal">{d.heading}</h2>
+        <p class="lede reveal reveal-d1">{d.lede}</p>
+
+        <ol class="steps-list reveal reveal-d2" aria-label="Quest progression steps">
+          {d.steps.map((step, i) => (
+            <li class="step-item">
+              <span class="step-dot" aria-hidden="true"></span>
+              <div class="step-body">
+                <p class="step-label">{step.label}</p>
+                <p class="step-title">{step.title}</p>
+                <p class="step-desc">{step.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <!-- Right: visual flow diagram -->
+      <div class="flow-card reveal reveal-d2" aria-label="Visual quest progression diagram">
+        {d.flow.map((node, i) => (
+          <>
+            <div class="flow-node">
+              <div class="flow-icon" aria-hidden="true">{node.icon}</div>
+              <div class="flow-name">{node.name}</div>
+              <div class="flow-sub">{node.sub}</div>
+            </div>
+            {i < d.flow.length - 1 && (
+              <div class="flow-arrow" aria-hidden="true">↓</div>
+            )}
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

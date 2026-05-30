@@ -1,13 +1,16 @@
 {
   "name": "hidden-bulgaria-quests-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Official product website for Unlocking Bulgaria, a premium real-world quest app for cultural exploration.",
+  "description": "Official product website for Unlocking Bulgaria — a premium real-world quest app for cultural exploration.",
   "scripts": {
-    "build": "node build.js",
-    "dev": "npm run build && wrangler pages dev dist --compatibility-date=2026-05-30",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=hidden-bulgaria-quests-web",
-    "check": "node --check script.js && node --check build.js"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
   },
   "devDependencies": {
     "wrangler": "latest"

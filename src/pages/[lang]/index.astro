@@ -1,0 +1,52 @@
+---
+import { SUPPORTED_LANGS, getDict, type Lang } from "../../i18n";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import PositioningBand from "../../components/PositioningBand.astro";
+import HowItWorksSection from "../../components/HowItWorksSection.astro";
+import DomainsSection from "../../components/DomainsSection.astro";
+import GuardianSightSection from "../../components/GuardianSightSection.astro";
+import TimelineSection from "../../components/TimelineSection.astro";
+import FeaturesSection from "../../components/FeaturesSection.astro";
+import DownloadCTA from "../../components/DownloadCTA.astro";
+import PartnersSection from "../../components/PartnersSection.astro";
+import FAQSection from "../../components/FAQSection.astro";
+import ContactSection from "../../components/ContactSection.astro";
+import Footer from "../../components/Footer.astro";
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const dict = getDict(lang as Lang);
+---
+
+<Base dict={dict} lang={lang as string}>
+  <Header dict={dict} lang={lang as string} />
+
+  <main id="main">
+    <HeroSection dict={dict} lang={lang as string} />
+    <PositioningBand dict={dict} />
+    <hr class="gold-rule" />
+    <HowItWorksSection dict={dict} />
+    <hr class="gold-rule" />
+    <DomainsSection dict={dict} lang={lang as string} />
+    <hr class="gold-rule" />
+    <GuardianSightSection dict={dict} />
+    <hr class="gold-rule" />
+    <TimelineSection dict={dict} />
+    <hr class="gold-rule" />
+    <FeaturesSection dict={dict} />
+    <DownloadCTA dict={dict} />
+    <hr class="gold-rule" />
+    <PartnersSection dict={dict} />
+    <hr class="gold-rule" />
+    <FAQSection dict={dict} />
+    <hr class="gold-rule" />
+    <ContactSection dict={dict} />
+  </main>
+
+  <Footer dict={dict} lang={lang as string} />
+</Base>

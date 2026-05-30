@@ -1,0 +1,414 @@
+{
+  "lang": "en",
+  "meta": {
+    "title": "Unlocking Bulgaria — Travel Through the Hidden Memory of Bulgaria",
+    "description": "A premium mobile app for exploring Bulgaria through real-world quests, cinematic storytelling, optional AR, historical routes, relics, and cultural discoveries. Become a Keeper.",
+    "ogTitle": "Unlocking Bulgaria — 1345 Years. One Name Survived.",
+    "ogDescription": "Travel through Bulgaria. Reveal the ancient secrets. Become a Keeper."
+  },
+  "nav": {
+    "howItWorks": "How it works",
+    "domains": "Domains",
+    "guardianSight": "Guardian Sight",
+    "timeline": "Timeline",
+    "partners": "Partners",
+    "faq": "FAQ",
+    "download": "Download",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Official product website",
+    "line1": "1345 Years.",
+    "line2": "One Name",
+    "line3": "Survived.",
+    "question": "How?",
+    "lede": "Travel through Bulgaria. Reveal the ancient secrets. Become a Keeper — a guardian of the living memory that has endured for thirteen centuries.",
+    "ctaPrimary": "Download the App",
+    "ctaSecondary": "Watch the Journey",
+    "trust": ["Real-world quests", "Cinematic storytelling", "Optional AR", "Family-friendly", "13 languages"],
+    "mapLabel": "Interactive map of Bulgaria's hidden memory",
+    "phoneDomain": "Domain of the Name",
+    "phoneTitle": "The Old Capitals",
+    "phoneDesc": "Visit the places where memory became statehood.",
+    "phoneProgress": "4 of 7 seals discovered"
+  },
+  "band": {
+    "sub": "Not a guide. Not a map. Not a game.",
+    "statement": "A real-world journey through Bulgaria's living memory."
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "heading": "Become a Keeper,\none place at a time.",
+    "lede": "Every journey in Unlocking Bulgaria follows a clear progression — from a single checkpoint to the full unlock of Bulgaria's hidden memory.",
+    "steps": [
+      {
+        "label": "Step 1",
+        "title": "Visit a Checkpoint",
+        "desc": "Travel to a real place. Activate the checkpoint by arriving at the location. Unlock a story, a clue, or a hidden layer."
+      },
+      {
+        "label": "Step 2 — 5 Checkpoints",
+        "title": "Complete a Route → Collect a Relic",
+        "desc": "Five connected checkpoints form a Route. Complete the route to receive a permanent digital relic — an artifact of Bulgaria's history."
+      },
+      {
+        "label": "Step 3 — 3 Routes",
+        "title": "Unlock a Domain → Earn a Seal",
+        "desc": "Three routes unlock a regional Domain. Earn its Seal — a symbol of mastery over that region's hidden memory."
+      },
+      {
+        "label": "Step 4 — 6 Domains",
+        "title": "National Unlock → Become a Keeper",
+        "desc": "Complete all six domains. Unlock the full memory of Bulgaria. Receive the title of Keeper — Пазител."
+      }
+    ],
+    "flow": [
+      { "icon": "◉", "name": "Checkpoint", "sub": "Real location · Story · Clue" },
+      { "icon": "⌘", "name": "Route + Relic", "sub": "5 checkpoints · 1 artifact" },
+      { "icon": "◈", "name": "Domain + Seal", "sub": "3 routes · 1 regional seal" },
+      { "icon": "✦", "name": "Keeper — Пазител", "sub": "6 domains · Full Bulgaria unlocked" }
+    ]
+  },
+  "domains": {
+    "eyebrow": "Explore domains",
+    "heading": "Every region\nbecomes a domain.",
+    "lede": "Six regional domains form the map of Bulgaria's hidden memory. Each holds its own routes, relics, epoch, and final seal.",
+    "explore": "Explore",
+    "continue": "Continue",
+    "locked": "Locked",
+    "epochBefore": "Before the Name",
+    "epochAfter": "After the Name",
+    "routesOf": "of 3 routes completed",
+    "cards": [
+      {
+        "region": "Danube & Northwest",
+        "name": "Domain of Stone and River",
+        "epoch": "before",
+        "key": "Fortresses, rivers, Roman roads, and the Belogradchik stone formations — where the Danube defined the edge of empire.",
+        "progress": 0,
+        "emblem": "🏔",
+        "status": "explore"
+      },
+      {
+        "region": "Old Capitals",
+        "name": "Domain of the Name",
+        "epoch": "after",
+        "key": "Pliska, Preslav, Tarnovo — the three capitals that carried the name of Bulgaria through conquest, fire, and rebirth.",
+        "progress": 33,
+        "emblem": "⚔",
+        "status": "continue"
+      },
+      {
+        "region": "Black Sea Coast",
+        "name": "Domain of the Sea Gate",
+        "epoch": "before",
+        "key": "Ancient ports, capes, salt lakes, island monasteries — where Greek colonies met Thracian shores and the sea became a border.",
+        "progress": 0,
+        "emblem": "🌊",
+        "status": "explore"
+      },
+      {
+        "region": "Thracian Valley",
+        "name": "Domain of Kings",
+        "epoch": "before",
+        "key": "Thracian tombs, ritual hills, rose fields, wine country, and golden artifacts — the oldest memory preserved in the land.",
+        "progress": 0,
+        "emblem": "🏛",
+        "status": "explore"
+      },
+      {
+        "region": "Rhodope Mountains",
+        "name": "Domain of Voice and Stone",
+        "epoch": "after",
+        "key": "Orpheus myths, sacred caves, ancient bridges, stone villages, forests, and the oldest living music tradition in Europe.",
+        "progress": 0,
+        "emblem": "♪",
+        "status": "explore"
+      },
+      {
+        "region": "Sofia & Western Bulgaria",
+        "name": "Domain of Crossroads",
+        "epoch": "after",
+        "key": "Urban layers, Serdica ruins beneath the city, Vitosha mountain paths, ancient springs, and living markets.",
+        "progress": 0,
+        "emblem": "✦",
+        "status": "explore"
+      }
+    ]
+  },
+  "guardianSight": {
+    "eyebrow": "Guardian Sight",
+    "heading": "AR that serves\nthe place.",
+    "lede": "Guardian Sight is the optional augmented reality camera mode inside Unlocking Bulgaria. Point it at the world — and see the hidden layer beneath.",
+    "floatTag1": "Hidden layer revealed",
+    "floatTag2": "Checkpoint · 82m",
+    "centerLabel": "Guardian\nSight",
+    "features": [
+      {
+        "icon": "◈",
+        "title": "Symbolic traces",
+        "desc": "Ancient symbols, glyphs, and route fragments appear over the real world at meaningful locations."
+      },
+      {
+        "icon": "◉",
+        "title": "Checkpoint presence",
+        "desc": "Nearby checkpoints pulse with light energy. The closer you are, the stronger the signal."
+      },
+      {
+        "icon": "✦",
+        "title": "Always accessible",
+        "desc": "AR is optional. Every AR moment has a full non-AR path with readable content, captions, and clear completion logic."
+      },
+      {
+        "icon": "⌘",
+        "title": "Heavier moments at key sites",
+        "desc": "Hero checkpoints and domain finales feature deeper AR sequences — reconstructed scenes, artifact reveals, and cinematic moments."
+      }
+    ]
+  },
+  "timeline": {
+    "eyebrow": "Historical timeline",
+    "heading": "The memory\nthat survived.",
+    "lede": "1345 years of Bulgarian history — compressed into the moments that defined the name, the faith, and the language.",
+    "events": [
+      {
+        "year": "681",
+        "shortName": "The State",
+        "tag": "Foundation of Bulgaria",
+        "title": "Khan Asparuh establishes the Bulgarian state.",
+        "body": "By the Danube, a federation of Bulgars and Slavs forms the first Bulgarian state — recognized by the Byzantine Empire after a decisive military victory. The name Bulgaria enters history. A name that will survive everything that follows."
+      },
+      {
+        "year": "862",
+        "shortName": "The Letters",
+        "tag": "Saints Cyril & Methodius",
+        "title": "A new alphabet is born for the Slavic peoples.",
+        "body": "Two brothers from Thessaloniki create the Glagolitic script — the foundation of the later Cyrillic alphabet. For the first time, the Slavic world has letters of its own. Bulgaria will adopt and preserve this legacy for centuries."
+      },
+      {
+        "year": "865",
+        "shortName": "The Baptism",
+        "tag": "Baptism of Bulgaria",
+        "title": "Khan Boris I accepts Christianity for Bulgaria.",
+        "body": "In a calculated political act of profound cultural consequence, Khan Boris I converts Bulgaria to Christianity. A new identity forms around faith and literacy. Pliska and Preslav become centers of Slavic Christian civilization."
+      },
+      {
+        "year": "893",
+        "shortName": "The Language",
+        "tag": "Preslav Council",
+        "title": "Old Bulgarian becomes the official language of state and church.",
+        "body": "Under Tsar Simeon I, the Preslav Literary School flourishes. Old Bulgarian replaces Greek in all official contexts. Bulgaria becomes a literary and spiritual powerhouse at the center of medieval Europe."
+      },
+      {
+        "year": "1018",
+        "shortName": "The Fall",
+        "tag": "Byzantine Conquest",
+        "title": "Bulgaria falls — but the name endures.",
+        "body": "Basil II conquers Bulgaria after decades of war. The Bulgarian state ceases to exist for 167 years. Yet the name, the language, and the memory survive — carried in monasteries, in villages, in oral tradition, in the stones themselves."
+      },
+      {
+        "year": "1185",
+        "shortName": "The Return",
+        "tag": "The Asen Brothers",
+        "title": "The Second Bulgarian Empire rises from Tarnovo.",
+        "body": "Brothers Asen and Peter lead an uprising from the Tarnovo hills. Bulgaria is reborn — the only medieval Slavic state to reconstitute itself after complete conquest. The name survived. The memory returned. The journey continues."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "App features",
+    "heading": "Built for discovery,\nnot distraction.",
+    "lede": "Every feature exists to deepen your connection with the real places you visit.",
+    "items": [
+      { "icon": "◉", "title": "Real-world quests", "desc": "Routes built around real GPS checkpoints. The app guides you to the place — the place rewards you with its story." },
+      { "icon": "▶", "title": "Cinematic storytelling", "desc": "Each checkpoint reveals a narrative moment rooted in history, mythology, local memory, or natural heritage." },
+      { "icon": "◎", "title": "Guardian Sight AR", "desc": "Optional augmented reality reveals symbols, artifacts, and hidden layers overlaid on the real world." },
+      { "icon": "⌛", "title": "Historical timeline", "desc": "An interactive map through 1345 years of Bulgarian memory — linked to the routes you walk." },
+      { "icon": "◈", "title": "Relics and artifacts", "desc": "Collect permanent digital relics at route completion. Build a personal archive of Bulgaria's hidden history." },
+      { "icon": "✦", "title": "Domains and seals", "desc": "Complete regional domains. Earn seals. Gradually reveal the full map of Bulgarian memory." },
+      { "icon": "⊕", "title": "13 languages", "desc": "Full multilingual support — including Bulgarian, English, German, Greek, Russian, Japanese, and more." },
+      { "icon": "❖", "title": "Family exploration", "desc": "Pacing modes and content scales for families, schools, and cultural travelers of every age." },
+      { "icon": "⊞", "title": "Offline support", "desc": "Key route content prepared in advance for mountain, village, and heritage sites with limited signal." },
+      { "icon": "⊗", "title": "Partner routes", "desc": "Municipalities, museums, and tourism businesses can co-create routes tied to real local heritage." }
+    ]
+  },
+  "download": {
+    "eyebrow": "Download the app",
+    "heading": "Become a Keeper\nof Bulgaria.",
+    "lede": "The app is coming to iOS and Android. Join the launch list and be ready to unlock the first domains when the gates open.",
+    "appStore": { "label": "Download on the", "name": "App Store" },
+    "googlePlay": { "label": "Get it on", "name": "Google Play" },
+    "trust": "iOS & Android · Free to explore · Premium routes available",
+    "comingSoon": "Coming soon"
+  },
+  "partners": {
+    "eyebrow": "For municipalities & partners",
+    "heading": "Turn real places into\nunforgettable journeys.",
+    "lede": "Unlocking Bulgaria helps destinations package cultural memory as a premium digital layer — sending visitors to real places, supporting local businesses, and strengthening regional identity.",
+    "benefits": [
+      {
+        "icon": "◉",
+        "title": "Tourism promotion",
+        "desc": "Create modern routes that make lesser-known places easier to discover. Extend the visitor journey beyond main attractions."
+      },
+      {
+        "icon": "◈",
+        "title": "Cultural preservation",
+        "desc": "Translate local stories, artifacts, traditions, and oral history into durable digital experiences that survive and travel."
+      },
+      {
+        "icon": "✦",
+        "title": "Visitor engagement",
+        "desc": "Increase dwell time, route completion, repeat visits, and cross-promotion with local hotels, restaurants, and guides."
+      }
+    ],
+    "formHeading": "Start a partnership conversation",
+    "formSub": "For municipalities, museums, tourism boards, schools, hotels, local guides, and businesses.",
+    "fields": {
+      "org": "Organization",
+      "email": "Email",
+      "region": "Region / Location",
+      "type": "Partnership type",
+      "typePlaceholder": "Select…",
+      "typeOptions": [
+        "Municipality / Local government",
+        "Museum or cultural institution",
+        "Tourism business",
+        "School or educational organization",
+        "Hotel or accommodation",
+        "Guide or tour operator",
+        "Media or press",
+        "Other"
+      ],
+      "message": "Tell us about your interest",
+      "submit": "Send Partnership Inquiry",
+      "note": "We respond within 2 business days."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Questions before\nthe journey.",
+    "items": [
+      {
+        "q": "What is Unlocking Bulgaria?",
+        "a": "Unlocking Bulgaria is a premium mobile app for exploring Bulgaria through real-world quests, cinematic storytelling, optional AR layers, historical routes, collectible relics, and regional domains. It is built around one central question: how has the name of Bulgaria survived for 1345 years?"
+      },
+      {
+        "q": "Is it a game or a travel guide?",
+        "a": "Neither. It uses game-like progress systems, relics, and rewards — but the real product is cultural exploration in real places. It is closer to a cinematic museum experience combined with GPS navigation and historical storytelling."
+      },
+      {
+        "q": "Do I need to be physically in Bulgaria?",
+        "a": "Most of the experience is designed for real-world exploration — visiting actual places in Bulgaria. However, the timeline, domain overviews, and some story content are accessible from anywhere to plan and prepare your journey."
+      },
+      {
+        "q": "Is AR required to use the app?",
+        "a": "No. Guardian Sight AR is entirely optional. Every AR moment has a full non-AR alternative with readable content, captions, and clear completion logic. The core quest experience works completely without AR."
+      },
+      {
+        "q": "Is the app suitable for children?",
+        "a": "Yes. The app is designed to be family-friendly with pacing modes, quiz-style content, and rewards that engage children. Routes support family groups, school trips, and cultural travelers of all ages."
+      },
+      {
+        "q": "What languages are supported?",
+        "a": "The app supports 13 languages: Bulgarian, English, German, French, Spanish, Italian, Romanian, Turkish, Greek, Polish, Russian, Japanese, and Serbian."
+      },
+      {
+        "q": "Do I need an account?",
+        "a": "Basic exploration is available without an account. An account is required to save route progress, collect relics, track domain completion, and sync across devices."
+      },
+      {
+        "q": "How does pricing work?",
+        "a": "Selected checkpoint previews are free. Full route access and domain bundles are available through in-app purchase. Pricing is premium and transparent — pay for what you want to explore."
+      },
+      {
+        "q": "Can municipalities and businesses partner with the app?",
+        "a": "Yes. Municipalities, museums, schools, tourism businesses, hotels, and local guides can collaborate on route design, cultural validation, and visitor engagement programs. Use the partnership form to start the conversation."
+      },
+      {
+        "q": "Is the app available on Android and iOS?",
+        "a": "Yes. Unlocking Bulgaria is being developed for both iOS and Android. Join the launch list on this page to be notified when the app is available in your region."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Support, partnerships,\nand media.",
+    "cards": [
+      {
+        "icon": "◉",
+        "title": "User support",
+        "desc": "Questions about routes, progress, relics, accounts, or the app experience.",
+        "email": "support@unlockingbulgaria.com",
+        "label": "support@unlockingbulgaria.com"
+      },
+      {
+        "icon": "◈",
+        "title": "Partnerships",
+        "desc": "Municipalities, museums, tourism boards, schools, and businesses.",
+        "email": "partners@unlockingbulgaria.com",
+        "label": "partners@unlockingbulgaria.com"
+      },
+      {
+        "icon": "✦",
+        "title": "Media & press",
+        "desc": "Press kits, interviews, coverage, and editorial collaboration.",
+        "email": "media@unlockingbulgaria.com",
+        "label": "media@unlockingbulgaria.com"
+      },
+      {
+        "icon": "⌘",
+        "title": "Business inquiries",
+        "desc": "Licensing, white-label, investments, and strategic conversations.",
+        "email": "business@unlockingbulgaria.com",
+        "label": "business@unlockingbulgaria.com"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "A real-world journey through the hidden memory of Bulgaria.",
+    "copyright": "© 2026 Unlocking Bulgaria. All rights reserved.",
+    "groups": [
+      {
+        "label": "Explore",
+        "links": [
+          { "label": "How it works", "href": "#how-it-works" },
+          { "label": "Domains", "href": "#domains" },
+          { "label": "Guardian Sight", "href": "#guardian-sight" },
+          { "label": "Timeline", "href": "#timeline" }
+        ]
+      },
+      {
+        "label": "Product",
+        "links": [
+          { "label": "Features", "href": "#features" },
+          { "label": "Download", "href": "#download" },
+          { "label": "FAQ", "href": "#faq" },
+          { "label": "Support", "href": "#contact" }
+        ]
+      },
+      {
+        "label": "Partners",
+        "links": [
+          { "label": "Become a partner", "href": "#partners" },
+          { "label": "Municipalities", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Museums", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "Media", "href": "mailto:media@unlockingbulgaria.com" }
+        ]
+      }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "#privacy" },
+      { "label": "Terms of Use", "href": "#terms" },
+      { "label": "Cookies", "href": "#cookies" }
+    ]
+  },
+  "langSelector": {
+    "title": "Choose language",
+    "close": "Close"
+  },
+  "skipLink": "Skip to content",
+  "ariaNav": "Main navigation",
+  "ariaFooterNav": "Footer navigation",
+  "ariaLangNav": "Legal navigation"
+}

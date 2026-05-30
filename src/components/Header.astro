@@ -1,0 +1,94 @@
+---
+import type { Dict } from "../i18n";
+import { LANG_NAMES, LANG_LABELS } from "../i18n";
+
+interface Props {
+  dict: Dict;
+  lang: string;
+}
+const { dict, lang } = Astro.props;
+const currentLabel = LANG_LABELS[lang as keyof typeof LANG_LABELS] ?? "EN";
+---
+
+<header class="site-header" data-header>
+  <a class="header-brand" href={`/${lang}`} aria-label="Unlocking Bulgaria — home">
+    <span class="brand-mark" aria-hidden="true">UB</span>
+    <span>
+      <span class="brand-name">Unlocking Bulgaria</span>
+      <span class="brand-tag">Hidden Bulgaria Quests</span>
+    </span>
+  </a>
+
+  <nav class="header-nav" aria-label={dict.ariaNav}>
+    <a href={`/${lang}#how-it-works`}>{dict.nav.howItWorks}</a>
+    <a href={`/${lang}#domains`}>{dict.nav.domains}</a>
+    <a href={`/${lang}#guardian-sight`}>{dict.nav.guardianSight}</a>
+    <a href={`/${lang}#timeline`}>{dict.nav.timeline}</a>
+    <a href={`/${lang}#partners`}>{dict.nav.partners}</a>
+    <a href={`/${lang}#faq`}>{dict.nav.faq}</a>
+  </nav>
+
+  <div class="header-actions">
+    <button
+      class="btn-lang"
+      type="button"
+      data-lang-btn
+      aria-expanded="false"
+      aria-controls="lang-overlay"
+      aria-label={dict.nav.language}
+    >
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="8" cy="8" r="6.5"/>
+        <path d="M8 1.5C8 1.5 5.5 4 5.5 8s2.5 6.5 2.5 6.5M8 1.5c0 0 2.5 2.5 2.5 6.5S8 14.5 8 14.5M1.5 8h13"/>
+      </svg>
+      <span data-lang-lbl>{currentLabel}</span>
+    </button>
+
+    <a class="btn-dl" href={`/${lang}#download`}>{dict.nav.download}</a>
+
+    <button
+      class="btn-menu"
+      type="button"
+      data-menu-btn
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Menu"
+    >
+      ☰
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label={dict.ariaNav}>
+  <a href={`/${lang}#how-it-works`}>{dict.nav.howItWorks}</a>
+  <a href={`/${lang}#domains`}>{dict.nav.domains}</a>
+  <a href={`/${lang}#guardian-sight`}>{dict.nav.guardianSight}</a>
+  <a href={`/${lang}#timeline`}>{dict.nav.timeline}</a>
+  <a href={`/${lang}#partners`}>{dict.nav.partners}</a>
+  <a href={`/${lang}#faq`}>{dict.nav.faq}</a>
+  <div class="mobile-nav-dl">
+    <a class="btn btn-gold" href={`/${lang}#download`}>{dict.nav.download}</a>
+  </div>
+</nav>
+
+<!-- Language overlay -->
+<div class="lang-overlay" id="lang-overlay" data-lang-overlay role="dialog" aria-label={dict.langSelector.title}>
+  <div class="lang-overlay-hd">
+    <span class="lang-overlay-title">{dict.langSelector.title}</span>
+    <button class="lang-close" type="button" data-lang-close>{dict.langSelector.close} ✕</button>
+  </div>
+  <div class="lang-grid" role="list">
+    {Object.entries(LANG_NAMES).map(([code, name]) => (
+      <button
+        class={`lang-pill${code === lang ? " active" : ""}`}
+        type="button"
+        data-lang-pill={code}
+        role="listitem"
+        lang={code}
+      >
+        {name}
+      </button>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,236 @@
+---
+import type { Dict } from "../i18n";
+import "../styles/global.css";
+
+interface Props {
+  dict: Dict;
+  lang: string;
+  canonicalPath?: string;
+}
+
+const { dict, lang, canonicalPath = "" } = Astro.props;
+const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
+---
+
+<!doctype html>
+<html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#030610" />
+
+  <title>{dict.meta.title}</title>
+  <meta name="description" content={dict.meta.description} />
+
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={dict.meta.ogTitle} />
+  <meta property="og:description" content={dict.meta.ogDescription} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:site_name" content="Unlocking Bulgaria" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- hreflang alternates -->
+  {["en","bg","de","fr","es","it","ro","tr","el","pl","ru","ja","sr"].map((l) => (
+    <link rel="alternate" hreflang={l} href={`https://unlockingbulgaria.com/${l}`} />
+  ))}
+  <link rel="alternate" hreflang="x-default" href="https://unlockingbulgaria.com/en" />
+
+  <!-- Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Structured data -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Unlocking Bulgaria",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "A premium mobile application for exploring Bulgaria through real-world quests, historical routes, mythology, culture, optional AR experiences, and cinematic storytelling.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "url": "https://unlockingbulgaria.com/"
+  }
+  </script>
+</head>
+<body>
+  <!-- Stars canvas -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <a class="skip" href="#main">{dict.skipLink}</a>
+
+  <slot />
+
+  <!-- Stars script -->
+  <script is:inline>
+  (function(){
+    var c=document.getElementById("stars");
+    if(!c||window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+    var x=c.getContext("2d"),W,H,S;
+    function resize(){
+      W=c.width=window.innerWidth;
+      H=c.height=document.documentElement.scrollHeight;
+    }
+    function make(n){
+      S=[];
+      for(var i=0;i<n;i++)S.push({
+        x:Math.random()*W,y:Math.random()*H,
+        r:Math.random()*1.1+.2,a:Math.random(),
+        sp:Math.random()*.25+.04,d:Math.random()>.5?1:-1
+      });
+    }
+    function draw(){
+      x.clearRect(0,0,W,H);
+      S.forEach(function(s){
+        s.a+=s.sp*.007*s.d;
+        if(s.a>1||s.a<0)s.d*=-1;
+        x.beginPath();x.arc(s.x,s.y,s.r,0,Math.PI*2);
+        x.fillStyle="rgba(245,226,168,"+s.a*.52+")";x.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    resize();make(200);draw();
+    var t;window.addEventListener("resize",function(){
+      clearTimeout(t);t=setTimeout(function(){resize();make(200);},180);
+    });
+  })();
+  </script>
+
+  <!-- Header scroll state -->
+  <script is:inline>
+  (function(){
+    var h=document.querySelector("[data-header]");
+    if(!h)return;
+    var u=function(){h.toggleAttribute("data-scrolled",window.scrollY>20)};
+    u();window.addEventListener("scroll",u,{passive:true});
+  })();
+  </script>
+
+  <!-- Mobile nav -->
+  <script is:inline>
+  (function(){
+    var btn=document.querySelector("[data-menu-btn]");
+    var nav=document.querySelector("[data-mobile-nav]");
+    if(!btn||!nav)return;
+    btn.addEventListener("click",function(){
+      var o=nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded",String(o));
+    });
+    nav.addEventListener("click",function(e){
+      if(e.target.tagName==="A"){nav.classList.remove("open");btn.setAttribute("aria-expanded","false");}
+    });
+    document.addEventListener("keydown",function(e){
+      if(e.key==="Escape"&&nav.classList.contains("open")){
+        nav.classList.remove("open");btn.setAttribute("aria-expanded","false");btn.focus();
+      }
+    });
+  })();
+  </script>
+
+  <!-- Language overlay -->
+  <script is:inline>
+  (function(){
+    var openBtn=document.querySelector("[data-lang-btn]");
+    var overlay=document.querySelector("[data-lang-overlay]");
+    var closeBtn=document.querySelector("[data-lang-close]");
+    var lbl=document.querySelector("[data-lang-lbl]");
+    if(!openBtn||!overlay||!closeBtn)return;
+    var labels={en:"EN",bg:"БГ",de:"DE",fr:"FR",es:"ES",it:"IT",ro:"RO",tr:"TR",el:"ΕΛ",pl:"PL",ru:"РУ",ja:"JA",sr:"СР"};
+    function open(){overlay.classList.add("open");openBtn.setAttribute("aria-expanded","true");closeBtn.focus();}
+    function close(){overlay.classList.remove("open");openBtn.setAttribute("aria-expanded","false");openBtn.focus();}
+    openBtn.addEventListener("click",open);
+    closeBtn.addEventListener("click",close);
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"&&overlay.classList.contains("open"))close();});
+    overlay.querySelectorAll("[data-lang-pill]").forEach(function(p){
+      p.addEventListener("click",function(){
+        overlay.querySelectorAll("[data-lang-pill]").forEach(function(x){x.classList.remove("active");});
+        p.classList.add("active");
+        var lang=p.dataset.langPill;
+        if(lbl&&labels[lang])lbl.textContent=labels[lang];
+        document.documentElement.lang=lang;
+        // Navigate to lang path
+        var seg=window.location.pathname.split("/").filter(Boolean);
+        var known=["en","bg","de","fr","es","it","ro","tr","el","pl","ru","ja","sr"];
+        if(seg.length&&known.includes(seg[0]))seg[0]=lang;
+        else seg.unshift(lang);
+        window.location.pathname="/"+seg.join("/");
+      });
+    });
+  })();
+  </script>
+
+  <!-- Timeline tabs -->
+  <script is:inline>
+  (function(){
+    var btns=document.querySelectorAll("[data-tl-btn]");
+    if(!btns.length)return;
+    btns.forEach(function(btn){
+      btn.addEventListener("click",function(){
+        document.querySelectorAll("[data-tl-btn]").forEach(function(b){b.classList.remove("active");b.setAttribute("aria-selected","false");});
+        document.querySelectorAll("[data-tl-panel]").forEach(function(p){p.classList.remove("active");});
+        btn.classList.add("active");btn.setAttribute("aria-selected","true");
+        var panel=document.getElementById("tl-"+btn.dataset.tlBtn);
+        if(panel)panel.classList.add("active");
+      });
+    });
+  })();
+  </script>
+
+  <!-- FAQ accordion -->
+  <script is:inline>
+  (function(){
+    var list=document.querySelector("[data-faq]");
+    if(!list)return;
+    list.querySelectorAll("[data-faq-btn]").forEach(function(btn){
+      btn.addEventListener("click",function(){
+        var item=btn.closest("[data-faq-item]");
+        var isOpen=item.classList.contains("open");
+        list.querySelectorAll("[data-faq-item]").forEach(function(i){
+          i.classList.remove("open");
+          i.querySelector("[data-faq-btn]").setAttribute("aria-expanded","false");
+        });
+        if(!isOpen){item.classList.add("open");btn.setAttribute("aria-expanded","true");}
+      });
+    });
+  })();
+  </script>
+
+  <!-- Scroll reveal -->
+  <script is:inline>
+  (function(){
+    if(window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+      document.querySelectorAll(".reveal").forEach(function(e){e.classList.add("visible");});return;
+    }
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add("visible");io.unobserve(en.target);}});
+    },{threshold:.1});
+    document.querySelectorAll(".reveal").forEach(function(e){io.observe(e);});
+  })();
+  </script>
+
+  <!-- Partner form -->
+  <script is:inline>
+  (function(){
+    var form=document.querySelector("[data-partner-form]");
+    var note=document.querySelector("[data-form-note]");
+    if(!form)return;
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      var d=new FormData(form);
+      var org=String(d.get("org")||"").trim();
+      var email=String(d.get("email")||"").trim();
+      var type=String(d.get("type")||"").trim();
+      var region=String(d.get("region")||"").trim();
+      var msg=String(d.get("message")||"").trim();
+      var sub=encodeURIComponent("Partnership inquiry — "+(org||"Unlocking Bulgaria website"));
+      var body=encodeURIComponent(["Organization: "+org,"Email: "+email,"Type: "+type,"Region: "+region,"","Partnership interest:",msg].join("\n"));
+      window.location.href="mailto:partners@unlockingbulgaria.com?subject="+sub+"&body="+body;
+      if(note)note.textContent="Opening your email client with the inquiry.";
+    });
+  })();
+  </script>
+</body>
+</html>

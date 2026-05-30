@@ -1,0 +1,29 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const d = dict.features;
+---
+
+<section class="section" id="features" aria-labelledby="feat-heading">
+  <div class="wrap">
+    <div class="section-intro reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="feat-heading">{d.heading}</h2>
+      <p class="lede">{d.lede}</p>
+    </div>
+
+    <div class="feat-grid">
+      {d.items.map((item, i) => {
+        const delay = i % 4 === 1 ? "reveal-d1" : i % 4 === 2 ? "reveal-d2" : i % 4 === 3 ? "reveal-d3" : "";
+        return (
+          <article class={`feat-card reveal ${delay}`}>
+            <div class="feat-icon" aria-hidden="true">{item.icon}</div>
+            <h3 class="feat-title">{item.title}</h3>
+            <p class="feat-desc">{item.desc}</p>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>

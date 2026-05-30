@@ -1,0 +1,49 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const d = dict.guardianSight;
+---
+
+<section class="section" id="guardian-sight" aria-labelledby="gs-heading">
+  <div class="wrap">
+    <div class="gs-grid">
+      <!-- Visual -->
+      <div
+        class="gs-visual reveal"
+        aria-label="Guardian Sight AR interface — animated scanning rings with checkpoint indicators"
+      >
+        <div class="gs-rings" aria-hidden="true">
+          <div class="gs-ring gs-ring-a"></div>
+          <div class="gs-ring gs-ring-b"></div>
+          <div class="gs-ring gs-ring-c"></div>
+          <div class="gs-center">
+            <span class="gs-icon">◎</span>
+            <span class="gs-label">{d.centerLabel}</span>
+          </div>
+        </div>
+        <div class="gs-tag gs-tag-a" aria-hidden="true">{d.floatTag1}</div>
+        <div class="gs-tag gs-tag-b" aria-hidden="true">{d.floatTag2}</div>
+      </div>
+
+      <!-- Text -->
+      <div class="gs-text">
+        <p class="eyebrow">{d.eyebrow}</p>
+        <h2 id="gs-heading" class="reveal">{d.heading}</h2>
+        <p class="lede reveal reveal-d1">{d.lede}</p>
+
+        <div class="gs-feats reveal reveal-d2">
+          {d.features.map((f) => (
+            <div class="gs-feat">
+              <span class="gs-feat-icon" aria-hidden="true">{f.icon}</span>
+              <div>
+                <p class="gs-feat-title">{f.title}</p>
+                <p class="gs-feat-desc">{f.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
