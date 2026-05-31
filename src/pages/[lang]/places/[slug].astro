@@ -37,6 +37,7 @@ const schemas = [
   dict={dict}
   lang={lang as string}
   canonicalPath={canonicalPath}
+  jsonLd={schemas}
   seo={{
     title: copy.seoTitle,
     description: copy.seoDescription,
@@ -47,7 +48,7 @@ const schemas = [
 >
   <Header dict={dict} lang={lang as string} />
   <main id="main">
-    <PlacePageTemplate dict={dict} lang={lang as string} place={place} route={route} jsonLd={schemas} />
+    <PlacePageTemplate dict={dict} lang={lang as string} place={place} route={route} />
     {place.slug === "prohodna-cave" && (
       <GuardianSightProhodna dict={dict} lang={lang as string} />
     )}

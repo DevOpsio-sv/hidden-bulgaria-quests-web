@@ -1,5 +1,5 @@
 import { SUPPORTED_LANGS, type Lang } from "../i18n";
-import { getSeoPagePaths, seoDomains, seoPlaces, seoRoutes } from "../data/seoPages";
+import { getPublicSeoDomains, getPublicSeoPlaces, getSeoPagePaths, seoRoutes } from "../data/seoPages";
 
 export interface SeoValidationIssue {
   code:
@@ -27,11 +27,13 @@ const requiredCopyFields = [
 export function validateSeoPages(): SeoValidationIssue[] {
   const issues: SeoValidationIssue[] = [];
   const supported = new Set<string>(SUPPORTED_LANGS);
-  const placesById = new Set(seoPlaces.map((place) => place.id));
+  const publicDomains = getPublicSeoDomains();
+  const publicPlaces = getPublicSeoPlaces();
+  const placesById = new Set(publicPlaces.map((place) => place.id));
   const routesById = new Set(seoRoutes.map((route) => route.id));
   const pagePaths = getSeoPagePaths();
 
-  for (const item of [...seoDomains, ...seoPlaces]) {
+  for (const item of [...publicDomains, ...publicPlaces]) {
     if (!item.translations.bg) {
       issues.push({ code: "missing-translation", message: `${item.id} is missing Bulgarian source copy.` });
     }
@@ -54,9 +56,15 @@ export function validateSeoPages(): SeoValidationIssue[] {
         }
       }
     }
+
+    for (const lang of SUPPORTED_LANGS) {
+      if (!item.translations[lang]) {
+        issues.push({ code: "missing-translation", message: `${item.id} is missing ${lang} copy and will use fallback content.` });
+      }
+    }
   }
 
-  for (const place of seoPlaces) {
+  for (const place of publicPlaces) {
     if (place.slug !== place.id) {
       issues.push({ code: "mismatched-page-slug", message: `${place.id} has slug ${place.slug}.` });
     }
@@ -72,7 +80,7 @@ export function validateSeoPages(): SeoValidationIssue[] {
 
   for (const route of seoRoutes) {
     for (const placeId of route.placeIds) {
-      if (!placesById.has(placeId)) {
+      if (!placesById.has(placeId) && route.placeIds.some((id) => placesById.has(id))) {
         issues.push({ code: "broken-localized-route", message: `${route.id} includes missing place ${placeId}.` });
       }
     }

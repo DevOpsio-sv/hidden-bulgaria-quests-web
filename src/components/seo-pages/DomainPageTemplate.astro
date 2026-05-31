@@ -2,7 +2,6 @@
 import type { Dict } from "../../i18n";
 import type { SeoDomain, SeoRoute } from "../../data/seoPages";
 import { getLocalizedCopy, getPlacesForRoute } from "../../data/seoPages";
-import SEOJsonLd from "./SEOJsonLd.astro";
 import PlaceHero from "./PlaceHero.astro";
 import TourismInfoSection from "./TourismInfoSection.astro";
 import StoryTeaserSection from "./StoryTeaserSection.astro";
@@ -17,15 +16,13 @@ interface Props {
   lang: string;
   domain: SeoDomain;
   route: SeoRoute;
-  jsonLd: unknown[];
 }
 
-const { dict, lang, domain, route, jsonLd } = Astro.props;
+const { dict, lang, domain, route } = Astro.props;
 const copy = getLocalizedCopy(domain, lang);
 const routePlaces = getPlacesForRoute(route.id);
 ---
 
-<SEOJsonLd items={jsonLd} />
 <PlaceHero
   dict={dict}
   copy={copy}

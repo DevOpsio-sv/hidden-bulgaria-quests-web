@@ -447,13 +447,21 @@ export function getPlacesForRoute(routeId: string) {
   return seoPlaces.filter((place) => place.routeId === routeId);
 }
 
+export function getPublicSeoDomains() {
+  return seoDomains.filter((domain) => domain.id === SEA_DOMAIN_ID);
+}
+
+export function getPublicSeoPlaces() {
+  return seoPlaces;
+}
+
 export function getLocalizedPath(lang: string, path: string) {
   return `/${lang}${path}`;
 }
 
 export function getSeoPagePaths() {
   return [
-    ...seoDomains.map((domain) => ({ kind: "domain" as const, path: `/${domain.slug}` })),
-    ...seoPlaces.map((place) => ({ kind: "place" as const, path: `/places/${place.slug}` })),
+    ...getPublicSeoDomains().map((domain) => ({ kind: "domain" as const, path: `/${domain.slug}` })),
+    ...getPublicSeoPlaces().map((place) => ({ kind: "place" as const, path: `/places/${place.slug}` })),
   ];
 }
