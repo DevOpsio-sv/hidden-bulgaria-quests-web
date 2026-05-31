@@ -18,13 +18,23 @@ interface Props {
   jsonLd?: unknown[];
 }
 
+const OG_LOCALE_MAP: Record<string, string> = {
+  en: "en_US", bg: "bg_BG", de: "de_DE", fr: "fr_FR", es: "es_ES",
+  it: "it_IT", ro: "ro_RO", tr: "tr_TR", el: "el_GR", hu: "hu_HU",
+  zh: "zh_CN", ru: "ru_RU", ja: "ja_JP", sr: "sr_RS",
+};
+
+const SITE_ORIGIN = "https://unlockingbulgaria.com";
+const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/og-image.png`;
+
 const { dict, lang, canonicalPath = "", seo, jsonLd = [] } = Astro.props;
-const canonical = `https://unlockingbulgaria.com/${lang}${canonicalPath}`;
+const canonical = `${SITE_ORIGIN}/${lang}${canonicalPath}`;
 const metaTitle = seo?.title ?? dict.meta.title;
 const metaDescription = seo?.description ?? dict.meta.description;
 const ogTitle = seo?.ogTitle ?? seo?.title ?? dict.meta.ogTitle;
 const ogDescription = seo?.ogDescription ?? seo?.description ?? dict.meta.ogDescription;
-const ogImage = seo?.ogImage;
+const ogImage = seo?.ogImage ?? DEFAULT_OG_IMAGE;
+const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
 ---
 
 <!doctype html>
@@ -33,29 +43,32 @@ const ogImage = seo?.ogImage;
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#030610" />
+  <meta name="robots" content="index, follow" />
 
   <title>{metaTitle}</title>
   <meta name="description" content={metaDescription} />
 
   <link rel="canonical" href={canonical} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <!-- Open Graph -->
   <meta property="og:type" content={seo?.type ?? "website"} />
+  <meta property="og:locale" content={ogLocale} />
   <meta property="og:title" content={ogTitle} />
   <meta property="og:description" content={ogDescription} />
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="Unlocking Bulgaria" />
-  {ogImage && <meta property="og:image" content={ogImage} />}
+  <meta property="og:image" content={ogImage} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={ogTitle} />
   <meta name="twitter:description" content={ogDescription} />
-  {ogImage && <meta name="twitter:image" content={ogImage} />}
+  <meta name="twitter:image" content={ogImage} />
 
   <!-- hreflang alternates -->
   {SUPPORTED_LANGS.map((l) => (
-    <link rel="alternate" hreflang={l} href={`https://unlockingbulgaria.com/${l}${canonicalPath}`} />
+    <link rel="alternate" hreflang={l} href={`${SITE_ORIGIN}/${l}${canonicalPath}`} />
   ))}
-  <link rel="alternate" hreflang="x-default" href={`https://unlockingbulgaria.com/en${canonicalPath}`} />
+  <link rel="alternate" hreflang="x-default" href={`${SITE_ORIGIN}/en${canonicalPath}`} />
 
   <!-- Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,7 +83,7 @@ const ogImage = seo?.ogImage;
     "operatingSystem": "iOS, Android",
     "description": metaDescription,
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-    "url": `https://unlockingbulgaria.com/${lang}`
+    "url": `${SITE_ORIGIN}/${lang}`
   })} />
   {jsonLd.map((schema) => (
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
