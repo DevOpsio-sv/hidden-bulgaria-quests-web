@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://unlockingbulgaria.com/sitemap.xml
