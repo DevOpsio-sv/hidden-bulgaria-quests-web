@@ -30,9 +30,9 @@ const place = getSeoPlace(slug as string)!;
 const route = getSeoRoute(place.routeId)!;
 const domain = route.domainId === SEA_DOMAIN_ID ? getSeoDomain(route.domainId) : undefined;
 const copy = getLocalizedCopy(place, lang as string);
+const canonicalPath = `/places/${place.slug}`;
 const parentCopy = domain ? getLocalizedCopy(domain, lang as string) : getLocalizedRouteCopy(route, lang as string);
 const parentPath = domain ? "/sea-domain" : canonicalPath;
-const canonicalPath = `/places/${place.slug}`;
 const schemas = [
   placeJsonLd(place, copy, lang as string, canonicalPath),
   breadcrumbJsonLd(lang as string, [
