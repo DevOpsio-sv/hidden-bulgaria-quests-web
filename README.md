@@ -225,11 +225,11 @@ Including:
 
 ## Maintained By
 
-DevOpsio
+**DevOpsio**
 
-Infrastructure, Architecture, Product Engineering, Cloud Operations, Security, Performance Optimization, and Technical Delivery.
+Website: [https://devopsio.co](https://devopsio.co)
 
-Website: https://devopsio.co
+Cloud Architecture • DevOps • Platform Engineering • Digital Experience Delivery
 
 ---
 
