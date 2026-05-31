@@ -18,6 +18,7 @@
 }
 
 .living-bg__base,
+.living-bg__stars,
 .living-bg__wave,
 .living-bg__auroras,
 .living-bg__paths,
@@ -31,6 +32,48 @@
   background:
     radial-gradient(ellipse 85% 62% at 50% -10%, rgb(10 12 22 / calc(.54 * var(--bg-intensity))) 0%, transparent 64%),
     linear-gradient(180deg, var(--void) 0%, #03050b 48%, var(--void-2) 100%);
+}
+
+.living-bg__stars {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgb(245 236 214 / .72) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 36% 72%, rgb(232 200 120 / .54) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 78% 28%, rgb(245 236 214 / .50) 0 .8px, transparent 1.5px),
+    radial-gradient(circle at 92% 66%, rgb(201 161 74 / .42) 0 .9px, transparent 1.6px);
+  background-position: 0 0, 28px 46px, 72px 18px, 104px 92px;
+  background-size: 180px 180px, 260px 260px, 320px 320px, 420px 420px;
+  mask-image: linear-gradient(180deg, black 0%, rgb(0 0 0 / .82) 56%, rgb(0 0 0 / .46) 100%);
+  opacity: calc(.64 * var(--bg-intensity));
+  transform: translate3d(0, 0, 0);
+  animation: living-stars-breathe 11s ease-in-out infinite alternate;
+}
+
+.living-bg__stars::before,
+.living-bg__stars::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.living-bg__stars::before {
+  background-image:
+    radial-gradient(circle at 18% 34%, rgb(245 226 168 / .38) 0 .7px, transparent 1.4px),
+    radial-gradient(circle at 64% 16%, rgb(244 236 214 / .44) 0 .8px, transparent 1.4px),
+    radial-gradient(circle at 84% 82%, rgb(232 200 120 / .34) 0 .7px, transparent 1.5px);
+  background-position: 30px 18px, 90px 70px, 140px 120px;
+  background-size: 220px 220px, 340px 340px, 470px 470px;
+  opacity: .72;
+}
+
+.living-bg__stars::after {
+  background:
+    radial-gradient(circle at 22% 24%, rgb(245 236 214 / .46) 0 .7px, transparent 1.4px),
+    radial-gradient(circle at 68% 44%, rgb(245 226 168 / .32) 0 .8px, transparent 1.5px),
+    radial-gradient(circle at 46% 86%, rgb(244 236 214 / .36) 0 .7px, transparent 1.4px);
+  background-size: 290px 290px, 390px 390px, 520px 520px;
+  opacity: .58;
+  transform: translate3d(0, 0, 0);
+  animation: living-stars-drift 48s linear infinite;
 }
 
 .living-bg__wave {
@@ -232,6 +275,16 @@
   }
 }
 
+@keyframes living-stars-breathe {
+  from { opacity: calc(.56 * var(--bg-intensity)); }
+  to { opacity: calc(.72 * var(--bg-intensity)); }
+}
+
+@keyframes living-stars-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-34px, -52px, 0); }
+}
+
 @media (hover: none), (pointer: coarse), (max-width: 760px) {
   .living-bg__auroras,
   .living-bg__paths,
@@ -241,6 +294,10 @@
 
   .living-bg__wave {
     opacity: .72;
+  }
+
+  .living-bg__stars {
+    opacity: calc(.5 * var(--bg-intensity));
   }
 
   .living-bg__grain {
@@ -266,6 +323,10 @@
     background-position: 54% 34%, 38% 62%, 52% 50%;
     filter: none;
     opacity: .78;
+  }
+
+  .living-bg__stars {
+    opacity: calc(.62 * var(--bg-intensity));
   }
 
   .living-bg__auroras,
