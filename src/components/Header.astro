@@ -1,6 +1,7 @@
 ---
 import type { Dict } from "../i18n";
 import { LANG_NAMES, LANG_LABELS } from "../i18n";
+import { GOOGLE_PLAY_URL } from "../config/appLinks";
 
 interface Props {
   dict: Dict;
@@ -44,7 +45,7 @@ const currentLabel = LANG_LABELS[lang as keyof typeof LANG_LABELS] ?? "EN";
       <span data-lang-lbl>{currentLabel}</span>
     </button>
 
-    <a class="btn-dl" href={`/${lang}#download`}>{dict.nav.download}</a>
+    <a class="btn-dl" href={GOOGLE_PLAY_URL}>{dict.nav.download}</a>
 
     <button
       class="btn-menu"
@@ -85,7 +86,7 @@ const currentLabel = LANG_LABELS[lang as keyof typeof LANG_LABELS] ?? "EN";
     </button>
   </div>
   <div class="mobile-nav-dl">
-    <a class="btn btn-gold" href={`/${lang}#download`}>{dict.nav.download}</a>
+    <a class="btn btn-gold" href={GOOGLE_PLAY_URL}>{dict.nav.download}</a>
   </div>
 </nav>
 

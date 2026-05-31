@@ -1,5 +1,6 @@
 ---
 import type { Dict } from "../i18n";
+import { GOOGLE_PLAY_URL } from "../config/appLinks";
 interface Props { dict: Dict; }
 const { dict } = Astro.props;
 const d = dict.download;
@@ -22,7 +23,7 @@ const d = dict.download;
       </a>
       <a
         class="store-btn"
-        href="#"
+        href={GOOGLE_PLAY_URL}
         aria-label={`${d.googlePlay.label} ${d.googlePlay.name} — ${d.comingSoon}`}
       >
         <span class="store-lbl">{d.googlePlay.label}</span>
