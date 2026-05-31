@@ -2,28 +2,48 @@
 import type { Dict } from "../i18n";
 interface Props { dict: Dict; }
 const { dict } = Astro.props;
-const j = dict.journey;
+const d = dict.howItWorks;
 ---
 
-<section class="s-journey" id="how-it-works" aria-labelledby="journey-heading">
-  <div class="journey-intro wrap">
-    <p class="eyebrow">{j.eyebrow}</p>
-    <h2 id="journey-heading">{j.heading}</h2>
-  </div>
+<section class="s-hiw" id="how-it-works" aria-labelledby="hiw-heading">
+  <div class="wrap">
+    <div class="section-intro reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="hiw-heading">{d.heading}</h2>
+      <p class="lede">{d.lede}</p>
+    </div>
 
-  <div class="journey-grid wrap">
-    {j.items.map((item, i) => {
-      const delay = i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : i === 3 ? " reveal-d3" : i === 4 ? " reveal-d4" : "";
-      return (
-        <div class={`ji reveal${delay}`}>
-          <div class="ji-sym" aria-hidden="true">{item.sym}</div>
-          <div class="ji-content">
-            <span class="ji-num">{item.num}</span>
-            <h3 class="ji-name">{item.name}</h3>
-            <p class="ji-desc">{item.desc}</p>
-          </div>
-        </div>
-      );
-    })}
+    <div class="hiw-layout">
+      <!-- 4-step progression with vertical spine -->
+      <ol class="hiw-steps" aria-label={d.heading}>
+        {d.steps.map((step, i) => {
+          const delay = i === 0 ? "" : i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : " reveal-d3";
+          return (
+            <li class={`hiw-step reveal${delay}`}>
+              <div class="hiw-step-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</div>
+              <div class="hiw-step-body">
+                <p class="hiw-step-label">{step.label}</p>
+                <h3 class="hiw-step-title">{step.title}</h3>
+                <p class="hiw-step-desc">{step.desc}</p>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+
+      <!-- Flow nodes (right column, sticky) -->
+      <div class="hiw-flow" aria-hidden="true">
+        {d.flow.map((node, i) => {
+          const delay = i === 0 ? "" : i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : " reveal-d3";
+          return (
+            <div class={`hiw-node reveal${delay}`}>
+              <div class="hiw-node-icon">{node.icon}</div>
+              <div class="hiw-node-name">{node.name}</div>
+              <div class="hiw-node-sub">{node.sub}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   </div>
 </section>

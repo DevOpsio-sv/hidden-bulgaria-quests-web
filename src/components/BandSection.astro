@@ -1,0 +1,13 @@
+---
+import type { Dict } from "../i18n";
+interface Props { dict: Dict; }
+const { dict } = Astro.props;
+const b = dict.band;
+---
+
+<section class="s-band">
+  <div class="wrap">
+    <p class="band-sub reveal">{b.sub}</p>
+    <p class="band-statement reveal reveal-d1">{b.statement}</p>
+  </div>
+</section>

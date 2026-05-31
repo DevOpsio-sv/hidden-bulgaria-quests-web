@@ -302,6 +302,89 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   })();
   </script>
 
+  <!-- Hero: pause video for reduced-motion; lightbox toggle -->
+  <script is:inline>
+  (function(){
+    /* Pause hero video for reduced-motion users */
+    var vid=document.querySelector('.hero-video');
+    if(vid&&window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+      vid.pause();
+      vid.removeAttribute('autoplay');
+    }
+    /* Lightbox open/close */
+    var openBtn=document.querySelector('[data-lightbox-btn]');
+    var lightbox=document.getElementById('hero-lightbox');
+    var closeBtn=document.querySelector('[data-lightbox-close]');
+    if(!openBtn||!lightbox)return;
+    function openLb(){
+      lightbox.removeAttribute('hidden');
+      lightbox.focus();
+      openBtn.setAttribute('aria-expanded','true');
+    }
+    function closeLb(){
+      lightbox.setAttribute('hidden','');
+      openBtn.setAttribute('aria-expanded','false');
+      openBtn.focus();
+    }
+    openBtn.addEventListener('click',openLb);
+    if(closeBtn)closeBtn.addEventListener('click',closeLb);
+    lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLb();});
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&!lightbox.hasAttribute('hidden'))closeLb();
+    });
+  })();
+  </script>
+
+  <!-- Scroll spine -->
+  <script is:inline>
+  (function(){
+    var wrap=document.getElementById('spine-wrap');
+    var fill=document.getElementById('spine-fill');
+    if(!wrap||!fill||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    function update(){
+      var r=wrap.getBoundingClientRect();
+      var wh=window.innerHeight;
+      var h=wrap.offsetHeight;
+      var scrolled=Math.max(0,wh-r.top);
+      var total=h+wh;
+      var prog=Math.min(1,scrolled/total);
+      fill.style.height=Math.round(prog*h)+'px';
+      fill.classList.toggle('active',prog>0.02&&prog<0.99);
+    }
+    window.addEventListener('scroll',update,{passive:true});
+    update();
+  })();
+  </script>
+
+  <!-- Custom scanning-lens cursor (desktop / fine pointer) -->
+  <script is:inline>
+  (function(){
+    if(!window.matchMedia('(pointer:fine)').matches)return;
+    if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    var lens=document.createElement('div');
+    lens.className='cursor-lens';
+    lens.setAttribute('aria-hidden','true');
+    document.body.appendChild(lens);
+    var mx=0,my=0,lx=0,ly=0,raf=0;
+    function move(e){mx=e.clientX;my=e.clientY}
+    function tick(){
+      lx+=(mx-lx)*.18;ly+=(my-ly)*.18;
+      lens.style.transform='translate('+(lx-19)+'px,'+(ly-19)+'px)';
+      lens.style.opacity='1';
+      raf=requestAnimationFrame(tick);
+    }
+    document.addEventListener('mousemove',move,{passive:true});
+    document.addEventListener('mouseenter',function(){
+      if(!raf)raf=requestAnimationFrame(tick);
+    });
+    document.addEventListener('mouseleave',function(){
+      lens.style.opacity='0';
+      cancelAnimationFrame(raf);raf=0;
+    });
+    raf=requestAnimationFrame(tick);
+  })();
+  </script>
+
   <!-- Partner form -->
   <script is:inline>
   (function(){

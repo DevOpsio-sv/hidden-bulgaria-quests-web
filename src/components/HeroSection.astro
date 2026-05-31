@@ -1,17 +1,29 @@
 ---
 import type { Dict } from "../i18n";
+import { GOOGLE_PLAY_URL } from "../config/appLinks";
 interface Props { dict: Dict; lang: string; }
 const { dict, lang } = Astro.props;
 const h = dict.hero;
 const a = dict.arrival;
 ---
 
-<section class="arrival-section" aria-label={dict.ariaHero}>
-  <!-- Animated globe -->
-  <div class="globe-container" aria-hidden="true">
+<section class="hero-section" aria-label={dict.ariaHero}>
+  <!-- Video / poster background -->
+  <div class="hero-video-wrap" aria-hidden="true">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/video/hero-poster.jpg"
+    >
+      <source src="/video/hero-bg.mp4" type="video/mp4" />
+    </video>
+    <!-- Globe kept as fallback/overlay visual when no video -->
     <svg
       id="globe-svg"
-      class="globe-svg"
+      class="globe-svg hero-globe"
       viewBox="0 0 500 500"
       xmlns="http://www.w3.org/2000/svg"
       role="presentation"
@@ -33,61 +45,111 @@ const a = dict.arrival;
           <circle cx="250" cy="250" r="190"/>
         </clipPath>
       </defs>
-
-      <!-- Outer atmosphere halo -->
       <circle cx="250" cy="250" r="226" fill="url(#rg-atmos)"/>
-
-      <!-- Planet surface -->
       <circle cx="250" cy="250" r="190" fill="url(#rg-surface)"/>
       <circle cx="250" cy="250" r="190" fill="url(#rg-glow)"/>
-
-      <!-- Grid lines — rotated on scroll by JS -->
       <g id="globe-grid" clip-path="url(#globe-clip)" fill="none" stroke="#d8b56a">
-        <!-- Latitude parallels -->
         <ellipse cx="250" cy="250" rx="190" ry="36" stroke-width="0.5" stroke-opacity="0.42"/>
         <ellipse cx="250" cy="250" rx="190" ry="86" stroke-width="0.45" stroke-opacity="0.3"/>
         <ellipse cx="250" cy="250" rx="190" ry="138" stroke-width="0.4" stroke-opacity="0.22"/>
         <ellipse cx="250" cy="180" rx="190" ry="36" stroke-width="0.35" stroke-opacity="0.16"/>
         <ellipse cx="250" cy="322" rx="190" ry="36" stroke-width="0.35" stroke-opacity="0.16"/>
-        <!-- Longitude meridians -->
         <ellipse cx="250" cy="250" rx="190" ry="190" stroke-width="0.5" stroke-opacity="0.36"/>
         <ellipse cx="250" cy="250" rx="95" ry="190" stroke-width="0.45" stroke-opacity="0.3"/>
         <ellipse cx="250" cy="250" rx="48" ry="190" stroke-width="0.35" stroke-opacity="0.2"/>
         <ellipse cx="250" cy="250" rx="143" ry="190" stroke-width="0.38" stroke-opacity="0.26"/>
-        <!-- Equator -->
         <line x1="60" y1="250" x2="440" y2="250" stroke-width="0.6" stroke-opacity="0.4"/>
-        <!-- Prime meridian -->
         <line x1="250" y1="60" x2="250" y2="440" stroke-width="0.5" stroke-opacity="0.32"/>
       </g>
-
-      <!-- Rim -->
       <circle cx="250" cy="250" r="190" fill="none" stroke="#d8b56a" stroke-width="0.8" stroke-opacity="0.28"/>
-
-      <!-- Bulgaria marker (approx. 43°N 25°E on visible face) -->
       <g class="globe-marker">
         <circle cx="291" cy="208" r="3.5" fill="#d8b56a" opacity="0.9"/>
         <circle cx="291" cy="208" r="8" fill="none" stroke="#d8b56a" stroke-width="0.8" stroke-opacity="0.5"/>
         <circle cx="291" cy="208" r="14" fill="none" stroke="#d8b56a" stroke-width="0.4" stroke-opacity="0.25"/>
       </g>
     </svg>
+    <div class="hero-overlay" aria-hidden="true"></div>
   </div>
 
-  <!-- The Question -->
-  <div class="arrival-copy">
-    <h1 class="arrival-title">
-      <span class="arrival-line al-1">{h.line1}</span>
-      <span class="arrival-line al-2">{h.line2} {h.line3}</span>
-      <span class="arrival-line al-3">{h.question}</span>
-    </h1>
+  <!-- Main content -->
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-eyebrow">{h.eyebrow}</span>
 
-    <a class="arrival-cta" href={`/${lang}#timeline`} aria-label={a.cta}>
-      <span>{a.cta}</span>
-      <svg class="arrival-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-        <path d="M12 4v16M5 13l7 7 7-7"/>
-      </svg>
-    </a>
+      <h1 class="hero-headline">
+        <span class="hero-line hl-1">{h.line1}</span>
+        <span class="hero-line hl-2">{h.line2} {h.line3}</span>
+        <span class="hero-question">{h.question}</span>
+      </h1>
+
+      <p class="hero-lede">{h.lede}</p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href={GOOGLE_PLAY_URL}>{h.ctaPrimary}</a>
+        <button
+          class="btn btn-ghost"
+          type="button"
+          data-lightbox-btn
+          aria-controls="hero-lightbox"
+          aria-expanded="false"
+        >
+          {h.ctaSecondary}
+        </button>
+      </div>
+
+      <ul class="hero-trust" role="list" aria-label={h.mapLabel}>
+        {h.trust.map((chip) => (
+          <li class="hero-trust-chip">{chip}</li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Phone mockup (desktop only) -->
+    <div class="hero-phone" aria-hidden="true">
+      <p class="hero-phone-domain">{h.phoneDomain}</p>
+      <p class="hero-phone-title">{h.phoneTitle}</p>
+      <p class="hero-phone-desc">{h.phoneDesc}</p>
+      <div class="hero-phone-bar-wrap">
+        <div class="hero-phone-bar"></div>
+      </div>
+      <p class="hero-phone-progress">{h.phoneProgress}</p>
+    </div>
   </div>
 
-  <!-- Bottom veil fading into next section -->
+  <!-- Scroll hint -->
+  <a
+    class="hero-scroll-hint"
+    href={`/${lang}#how-it-works`}
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    <span class="hero-scroll-label">{a.cta}</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22" aria-hidden="true">
+      <path d="M12 4v16M5 13l7 7 7-7"/>
+    </svg>
+  </a>
+
   <div class="arrival-veil" aria-hidden="true"></div>
 </section>
+
+<!-- Video lightbox -->
+<div
+  class="hero-lightbox"
+  id="hero-lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label={h.videoTitle}
+  data-lightbox
+  hidden
+>
+  <div class="hero-lightbox-inner">
+    <button
+      class="hero-lightbox-close"
+      type="button"
+      data-lightbox-close
+    >{h.videoClose} ✕</button>
+    <div class="hero-lightbox-placeholder" role="img" aria-label={h.videoTitle}>
+      <span>{h.videoTitle}</span>
+    </div>
+  </div>
+</div>

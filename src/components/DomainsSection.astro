@@ -8,6 +8,8 @@ const atmoClasses = [
   "dc-stone", "dc-name", "dc-sea",
   "dc-kings", "dc-voice", "dc-cross",
 ];
+
+const veils = ["◉", "⌘", "◈", "✦", "♪", "◎"];
 ---
 
 <section class="s-domains" id="domains" aria-labelledby="domains-heading">
@@ -24,6 +26,10 @@ const atmoClasses = [
       const content = (
         <>
           <div class="dc-atmo" aria-hidden="true"></div>
+          <div class="dc-veil" aria-hidden="true">
+            <div class="dc-veil-glyph">{veils[i]}</div>
+            <span class="dc-veil-label">{d.explore}</span>
+          </div>
           <div class="dc-content">
             <p class="dc-epoch">{epochLabel}</p>
             <h3 class="dc-title">{card.name}</h3>

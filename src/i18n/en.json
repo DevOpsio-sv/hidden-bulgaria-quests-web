@@ -31,7 +31,9 @@
     "phoneDomain": "Domain of the Name",
     "phoneTitle": "The Old Capitals",
     "phoneDesc": "Visit the places where memory became statehood.",
-    "phoneProgress": "4 of 7 seals discovered"
+    "phoneProgress": "4 of 7 seals discovered",
+    "videoTitle": "The Journey — Unlocking Bulgaria",
+    "videoClose": "Close"
   },
   "band": {
     "sub": "Not a guide. Not a map. Not a game.",
