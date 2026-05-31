@@ -1301,7 +1301,17 @@ textarea.form-control{min-height:122px;resize:vertical}
 /* Contact card text — was .82rem (~14px), bumped to .95rem */
 .contact-card p{color:var(--text-3);font-size:.95rem;line-height:1.58;margin-bottom:18px}
 /* Contact card links — was .8rem (~13.5px), bumped to .92rem */
-.contact-card a{color:var(--gold);font-size:.92rem;font-weight:600;transition:color var(--fast)}
+.contact-card a{
+  color:var(--gold);
+  display:inline-block;
+  font-size:.92rem;
+  font-weight:600;
+  line-height:1.45;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  transition:color var(--fast);
+  word-break:break-word;
+}
 .contact-card a:hover{color:var(--gold-lt)}
 
 /* ─── Footer ─────────────────────────────────────────────────── */
