@@ -5,12 +5,20 @@ import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import PlacePageTemplate from "../../../components/seo-pages/PlacePageTemplate.astro";
 import GuardianSightProhodna from "../../../components/GuardianSightProhodna.astro";
-import { getLocalizedCopy, getSeoPlace, getSeoRoute, seoPlaces } from "../../../data/seoPages";
+import {
+  SEA_DOMAIN_ID,
+  getLocalizedCopy,
+  getLocalizedRouteCopy,
+  getPublicSeoPlaces,
+  getSeoDomain,
+  getSeoPlace,
+  getSeoRoute,
+} from "../../../data/seoPages";
 import { breadcrumbJsonLd, faqJsonLd, placeJsonLd } from "../../../utils/seoJsonLd";
 
 export function getStaticPaths() {
   return SUPPORTED_LANGS.flatMap((lang) =>
-    seoPlaces.map((place) => ({
+    getPublicSeoPlaces().map((place) => ({
       params: { lang, slug: place.slug },
     })),
   );
@@ -20,13 +28,16 @@ const { lang, slug } = Astro.params;
 const dict = getDict(lang as Lang);
 const place = getSeoPlace(slug as string)!;
 const route = getSeoRoute(place.routeId)!;
+const domain = route.domainId === SEA_DOMAIN_ID ? getSeoDomain(route.domainId) : undefined;
 const copy = getLocalizedCopy(place, lang as string);
+const parentCopy = domain ? getLocalizedCopy(domain, lang as string) : getLocalizedRouteCopy(route, lang as string);
+const parentPath = domain ? "/sea-domain" : canonicalPath;
 const canonicalPath = `/places/${place.slug}`;
 const schemas = [
   placeJsonLd(place, copy, lang as string, canonicalPath),
   breadcrumbJsonLd(lang as string, [
     { name: "Unlocking Bulgaria", path: "" },
-    { name: dict.seoPages.common.place, path: "/sea-domain" },
+    { name: parentCopy.title, path: parentPath },
     { name: copy.title, path: canonicalPath },
   ]),
   faqJsonLd(copy),
