@@ -5,7 +5,7 @@
 - Baseline scope: Astro static build output from dist/
 - Rendered HTML snapshot: docs/qa/cleanup-baseline/rendered-html/
 - Route list: docs/qa/cleanup-baseline/routes.txt
-- Asset summaries: sset-sizes-by-extension.txt, sset-files.tsv
+- Asset summaries: asset-sizes-by-extension.txt, asset-files.tsv
 
 ## Command Baseline
 
@@ -13,9 +13,9 @@
 
 Result: completed with 0 errors and 4 TypeScript hints.
 
-Hints recorded by stro check:
+Hints recorded by astro check:
 
-- uild.js: CommonJS module hint.
+- build.js: CommonJS module hint.
 - src/components/GuardianSightProhodna.astro: lang prop declared but unused.
 - src/components/LivingMap.astro: Lang type import declared but unused.
 - src/components/TimelineSection.astro: i callback parameter declared but unused.
@@ -36,7 +36,6 @@ Build output summary:
 
 ## Asset Size Summary
 
-``text
 .css: 1 files, 66004 bytes
 .html: 267 files, 10848295 bytes
 .svg: 2 files, 6545 bytes
@@ -44,13 +43,10 @@ Build output summary:
 .xml: 1 files, 37179 bytes
 [no extension]: 2 files, 934 bytes
 
-``
-
 ## Route Sample
 
-Full route list is in outes.txt.
+Full route list is in routes.txt.
 
-``text
 /
 /bg
 /bg/map
@@ -91,10 +87,9 @@ Full route list is in outes.txt.
 /de/places/varna
 /de/sea-domain
 /el
-``
 
 ## Visual Baseline Notes
 
-A browser screenshot pass has not changed code and is intentionally described here as baseline observation criteria. For the key languages en, g, and el, the expected visual state is the current Astro-rendered design: dark cinematic background, fixed header, language selector, hero video/poster/globe layer, scroll-reveal sections, domain cards, Guardian Sight section, timeline, partner form, FAQ accordion, footer, map pages, sea-domain pages, and place pages including the Prohodna Guardian Sight demo.
+A browser screenshot pass has not changed code and is intentionally described here as baseline observation criteria. For the key languages en, bg, and el, the expected visual state is the current Astro-rendered design: dark cinematic background, fixed header, language selector, hero video/poster/globe layer, scroll-reveal sections, domain cards, Guardian Sight section, timeline, partner form, FAQ accordion, footer, map pages, sea-domain pages, and place pages including the Prohodna Guardian Sight demo.
 
-The final verification pass must compare rebuilt HTML against endered-html/ and spot-check desktop/mobile plus reduced-motion states before accepting cleanup changes.
+The final verification pass must compare rebuilt HTML against rendered-html/ and spot-check desktop/mobile plus reduced-motion states before accepting cleanup changes.
