@@ -1,4 +1,5 @@
 import { DEFAULT_LANG, SUPPORTED_LANGS, type Lang } from "../i18n";
+import { geoToMap } from "../utils/geoToMap";
 
 export type PageStatus = "draft" | "ready";
 export type PlaceType = "hero" | "standard" | "demo";
@@ -18,6 +19,9 @@ export interface LocalizedSeoCopy {
   faq: Array<{ q: string; a: string }>;
 }
 
+export type DomainEpoch = "before" | "after";
+export type DomainMasterKey = "spirit" | "soul" | "body" | "earth";
+
 export interface SeoDomain {
   id: string;
   slug: string;
@@ -27,6 +31,12 @@ export interface SeoDomain {
   images: string[];
   appDeepLink: string;
   translations: Partial<Record<Lang, LocalizedSeoCopy>>;
+  /** Which side of 681 CE this domain primarily represents */
+  epoch: DomainEpoch;
+  /** Symbolic axis: Дух / Душа / Тяло / Земя */
+  masterKey: DomainMasterKey;
+  /** SVG path (viewBox 0 0 800 500) for the region overlay + accent hex tint */
+  mapRegion?: { path: string; accent: string };
 }
 
 export interface SeoRoute {
@@ -58,11 +68,23 @@ export interface SeoPlace {
   nextPlace?: string;
   appDeepLink: string;
   translations: Partial<Record<Lang, LocalizedSeoCopy>>;
+  /** Which side of 681 CE this place primarily belongs to */
+  epoch: DomainEpoch;
+  /** Normalized 0..1 position on the Bulgaria Living Map SVG (viewBox 800×500) */
+  map?: { x: number; y: number };
 }
 
 export const SITE_ORIGIN = "https://unlockingbulgaria.com";
 export const SEO_PAGE_IMAGE = `${SITE_ORIGIN}/favicon.svg`;
+
+// Domain IDs — order matches dict.domains.cards (0-5)
+export const STONE_RIVER_DOMAIN_ID = "stone-river-domain";
+export const OLD_CAPITALS_DOMAIN_ID = "old-capitals-domain";
 export const SEA_DOMAIN_ID = "sea-domain";
+export const KINGS_DOMAIN_ID = "kings-domain";
+export const VOICE_STONE_DOMAIN_ID = "voice-stone-domain";
+export const CROSSROADS_DOMAIN_ID = "crossroads-domain";
+
 export const SEA_ROUTE_ID = "sea-coast-route";
 export const DEMO_ROUTE_ID = "demo-route";
 
@@ -88,7 +110,46 @@ const commonFaqEn = [
   },
 ];
 
+// Domain region SVG paths — viewBox 0 0 800 500
+// Approximate geographic zones; replace with precise GIS paths when available.
+// TODO: replace rough polygons with authored per-region paths for production.
+const REGION_NW    = "M 0,33 L 320,18 L 308,225 L 0,225 Z";
+const REGION_NC    = "M 320,18 L 658,33 L 648,225 L 308,225 Z";
+const REGION_COAST = "M 658,33 L 723,67 L 787,117 Q 793,260 788,300 L 783,383 L 723,430 L 690,450 L 646,395 L 648,225 Z";
+const REGION_SC    = "M 165,225 L 648,225 L 648,395 L 490,470 L 310,462 L 155,380 Z";
+const REGION_SW    = "M 0,305 L 205,295 L 285,432 L 172,455 L 26,450 L 0,380 Z";
+const REGION_W     = "M 0,225 L 210,225 L 220,305 L 0,305 Z";
+
 export const seoDomains: SeoDomain[] = [
+  // Index 0 — matches dict.domains.cards[0]
+  {
+    id: STONE_RIVER_DOMAIN_ID,
+    slug: "stone-river-domain",
+    routeIds: [],
+    status: "draft",
+    coordinates: { lat: 43.8, lng: 24.0 },
+    images: [SEO_PAGE_IMAGE],
+    appDeepLink: "unlockingbulgaria://domains/stone-river-domain",
+    epoch: "before",
+    masterKey: "earth",
+    mapRegion: { path: REGION_NW, accent: "#1e3a5f" },
+    translations: {},
+  },
+  // Index 1 — matches dict.domains.cards[1]
+  {
+    id: OLD_CAPITALS_DOMAIN_ID,
+    slug: "old-capitals-domain",
+    routeIds: [],
+    status: "draft",
+    coordinates: { lat: 43.1, lng: 25.6 },
+    images: [SEO_PAGE_IMAGE],
+    appDeepLink: "unlockingbulgaria://domains/old-capitals-domain",
+    epoch: "after",
+    masterKey: "spirit",
+    mapRegion: { path: REGION_NC, accent: "#4a2010" },
+    translations: {},
+  },
+  // Index 2 — matches dict.domains.cards[2] — Sea Domain (full data)
   {
     id: SEA_DOMAIN_ID,
     slug: "sea-domain",
@@ -97,6 +158,9 @@ export const seoDomains: SeoDomain[] = [
     coordinates: { lat: 42.65, lng: 27.9 },
     images: [SEO_PAGE_IMAGE],
     appDeepLink: "unlockingbulgaria://domains/sea-domain",
+    epoch: "before",
+    masterKey: "body",
+    mapRegion: { path: REGION_COAST, accent: "#1e3a5f" },
     translations: {
       bg: {
         title: "Морски Предел",
@@ -125,6 +189,48 @@ export const seoDomains: SeoDomain[] = [
         faq: commonFaqEn,
       },
     },
+  },
+  // Index 3 — matches dict.domains.cards[3]
+  {
+    id: KINGS_DOMAIN_ID,
+    slug: "kings-domain",
+    routeIds: [],
+    status: "draft",
+    coordinates: { lat: 42.2, lng: 25.4 },
+    images: [SEO_PAGE_IMAGE],
+    appDeepLink: "unlockingbulgaria://domains/kings-domain",
+    epoch: "before",
+    masterKey: "soul",
+    mapRegion: { path: REGION_SC, accent: "#1e3a5f" },
+    translations: {},
+  },
+  // Index 4 — matches dict.domains.cards[4]
+  {
+    id: VOICE_STONE_DOMAIN_ID,
+    slug: "voice-stone-domain",
+    routeIds: [],
+    status: "draft",
+    coordinates: { lat: 41.6, lng: 24.7 },
+    images: [SEO_PAGE_IMAGE],
+    appDeepLink: "unlockingbulgaria://domains/voice-stone-domain",
+    epoch: "after",
+    masterKey: "spirit",
+    mapRegion: { path: REGION_SW, accent: "#4a2010" },
+    translations: {},
+  },
+  // Index 5 — matches dict.domains.cards[5]
+  {
+    id: CROSSROADS_DOMAIN_ID,
+    slug: "crossroads-domain",
+    routeIds: [DEMO_ROUTE_ID],
+    status: "draft",
+    coordinates: { lat: 42.7, lng: 23.3 },
+    images: [SEO_PAGE_IMAGE],
+    appDeepLink: "unlockingbulgaria://domains/crossroads-domain",
+    epoch: "after",
+    masterKey: "earth",
+    mapRegion: { path: REGION_W, accent: "#4a2010" },
+    translations: {},
   },
 ];
 
@@ -225,6 +331,8 @@ function makeSeaPlace(index: number, row: (typeof seaPlaces)[number]): SeoPlace 
     previousPlace,
     nextPlace,
     appDeepLink: `unlockingbulgaria://places/${id}`,
+    epoch: "before",
+    map: geoToMap(lat, lng),
     translations: {
       bg: {
         title: bgName,
@@ -274,6 +382,8 @@ export const seoPlaces: SeoPlace[] = [
     audioUrl: "unlockingbulgaria://audio/prohodna-cave",
     nearbyPlaces: [],
     appDeepLink: "unlockingbulgaria://places/prohodna-cave",
+    epoch: "after",
+    map: geoToMap(43.173, 24.071),
     translations: {
       bg: {
         title: "Пещера Проходна",

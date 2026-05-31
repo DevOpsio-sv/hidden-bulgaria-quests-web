@@ -441,6 +441,23 @@
       { "num": "05", "sym": "◎", "name": "Seal", "desc": "The mark of a completed domain. Six seals. Six layers of memory. All six — and Bulgaria is yours." }
     ]
   },
+  "map": {
+    "eyebrow": "Living Map",
+    "title": "Living Map of Bulgaria",
+    "subtitle": "The hidden geography of memory — six domains, real checkpoints.",
+    "legendTitle": "Map legend",
+    "legendHero": "Hero checkpoint",
+    "legendStandard": "Standard checkpoint",
+    "legendBefore": "Before the Name — ancient memory",
+    "legendAfter": "After the Name — enduring identity",
+    "epochBefore": "Before the Name",
+    "epochAfter": "After the Name",
+    "viewPlace": "Visit place",
+    "viewDomain": "View domain",
+    "lockedLabel": "Coming soon",
+    "regionsLabel": "Interactive map of Bulgaria's six domains",
+    "nodesLabel": "Map checkpoint nodes"
+  },
   "skipLink": "Skip to content",
   "ariaNav": "Main navigation",
   "ariaFooterNav": "Footer navigation",
