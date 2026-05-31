@@ -214,15 +214,30 @@ const ogImage = seo?.ogImage;
   <!-- Language overlay -->
   <script is:inline>
   (function(){
-    var openBtn=document.querySelector("[data-lang-btn]");
+    var openBtns=document.querySelectorAll("[data-lang-btn],[data-lang-btn-mobile]");
     var overlay=document.querySelector("[data-lang-overlay]");
     var closeBtn=document.querySelector("[data-lang-close]");
-    var lbl=document.querySelector("[data-lang-lbl]");
-    if(!openBtn||!overlay||!closeBtn)return;
+    var lbls=document.querySelectorAll("[data-lang-lbl]");
+    if(!openBtns.length||!overlay||!closeBtn)return;
     var labels={en:"EN",bg:"БГ",de:"DE",fr:"FR",es:"ES",it:"IT",ro:"RO",tr:"TR",el:"ΕΛ",hu:"HU",zh:"中文",ru:"РУ",ja:"JA",sr:"СР"};
-    function open(){overlay.classList.add("open");openBtn.setAttribute("aria-expanded","true");closeBtn.focus();}
-    function close(){overlay.classList.remove("open");openBtn.setAttribute("aria-expanded","false");openBtn.focus();}
-    openBtn.addEventListener("click",open);
+    function open(){
+      var mobileNav=document.querySelector("[data-mobile-nav]");
+      var menuBtn=document.querySelector("[data-menu-btn]");
+      if(mobileNav){mobileNav.classList.remove("open");}
+      if(menuBtn){menuBtn.setAttribute("aria-expanded","false");}
+      overlay.classList.add("open");
+      openBtns.forEach(function(b){b.setAttribute("aria-expanded","true");});
+      closeBtn.focus();
+    }
+    function close(){
+      overlay.classList.remove("open");
+      openBtns.forEach(function(b){b.setAttribute("aria-expanded","false");});
+      var menuBtn=document.querySelector("[data-menu-btn]");
+      var desktopBtn=document.querySelector("[data-lang-btn]");
+      if(menuBtn&&getComputedStyle(menuBtn).display!=="none"){menuBtn.focus();}
+      else if(desktopBtn){desktopBtn.focus();}
+    }
+    openBtns.forEach(function(btn){btn.addEventListener("click",open);});
     closeBtn.addEventListener("click",close);
     document.addEventListener("keydown",function(e){if(e.key==="Escape"&&overlay.classList.contains("open"))close();});
     overlay.querySelectorAll("[data-lang-pill]").forEach(function(p){
@@ -230,9 +245,8 @@ const ogImage = seo?.ogImage;
         overlay.querySelectorAll("[data-lang-pill]").forEach(function(x){x.classList.remove("active");});
         p.classList.add("active");
         var lang=p.dataset.langPill;
-        if(lbl&&labels[lang])lbl.textContent=labels[lang];
+        lbls.forEach(function(lbl){if(labels[lang])lbl.textContent=labels[lang];});
         document.documentElement.lang=lang;
-        // Navigate to lang path
         var seg=window.location.pathname.split("/").filter(Boolean);
         var known=["en","bg","de","fr","es","it","ro","tr","el","hu","zh","ru","ja","sr"];
         if(seg.length&&known.includes(seg[0]))seg[0]=lang;

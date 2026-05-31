@@ -304,6 +304,27 @@ h3{
   display:flex;justify-content:center;
 }
 
+/* Mobile nav language row */
+.mobile-nav-lang{border-top:1px solid var(--border-lt);margin-top:6px;padding-top:6px}
+.mobile-lang-btn{
+  align-items:center;background:transparent;border:none;
+  border-radius:var(--r-md);color:var(--text-2);cursor:pointer;
+  display:flex;font-size:1.05rem;gap:12px;
+  min-height:48px;padding:14px 18px;
+  transition:background var(--fast),color var(--fast);
+  width:100%;
+}
+.mobile-lang-btn:hover,.mobile-lang-btn:focus-visible{
+  background:var(--gold-faint);color:var(--gold-lt);outline:none;
+}
+.mobile-lang-btn svg{flex-shrink:0;height:16px;width:16px}
+.mobile-lang-badge{
+  background:var(--gold-dim);border:1px solid var(--gold);
+  border-radius:var(--r-pill);color:var(--gold-lt);
+  font-size:.78rem;font-weight:600;letter-spacing:.06em;
+  margin-left:auto;padding:3px 10px;
+}
+
 /* ─── Lang overlay ───────────────────────────────────────────── */
 .lang-overlay{
   backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);

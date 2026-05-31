@@ -67,6 +67,23 @@ const currentLabel = LANG_LABELS[lang as keyof typeof LANG_LABELS] ?? "EN";
   <a href={`/${lang}#timeline`}>{dict.nav.timeline}</a>
   <a href={`/${lang}#partners`}>{dict.nav.partners}</a>
   <a href={`/${lang}#faq`}>{dict.nav.faq}</a>
+  <div class="mobile-nav-lang">
+    <button
+      class="mobile-lang-btn"
+      type="button"
+      data-lang-btn-mobile
+      aria-expanded="false"
+      aria-controls="lang-overlay"
+      aria-label={dict.nav.language}
+    >
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="8" cy="8" r="6.5"/>
+        <path d="M8 1.5C8 1.5 5.5 4 5.5 8s2.5 6.5 2.5 6.5M8 1.5c0 0 2.5 2.5 2.5 6.5S8 14.5 8 14.5M1.5 8h13"/>
+      </svg>
+      <span>{dict.nav.language}</span>
+      <span class="mobile-lang-badge" data-lang-lbl>{currentLabel}</span>
+    </button>
+  </div>
   <div class="mobile-nav-dl">
     <a class="btn btn-gold" href={`/${lang}#download`}>{dict.nav.download}</a>
   </div>
