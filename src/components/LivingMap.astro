@@ -1,0 +1,249 @@
+---
+import type { Dict } from "../i18n";
+import type { Lang } from "../i18n";
+import {
+  seoDomains,
+  seoPlaces,
+  getLocalizedCopy,
+  getLocalizedPath,
+} from "../data/seoPages";
+
+interface Props { dict: Dict; lang: string; }
+const { dict, lang } = Astro.props;
+const d = dict.map;
+
+// Only render places that have map coordinates
+const mapPlaces = seoPlaces.filter((p) => p.map != null);
+
+// Pre-compute all data at build time so the SVG is fully static
+type PlaceNode = {
+  id: string; slug: string; routeId: string;
+  cx: number; cy: number; r: number;
+  epoch: string; type: string;
+  title: string; subtitle: string;
+  href: string; ariaLabel: string;
+};
+
+const placeNodes: PlaceNode[] = mapPlaces.map((place) => {
+  const copy = getLocalizedCopy(place, lang);
+  const cx = Math.round(place.map!.x * 800);
+  const cy = Math.round(place.map!.y * 500);
+  const r = place.type === "hero" ? 7 : place.type === "demo" ? 8 : 5;
+  const href = getLocalizedPath(lang, `/places/${place.slug}`);
+  return {
+    id: place.id,
+    slug: place.slug,
+    routeId: place.routeId,
+    cx, cy, r,
+    epoch: place.epoch,
+    type: place.type,
+    title: copy.title,
+    subtitle: copy.subtitle,
+    href,
+    ariaLabel: `${copy.title} — ${copy.subtitle}`,
+  };
+});
+
+// Bulgaria silhouette path (viewBox 0 0 800 500)
+// Approximation; TODO: replace with precise GIS-derived path
+const SILHOUETTE = "M 0,33 L 142,0 L 310,13 L 529,13 L 658,33 L 723,67 L 787,117 Q 792,220 788,300 L 783,383 L 723,430 L 690,450 L 594,483 L 465,490 L 335,483 L 142,450 L 26,450 L 0,367 L 13,200 Z";
+---
+
+<section class="s-living-map section" id="living-map" aria-labelledby="lmap-heading">
+  <div class="wrap">
+    <div class="section-intro lmap-intro reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="lmap-heading">{d.title}</h2>
+      <p class="lede">{d.subtitle}</p>
+    </div>
+  </div>
+
+  <!-- Map area (full-bleed) -->
+  <div class="lmap-outer">
+    <div class="wrap">
+      <div class="lmap-container" id="lmap-container">
+
+        <!-- SVG map -->
+        <svg
+          id="lmap-svg"
+          class="lmap-svg"
+          viewBox="0 0 800 500"
+          xmlns="http://www.w3.org/2000/svg"
+          role="group"
+          aria-label={d.regionsLabel}
+          focusable="true"
+        >
+          <defs>
+            <radialGradient id="lm-bg" cx="40%" cy="40%" r="70%">
+              <stop offset="0%" stop-color="#0c1929"/>
+              <stop offset="100%" stop-color="#030610"/>
+            </radialGradient>
+            <!-- Bulgaria clipping mask -->
+            <clipPath id="lm-clip">
+              <path d={SILHOUETTE}/>
+            </clipPath>
+            <!-- Soft glow filter for hero nodes -->
+            <filter id="lm-glow-f" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- SVG background -->
+          <rect width="800" height="500" fill="url(#lm-bg)"/>
+
+          <!-- Country silhouette fill -->
+          <path class="lmap-silhouette" d={SILHOUETTE}/>
+
+          <!-- Etched interior lines (decorative, aria-hidden) -->
+          <g class="lmap-etching" clip-path="url(#lm-clip)" aria-hidden="true">
+            <!-- Stara Planina ridge suggestion -->
+            <path d="M 0,215 Q 200,195 400,210 Q 550,220 660,215" class="lmap-ridge"/>
+            <!-- Danube river line -->
+            <path d="M 0,60 Q 100,30 250,25 Q 400,18 530,20 L 640,42" class="lmap-river"/>
+          </g>
+
+          <!-- Domain region overlays (clipped to silhouette) -->
+          <g id="lmap-regions" clip-path="url(#lm-clip)">
+            {seoDomains.map((domain, i) => {
+              if (!domain.mapRegion) return null;
+              const card = dict.domains.cards[i];
+              if (!card) return null;
+              const epochLabel = domain.epoch === "before" ? d.epochBefore : d.epochAfter;
+              return (
+                <path
+                  class="lmap-region"
+                  data-domain-id={domain.id}
+                  data-domain-index={i}
+                  data-domain-name={card.name}
+                  data-domain-region={card.region}
+                  data-domain-key={card.key}
+                  data-epoch={domain.epoch}
+                  data-epoch-label={epochLabel}
+                  d={domain.mapRegion.path}
+                  fill={domain.mapRegion.accent}
+                  tabindex="0"
+                  role="button"
+                  aria-label={`${card.name} — ${card.region}`}
+                />
+              );
+            })}
+          </g>
+
+          <!-- Route pathways (drawn by JS on node hover) -->
+          <g id="lmap-pathways" clip-path="url(#lm-clip)" aria-hidden="true"/>
+
+          <!-- Checkpoint nodes -->
+          <g id="lmap-nodes" clip-path="url(#lm-clip)" role="list" aria-label={d.nodesLabel}>
+            {placeNodes.map((node) => {
+              const epochClass = node.epoch === "before" ? "lmap-node-before" : "lmap-node-after";
+              const heroFilter = node.type === "hero" || node.type === "demo" ? "url(#lm-glow-f)" : undefined;
+              return (
+                <g class={`lmap-node-group ${epochClass}`} data-type={node.type} role="listitem">
+                  {/* Pulse ring — CSS animation, aria-hidden */}
+                  <circle
+                    class="lmap-node-pulse"
+                    cx={node.cx} cy={node.cy}
+                    r={node.r + 7}
+                    aria-hidden="true"
+                  />
+                  {/* Interactive node */}
+                  <circle
+                    class="lmap-node-dot"
+                    cx={node.cx} cy={node.cy}
+                    r={node.r}
+                    filter={heroFilter}
+                    data-place-id={node.id}
+                    data-place-slug={node.slug}
+                    data-route-id={node.routeId}
+                    data-cx={node.cx}
+                    data-cy={node.cy}
+                    data-epoch={node.epoch}
+                    data-title={node.title}
+                    data-subtitle={node.subtitle}
+                    data-href={node.href}
+                    tabindex="0"
+                    role="button"
+                    aria-label={node.ariaLabel}
+                  />
+                </g>
+              );
+            })}
+          </g>
+        </svg>
+
+        <!-- Tooltip (HTML overlay, positioned by JS) -->
+        <div
+          class="lmap-tooltip"
+          id="lmap-tooltip"
+          role="tooltip"
+          aria-live="polite"
+          hidden
+        >
+          <p class="lmap-tt-title"></p>
+          <p class="lmap-tt-sub"></p>
+          <span class="lmap-tt-cta">{d.viewPlace} →</span>
+        </div>
+
+        <!-- Domain info card (top-right corner overlay) -->
+        <div
+          class="lmap-domain-card"
+          id="lmap-domain-card"
+          aria-live="polite"
+          aria-atomic="true"
+          hidden
+        >
+          <p class="lmap-dc-epoch eyebrow"></p>
+          <h3 class="lmap-dc-name"></h3>
+          <p class="lmap-dc-region"></p>
+          <p class="lmap-dc-key"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="wrap">
+    <div class="lmap-legend reveal">
+      <p class="lmap-legend-title">{d.legendTitle}</p>
+      <dl class="lmap-legend-list">
+        <div class="lmap-legend-item">
+          <dt>
+            <span class="lmap-ls hero-swatch" aria-hidden="true"></span>
+          </dt>
+          <dd>{d.legendHero}</dd>
+        </div>
+        <div class="lmap-legend-item">
+          <dt>
+            <span class="lmap-ls std-swatch" aria-hidden="true"></span>
+          </dt>
+          <dd>{d.legendStandard}</dd>
+        </div>
+        <div class="lmap-legend-item">
+          <dt>
+            <span class="lmap-ls before-swatch" aria-hidden="true"></span>
+          </dt>
+          <dd>{d.legendBefore}</dd>
+        </div>
+        <div class="lmap-legend-item">
+          <dt>
+            <span class="lmap-ls after-swatch" aria-hidden="true"></span>
+          </dt>
+          <dd>{d.legendAfter}</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initLivingMap } from "../utils/living-map";
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initLivingMap);
+  } else {
+    initLivingMap();
+  }
+</script>

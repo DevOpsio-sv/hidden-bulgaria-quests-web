@@ -1498,6 +1498,251 @@ textarea.form-control{min-height:122px;resize:vertical}
   .ji{padding:clamp(24px,5vw,32px) clamp(20px,5vw,28px)}
 }
 
+/* ─── LIVING MAP ─────────────────────────────────────────────── */
+.s-living-map{padding-bottom:var(--sec-v)}
+.lmap-intro{max-width:680px}
+.lmap-intro h2{font-size:clamp(2rem,4vw,4rem);font-weight:300;margin-bottom:16px}
+
+.lmap-outer{
+  margin:clamp(32px,4vw,56px) 0;
+  position:relative;
+}
+
+.lmap-container{
+  border:1px solid var(--border-lt);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  position:relative;
+}
+
+/* The SVG itself */
+.lmap-svg{
+  cursor:default;
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:70vh;
+}
+
+/* Country silhouette */
+.lmap-silhouette{
+  fill:#0b1220;
+  stroke:rgba(216,181,106,.22);
+  stroke-width:.8;
+}
+
+/* Interior decorative lines */
+.lmap-ridge{
+  fill:none;
+  stroke:rgba(216,181,106,.08);
+  stroke-width:.6;
+  stroke-dasharray:4 6;
+}
+.lmap-river{
+  fill:none;
+  stroke:rgba(30,58,95,.35);
+  stroke-width:.8;
+}
+
+/* Domain region overlays */
+.lmap-region{
+  cursor:pointer;
+  fill-opacity:.18;
+  stroke:rgba(216,181,106,.06);
+  stroke-width:.5;
+  transition:fill-opacity .3s var(--ease),stroke-opacity .3s var(--ease);
+}
+.lmap-region:hover,.lmap-region:focus-visible{
+  fill-opacity:.45;
+  stroke-opacity:.5;
+  outline:none;
+}
+.lmap-region-active{fill-opacity:.5 !important;stroke-opacity:.7 !important}
+.lmap-region-dim{fill-opacity:.06 !important}
+.lmap-region:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:2px;
+}
+
+/* Pathway lines between route-mate nodes */
+.lmap-pathway{
+  animation:lmap-pulse-line 1.4s ease-in-out infinite;
+  opacity:.55;
+  stroke:var(--gold);
+  stroke-dasharray:3 5;
+  stroke-width:.8;
+}
+@keyframes lmap-pulse-line{
+  0%,100%{opacity:.35;stroke-dashoffset:0}
+  50%{opacity:.7;stroke-dashoffset:-12}
+}
+
+/* Checkpoint nodes */
+.lmap-node-group{cursor:pointer}
+
+/* Pulse ring — animated, aria-hidden */
+.lmap-node-pulse{
+  fill:none;
+  opacity:.28;
+  stroke-width:.8;
+}
+.lmap-node-before .lmap-node-pulse{stroke:#4a8abf;animation:lmap-pulse 2.8s ease-in-out infinite}
+.lmap-node-after  .lmap-node-pulse{stroke:#c9a14a;animation:lmap-pulse 2.8s ease-in-out 1.4s infinite}
+@keyframes lmap-pulse{
+  0%,100%{transform:scale(1);opacity:.28}
+  50%{transform:scale(1.45);opacity:.12}
+}
+/* Disable pulse ring for reduced-motion (handled in media query block below) */
+
+/* Main dot */
+.lmap-node-dot{
+  stroke-width:1;
+  transition:r .2s var(--ease),filter .2s,opacity .2s;
+}
+.lmap-node-before .lmap-node-dot{fill:#3a6fa8;stroke:rgba(74,138,191,.7)}
+.lmap-node-after  .lmap-node-dot{fill:#c9a14a;stroke:rgba(201,161,74,.7)}
+[data-type="hero"]   .lmap-node-dot{fill:#e8c878;stroke:rgba(232,200,120,.8)}
+[data-type="demo"]   .lmap-node-dot{fill:#e8c878;stroke:rgba(232,200,120,.8)}
+
+.lmap-node-dot:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:4px;
+}
+.lmap-node-active .lmap-node-dot,
+.lmap-node-dot:hover,
+.lmap-node-dot:focus-visible{
+  opacity:1;
+}
+
+/* Tooltip overlay */
+.lmap-tooltip{
+  background:rgba(3,6,16,.92);
+  border:1px solid var(--border);
+  border-radius:var(--r-sm);
+  max-width:240px;
+  padding:12px 16px;
+  pointer-events:none;
+  position:absolute;
+  transform:translate(-50%,-110%);
+  z-index:10;
+  backdrop-filter:blur(8px);
+}
+.lmap-tooltip[hidden]{display:none}
+.lmap-tt-title{
+  color:var(--text-1);
+  font-family:var(--ff-display);
+  font-size:1rem;
+  font-weight:500;
+  margin-bottom:4px;
+}
+.lmap-tt-sub{
+  color:var(--text-3);
+  font-size:.82rem;
+  line-height:1.55;
+  margin-bottom:8px;
+}
+.lmap-tt-cta{
+  color:var(--gold);
+  font-family:var(--ff-title);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+/* Domain info card (top-right corner) */
+.lmap-domain-card{
+  backdrop-filter:blur(12px);
+  background:rgba(3,6,16,.88);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  max-width:260px;
+  padding:20px 22px;
+  pointer-events:none;
+  position:absolute;
+  right:16px;
+  top:16px;
+  z-index:10;
+}
+.lmap-domain-card[hidden]{display:none}
+.lmap-dc-epoch{
+  font-size:.72rem;
+  margin-bottom:8px;
+}
+.lmap-dc-epoch[data-epoch="before"]{color:#4a8abf}
+.lmap-dc-epoch[data-epoch="after"]{color:var(--gold)}
+.lmap-dc-name{
+  color:var(--text-1);
+  font-family:var(--ff-display);
+  font-size:1.1rem;
+  font-weight:500;
+  letter-spacing:0;
+  margin-bottom:4px;
+  text-transform:none;
+}
+.lmap-dc-region{
+  color:var(--text-3);
+  font-family:var(--ff-title);
+  font-size:.72rem;
+  letter-spacing:.12em;
+  margin-bottom:10px;
+  text-transform:uppercase;
+}
+.lmap-dc-key{
+  color:var(--text-2);
+  font-family:var(--ff-display);
+  font-size:.88rem;
+  font-style:italic;
+  line-height:1.62;
+}
+
+/* Legend */
+.lmap-legend{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:clamp(16px,3vw,36px);
+  margin-top:clamp(16px,2vw,24px);
+  padding-top:clamp(16px,2vw,24px);
+  border-top:1px solid var(--border-lt);
+}
+.lmap-legend-title{
+  color:var(--text-3);
+  font-family:var(--ff-title);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-right:8px;
+  flex-shrink:0;
+}
+.lmap-legend-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:clamp(12px,2vw,24px);
+}
+.lmap-legend-item{
+  align-items:center;
+  display:flex;
+  gap:8px;
+}
+.lmap-legend-item dd{
+  color:var(--text-3);
+  font-size:.82rem;
+}
+/* Legend swatches */
+.lmap-ls{
+  border-radius:50%;
+  display:inline-block;
+  flex-shrink:0;
+  height:12px;
+  width:12px;
+}
+.hero-swatch{background:#e8c878;box-shadow:0 0 6px rgba(232,200,120,.5)}
+.std-swatch{background:#3a6fa8}
+.before-swatch{background:#1e3a5f;border:1px solid #4a8abf}
+.after-swatch{background:#4a2010;border:1px solid #c9a14a}
+
 /* ─── Reduced motion ─────────────────────────────────────────── */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{
@@ -1513,6 +1758,8 @@ textarea.form-control{min-height:122px;resize:vertical}
   .hero-ctas,.hero-trust,.hero-scroll-hint{opacity:1;transform:none}
   .hero-video{opacity:0 !important}
   .scroll-spine-fill{display:none}
+  .lmap-node-pulse{display:none}
+  .lmap-pathway{animation:none}
 }
 
 /* ─── HERO (cinematic full-viewport) ─────────────────────────── */

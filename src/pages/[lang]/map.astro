@@ -1,0 +1,34 @@
+---
+import { SUPPORTED_LANGS, getDict, type Lang } from "../../i18n";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import LivingMap from "../../components/LivingMap.astro";
+import Footer from "../../components/Footer.astro";
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const dict = getDict(lang as Lang);
+---
+
+<Base
+  dict={dict}
+  lang={lang as string}
+  canonicalPath="/map"
+  seo={{
+    title: `${dict.map.title} | Unlocking Bulgaria`,
+    description: dict.map.subtitle,
+    ogTitle: dict.map.title,
+    ogDescription: dict.map.subtitle,
+  }}
+>
+  <Header dict={dict} lang={lang as string} />
+
+  <main id="main">
+    <LivingMap dict={dict} lang={lang as string} />
+  </main>
+
+  <Footer dict={dict} lang={lang as string} />
+</Base>
