@@ -26,7 +26,7 @@
     "lede": "Travel through Bulgaria. Reveal the ancient secrets. Become a Keeper — a guardian of the living memory that has endured for thirteen centuries.",
     "ctaPrimary": "Download the App",
     "ctaSecondary": "Watch the Journey",
-    "trust": ["Real-world quests", "Cinematic storytelling", "Optional AR", "Family-friendly", "13 languages"],
+    "trust": ["Real-world quests", "Cinematic storytelling", "Optional AR", "Family-friendly", "14 languages"],
     "mapLabel": "Interactive map of Bulgaria's hidden memory",
     "phoneDomain": "Domain of the Name",
     "phoneTitle": "The Old Capitals",
@@ -239,7 +239,7 @@
       { "icon": "⌛", "title": "Historical timeline", "desc": "An interactive map through 1345 years of Bulgarian memory — linked to the routes you walk." },
       { "icon": "◈", "title": "Relics and artifacts", "desc": "Collect permanent digital relics at route completion. Build a personal archive of Bulgaria's hidden history." },
       { "icon": "✦", "title": "Domains and seals", "desc": "Complete regional domains. Earn seals. Gradually reveal the full map of Bulgarian memory." },
-      { "icon": "⊕", "title": "13 languages", "desc": "Full multilingual support — including Bulgarian, English, German, Greek, Russian, Japanese, and more." },
+      { "icon": "⊕", "title": "14 languages", "desc": "Full multilingual support — including Bulgarian, English, German, Hungarian, Chinese, Greek, Russian, Japanese, and more." },
       { "icon": "❖", "title": "Family exploration", "desc": "Pacing modes and content scales for families, schools, and cultural travelers of every age." },
       { "icon": "⊞", "title": "Offline support", "desc": "Key route content prepared in advance for mountain, village, and heritage sites with limited signal." },
       { "icon": "⊗", "title": "Partner routes", "desc": "Municipalities, museums, and tourism businesses can co-create routes tied to real local heritage." }
@@ -324,7 +324,7 @@
       },
       {
         "q": "What languages are supported?",
-        "a": "The app supports 13 languages: Bulgarian, English, German, French, Spanish, Italian, Romanian, Turkish, Greek, Polish, Russian, Japanese, and Serbian."
+        "a": "The app supports 14 languages: Bulgarian, English, German, French, Spanish, Italian, Romanian, Turkish, Greek, Hungarian, Chinese, Russian, Japanese, and Serbian."
       },
       {
         "q": "Do I need an account?",

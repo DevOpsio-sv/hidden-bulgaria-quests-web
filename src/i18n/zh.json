@@ -1,0 +1,490 @@
+{
+  "lang": "zh",
+  "meta": {
+    "title": "Unlocking Bulgaria — 穿越保加利亚隐藏的记忆",
+    "description": "一款高级移动应用，通过现实世界任务、电影化叙事、可选 AR、历史路线、遗物和文化发现来探索保加利亚。成为 Keeper。",
+    "ogTitle": "Unlocking Bulgaria — 1345 年。一个名字幸存了下来。",
+    "ogDescription": "穿越保加利亚。揭开古老的秘密。成为 Keeper。"
+  },
+  "nav": {
+    "howItWorks": "玩法介绍",
+    "domains": "领域",
+    "guardianSight": "Guardian Sight",
+    "timeline": "时间线",
+    "partners": "合作伙伴",
+    "faq": "常见问题",
+    "download": "下载",
+    "language": "语言",
+    "menuLabel": "菜单"
+  },
+  "hero": {
+    "eyebrow": "官方产品网站",
+    "line1": "1345 年。",
+    "line2": "一个名字",
+    "line3": "幸存下来。",
+    "question": "如何做到？",
+    "lede": "穿越保加利亚。揭开古老的秘密。成为 Keeper — 守护这份延续十三个世纪的鲜活记忆。",
+    "ctaPrimary": "下载应用",
+    "ctaSecondary": "观看旅程",
+    "trust": ["现实世界任务", "电影化叙事", "可选 AR", "适合家庭", "14 种语言"],
+    "mapLabel": "保加利亚隐藏记忆互动地图",
+    "phoneDomain": "名字之域",
+    "phoneTitle": "古都",
+    "phoneDesc": "走访记忆成为国家之处。",
+    "phoneProgress": "已发现 7 枚印记中的 4 枚"
+  },
+  "band": {
+    "sub": "不是指南。不是地图。不是游戏。",
+    "statement": "一场穿越保加利亚鲜活记忆的现实世界旅程。"
+  },
+  "howItWorks": {
+    "eyebrow": "玩法介绍",
+    "heading": "成为 Keeper，\n一次走进一个地点。",
+    "lede": "Unlocking Bulgaria 中的每段旅程都遵循清晰的进程 — 从一个检查点到完整解锁保加利亚隐藏的记忆。",
+    "steps": [
+      {
+        "label": "第 1 步",
+        "title": "到访一个检查点",
+        "desc": "前往真实地点。抵达后激活检查点。解锁一段故事、一条线索或一个隐藏层。"
+      },
+      {
+        "label": "第 2 步 — 5 个检查点",
+        "title": "完成一条路线 → 收集一件遗物",
+        "desc": "五个相连的检查点组成一条路线。完成路线即可获得一件永久数字遗物 — 保加利亚历史中的一件文物。"
+      },
+      {
+        "label": "第 3 步 — 3 条路线",
+        "title": "解锁一个领域 → 赢得一枚印记",
+        "desc": "三条路线会解锁一个区域领域。赢得它的印记 — 这是掌握该地区隐藏记忆的象征。"
+      },
+      {
+        "label": "第 4 步 — 6 个领域",
+        "title": "全国解锁 → 成为 Keeper",
+        "desc": "完成全部六个领域。解锁保加利亚的完整记忆。获得 Keeper — Пазител 的称号。"
+      }
+    ],
+    "flow": [
+      { "icon": "◉", "name": "检查点", "sub": "真实地点 · 故事 · 线索" },
+      { "icon": "⌘", "name": "路线 + 遗物", "sub": "5 个检查点 · 1 件文物" },
+      { "icon": "◈", "name": "领域 + 印记", "sub": "3 条路线 · 1 枚区域印记" },
+      { "icon": "✦", "name": "Keeper — Пазител", "sub": "6 个领域 · 完整解锁保加利亚" }
+    ]
+  },
+  "domains": {
+    "eyebrow": "探索领域",
+    "heading": "每个地区\n都隐藏着一个世界。",
+    "lede": "六个区域领域构成保加利亚隐藏记忆的地图。每个领域都有自己的路线、遗物、时代和最终印记。",
+    "explore": "探索",
+    "continue": "继续",
+    "locked": "已锁定",
+    "epochBefore": "名字之前",
+    "epochAfter": "名字之后",
+    "routesOf": "条路线已完成，共 3 条",
+    "lures": [
+      "多瑙河与帝国相遇之处。\n堡垒记得历史遗忘的事。",
+      "普利斯卡。普雷斯拉夫。特尔诺沃。\n三座都城。一个从未倒下的名字。",
+      "古老港口。岛上修道院。\n大海守护陆地秘密的地方。",
+      "黄金墓冢。玫瑰田野。\n这片土地上最古老的记忆。",
+      "俄耳甫斯曾在此行走。\n音乐仍在岩石中回响。",
+      "城市之下的罗马遗迹。\n每一层都讲述不同的故事。"
+    ],
+    "cards": [
+      {
+        "region": "多瑙河与西北部",
+        "name": "石与河之域",
+        "epoch": "before",
+        "key": "堡垒、河流、罗马道路和贝洛格拉奇克岩石群 — 多瑙河在这里划定帝国边缘。",
+        "progress": 0,
+        "emblem": "🏔",
+        "status": "explore"
+      },
+      {
+        "region": "古都",
+        "name": "名字之域",
+        "epoch": "after",
+        "key": "普利斯卡、普雷斯拉夫、特尔诺沃 — 三座都城在征服、战火与重生中承载着保加利亚之名。",
+        "progress": 33,
+        "emblem": "⚔",
+        "status": "continue"
+      },
+      {
+        "region": "黑海海岸",
+        "name": "海门之域",
+        "epoch": "before",
+        "key": "古老港口、海角、盐湖、岛上修道院 — 希腊殖民地在此遇见色雷斯海岸，大海成为边界。",
+        "progress": 0,
+        "emblem": "🌊",
+        "status": "explore"
+      },
+      {
+        "region": "色雷斯山谷",
+        "name": "诸王之域",
+        "epoch": "before",
+        "key": "色雷斯墓冢、仪式山丘、玫瑰田、葡萄酒乡和黄金文物 — 这片土地保存的最古老记忆。",
+        "progress": 0,
+        "emblem": "🏛",
+        "status": "explore"
+      },
+      {
+        "region": "罗多彼山脉",
+        "name": "声音与石之域",
+        "epoch": "after",
+        "key": "俄耳甫斯神话、神圣洞穴、古桥、石村、森林，以及欧洲最古老的鲜活音乐传统。",
+        "progress": 0,
+        "emblem": "♪",
+        "status": "explore"
+      },
+      {
+        "region": "索非亚与保加利亚西部",
+        "name": "十字路口之域",
+        "epoch": "after",
+        "key": "城市层叠的历史、城下塞尔迪卡遗迹、维托沙山路径、古老泉水和鲜活市集。",
+        "progress": 0,
+        "emblem": "✦",
+        "status": "explore"
+      }
+    ]
+  },
+  "guardianSight": {
+    "eyebrow": "Guardian Sight",
+    "heading": "看见\n他人无法看见之物。",
+    "lede": "Guardian Sight 是 Unlocking Bulgaria 中可选的增强现实相机模式。将镜头对准世界 — 看见其下隐藏的层次。",
+    "sightBody": "将相机对准世界。\n隐藏层会在现实之下显现。",
+    "sightNote": "可选 AR · 每个时刻都有非 AR 路径",
+    "ariaVisual": "Guardian Sight AR 界面 — 动画扫描环",
+    "floatTag1": "隐藏层已揭示",
+    "floatTag2": "检查点 · 82m",
+    "centerLabel": "Guardian\nSight",
+    "features": [
+      {
+        "icon": "◈",
+        "title": "象征痕迹",
+        "desc": "古老符号、字形和路线碎片会在有意义的地点叠加于现实世界之上。"
+      },
+      {
+        "icon": "◉",
+        "title": "检查点存在感",
+        "desc": "附近的检查点会以光能脉动。你越接近，信号越强。"
+      },
+      {
+        "icon": "✦",
+        "title": "始终可访问",
+        "desc": "AR 是可选的。每个 AR 时刻都有完整的非 AR 路径，包含可阅读内容、字幕和清晰的完成逻辑。"
+      },
+      {
+        "icon": "⌘",
+        "title": "关键地点的重磅时刻",
+        "desc": "英雄检查点和领域终章包含更深入的 AR 片段 — 重建场景、文物揭示和电影化时刻。"
+      }
+    ]
+  },
+  "timeline": {
+    "eyebrow": "历史时间线",
+    "heading": "拒绝消亡的\n记忆。",
+    "lede": "1345 年保加利亚历史 — 浓缩为定义这个名字、信仰与语言的关键时刻。",
+    "sub": "沿着时间线前行。看看什么幸存了下来。",
+    "events": [
+      {
+        "year": "681",
+        "shortName": "国家",
+        "tag": "保加利亚建国",
+        "title": "阿斯帕鲁赫汗建立保加利亚国家。",
+        "body": "在多瑙河畔，保加尔人与斯拉夫人的联盟组成了第一个保加利亚国家，并在决定性军事胜利后得到拜占庭帝国承认。保加利亚之名进入历史。一个将幸存于随后一切的名字。"
+      },
+      {
+        "year": "862",
+        "shortName": "文字",
+        "tag": "圣西里尔与美多德",
+        "title": "一种新字母为斯拉夫民族诞生。",
+        "body": "两位来自帖撒罗尼迦的兄弟创造了格拉哥里字母 — 后来西里尔字母的基础。斯拉夫世界第一次拥有了自己的文字。保加利亚将在数个世纪中采纳并保存这份遗产。"
+      },
+      {
+        "year": "865",
+        "shortName": "洗礼",
+        "tag": "保加利亚受洗",
+        "title": "鲍里斯一世汗为保加利亚接受基督教。",
+        "body": "在一次经过深思熟虑、且带来深远文化后果的政治行动中，鲍里斯一世汗使保加利亚皈依基督教。围绕信仰与文字的新身份开始形成。普利斯卡和普雷斯拉夫成为斯拉夫基督教文明中心。"
+      },
+      {
+        "year": "893",
+        "shortName": "语言",
+        "tag": "普雷斯拉夫会议",
+        "title": "古保加利亚语成为国家和教会的官方语言。",
+        "body": "在沙皇西美昂一世治下，普雷斯拉夫文学学校繁荣发展。古保加利亚语在所有官方语境中取代希腊语。保加利亚成为中世纪欧洲中心的文学与精神强国。"
+      },
+      {
+        "year": "1018",
+        "shortName": "陷落",
+        "tag": "拜占庭征服",
+        "title": "保加利亚陷落 — 但名字延续。",
+        "body": "经过数十年战争，巴西尔二世征服保加利亚。保加利亚国家在 167 年间不复存在。然而名字、语言和记忆幸存下来 — 被修道院、村庄、口述传统和石头本身承载。"
+      },
+      {
+        "year": "1185",
+        "shortName": "归来",
+        "tag": "阿森兄弟",
+        "title": "第二保加利亚帝国从特尔诺沃崛起。",
+        "body": "阿森和彼得兄弟从特尔诺沃山丘领导起义。保加利亚重生 — 它是唯一一个在彻底征服后重新构建自身的中世纪斯拉夫国家。名字幸存了下来。记忆回归。旅程继续。"
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "应用功能",
+    "heading": "为发现而生，\n不是为分心而生。",
+    "lede": "每项功能都旨在加深你与所到真实地点之间的连接。",
+    "items": [
+      { "icon": "◉", "title": "现实世界任务", "desc": "围绕真实 GPS 检查点构建的路线。应用引导你抵达地点 — 地点用自己的故事回馈你。" },
+      { "icon": "▶", "title": "电影化叙事", "desc": "每个检查点都会揭示一个扎根于历史、神话、地方记忆或自然遗产的叙事时刻。" },
+      { "icon": "◎", "title": "Guardian Sight AR", "desc": "可选的增强现实会在真实世界上叠加显示符号、文物和隐藏层。" },
+      { "icon": "⌛", "title": "历史时间线", "desc": "一张穿越 1345 年保加利亚记忆的互动地图 — 与你行走的路线相连。" },
+      { "icon": "◈", "title": "遗物与文物", "desc": "在完成路线时收集永久数字遗物。建立属于你的保加利亚隐藏历史档案。" },
+      { "icon": "✦", "title": "领域与印记", "desc": "完成区域领域。赢得印记。逐步揭示保加利亚记忆的完整地图。" },
+      { "icon": "⊕", "title": "14 种语言", "desc": "完整多语言支持 — 包括保加利亚语、英语、德语、匈牙利语、中文、希腊语、俄语、日语等。" },
+      { "icon": "❖", "title": "家庭探索", "desc": "节奏模式和内容可适配家庭、学校以及各年龄段的文化旅行者。" },
+      { "icon": "⊞", "title": "离线支持", "desc": "为信号有限的山区、村庄和遗产地点提前准备关键路线内容。" },
+      { "icon": "⊗", "title": "合作伙伴路线", "desc": "市政机构、博物馆和旅游企业可以共同创建与真实地方遗产相连的路线。" }
+    ]
+  },
+  "download": {
+    "eyebrow": "下载应用",
+    "heading": "成为保加利亚的\nKeeper。",
+    "lede": "应用即将登陆 iOS 和 Android。加入发布名单，在大门开启时准备解锁首批领域。",
+    "appStore": { "label": "下载于", "name": "App Store" },
+    "googlePlay": { "label": "获取于", "name": "Google Play" },
+    "trust": "iOS & Android · 免费探索 · 提供高级路线",
+    "comingSoon": "即将推出"
+  },
+  "partners": {
+    "eyebrow": "面向市政机构与合作伙伴",
+    "heading": "把真实地点变成\n难忘旅程。",
+    "lede": "Unlocking Bulgaria 帮助目的地将文化记忆包装为高级数字层 — 引导游客前往真实地点，支持本地企业，并强化区域身份。",
+    "benefits": [
+      {
+        "icon": "◉",
+        "title": "旅游推广",
+        "desc": "创建现代路线，让较少被了解的地点更易被发现。将游客旅程延伸到主要景点之外。"
+      },
+      {
+        "icon": "◈",
+        "title": "文化保护",
+        "desc": "将地方故事、文物、传统和口述历史转化为可持久保存并传播的数字体验。"
+      },
+      {
+        "icon": "✦",
+        "title": "游客参与",
+        "desc": "提升停留时间、路线完成率、重复访问，以及与本地酒店、餐厅和导游的交叉推广。"
+      }
+    ],
+    "formHeading": "开启合作对话",
+    "formSub": "面向市政机构、博物馆、旅游局、学校、酒店、本地导游和企业。",
+    "fields": {
+      "org": "组织",
+      "email": "邮箱",
+      "region": "地区 / 地点",
+      "type": "合作类型",
+      "typePlaceholder": "选择…",
+      "typeOptions": [
+        "市政机构 / 地方政府",
+        "博物馆或文化机构",
+        "旅游企业",
+        "学校或教育组织",
+        "酒店或住宿",
+        "导游或旅行运营商",
+        "媒体或新闻机构",
+        "其他"
+      ],
+      "message": "告诉我们你的兴趣",
+      "submit": "发送合作咨询",
+      "note": "我们会在 2 个工作日内回复。"
+    }
+  },
+  "faq": {
+    "eyebrow": "常见问题",
+    "heading": "旅程开始前的\n问题。",
+    "items": [
+      {
+        "q": "什么是 Unlocking Bulgaria？",
+        "a": "Unlocking Bulgaria 是一款高级移动应用，通过现实世界任务、电影化叙事、可选 AR 层、历史路线、可收集遗物和区域领域来探索保加利亚。它围绕一个核心问题构建：保加利亚之名如何延续了 1345 年？"
+      },
+      {
+        "q": "它是游戏还是旅行指南？",
+        "a": "都不是。它使用类似游戏的进程系统、遗物和奖励 — 但真正的产品是在真实地点进行文化探索。它更接近电影化博物馆体验与 GPS 导航、历史叙事的结合。"
+      },
+      {
+        "q": "我必须身在保加利亚吗？",
+        "a": "大部分体验为现实世界探索而设计 — 走访保加利亚的实际地点。不过，时间线、领域概览和部分故事内容可在任何地方访问，用于规划和准备你的旅程。"
+      },
+      {
+        "q": "使用应用必须使用 AR 吗？",
+        "a": "不需要。Guardian Sight AR 完全可选。每个 AR 时刻都有完整的非 AR 替代方案，包含可阅读内容、字幕和清晰的完成逻辑。核心任务体验完全不依赖 AR。"
+      },
+      {
+        "q": "这款应用适合儿童吗？",
+        "a": "适合。应用以家庭友好为设计目标，包含节奏模式、问答式内容和能吸引儿童的奖励。路线支持家庭团体、学校旅行和各年龄段的文化旅行者。"
+      },
+      {
+        "q": "支持哪些语言？",
+        "a": "应用支持 14 种语言：保加利亚语、英语、德语、法语、西班牙语、意大利语、罗马尼亚语、土耳其语、希腊语、匈牙利语、中文、俄语、日语和塞尔维亚语。"
+      },
+      {
+        "q": "我需要账户吗？",
+        "a": "基础探索无需账户即可使用。保存路线进度、收集遗物、追踪领域完成情况以及跨设备同步需要账户。"
+      },
+      {
+        "q": "定价如何运作？",
+        "a": "部分检查点预览免费。完整路线访问和领域套餐可通过应用内购买获得。定价高级且透明 — 只为你想探索的内容付费。"
+      },
+      {
+        "q": "市政机构和企业可以与应用合作吗？",
+        "a": "可以。市政机构、博物馆、学校、旅游企业、酒店和本地导游可以在路线设计、文化验证和游客参与项目上合作。使用合作表单开启对话。"
+      },
+      {
+        "q": "应用会在 Android 和 iOS 上提供吗？",
+        "a": "会。Unlocking Bulgaria 正在为 iOS 和 Android 开发。在本页加入发布名单，即可在应用于你所在地区上线时收到通知。"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "联系",
+    "heading": "支持、合作\n与媒体。",
+    "cards": [
+      {
+        "icon": "◉",
+        "title": "用户支持",
+        "desc": "关于路线、进度、遗物、账户或应用体验的问题。",
+        "email": "support@unlockingbulgaria.com",
+        "label": "support@unlockingbulgaria.com"
+      },
+      {
+        "icon": "◈",
+        "title": "合作伙伴",
+        "desc": "市政机构、博物馆、旅游局、学校和企业。",
+        "email": "partners@unlockingbulgaria.com",
+        "label": "partners@unlockingbulgaria.com"
+      },
+      {
+        "icon": "✦",
+        "title": "媒体与新闻",
+        "desc": "新闻资料包、采访、报道和编辑合作。",
+        "email": "media@unlockingbulgaria.com",
+        "label": "media@unlockingbulgaria.com"
+      },
+      {
+        "icon": "⌘",
+        "title": "商务咨询",
+        "desc": "授权、白标、投资和战略对话。",
+        "email": "business@unlockingbulgaria.com",
+        "label": "business@unlockingbulgaria.com"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "一场穿越保加利亚隐藏记忆的现实世界旅程。",
+    "copyright": "© 2026 Unlocking Bulgaria。保留所有权利。",
+    "groups": [
+      {
+        "label": "探索",
+        "links": [
+          { "label": "玩法介绍", "href": "#how-it-works" },
+          { "label": "领域", "href": "#domains" },
+          { "label": "Guardian Sight", "href": "#guardian-sight" },
+          { "label": "时间线", "href": "#timeline" }
+        ]
+      },
+      {
+        "label": "产品",
+        "links": [
+          { "label": "功能", "href": "#features" },
+          { "label": "下载", "href": "#download" },
+          { "label": "常见问题", "href": "#faq" },
+          { "label": "支持", "href": "#contact" }
+        ]
+      },
+      {
+        "label": "合作伙伴",
+        "links": [
+          { "label": "成为合作伙伴", "href": "#partners" },
+          { "label": "市政机构", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "博物馆", "href": "mailto:partners@unlockingbulgaria.com" },
+          { "label": "媒体", "href": "mailto:media@unlockingbulgaria.com" }
+        ]
+      }
+    ],
+    "legal": [
+      { "label": "隐私政策", "href": "#privacy" },
+      { "label": "使用条款", "href": "#terms" },
+      { "label": "Cookie", "href": "#cookies" }
+    ]
+  },
+  "langSelector": {
+    "title": "选择语言",
+    "close": "关闭"
+  },
+  "arrival": {
+    "cta": "揭示旅程"
+  },
+  "memory": {
+    "pre": "不是一个国家。",
+    "name": "保加利亚。",
+    "post": "一个幸存十三个世纪的谜。"
+  },
+  "journey": {
+    "eyebrow": "路径",
+    "heading": "五次发现。\n一次蜕变。",
+    "items": [
+      { "num": "01", "sym": "✦", "name": "Keeper", "desc": "完成完整旅程者赢得的称号。保加利亚鲜活记忆的守护者 — Пазител。" },
+      { "num": "02", "sym": "⌘", "name": "路线", "desc": "五个真实地点。由历史相连。走完路线 — 解锁隐藏在它们之间的故事。" },
+      { "num": "03", "sym": "◈", "name": "遗物", "desc": "完成一条路线。获得一件永久文物。一片永远属于你的保加利亚记忆。" },
+      { "num": "04", "sym": "◉", "name": "领域", "desc": "六个地区。每个都有自己的路线、自己的时代、自己的秘密。揭示一个领域 — 认领一层记忆。" },
+      { "num": "05", "sym": "◎", "name": "印记", "desc": "完成领域的标记。六枚印记。六层记忆。全部六枚 — 保加利亚便属于你。" }
+    ]
+  },
+  "skipLink": "跳至内容",
+  "ariaNav": "主导航",
+  "ariaFooterNav": "页脚导航",
+  "ariaLangNav": "法律导航",
+  "ariaHome": "Unlocking Bulgaria — 前往首页",
+  "ariaTop": "Unlocking Bulgaria — 返回顶部",
+  "ariaHero": "抵达 — 开篇章节",
+  "seoPages": {
+    "common": {
+      "domain": "领域",
+      "place": "地点",
+      "draft": "路线顺序草稿",
+      "downloadApp": "下载应用",
+      "exploreRoute": "探索路线",
+      "onlyInApp": "仅在应用中",
+      "onlyInAppBody": "AR 场景、谜题、遗物、路线解锁、完整电影化故事、进度和奖励都仅在 Unlocking Bulgaria 中提供。",
+      "tourism": "为什么参观",
+      "history": "历史层",
+      "story": "故事预告",
+      "practical": "实用信息",
+      "map": "地图预览",
+      "media": "媒体预览",
+      "audio": "音频预览",
+      "nearby": "附近地点",
+      "faq": "问题",
+      "quickFacts": "速览信息",
+      "duration": "时长",
+      "difficulty": "难度",
+      "childFriendly": "适合儿童",
+      "bestSeason": "最佳季节",
+      "coordinates": "坐标",
+      "easy": "简单",
+      "moderate": "中等",
+      "hard": "困难",
+      "yes": "是",
+      "no": "否",
+      "previous": "上一个",
+      "current": "当前",
+      "next": "下一个",
+      "routePreview": "路线预览",
+      "hiddenTeaserTitle": "隐藏在应用中",
+      "openInApp": "在应用中打开",
+      "comingSoon": "即将推出",
+      "watchPreview": "观看预览",
+      "listenPreview": "收听预览",
+      "mapLabel": "大致位置预览"
+    }
+  }
+}

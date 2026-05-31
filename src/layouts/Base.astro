@@ -219,7 +219,7 @@ const ogImage = seo?.ogImage;
     var closeBtn=document.querySelector("[data-lang-close]");
     var lbl=document.querySelector("[data-lang-lbl]");
     if(!openBtn||!overlay||!closeBtn)return;
-    var labels={en:"EN",bg:"БГ",de:"DE",fr:"FR",es:"ES",it:"IT",ro:"RO",tr:"TR",el:"ΕΛ",pl:"PL",ru:"РУ",ja:"JA",sr:"СР"};
+    var labels={en:"EN",bg:"БГ",de:"DE",fr:"FR",es:"ES",it:"IT",ro:"RO",tr:"TR",el:"ΕΛ",hu:"HU",zh:"中文",ru:"РУ",ja:"JA",sr:"СР"};
     function open(){overlay.classList.add("open");openBtn.setAttribute("aria-expanded","true");closeBtn.focus();}
     function close(){overlay.classList.remove("open");openBtn.setAttribute("aria-expanded","false");openBtn.focus();}
     openBtn.addEventListener("click",open);
@@ -234,7 +234,7 @@ const ogImage = seo?.ogImage;
         document.documentElement.lang=lang;
         // Navigate to lang path
         var seg=window.location.pathname.split("/").filter(Boolean);
-        var known=["en","bg","de","fr","es","it","ro","tr","el","pl","ru","ja","sr"];
+        var known=["en","bg","de","fr","es","it","ro","tr","el","hu","zh","ru","ja","sr"];
         if(seg.length&&known.includes(seg[0]))seg[0]=lang;
         else seg.unshift(lang);
         window.location.pathname="/"+seg.join("/");

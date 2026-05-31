@@ -26,7 +26,7 @@
     "lede": "Viaja por Bulgaria. Revela los secretos ancestrales. Conviértete en Guardián — custodio de la memoria viva que ha perdurado trece siglos.",
     "ctaPrimary": "Descargar la aplicación",
     "ctaSecondary": "Ver el viaje",
-    "trust": ["Misiones reales", "Narración cinematográfica", "RA opcional", "Apto para familias", "13 idiomas"],
+    "trust": ["Misiones reales", "Narración cinematográfica", "RA opcional", "Apto para familias", "14 idiomas"],
     "mapLabel": "Mapa interactivo de la memoria oculta de Bulgaria",
     "phoneDomain": "Dominio del Nombre",
     "phoneTitle": "Las antiguas capitales",
@@ -239,7 +239,7 @@
       { "icon": "⌛", "title": "Cronología histórica", "desc": "Un mapa interactivo a través de 1345 años de memoria búlgara — vinculado a las rutas que recorres." },
       { "icon": "◈", "title": "Reliquias y artefactos", "desc": "Colecciona reliquias digitales permanentes al completar una ruta. Construye un archivo personal de la historia oculta de Bulgaria." },
       { "icon": "✦", "title": "Dominios y sellos", "desc": "Completa dominios regionales. Gana sellos. Revela progresivamente el mapa completo de la memoria búlgara." },
-      { "icon": "⊕", "title": "13 idiomas", "desc": "Soporte multilingüe completo — incluyendo búlgaro, inglés, alemán, griego, ruso, japonés y más." },
+      { "icon": "⊕", "title": "14 idiomas", "desc": "Soporte multilingüe completo — incluyendo búlgaro, inglés, alemán, húngaro, chino, griego, ruso, japonés y más." },
       { "icon": "❖", "title": "Exploración familiar", "desc": "Modos de ritmo y niveles de contenido para familias, escuelas y viajeros culturales de todas las edades." },
       { "icon": "⊞", "title": "Soporte sin conexión", "desc": "Contenido clave de las rutas preparado para sitios de montaña, rurales y patrimoniales con señal limitada." },
       { "icon": "⊗", "title": "Rutas de socios", "desc": "Municipios, museos y empresas turísticas pueden co-crear rutas vinculadas al patrimonio local auténtico." }
@@ -324,7 +324,7 @@
       },
       {
         "q": "¿Qué idiomas están disponibles?",
-        "a": "La aplicación admite 13 idiomas: búlgaro, inglés, alemán, francés, español, italiano, rumano, turco, griego, polaco, ruso, japonés y serbio."
+        "a": "La aplicación admite 14 idiomas: búlgaro, inglés, alemán, francés, español, italiano, rumano, turco, griego, húngaro, chino, ruso, japonés y serbio."
       },
       {
         "q": "¿Necesito una cuenta?",

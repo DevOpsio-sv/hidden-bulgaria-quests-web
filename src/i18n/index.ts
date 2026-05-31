@@ -7,14 +7,15 @@ import it from "./it.json";
 import ro from "./ro.json";
 import tr from "./tr.json";
 import el from "./el.json";
-import pl from "./pl.json";
+import hu from "./hu.json";
+import zh from "./zh.json";
 import ru from "./ru.json";
 import ja from "./ja.json";
 import sr from "./sr.json";
 
 export const SUPPORTED_LANGS = [
   "en", "bg", "de", "fr", "es", "it",
-  "ro", "tr", "el", "pl", "ru", "ja", "sr",
+  "ro", "tr", "el", "hu", "zh", "ru", "ja", "sr",
 ] as const;
 
 export type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -25,19 +26,19 @@ export const LANG_NAMES: Record<Lang, string> = {
   en: "English", bg: "Български", de: "Deutsch",
   fr: "Français", es: "Español", it: "Italiano",
   ro: "Română", tr: "Türkçe", el: "Ελληνικά",
-  pl: "Polski", ru: "Русский", ja: "日本語", sr: "Српски",
+  hu: "Magyar", zh: "中文", ru: "Русский", ja: "日本語", sr: "Српски",
 };
 
 export const LANG_LABELS: Record<Lang, string> = {
   en: "EN", bg: "БГ", de: "DE", fr: "FR", es: "ES",
-  it: "IT", ro: "RO", tr: "TR", el: "ΕΛ", pl: "PL",
+  it: "IT", ro: "RO", tr: "TR", el: "ΕΛ", hu: "HU", zh: "中文",
   ru: "РУ", ja: "JA", sr: "СР",
 };
 
 export type Dict = typeof en;
 
 const allDicts: Record<Lang, Partial<Dict>> = {
-  en, bg, de, fr, es, it, ro, tr, el, pl, ru, ja, sr,
+  en, bg, de, fr, es, it, ro, tr, el, hu, zh, ru, ja, sr,
 };
 
 function deepMerge<T extends object>(base: T, override: Partial<T>): T {

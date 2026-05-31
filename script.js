@@ -96,7 +96,7 @@
 
   const LANG_LABELS = {
     en: "EN", bg: "БГ", de: "DE", fr: "FR", es: "ES",
-    it: "IT", ro: "RO", tr: "TR", el: "ΕΛ", pl: "PL",
+    it: "IT", ro: "RO", tr: "TR", el: "ΕΛ", hu: "HU", zh: "中文",
     ru: "РУ", ja: "JA", sr: "SR",
   };
 

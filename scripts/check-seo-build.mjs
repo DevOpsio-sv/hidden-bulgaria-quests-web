@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
-const langs = ["en", "bg", "de", "fr", "es", "it", "ro", "tr", "el", "pl", "ru", "ja", "sr"];
+const langs = ["en", "bg", "de", "fr", "es", "it", "ro", "tr", "el", "hu", "zh", "ru", "ja", "sr"];
 const places = [
   "durankulak",
   "shabla",

@@ -2,7 +2,7 @@
 
 This folder contains localization planning, translation tracking, and language-specific notes for Unlocking Bulgaria.
 
-## Supported Languages (13)
+## Supported Languages (14)
 
 | Code | Language | Native Name | Status |
 |------|----------|-------------|--------|
@@ -15,7 +15,8 @@ This folder contains localization planning, translation tracking, and language-s
 | `ro` | Romanian | Română | Active |
 | `tr` | Turkish | Türkçe | Active |
 | `el` | Greek | Ελληνικά | Active |
-| `pl` | Polish | Polski | Active |
+| `hu` | Hungarian | Magyar | Active |
+| `zh` | Chinese | 中文 | Active |
 | `ru` | Russian | Русский | Active |
 | `ja` | Japanese | 日本語 | Active |
 | `sr` | Serbian | Српски | Active |
@@ -38,7 +39,7 @@ This folder contains localization planning, translation tracking, and language-s
 ## Adding New Translation Keys
 
 1. Add the key to `src/i18n/en.json` first
-2. Add translations to all 13 language files
+2. Add translations to all 14 language files
 3. If a translation is pending, the English fallback will show
 4. Document any pending translations in this folder
 

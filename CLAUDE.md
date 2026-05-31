@@ -13,11 +13,11 @@ Quick-start context for Claude and any agent opening this repository.
 | Website | unlockingbulgaria.com |
 | Repo | hidden-bulgaria-quests-web |
 | Stack | Astro 5.0 · TypeScript · CSS · Cloudflare Pages |
-| Languages | 13 (en, bg, de, fr, es, it, ro, tr, el, pl, ru, ja, sr) |
+| Languages | 14 (en, bg, de, fr, es, it, ro, tr, el, hu, zh, ru, ja, sr) |
 
 ## What This Repo Is
 
-**Marketing website only** — not the mobile app. A static Astro site that introduces the product, supports 13 languages, and drives app downloads and partnership inquiries.
+**Marketing website only** — not the mobile app. A static Astro site that introduces the product, supports 14 languages, and drives app downloads and partnership inquiries.
 
 ---
 

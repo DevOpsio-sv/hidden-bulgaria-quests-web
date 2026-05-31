@@ -26,7 +26,7 @@
     "lede": "Viaggia attraverso la Bulgaria. Rivela i segreti antichi. Diventa un Custode — guardiano della memoria viva che ha resistito per tredici secoli.",
     "ctaPrimary": "Scarica l'app",
     "ctaSecondary": "Guarda il viaggio",
-    "trust": ["Missioni reali", "Narrazione cinematografica", "RA opzionale", "Per famiglie", "13 lingue"],
+    "trust": ["Missioni reali", "Narrazione cinematografica", "RA opzionale", "Per famiglie", "14 lingue"],
     "mapLabel": "Mappa interattiva della memoria nascosta della Bulgaria",
     "phoneDomain": "Dominio del Nome",
     "phoneTitle": "Le antiche capitali",
@@ -239,7 +239,7 @@
       { "icon": "⌛", "title": "Cronologia storica", "desc": "Una mappa interattiva attraverso 1345 anni di memoria bulgara — collegata ai percorsi che compi." },
       { "icon": "◈", "title": "Reliquie e artefatti", "desc": "Colleziona reliquie digitali permanenti al completamento di un percorso. Costruisci un archivio personale della storia nascosta della Bulgaria." },
       { "icon": "✦", "title": "Domini e sigilli", "desc": "Completa i domini regionali. Guadagna sigilli. Rivela progressivamente la mappa completa della memoria bulgara." },
-      { "icon": "⊕", "title": "13 lingue", "desc": "Supporto multilingue completo — incluso bulgaro, inglese, tedesco, greco, russo, giapponese e altro." },
+      { "icon": "⊕", "title": "14 lingue", "desc": "Supporto multilingue completo — incluso bulgaro, inglese, tedesco, ungherese, cinese, greco, russo, giapponese e altro." },
       { "icon": "❖", "title": "Esplorazione in famiglia", "desc": "Modalità di ritmo e contenuti scalabili per famiglie, scuole e viaggiatori culturali di ogni età." },
       { "icon": "⊞", "title": "Supporto offline", "desc": "Contenuti chiave dei percorsi preparati per siti montani, rurali e del patrimonio con segnale limitato." },
       { "icon": "⊗", "title": "Percorsi partner", "desc": "Comuni, musei e aziende turistiche possono co-creare percorsi legati al reale patrimonio locale." }
@@ -324,7 +324,7 @@
       },
       {
         "q": "Quali lingue sono supportate?",
-        "a": "L'app supporta 13 lingue: bulgaro, inglese, tedesco, francese, spagnolo, italiano, rumeno, turco, greco, polacco, russo, giapponese e serbo."
+        "a": "L'app supporta 14 lingue: bulgaro, inglese, tedesco, francese, spagnolo, italiano, rumeno, turco, greco, ungherese, cinese, russo, giapponese e serbo."
       },
       {
         "q": "Ho bisogno di un account?",
