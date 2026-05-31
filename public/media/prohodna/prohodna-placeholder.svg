@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Prohodna Cave placeholder — twin sky openings (Eyes of God). Replace with licensed photograph.">
+  <title>Prohodna Cave — placeholder (licensed photo required)</title>
+  <defs>
+    <!-- Cave interior gradient -->
+    <radialGradient id="cave-bg" cx="50%" cy="60%" r="75%">
+      <stop offset="0%" stop-color="#1a1208"/>
+      <stop offset="40%" stop-color="#0d0c0a"/>
+      <stop offset="100%" stop-color="#040404"/>
+    </radialGradient>
+    <!-- Stone texture layers -->
+    <radialGradient id="stone-left" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2a2018" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0d0c0a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="stone-right" cx="70%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#252015" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0d0c0a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Sky through left opening -->
+    <radialGradient id="sky-left" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#e8dfc8"/>
+      <stop offset="25%" stop-color="#c8bfa0"/>
+      <stop offset="60%" stop-color="#8fa8c4"/>
+      <stop offset="100%" stop-color="#5a7a9a"/>
+    </radialGradient>
+    <!-- Sky through right opening -->
+    <radialGradient id="sky-right" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#ddd5bc"/>
+      <stop offset="30%" stop-color="#bab296"/>
+      <stop offset="65%" stop-color="#7e9ab8"/>
+      <stop offset="100%" stop-color="#4e6e8c"/>
+    </radialGradient>
+    <!-- Glow on opening edges -->
+    <filter id="opening-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Soft vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.72"/>
+    </radialGradient>
+    <!-- Cave wall texture -->
+    <filter id="rock-texture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feBlend in="SourceGraphic" in2="gray" mode="multiply"/>
+    </filter>
+    <!-- Clip paths for the two oval eye openings -->
+    <clipPath id="eye-left-clip">
+      <ellipse cx="390" cy="290" rx="155" ry="185"/>
+    </clipPath>
+    <clipPath id="eye-right-clip">
+      <ellipse cx="810" cy="310" rx="145" ry="170"/>
+    </clipPath>
+  </defs>
+
+  <!-- Cave interior background -->
+  <rect width="1200" height="750" fill="url(#cave-bg)"/>
+
+  <!-- Stone walls -->
+  <rect width="1200" height="750" fill="url(#stone-left)"/>
+  <rect width="1200" height="750" fill="url(#stone-right)"/>
+
+  <!-- Cave silhouette shapes (rough organic rock walls) -->
+  <!-- Left wall mass -->
+  <path d="M 0,0 L 230,0 Q 270,80 255,160 Q 238,250 245,340 Q 250,420 230,500 Q 210,600 220,750 L 0,750 Z"
+        fill="#0e0c08" opacity="0.9"/>
+  <!-- Right wall mass -->
+  <path d="M 1200,0 L 970,0 Q 935,90 945,185 Q 958,285 950,370 Q 942,460 958,550 Q 975,640 965,750 L 1200,750 Z"
+        fill="#0d0b07" opacity="0.9"/>
+  <!-- Ceiling arch -->
+  <path d="M 0,0 L 1200,0 L 1200,95 Q 1050,55 950,70 Q 880,80 815,60 Q 735,38 660,42 Q 580,46 500,38 Q 420,30 350,48 Q 280,64 215,72 Q 135,82 0,95 Z"
+        fill="#080806" opacity="0.95"/>
+  <!-- Ceiling stalactite suggestions -->
+  <path d="M 500,0 Q 510,42 505,60 Q 500,42 490,0 Z" fill="#0c0b08" opacity="0.5"/>
+  <path d="M 680,0 Q 694,50 688,72 Q 682,50 668,0 Z" fill="#0c0b08" opacity="0.4"/>
+  <path d="M 840,0 Q 851,38 846,55 Q 840,38 828,0 Z" fill="#0c0b08" opacity="0.35"/>
+  <!-- Floor shadow -->
+  <path d="M 0,680 Q 300,640 600,650 Q 900,660 1200,630 L 1200,750 L 0,750 Z"
+        fill="#060504" opacity="0.85"/>
+  <!-- Mid-ground rock formation (ground level) -->
+  <path d="M 0,720 Q 80,680 160,695 Q 240,710 320,690 Q 400,670 480,685 Q 560,700 640,680 Q 720,660 800,678 Q 880,695 960,682 Q 1040,668 1120,690 L 1200,720 L 1200,750 L 0,750 Z"
+        fill="#0a0907"/>
+
+  <!-- LEFT EYE OPENING — sky fill -->
+  <ellipse cx="390" cy="290" rx="155" ry="185" fill="url(#sky-left)" filter="url(#opening-glow)"/>
+  <!-- Light scatter inside the left opening -->
+  <ellipse cx="390" cy="290" rx="90" ry="110" fill="#f0e8d2" opacity="0.18"/>
+  <ellipse cx="370" cy="270" rx="45" ry="58" fill="#fff8ec" opacity="0.12"/>
+
+  <!-- RIGHT EYE OPENING — sky fill -->
+  <ellipse cx="810" cy="310" rx="145" ry="170" fill="url(#sky-right)" filter="url(#opening-glow)"/>
+  <!-- Light scatter inside the right opening -->
+  <ellipse cx="810" cy="310" rx="82" ry="100" fill="#ede4cc" opacity="0.16"/>
+  <ellipse cx="828" cy="295" rx="40" ry="52" fill="#fff5e6" opacity="0.11"/>
+
+  <!-- Opening rim highlights (inner edge glow — light bouncing off rock) -->
+  <ellipse cx="390" cy="290" rx="155" ry="185" fill="none"
+           stroke="#c8b890" stroke-width="3" opacity="0.28"/>
+  <ellipse cx="810" cy="310" rx="145" ry="170" fill="none"
+           stroke="#b8a880" stroke-width="2.5" opacity="0.22"/>
+
+  <!-- Atmospheric light shafts falling from openings -->
+  <path d="M 320,475 L 350,290 L 430,290 L 480,650 Z"
+        fill="#d4c090" opacity="0.04"/>
+  <path d="M 350,475 L 368,290 L 412,290 L 440,600 Z"
+        fill="#d4c090" opacity="0.03"/>
+  <path d="M 740,480 L 765,310 L 855,310 L 900,640 Z"
+        fill="#c8b88a" opacity="0.04"/>
+
+  <!-- Vignette overlay -->
+  <rect width="1200" height="750" fill="url(#vignette)"/>
+
+  <!-- Placeholder watermark -->
+  <rect x="0" y="690" width="1200" height="60" fill="#000" opacity="0.55"/>
+  <text x="600" y="724" text-anchor="middle" fill="#c8a860" font-family="Georgia, serif"
+        font-size="15" letter-spacing="3" opacity="0.85">
+    PLACEHOLDER · PROHODNA CAVE · LICENSED PHOTOGRAPH REQUIRED
+  </text>
+</svg>

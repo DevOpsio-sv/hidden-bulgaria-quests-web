@@ -157,6 +157,8 @@
     "floatTag1": "Hidden layer revealed",
     "floatTag2": "Checkpoint · 82m",
     "centerLabel": "Guardian\nSight",
+    "toggle": "Raise the Guardian Sight",
+    "toggleActive": "Lower the Guardian Sight",
     "features": [
       {
         "icon": "◈",
@@ -178,7 +180,23 @@
         "title": "Heavier moments at key sites",
         "desc": "Hero checkpoints and domain finales feature deeper AR sequences — reconstructed scenes, artifact reveals, and cinematic moments."
       }
-    ]
+    ],
+    "prohodna": {
+      "eyebrow": "Guardian Sight · Prohodna Cave",
+      "heading": "The Eyes of God\nremember.",
+      "lede": "Stand inside Prohodna. Look up through the twin openings. This is what the land kept secret for a thousand years.",
+      "sliderLabel": "Drag to reveal the Guardian Sight sacred layer",
+      "keyEarth": "ЗЕМЯ · Earth",
+      "keySpirit": "ДУХ · Spirit",
+      "guruCaptionBg": "Преди Името… Земята вече помнеше.",
+      "guruCaption": "Before the Name, the land already remembered.",
+      "guruNote": "Guardian Sight reveals a sacred hidden layer at this checkpoint — ancient axis, Keeper glyphs, and the light that never left.",
+      "altBase": "Prohodna Cave, Bulgaria — the two natural sky openings called the Eyes of God, seen from inside the cave tunnel",
+      "altOverlay": "Guardian Sight layer: celestial light beams through the Eyes of God, Earth–Spirit axis glyphs ЗЕМЯ and ДУХ, a slow keeper-resonance glow — the sacred hidden memory of the land",
+      "liveOn": "Guardian Sight activated — sacred layer revealed",
+      "liveOff": "Guardian Sight deactivated",
+      "credit": "Photo: placeholder · Licensed image of Prohodna Cave required · See README"
+    }
   },
   "timeline": {
     "eyebrow": "Historical timeline",

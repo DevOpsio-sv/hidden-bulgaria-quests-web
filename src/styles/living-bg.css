@@ -1,0 +1,280 @@
+@property --living-warm {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+.living-bg {
+  --bg-scroll-boost: 0;
+  --living-warm: 0;
+
+  contain: layout paint style;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+.living-bg__base,
+.living-bg__wave,
+.living-bg__auroras,
+.living-bg__paths,
+.living-bg__motes,
+.living-bg__grain {
+  inset: 0;
+  position: absolute;
+}
+
+.living-bg__base {
+  background:
+    radial-gradient(ellipse 85% 62% at 50% -10%, rgb(10 12 22 / calc(.54 * var(--bg-intensity))) 0%, transparent 64%),
+    linear-gradient(180deg, var(--void) 0%, #03050b 48%, var(--void-2) 100%);
+}
+
+.living-bg__wave {
+  background:
+    radial-gradient(
+      ellipse 96% 72% at 18% 18%,
+      rgb(26 43 69 / calc(.24 * var(--bg-intensity) * (1 - var(--living-warm)))) 0%,
+      transparent 64%
+    ),
+    radial-gradient(
+      ellipse 86% 76% at 78% 72%,
+      rgb(58 31 20 / calc(.20 * var(--bg-intensity) * var(--living-warm))) 0%,
+      transparent 68%
+    ),
+    conic-gradient(
+      from 210deg at 46% 50%,
+      rgb(26 43 69 / calc(.12 * var(--bg-intensity) * (1 - var(--living-warm)))),
+      rgb(201 161 74 / calc(.10 * var(--bg-intensity) * var(--living-warm))),
+      transparent 42%,
+      rgb(58 31 20 / calc(.10 * var(--bg-intensity) * var(--living-warm))),
+      rgb(26 43 69 / calc(.10 * var(--bg-intensity) * (1 - var(--living-warm))))
+    );
+  background-position: 8% 2%, 92% 88%, 50% 50%;
+  background-size: 132% 132%, 142% 142%, 160% 160%;
+  opacity: .9;
+  animation: living-wave-drift 44s var(--ease) infinite alternate;
+}
+
+.living-bg__auroras {
+  opacity: calc(.92 * var(--bg-intensity));
+}
+
+.living-bg__aurora {
+  border-radius: 999px;
+  display: block;
+  filter: blur(82px);
+  height: 34vh;
+  min-height: 260px;
+  opacity: calc((.1 + (.04 * var(--bg-scroll-boost))) * var(--bg-intensity));
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  width: 46vw;
+}
+
+.living-bg__aurora--river {
+  animation: living-aurora-river 34s ease-in-out infinite alternate;
+  background: radial-gradient(ellipse at center, rgb(26 43 69 / .82), transparent 68%);
+  left: -12vw;
+  top: 8vh;
+}
+
+.living-bg__aurora--gold {
+  --cursor-dx: 0px;
+  --cursor-dy: 0px;
+
+  animation: living-aurora-gold 29s ease-in-out infinite alternate;
+  background: radial-gradient(ellipse at center, rgb(138 112 56 / .66), transparent 70%);
+  height: 30vh;
+  left: 44vw;
+  opacity: calc((.12 + (.035 * var(--bg-scroll-boost))) * var(--bg-intensity));
+  top: 22vh;
+  width: 38vw;
+}
+
+.living-bg__aurora--ember {
+  animation: living-aurora-ember 41s ease-in-out infinite alternate;
+  background: radial-gradient(ellipse at center, rgb(58 31 20 / .72), transparent 70%);
+  bottom: -6vh;
+  height: 42vh;
+  right: -16vw;
+}
+
+.living-bg__grain {
+  height: 100%;
+  mix-blend-mode: soft-light;
+  opacity: calc((.045 + (.018 * var(--bg-scroll-boost))) * var(--bg-intensity));
+  width: 100%;
+}
+
+.living-bg__paths {
+  opacity: calc(.62 * var(--bg-intensity));
+}
+
+.living-bg__path {
+  animation: living-path-drift var(--path-duration) linear infinite;
+  animation-delay: var(--path-delay);
+  background: linear-gradient(180deg, transparent, rgb(232 200 120 / .34) 36%, rgb(201 161 74 / .18) 58%, transparent);
+  box-shadow: 0 0 18px rgb(201 161 74 / .12);
+  display: block;
+  height: 48vh;
+  left: var(--path-x);
+  opacity: .42;
+  position: absolute;
+  top: 100vh;
+  transform: translate3d(0, 0, 0);
+  width: 1px;
+}
+
+.living-bg__mote {
+  animation: living-mote-rise var(--mote-duration) linear infinite;
+  animation-delay: var(--mote-delay);
+  background: rgb(232 200 120 / .72);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(201 161 74 / .36);
+  display: block;
+  height: var(--mote-size);
+  left: var(--x);
+  opacity: calc((.16 + (.05 * var(--bg-scroll-boost))) * var(--bg-intensity));
+  position: absolute;
+  top: var(--y);
+  transform: translate3d(0, 0, 0);
+  width: var(--mote-size);
+}
+
+@supports (animation-timeline: scroll(root)) {
+  .living-bg__wave {
+    animation: living-wave-scroll linear both;
+    animation-timeline: scroll(root);
+  }
+
+  .living-bg__path {
+    animation: living-path-scroll linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes living-wave-scroll {
+  0% {
+    --living-warm: 0;
+    background-position: 4% 4%, 94% 84%, 42% 48%;
+    filter: hue-rotate(-7deg);
+  }
+  48% {
+    --living-warm: .38;
+    background-position: 42% 28%, 60% 70%, 50% 50%;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    --living-warm: 1;
+    background-position: 78% 60%, 26% 38%, 62% 54%;
+    filter: hue-rotate(9deg);
+  }
+}
+
+@keyframes living-wave-drift {
+  0% {
+    --living-warm: .08;
+    background-position: 4% 4%, 94% 84%, 42% 48%;
+    filter: hue-rotate(-5deg);
+  }
+  100% {
+    --living-warm: .62;
+    background-position: 82% 58%, 26% 38%, 62% 54%;
+    filter: hue-rotate(6deg);
+  }
+}
+
+@keyframes living-aurora-river {
+  from { transform: translate3d(-4vw, 2vh, 0) rotate(-7deg) scale(1); }
+  to { transform: translate3d(10vw, 9vh, 0) rotate(8deg) scale(1.08); }
+}
+
+@keyframes living-aurora-gold {
+  from { transform: translate3d(calc(-5vw + var(--cursor-dx)), calc(0vh + var(--cursor-dy)), 0) rotate(10deg) scale(.98); }
+  to { transform: translate3d(calc(3vw + var(--cursor-dx)), calc(8vh + var(--cursor-dy)), 0) rotate(-6deg) scale(1.06); }
+}
+
+@keyframes living-aurora-ember {
+  from { transform: translate3d(4vw, 6vh, 0) rotate(7deg) scale(1.04); }
+  to { transform: translate3d(-8vw, -2vh, 0) rotate(-9deg) scale(.98); }
+}
+
+@keyframes living-path-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -150vh, 0); }
+}
+
+@keyframes living-path-scroll {
+  from {
+    opacity: .08;
+    transform: translate3d(0, 28vh, 0);
+  }
+  35% {
+    opacity: .42;
+  }
+  to {
+    opacity: .18;
+    transform: translate3d(0, -150vh, 0);
+  }
+}
+
+@keyframes living-mote-rise {
+  from {
+    transform: translate3d(0, 12vh, 0) scale(.8);
+  }
+  to {
+    transform: translate3d(var(--mote-drift), -112vh, 0) scale(1);
+  }
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 760px) {
+  .living-bg__auroras,
+  .living-bg__paths,
+  .living-bg__motes {
+    display: none;
+  }
+
+  .living-bg__wave {
+    opacity: .72;
+  }
+
+  .living-bg__grain {
+    opacity: calc(.04 * var(--bg-intensity));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .living-bg,
+  .living-bg *,
+  .living-bg *::before,
+  .living-bg *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .living-bg {
+    --bg-scroll-boost: 0;
+    --living-warm: .52;
+  }
+
+  .living-bg__wave {
+    background-position: 54% 34%, 38% 62%, 52% 50%;
+    filter: none;
+    opacity: .78;
+  }
+
+  .living-bg__auroras,
+  .living-bg__paths,
+  .living-bg__motes {
+    display: none;
+  }
+
+  .living-bg__grain {
+    opacity: calc(.045 * var(--bg-intensity));
+  }
+}

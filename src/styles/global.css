@@ -2,6 +2,14 @@
 
 /* ─── Tokens ─────────────────────────────────────────────────── */
 :root {
+  --void:       #05060c;
+  --void-2:     #0a0c16;
+  --gold-bright:#e8c878;
+  --flame:      #f4ecd6;
+  --river:      #1a2b45;
+  --ember:      #3a1f14;
+  --bg-intensity: .82;
+
   --bg-0:      #030610;
   --bg-1:      #06091a;
   --bg-2:      #08101f;
@@ -52,10 +60,10 @@
 
 /* ─── Reset ──────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{background:var(--void);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   margin:0;
-  background:var(--bg-0);
+  background:transparent;
   color:var(--text-1);
   font-family:var(--ff-body);
   font-size:1.0625rem; /* 17px base — all rem values scale up proportionally */
@@ -68,18 +76,6 @@ img,svg{display:block;max-width:100%}
 button,input,textarea,select{font:inherit}
 h1,h2,h3,h4,p,ul,ol,figure{margin:0}
 ul,ol{list-style:none;padding:0}
-
-/* ─── Stars & dust ───────────────────────────────────────────── */
-#stars{
-  inset:0;pointer-events:none;
-  position:fixed;z-index:0;
-  opacity:.75;
-}
-#dust{
-  inset:0;pointer-events:none;
-  position:fixed;z-index:0;
-  opacity:.65;
-}
 
 /* ─── Skip link ──────────────────────────────────────────────── */
 .skip{
@@ -2359,4 +2355,385 @@ textarea.form-control{min-height:122px;resize:vertical}
   .hiw-flow{grid-template-columns:1fr}
   .hiw-node:nth-child(odd){border-right:none}
   .feat-grid{grid-template-columns:1fr}
+}
+
+/* ─── GUARDIAN SIGHT PROHODNA (before/after reveal) ─────────── */
+.gsp-section{
+  padding:clamp(88px,11vw,128px) 0;
+  position:relative;
+}
+.gsp-section::before{
+  background:radial-gradient(ellipse 50% 40% at 50% 0%,rgba(216,181,106,.05) 0%,transparent 70%);
+  content:"";inset:0;pointer-events:none;position:absolute;z-index:0;
+}
+
+/* Header */
+.gsp-header{max-width:720px;margin-bottom:clamp(36px,5vw,56px)}
+.gsp-heading{
+  font-size:clamp(2.4rem,5vw,5rem);
+  font-weight:300;
+  margin-bottom:20px;
+  margin-top:12px;
+  white-space:pre-line;
+}
+.gsp-lede{max-width:580px}
+
+/* Photo stage */
+.gsp-stage{
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  cursor:col-resize;
+  overflow:hidden;
+  position:relative;
+  touch-action:none;
+  user-select:none;
+  width:100%;
+}
+/* Intrinsic 8:5 ratio matching SVG placeholder */
+.gsp-stage::before{
+  content:"";
+  display:block;
+  padding-top:calc(750 / 1200 * 100%);
+}
+.gsp-stage > *{position:absolute}
+
+/* Base photo */
+.gsp-base-photo{
+  height:100%;
+  inset:0;
+  object-fit:cover;
+  width:100%;
+}
+
+/* Overlay (clipped by JS via clip-path) */
+.gsp-overlay{
+  height:100%;
+  inset:0;
+  pointer-events:none;
+  transition:opacity .22s var(--ease);
+  width:100%;
+  will-change:clip-path;
+}
+
+/* Celestial light beams (through the two eye openings) */
+.gsp-light{
+  border-radius:50%;
+  position:absolute;
+}
+.gsp-light-left{
+  animation:gsp-pulse-light 4s ease-in-out infinite;
+  background:radial-gradient(ellipse 55% 65% at 50% 40%,
+    rgba(248,240,200,.52) 0%,
+    rgba(216,181,106,.22) 35%,
+    rgba(140,110,60,.08) 65%,
+    transparent 100%);
+  height:65%;
+  left:16%;
+  top:5%;
+  width:28%;
+}
+.gsp-light-right{
+  animation:gsp-pulse-light 4s ease-in-out .7s infinite;
+  background:radial-gradient(ellipse 55% 60% at 50% 42%,
+    rgba(240,230,188,.46) 0%,
+    rgba(200,166,96,.20) 38%,
+    rgba(120,95,50,.07) 65%,
+    transparent 100%);
+  height:62%;
+  left:52%;
+  top:8%;
+  width:27%;
+}
+@keyframes gsp-pulse-light{
+  0%,100%{opacity:.75;transform:scale(1)}
+  50%{opacity:1;transform:scale(1.04)}
+}
+
+/* Keeper resonance glow (ambient centre) */
+.gsp-keeper-glow{
+  animation:gsp-keeper 6s ease-in-out infinite;
+  background:radial-gradient(ellipse 60% 40% at 50% 55%,
+    rgba(216,181,106,.10) 0%,
+    transparent 70%);
+  inset:0;
+  position:absolute;
+}
+@keyframes gsp-keeper{
+  0%,100%{opacity:.6}
+  50%{opacity:1}
+}
+
+/* Glyph SVG */
+.gsp-glyphs{
+  height:100%;
+  inset:0;
+  position:absolute;
+  width:100%;
+}
+.gsp-glyph-primary{
+  fill:var(--gold-lt);
+  font-family:var(--ff-title);
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:.18em;
+  opacity:.82;
+  text-transform:uppercase;
+}
+.gsp-glyph-secondary{
+  fill:var(--gold);
+  font-family:var(--ff-title);
+  font-size:13px;
+  letter-spacing:.24em;
+  opacity:.58;
+  text-transform:uppercase;
+}
+.gsp-glyph-line{
+  opacity:.28;
+  stroke:var(--gold);
+  stroke-width:1;
+}
+.gsp-glyph-dot{
+  fill:var(--gold);
+  opacity:.38;
+}
+.gsp-axis-spine{
+  opacity:.10;
+  stroke:var(--gold);
+  stroke-dasharray:4 8;
+  stroke-width:.8;
+}
+
+/* Overlay art PNG (if provided) */
+.gsp-overlay-art{
+  height:100%;
+  inset:0;
+  mix-blend-mode:screen;
+  object-fit:cover;
+  opacity:.68;
+  width:100%;
+}
+
+/* Particles */
+.gsp-particles{
+  inset:0;
+  pointer-events:none;
+  position:absolute;
+}
+.gsp-particle{
+  border-radius:50%;
+  display:block;
+  opacity:0;
+  position:absolute;
+}
+.gsp-particles-active .gsp-particle{animation:gsp-float var(--dur,6s) ease-in-out var(--del,0s) infinite}
+
+/* Particle positions + sizes */
+.gsp-p1{background:var(--gold-lt);height:3px;width:3px;left:32%;top:22%;--dur:7s;--del:0s}
+.gsp-p2{background:var(--gold);height:2px;width:2px;left:44%;top:35%;--dur:9s;--del:1.2s}
+.gsp-p3{background:var(--gold-lt);height:3px;width:3px;left:55%;top:18%;--dur:6.5s;--del:2.1s}
+.gsp-p4{background:var(--gold);height:2px;width:2px;left:38%;top:55%;--dur:8s;--del:0.7s}
+.gsp-p5{background:var(--gold-lt);height:2px;width:2px;left:64%;top:28%;--dur:7.5s;--del:3s}
+.gsp-p6{background:var(--gold);height:3px;width:3px;left:26%;top:42%;--dur:8.5s;--del:1.8s}
+.gsp-p7{background:var(--gold-lt);height:2px;width:2px;left:71%;top:45%;--dur:6.8s;--del:0.4s}
+.gsp-p8{background:var(--gold);height:2px;width:2px;left:48%;top:62%;--dur:9.5s;--del:2.5s}
+
+@keyframes gsp-float{
+  0%{opacity:0;transform:translateY(0) scale(1)}
+  15%{opacity:.7}
+  50%{opacity:.45;transform:translateY(-18px) scale(1.3)}
+  85%{opacity:.6}
+  100%{opacity:0;transform:translateY(-36px) scale(.8)}
+}
+@media(prefers-reduced-motion:reduce){
+  .gsp-particle,.gsp-light,.gsp-keeper-glow{animation:none}
+  .gsp-light{opacity:.7}
+  .gsp-keeper-glow{opacity:.7}
+}
+
+/* Range slider — transparent track, only thumb visible */
+.gsp-slider{
+  -webkit-appearance:none;
+  appearance:none;
+  background:transparent;
+  cursor:col-resize;
+  height:100%;
+  inset:0;
+  margin:0;
+  outline:none;
+  padding:0;
+  position:absolute;
+  width:100%;
+  z-index:10;
+}
+.gsp-slider::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  appearance:none;
+  height:60px;
+  opacity:0;
+  width:60px;
+}
+.gsp-slider::-moz-range-thumb{
+  border:none;
+  height:60px;
+  opacity:0;
+  width:60px;
+}
+.gsp-slider:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Visual divider line + handle (JS positions via CSS custom property) */
+.gsp-divider{
+  height:100%;
+  left:0;
+  pointer-events:none;
+  position:absolute;
+  top:0;
+  transform:translateX(0);
+  width:100%;
+  z-index:9;
+}
+.gsp-divider-line{
+  background:var(--gold);
+  height:100%;
+  left:0;
+  opacity:.42;
+  position:absolute;
+  top:0;
+  transform:translateX(-1px);
+  width:1px;
+}
+.gsp-divider-handle{
+  align-items:center;
+  background:rgba(3,6,16,.82);
+  border:1px solid var(--border);
+  border-radius:var(--r-pill);
+  box-shadow:var(--glow-sm);
+  color:var(--gold);
+  display:flex;
+  height:44px;
+  justify-content:center;
+  left:-22px;
+  padding:0 10px;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+}
+.gsp-divider-handle svg{height:18px;width:18px}
+
+/* Hint label (fades out when slider moves) */
+.gsp-hint-label{
+  background:rgba(3,6,16,.62);
+  border:1px solid var(--border-lt);
+  border-radius:var(--r-sm);
+  bottom:16px;
+  color:var(--gold-lt);
+  font-family:var(--ff-title);
+  font-size:.72rem;
+  font-weight:600;
+  left:50%;
+  letter-spacing:.16em;
+  padding:8px 14px;
+  pointer-events:none;
+  position:absolute;
+  text-align:center;
+  text-transform:uppercase;
+  transform:translateX(-50%);
+  transition:opacity .4s var(--ease);
+  z-index:8;
+}
+/* Hide hint once slider has been touched (JS would add .gsp-touched class to stage) */
+.gsp-stage.gsp-touched .gsp-hint-label{opacity:0}
+
+/* Photo credit */
+.gsp-credit{
+  bottom:8px;
+  color:rgba(160,146,114,.6);
+  font-size:.68rem;
+  left:12px;
+  letter-spacing:.04em;
+  pointer-events:none;
+  position:absolute;
+  z-index:8;
+}
+
+/* Controls row */
+.gsp-controls{
+  align-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px 32px;
+  margin-top:clamp(24px,3vw,36px);
+}
+.gsp-toggle{min-width:240px;justify-content:center}
+.gsp-keys{
+  align-items:center;
+  color:var(--text-3);
+  display:flex;
+  font-family:var(--ff-title);
+  font-size:.78rem;
+  gap:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.gsp-key{color:var(--text-2)}
+.gsp-key-earth{color:var(--gold)}
+.gsp-key-spirit{color:var(--text-2)}
+.gsp-key-sep{color:var(--border);opacity:.6}
+
+/* Guru caption */
+.gsp-caption{
+  border-left:2px solid var(--gold-dk);
+  margin-top:clamp(36px,5vw,56px);
+  padding:clamp(20px,3vw,32px) clamp(20px,3vw,32px);
+  position:relative;
+}
+.gsp-quote{margin:0 0 16px}
+.gsp-quote-original{
+  color:var(--text-1);
+  font-family:var(--ff-display);
+  font-size:clamp(1.25rem,2vw,1.55rem);
+  font-style:italic;
+  font-weight:400;
+  letter-spacing:.01em;
+  line-height:1.55;
+  margin:0 0 8px;
+}
+.gsp-quote-trans{
+  color:var(--text-3);
+  font-family:var(--ff-display);
+  font-size:clamp(1rem,1.5vw,1.18rem);
+  font-style:italic;
+  font-weight:300;
+  line-height:1.6;
+  margin:0;
+}
+.gsp-quote-note{
+  color:var(--text-4);
+  font-size:.9rem;
+  line-height:1.7;
+  margin:0;
+}
+
+/* Screen reader only */
+.gsp-sr-only{
+  clip:rect(0,0,0,0);
+  clip-path:inset(50%);
+  height:1px;
+  overflow:hidden;
+  position:absolute;
+  white-space:nowrap;
+  width:1px;
+}
+
+/* Divider tracks slider value via CSS — JS updates inline left% on .gsp-divider */
+/* (The JS sets style.left on .gsp-divider-line and .gsp-divider-handle via a shared wrapper) */
+
+/* Responsive */
+@media(max-width:700px){
+  .gsp-stage{border-radius:var(--r-md)}
+  .gsp-controls{flex-direction:column;align-items:flex-start}
+  .gsp-toggle{min-width:0;width:100%}
+  .gsp-caption{padding:18px 20px}
+  .gsp-glyph-primary{font-size:16px}
+  .gsp-glyph-secondary{font-size:10px}
 }

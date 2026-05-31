@@ -1,6 +1,7 @@
 ---
 import type { Dict } from "../i18n";
 import { SUPPORTED_LANGS } from "../i18n";
+import LivingBackground from "../components/LivingBackground.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -90,88 +91,11 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   ))}
 </head>
 <body>
-  <!-- Stars canvas -->
-  <canvas id="stars" aria-hidden="true"></canvas>
-  <!-- Ambient drift canvas -->
-  <canvas id="dust" aria-hidden="true"></canvas>
+  <LivingBackground />
 
   <a class="skip" href="#main">{dict.skipLink}</a>
 
   <slot />
-
-  <!-- Stars script -->
-  <script is:inline>
-  (function(){
-    var c=document.getElementById("stars");
-    if(!c||window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
-    var x=c.getContext("2d"),W,H,S;
-    function resize(){
-      W=c.width=window.innerWidth;
-      H=c.height=window.innerHeight;
-    }
-    function make(n){
-      S=[];
-      for(var i=0;i<n;i++)S.push({
-        x:Math.random()*W,y:Math.random()*H,
-        r:Math.random()*1.1+.2,a:Math.random(),
-        sp:Math.random()*.25+.04,d:Math.random()>.5?1:-1
-      });
-    }
-    function draw(){
-      x.clearRect(0,0,W,H);
-      S.forEach(function(s){
-        s.a+=s.sp*.007*s.d;
-        if(s.a>1||s.a<0)s.d*=-1;
-        x.beginPath();x.arc(s.x,s.y,s.r,0,Math.PI*2);
-        x.fillStyle="rgba(245,226,168,"+s.a*.7+")";x.fill();
-      });
-      requestAnimationFrame(draw);
-    }
-    resize();make(280);draw();
-    var t;window.addEventListener("resize",function(){
-      clearTimeout(t);t=setTimeout(function(){resize();make(280);},180);
-    });
-  })();
-  </script>
-
-  <!-- Ambient drift particles — very subtle floating dust -->
-  <script is:inline>
-  (function(){
-    var c=document.getElementById("dust");
-    if(!c||window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
-    var x=c.getContext("2d"),W,H,P;
-    function resize(){
-      W=c.width=window.innerWidth;
-      H=c.height=window.innerHeight;
-    }
-    function make(){
-      P=[];
-      for(var i=0;i<48;i++)P.push({
-        x:Math.random()*W,y:Math.random()*H,
-        r:Math.random()*1.2+.35,
-        vx:(Math.random()-.5)*.14,
-        vy:(Math.random()-.5)*.09,
-        a:Math.random()*.09+.02
-      });
-    }
-    function draw(){
-      x.clearRect(0,0,W,H);
-      for(var i=0;i<P.length;i++){
-        var p=P[i];
-        p.x+=p.vx;p.y+=p.vy;
-        if(p.x<-4)p.x=W+4;else if(p.x>W+4)p.x=-4;
-        if(p.y<-4)p.y=H+4;else if(p.y>H+4)p.y=-4;
-        x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);
-        x.fillStyle="rgba(245,226,168,"+p.a+")";x.fill();
-      }
-      requestAnimationFrame(draw);
-    }
-    resize();make();draw();
-    var t;window.addEventListener("resize",function(){
-      clearTimeout(t);t=setTimeout(function(){resize();make();},200);
-    });
-  })();
-  </script>
 
   <!-- Header scroll state -->
   <script is:inline>

@@ -72,6 +72,8 @@ export interface SeoPlace {
   epoch: DomainEpoch;
   /** Normalized 0..1 position on the Bulgaria Living Map SVG (viewBox 800×500) */
   map?: { x: number; y: number };
+  /** Guardian Sight interactive reveal — path to overlay art in public/media/ */
+  guardianSight?: { overlayImage: string };
 }
 
 export const SITE_ORIGIN = "https://unlockingbulgaria.com";
@@ -384,6 +386,7 @@ export const seoPlaces: SeoPlace[] = [
     appDeepLink: "unlockingbulgaria://places/prohodna-cave",
     epoch: "after",
     map: geoToMap(43.173, 24.071),
+    guardianSight: { overlayImage: "/media/prohodna/prohodna-overlay.png" },
     translations: {
       bg: {
         title: "Пещера Проходна",

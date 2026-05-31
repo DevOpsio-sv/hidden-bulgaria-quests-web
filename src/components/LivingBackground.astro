@@ -1,0 +1,111 @@
+---
+import "../styles/living-bg.css";
+
+const motes = Array.from({ length: 36 }, (_, index) => {
+  const x = (index * 37 + 11) % 100;
+  const y = (index * 61 + 7) % 100;
+  const size = 1 + (index % 5) * 0.35;
+  const delay = -((index * 1.7) % 28);
+  const duration = 26 + (index % 9) * 2.4;
+  const drift = ((index % 7) - 3) * 9;
+
+  return `--x:${x}vw;--y:${y}vh;--mote-size:${size}px;--mote-delay:${delay}s;--mote-duration:${duration}s;--mote-drift:${drift}px;`;
+});
+
+const pathways = [
+  "--path-x:14vw;--path-delay:-2s;--path-duration:18s;",
+  "--path-x:31vw;--path-delay:-10s;--path-duration:24s;",
+  "--path-x:58vw;--path-delay:-6s;--path-duration:21s;",
+  "--path-x:74vw;--path-delay:-14s;--path-duration:27s;",
+  "--path-x:88vw;--path-delay:-4s;--path-duration:23s;",
+];
+---
+
+<div class="living-bg" data-living-background aria-hidden="true">
+  <div class="living-bg__base"></div>
+  <div class="living-bg__wave"></div>
+
+  <div class="living-bg__auroras" data-aurora-field>
+    <span class="living-bg__aurora living-bg__aurora--river"></span>
+    <span class="living-bg__aurora living-bg__aurora--gold" data-cursor-aurora></span>
+    <span class="living-bg__aurora living-bg__aurora--ember"></span>
+  </div>
+
+  <div class="living-bg__paths">
+    {pathways.map((style) => <span class="living-bg__path" style={style}></span>)}
+  </div>
+
+  <div class="living-bg__motes">
+    {motes.map((style) => <span class="living-bg__mote" style={style}></span>)}
+  </div>
+
+  <svg class="living-bg__grain" viewBox="0 0 160 160" preserveAspectRatio="none" focusable="false">
+    <filter id="living-bg-grain-filter" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" seed="17" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.48" />
+      </feComponentTransfer>
+    </filter>
+    <rect width="160" height="160" filter="url(#living-bg-grain-filter)" />
+  </svg>
+</div>
+
+<script>
+  const background = document.querySelector<HTMLElement>("[data-living-background]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const coarsePointer = window.matchMedia("(hover: none), (pointer: coarse)");
+
+  if (background && !reducedMotion.matches) {
+    let lastY = window.scrollY;
+    let lastTime = performance.now();
+    let boost = 0;
+    let raf = 0;
+
+    const updateScrollBoost = () => {
+      const now = performance.now();
+      const dy = Math.abs(window.scrollY - lastY);
+      const dt = Math.max(16, now - lastTime);
+      lastY = window.scrollY;
+      lastTime = now;
+      boost = Math.min(1, dy / dt / 2.5);
+      background.style.setProperty("--bg-scroll-boost", boost.toFixed(3));
+      window.clearTimeout(settleTimer);
+      settleTimer = window.setTimeout(() => {
+        background.style.setProperty("--bg-scroll-boost", "0");
+      }, 160);
+    };
+
+    let settleTimer = window.setTimeout(() => undefined, 0);
+    window.addEventListener("scroll", updateScrollBoost, { passive: true });
+
+    if (!coarsePointer.matches) {
+      const cursorAurora = background.querySelector<HTMLElement>("[data-cursor-aurora]");
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+
+      const onPointerMove = (event: PointerEvent) => {
+        targetX = (event.clientX / window.innerWidth - 0.5) * 28;
+        targetY = (event.clientY / window.innerHeight - 0.5) * 20;
+        if (!raf) raf = window.requestAnimationFrame(tick);
+      };
+
+      const tick = () => {
+        currentX += (targetX - currentX) * 0.055;
+        currentY += (targetY - currentY) * 0.055;
+        cursorAurora?.style.setProperty("--cursor-dx", `${currentX.toFixed(2)}px`);
+        cursorAurora?.style.setProperty("--cursor-dy", `${currentY.toFixed(2)}px`);
+
+        if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+          raf = window.requestAnimationFrame(tick);
+        } else {
+          raf = 0;
+        }
+      };
+
+      window.addEventListener("pointermove", onPointerMove, { passive: true });
+    }
+  }
+</script>

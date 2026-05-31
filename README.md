@@ -204,6 +204,43 @@ The companion mobile application provides:
 
 ---
 
+## Guardian Sight Prohodna — Image Assets
+
+The `GuardianSightProhodna` component (`src/components/GuardianSightProhodna.astro`) requires two images in `public/media/prohodna/`.
+
+### Base Photo (required — licensed)
+
+| Property | Requirement |
+|----------|-------------|
+| File | `public/media/prohodna/prohodna-cave-base.jpg` |
+| Subject | Interior of Prohodna Cave, Bulgaria — both twin sky openings ("Eyes of God") visible, looking up from the cave floor |
+| Dimensions | At least **1200 × 750 px** (8:5 ratio); 1600 × 1000 recommended for retina |
+| Format | JPEG, optimised for web (≤ 400 KB at 1200 px wide) |
+| Credit | Photographer name, year, and licence must be displayed |
+| Acceptable licences | CC BY 4.0 · CC BY-SA 4.0 · Commercial licence · Own work |
+| **Action required** | Update `baseImage` path in the component + credit string in `guardianSight.prohodna.credit` in all i18n files |
+
+Until a licensed image is supplied the component renders `prohodna-placeholder.svg` — an artistic SVG that depicts the twin eye openings.
+
+### Overlay Art (optional)
+
+| Property | Requirement |
+|----------|-------------|
+| File | `public/media/prohodna/prohodna-overlay.png` |
+| Purpose | Screen-blended atmosphere layer painted over the base photo (Guardian Sight ON state) |
+| Dimensions | **1200 × 750 px** exactly (must match base photo ratio) |
+| Format | PNG with transparency |
+| Style | Restrained sacred atmosphere — no sparkle or neon. Soft celestial palette: ivory, pale gold, deep indigo. The CSS gradient + SVG glyphs already provide the layer; this PNG is additive. |
+| Blend mode | Applied as `mix-blend-mode: screen` at 68% opacity |
+
+The overlay PNG path is set in `seoPages.ts` on the prohodna-cave entry:
+```ts
+guardianSight: { overlayImage: "/media/prohodna/prohodna-overlay.png" }
+```
+Remove or null this field to skip the PNG and rely on CSS-only atmosphere.
+
+---
+
 ## Documentation
 
 Project documentation is available in:

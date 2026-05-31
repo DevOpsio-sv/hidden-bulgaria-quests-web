@@ -1,0 +1,227 @@
+---
+import type { Dict } from "../i18n";
+import { getSeoPlace } from "../data/seoPages";
+
+interface Props { dict: Dict; lang: string; }
+const { dict, lang } = Astro.props;
+
+const d = dict.guardianSight.prohodna;
+const gs = dict.guardianSight;
+
+const place = getSeoPlace("prohodna-cave");
+const overlayImage = place?.guardianSight?.overlayImage ?? null;
+
+// Placeholder image — replace with licensed Prohodna photo
+const baseImage = "/media/prohodna/prohodna-placeholder.svg";
+---
+
+<section
+  class="gsp-section section"
+  id="gsp-section"
+  aria-labelledby="gsp-heading"
+>
+  <div class="wrap">
+
+    <!-- Section header -->
+    <div class="gsp-header reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="gsp-heading" class="gsp-heading">{d.heading}</h2>
+      <p class="lede gsp-lede">{d.lede}</p>
+    </div>
+
+    <!-- Photo reveal stage -->
+    <div
+      class="gsp-stage reveal reveal-d1"
+      id="gsp-photo-container"
+      aria-describedby="gsp-layer-desc"
+    >
+
+      <!-- Base photo layer -->
+      <img
+        src={baseImage}
+        alt={d.altBase}
+        class="gsp-base-photo"
+        width="1200"
+        height="750"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <!-- Guardian Sight overlay (clipped by JS) -->
+      <div
+        id="gsp-overlay"
+        class="gsp-overlay"
+        aria-hidden="true"
+        style="opacity:0;clip-path:inset(0 100% 0 0)"
+      >
+        <!-- Celestial light: two radial beams at the eye positions -->
+        <div class="gsp-light gsp-light-left" aria-hidden="true"></div>
+        <div class="gsp-light gsp-light-right" aria-hidden="true"></div>
+
+        <!-- Keeper resonance glow (ambient) -->
+        <div class="gsp-keeper-glow" aria-hidden="true"></div>
+
+        <!-- Earth–Spirit glyph SVG -->
+        <svg
+          class="gsp-glyphs"
+          viewBox="0 0 1200 750"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <!-- ЗЕМЯ — Earth key, lower left -->
+          <text
+            x="178" y="540"
+            class="gsp-glyph-primary"
+            text-anchor="middle"
+            dominant-baseline="middle"
+          >ЗЕМЯ</text>
+          <text
+            x="178" y="568"
+            class="gsp-glyph-secondary"
+            text-anchor="middle"
+            dominant-baseline="middle"
+          >Earth</text>
+          <!-- Axis connector line -->
+          <line x1="178" y1="480" x2="178" y2="456" class="gsp-glyph-line"/>
+          <circle cx="178" cy="444" r="4" class="gsp-glyph-dot"/>
+
+          <!-- ДУХ — Spirit key, upper right -->
+          <text
+            x="1022" y="175"
+            class="gsp-glyph-primary"
+            text-anchor="middle"
+            dominant-baseline="middle"
+          >ДУХ</text>
+          <text
+            x="1022" y="203"
+            class="gsp-glyph-secondary"
+            text-anchor="middle"
+            dominant-baseline="middle"
+          >Spirit</text>
+          <!-- Axis connector line -->
+          <line x1="1022" y1="218" x2="1022" y2="242" class="gsp-glyph-line"/>
+          <circle cx="1022" cy="254" r="4" class="gsp-glyph-dot"/>
+
+          <!-- Subtle axis spine connecting Earth to Spirit -->
+          <line x1="178" y1="420" x2="1022" y2="270" class="gsp-axis-spine"/>
+        </svg>
+
+        <!-- Drifting particles (CSS-animated, JS toggles .gsp-particles-active) -->
+        <div id="gsp-particles" class="gsp-particles" aria-hidden="true">
+          <span class="gsp-particle gsp-p1"></span>
+          <span class="gsp-particle gsp-p2"></span>
+          <span class="gsp-particle gsp-p3"></span>
+          <span class="gsp-particle gsp-p4"></span>
+          <span class="gsp-particle gsp-p5"></span>
+          <span class="gsp-particle gsp-p6"></span>
+          <span class="gsp-particle gsp-p7"></span>
+          <span class="gsp-particle gsp-p8"></span>
+        </div>
+
+        <!-- Provided overlay art (PNG if supplied) -->
+        {overlayImage && (
+          <img
+            src={overlayImage}
+            alt=""
+            class="gsp-overlay-art"
+            aria-hidden="true"
+            width="1200"
+            height="750"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+      </div>
+
+      <!-- Drag slider — controls clip-path reveal -->
+      <input
+        id="gsp-slider"
+        type="range"
+        class="gsp-slider"
+        min="0"
+        max="100"
+        value="0"
+        step="1"
+        role="slider"
+        aria-label={d.sliderLabel}
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-controls="gsp-overlay"
+        aria-describedby="gsp-layer-desc"
+      />
+
+      <!-- Divider thumb indicator -->
+      <div class="gsp-divider" aria-hidden="true">
+        <div class="gsp-divider-line"></div>
+        <div class="gsp-divider-handle">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 5l-5 7 5 7M16 5l5 7-5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Corner label (OFF state hint) -->
+      <div class="gsp-hint-label" aria-hidden="true">{gs.toggle}</div>
+
+      <!-- Photo credit -->
+      <p class="gsp-credit" aria-hidden="true">{d.credit}</p>
+    </div>
+
+    <!-- Controls row -->
+    <div class="gsp-controls reveal reveal-d2">
+      <!-- Toggle button — click/keyboard fallback -->
+      <button
+        id="gsp-toggle"
+        class="btn btn-ghost gsp-toggle"
+        type="button"
+        aria-pressed="false"
+        data-label-on={gs.toggle}
+        data-label-off={gs.toggleActive}
+      >
+        {gs.toggle}
+      </button>
+
+      <!-- Key glyphs display -->
+      <div class="gsp-keys" aria-hidden="true">
+        <span class="gsp-key gsp-key-earth">{d.keyEarth}</span>
+        <span class="gsp-key-sep">·</span>
+        <span class="gsp-key gsp-key-spirit">{d.keySpirit}</span>
+      </div>
+    </div>
+
+    <!-- Guru caption block -->
+    <figure class="gsp-caption reveal reveal-d3">
+      <blockquote class="gsp-quote">
+        <p class="gsp-quote-original" lang="bg">{d.guruCaptionBg}</p>
+        <p class="gsp-quote-trans">{d.guruCaption}</p>
+      </blockquote>
+      <figcaption class="gsp-quote-note">{d.guruNote}</figcaption>
+    </figure>
+
+    <!-- Accessibility: text description of hidden layer (always visible to AT) -->
+    <p id="gsp-layer-desc" class="gsp-sr-only">{d.altOverlay}</p>
+
+    <!-- ARIA live region for state announcements -->
+    <div
+      id="gsp-live"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      class="gsp-sr-only"
+      data-msg-on={d.liveOn}
+      data-msg-off={d.liveOff}
+    ></div>
+
+  </div>
+</section>
+
+<script>
+  import { initGuardianSight } from "../utils/guardian-sight";
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initGuardianSight);
+  } else {
+    initGuardianSight();
+  }
+</script>

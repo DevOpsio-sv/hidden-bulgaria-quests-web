@@ -36,12 +36,19 @@ export const LANG_LABELS: Record<Lang, string> = {
 };
 
 export type Dict = typeof en;
+type DeepPartial<T> = {
+  [K in keyof T]?: T[K] extends object
+    ? T[K] extends unknown[]
+      ? T[K]
+      : DeepPartial<T[K]>
+    : T[K];
+};
 
-const allDicts: Record<Lang, Partial<Dict>> = {
+const allDicts: Record<Lang, DeepPartial<Dict>> = {
   en, bg, de, fr, es, it, ro, tr, el, hu, zh, ru, ja, sr,
 };
 
-function deepMerge<T extends object>(base: T, override: Partial<T>): T {
+function deepMerge<T extends object>(base: T, override: DeepPartial<T>): T {
   const result = { ...base } as T;
   for (const key in override) {
     const k = key as keyof T;
