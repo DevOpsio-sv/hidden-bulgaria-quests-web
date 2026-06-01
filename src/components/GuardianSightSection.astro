@@ -26,7 +26,6 @@ const d = dict.guardianSight;
       <p class="eyebrow">{d.eyebrow}</p>
       <h2 id="sight-heading" style="white-space:pre-line">{d.heading}</h2>
       <p class="sight-body" style="white-space:pre-line">{d.sightBody}</p>
-      <p class="sight-note">{d.sightNote}</p>
 
       <div class="sight-features">
         {d.features.map((feat, i) => {
@@ -35,6 +34,7 @@ const d = dict.guardianSight;
             <div class={`sight-feat reveal${delay}`}>
               <div class="sight-feat-icon" aria-hidden="true">{feat.icon}</div>
               <h3>{feat.title}</h3>
+              {feat.subtitle && <p class="sight-feat-sub">{feat.subtitle}</p>}
               <p>{feat.desc}</p>
             </div>
           );

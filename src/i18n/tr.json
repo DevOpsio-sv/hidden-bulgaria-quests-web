@@ -26,7 +26,12 @@
     "lede": "Bulgaristan'da yolculuk et. Kadim sırları ortaya çıkar. On üç yüzyıl boyunca varlığını sürdüren yaşayan belleğin koruyucusu — Bir Koruyucu ol.",
     "ctaPrimary": "Uygulamayı İndir",
     "ctaSecondary": "Yolculuğu İzle",
-    "trust": ["AR gerçek görevler", "Sinematik hikaye anlatımı", "Aile dostu", "14 dil"],
+    "trust": [
+      "AR gerçek görevler",
+      "Sinematik hikaye anlatımı",
+      "Aile dostu",
+      "14 dil"
+    ],
     "mapLabel": "Bulgaristan'ın gizli belleğinin interaktif haritası",
     "phoneDomain": "İsmin Bölgesi",
     "phoneTitle": "Eski başkentler",
@@ -64,10 +69,26 @@
       }
     ],
     "flow": [
-      { "icon": "◉", "name": "Kontrol noktası", "sub": "Gerçek yer · Hikaye · İpucu" },
-      { "icon": "⌘", "name": "Rota + Emanet", "sub": "5 nokta · 1 eser" },
-      { "icon": "◈", "name": "Bölge + Mühür", "sub": "3 rota · 1 bölgesel mühür" },
-      { "icon": "✦", "name": "Koruyucu — Пазител", "sub": "6 bölge · Tüm Bulgaristan açıldı" }
+      {
+        "icon": "◉",
+        "name": "Kontrol noktası",
+        "sub": "Gerçek yer · Hikaye · İpucu"
+      },
+      {
+        "icon": "⌘",
+        "name": "Rota + Emanet",
+        "sub": "5 nokta · 1 eser"
+      },
+      {
+        "icon": "◈",
+        "name": "Bölge + Mühür",
+        "sub": "3 rota · 1 bölgesel mühür"
+      },
+      {
+        "icon": "✦",
+        "name": "Koruyucu — Пазител",
+        "sub": "6 bölge · Tüm Bulgaristan açıldı"
+      }
     ]
   },
   "domains": {
@@ -84,7 +105,6 @@
     "heading": "Başkalarının göremediğini\ngör.",
     "lede": "Koruyucunun Bakışı, Unlocking Bulgaria'daki isteğe bağlı artırılmış gerçeklik kamera modudur. Dünyaya doğrult — ve altındaki gizli katmanı gör.",
     "sightBody": "Kamerayı dünyaya doğrult.\nGizli katman gerçekliğin altında belirir.",
-    "sightNote": "İsteğe bağlı AR · Her anın AR'sız bir yolu var",
     "ariaVisual": "Koruyucunun Bakışı AR arayüzü — animasyonlu tarama halkaları",
     "floatTag1": "Gizli katman açığa çıktı",
     "floatTag2": "Kontrol noktası · 82m",
@@ -93,22 +113,26 @@
       {
         "icon": "◈",
         "title": "Sembolik izler",
-        "desc": "Kadim semboller, hiyeroglifler ve rota parçaları anlamlı yerlerde gerçek dünya üzerinde beliriyor."
+        "subtitle": "İzler asla kaybolmaz",
+        "desc": "Bazı yerler insanların, olayların ve efsanelerin izlerini taşır. Bekçinin Bakışı, onları yeniden görmenize yardımcı olur."
       },
       {
         "icon": "◉",
-        "title": "Kontrol noktası varlığı",
-        "desc": "Yakındaki kontrol noktaları ışık enerjisiyle titreşiyor. Ne kadar yakınsanız, sinyal o kadar güçlü."
+        "title": "Mekânda varlık",
+        "subtitle": "Her yer bir bellek taşır",
+        "desc": "Anlamlı bir konuma yaklaştığınızda, dünya tarihinin gizli katmanlarını ortaya çıkarmaya başlar."
       },
       {
         "icon": "✦",
         "title": "Her zaman erişilebilir",
-        "desc": "AR isteğe bağlıdır. Her AR anının okunabilir içerik, altyazı ve net tamamlama mantığıyla tam bir AR'sız yolu vardır."
+        "subtitle": "Hikaye erişilebilir kalır",
+        "desc": "AR ek bir katmandır. Tüm içerikler onsuz da her yerde ve her zaman deneyimlenebilir."
       },
       {
         "icon": "⌘",
-        "title": "Kilit noktalarda daha derin anlar",
-        "desc": "Ana kontrol noktaları ve bölge finalleri daha derin AR dizileri sunar — yeniden yapılandırılmış sahneler, eser açıklamaları ve sinematik anlar."
+        "title": "Kahramanlık anları",
+        "subtitle": "Açılış anları",
+        "desc": "Kutsal yerlerde, güzergah finallerinde ve önemli keşiflerde özel sahneler ve ödüller sizi bekliyor."
       }
     ]
   },
@@ -164,27 +188,63 @@
   },
   "features": {
     "eyebrow": "Uygulama özellikleri",
-    "heading": "Keşif için yapıldı,\ndikkat dağıtmak için değil.",
-    "lede": "Her özellik, ziyaret ettiğin gerçek yerlerle bağını derinleştirmek için var.",
+    "heading": "Canlı bir keşif için\ngereken her şey.",
+    "lede": "Özellikler yolculuktan dikkati dağıtmaz — onu yönlendirir, derinleştirir ve erişilebilir kılar.",
     "items": [
-      { "icon": "◉", "title": "Gerçek görevler", "desc": "Gerçek GPS noktaları etrafında oluşturulmuş rotalar. Uygulama seni yere yönlendirir — yer seni hikayesiyle ödüllendirir." },
-      { "icon": "▶", "title": "Sinematik hikaye anlatımı", "desc": "Her kontrol noktası tarih, mitoloji, yerel bellek veya doğal mirastan beslenen bir anlatı anı ortaya çıkarır." },
-      { "icon": "◎", "title": "Koruyucunun Bakışı AR", "desc": "İsteğe bağlı artırılmış gerçeklik, gerçek dünya üzerine bindirilen sembolleri, eserleri ve gizli katmanları ortaya çıkarır." },
-      { "icon": "⌛", "title": "Tarihsel kronoloji", "desc": "1345 yıllık Bulgar belleği boyunca interaktif bir harita — yürüdüğün rotalara bağlı." },
-      { "icon": "◈", "title": "Emanetler ve eserler", "desc": "Rota tamamlandığında kalıcı dijital emanetler topla. Bulgaristan'ın gizli tarihinin kişisel bir arşivini oluştur." },
-      { "icon": "✦", "title": "Bölgeler ve mühürler", "desc": "Bölgesel alanları tamamla. Mühürler kazan. Bulgar belleğinin tam haritasını adım adım açığa çıkar." },
-      { "icon": "⊕", "title": "13 dil", "desc": "Tam çok dilli destek — Bulgarca, İngilizce, Almanca, Yunanca, Rusça, Japonca ve daha fazlası dahil." },
-      { "icon": "❖", "title": "Aile keşfi", "desc": "Aileler, okullar ve her yaştan kültürel gezginler için tempo modları ve içerik seviyeleri." },
-      { "icon": "⊞", "title": "Çevrimdışı destek", "desc": "Sınırlı sinyalli dağlık, köy ve miras alanları için temel rota içeriği önceden hazırlanmış." },
-      { "icon": "⊗", "title": "Ortak rotalar", "desc": "Belediyeler, müzeler ve turizm işletmeleri gerçek yerel miras ile bağlantılı rotalar oluşturabilir." }
+      {
+        "icon": "◉",
+        "title": "Gerçek görevler",
+        "desc": "GPS tabanlı güzergahlar sizi tarihin yerinde yaşandığı gerçek yerlere götürür."
+      },
+      {
+        "icon": "▶",
+        "title": "Sinematik anlatı",
+        "desc": "Her kontrol noktası, kuru bir bilgi sayfası gibi değil, bir sahne gibi hissettirmek için tasarlanmış kısa bir anlatı anı ortaya çıkarır."
+      },
+      {
+        "icon": "◎",
+        "title": "Guardian Sight AR",
+        "desc": "İsteğe bağlı bir AR katmanı, gerçek dünya üzerinde semboller, eserler ve gizli izler ortaya çıkarır."
+      },
+      {
+        "icon": "⌛",
+        "title": "Tarihsel zaman çizelgesi",
+        "desc": "Yolculuk yerleri 1345 yıllık bellekle birleştirir — açık, görsel ve anlamlı biçimde."
+      },
+      {
+        "icon": "◈",
+        "title": "Eserler ve kalıntılar",
+        "desc": "İlerlemeyi işaretleyen ve hikayenin daha derin katmanlarını açan sembolik keşifler toplarsınız."
+      },
+      {
+        "icon": "✦",
+        "title": "Alanlar, mühürler ve anahtarlar",
+        "desc": "Her tamamlanan aşama Bekçiyi daha büyük ulusal açılıma yaklaştırır."
+      },
+      {
+        "icon": "⊕",
+        "title": "14 dil",
+        "desc": "Uygulama uluslararası gezginler, aileler ve kültürel kaşifler için hazırlanmıştır."
+      },
+      {
+        "icon": "❖",
+        "title": "Aile keşfi",
+        "desc": "Bulgaristan'ı birlikte keşfetmek isteyen ebeveynler, çocuklar ve arkadaşlar için tasarlanmıştır."
+      }
     ]
   },
   "download": {
     "eyebrow": "Uygulamayı indir",
     "heading": "Bulgaristan'ın\nKoruyucusu ol.",
     "lede": "Uygulama iOS ve Android için geliyor. Başlatma listesine katıl ve kapılar açıldığında ilk bölgelerin kilidini açmaya hazır ol.",
-    "appStore": { "label": "İndir:", "name": "App Store" },
-    "googlePlay": { "label": "İndir:", "name": "Google Play" },
+    "appStore": {
+      "label": "İndir:",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "label": "İndir:",
+      "name": "Google Play"
+    },
     "trust": "iOS ve Android · Ücretsiz keşif · Premium rotalar mevcut",
     "comingSoon": "Yakında"
   },
@@ -319,35 +379,80 @@
       {
         "label": "Keşfet",
         "links": [
-          { "label": "Nasıl çalışır", "href": "#how-it-works" },
-          { "label": "Bölgeler", "href": "#domains" },
-          { "label": "Koruyucunun Bakışı", "href": "#guardian-sight" },
-          { "label": "Kronoloji", "href": "#timeline" }
+          {
+            "label": "Nasıl çalışır",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "Bölgeler",
+            "href": "#domains"
+          },
+          {
+            "label": "Koruyucunun Bakışı",
+            "href": "#guardian-sight"
+          },
+          {
+            "label": "Kronoloji",
+            "href": "#timeline"
+          }
         ]
       },
       {
         "label": "Ürün",
         "links": [
-          { "label": "Özellikler", "href": "#features" },
-          { "label": "İndir", "href": "#download" },
-          { "label": "SSS", "href": "#faq" },
-          { "label": "Destek", "href": "#contact" }
+          {
+            "label": "Özellikler",
+            "href": "#features"
+          },
+          {
+            "label": "İndir",
+            "href": "#download"
+          },
+          {
+            "label": "SSS",
+            "href": "#faq"
+          },
+          {
+            "label": "Destek",
+            "href": "#contact"
+          }
         ]
       },
       {
         "label": "Ortaklar",
         "links": [
-          { "label": "Ortak ol", "href": "#partners" },
-          { "label": "Belediyeler", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Müzeler", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Medya", "href": "mailto:media@unlockingbulgaria.com" }
+          {
+            "label": "Ortak ol",
+            "href": "#partners"
+          },
+          {
+            "label": "Belediyeler",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Müzeler",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Medya",
+            "href": "mailto:media@unlockingbulgaria.com"
+          }
         ]
       }
     ],
     "legal": [
-      { "label": "Gizlilik politikası", "href": "#privacy" },
-      { "label": "Kullanım koşulları", "href": "#terms" },
-      { "label": "Çerezler", "href": "#cookies" }
+      {
+        "label": "Gizlilik politikası",
+        "href": "#privacy"
+      },
+      {
+        "label": "Kullanım koşulları",
+        "href": "#terms"
+      },
+      {
+        "label": "Çerezler",
+        "href": "#cookies"
+      }
     ]
   },
   "langSelector": {
@@ -363,14 +468,39 @@
     "post": "On üç yüzyıl boyunca hayatta kalan bir gizem."
   },
   "journey": {
-    "eyebrow": "Yol",
+    "eyebrow": "Yolculuk nasıl ilerler",
     "heading": "Beş keşif.\nBir dönüşüm.",
     "items": [
-      { "num": "01", "sym": "✦", "name": "Koruyucu", "desc": "Tüm yolculuğu tamamlayanların kazandığı unvan. Bulgaristan'ın yaşayan belleğinin bekçisi — Пазител." },
-      { "num": "02", "sym": "⌘", "name": "Rota", "desc": "Beş gerçek yer. Tarihle birbirine bağlı. Rotayı kat et — aralarında gizlenen hikayenin kilidini aç." },
-      { "num": "03", "sym": "◈", "name": "Emanet", "desc": "Bir rotayı tamamla. Kalıcı bir eser al. Sonsuza dek sana ait olan Bulgar belleğinin bir parçası." },
-      { "num": "04", "sym": "◉", "name": "Bölge", "desc": "Altı bölge. Her biri kendi rotalarını, dönemini, sırlarını saklar. Bir bölgeyi ortaya çıkar — bir katman kazan." },
-      { "num": "05", "sym": "◎", "name": "Mühür", "desc": "Tamamlanan bir bölgenin işareti. Altı mühür. Altı bellek katmanı. Hepsi — ve Bulgaristan senindir." }
+      {
+        "num": "01",
+        "sym": "◉",
+        "name": "Kontrol noktası",
+        "desc": "İlk karşılaşma.\nGerçek bir yer belleğini açığa çıkarmaya başlar."
+      },
+      {
+        "num": "02",
+        "sym": "⌘",
+        "name": "Güzergah",
+        "desc": "İzler birleşir.\nBirçok yer tek bir anlatı yayı oluşturur."
+      },
+      {
+        "num": "03",
+        "sym": "◈",
+        "name": "Alan",
+        "desc": "Tablo genişler.\nTamamlanan güzergahlar Bulgaristan'ın daha derin bir katmanını açar."
+      },
+      {
+        "num": "04",
+        "sym": "✦",
+        "name": "Ana Anahtar",
+        "desc": "Keşifler bilgiye dönüşür.\nToprak, Ruh, Tin ve Beden hizalanmaya başlar."
+      },
+      {
+        "num": "05",
+        "sym": "◎",
+        "name": "Yaşayan Ahit",
+        "desc": "Son açılım.\nAnahtarlar bir araya geldiğinde Bekçi, İsmin neden ayakta kaldığını anlar."
+      }
     ]
   },
   "skipLink": "İçeriğe geç",

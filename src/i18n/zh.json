@@ -26,7 +26,12 @@
     "lede": "穿越保加利亚。揭开古老的秘密。成为 Keeper — 守护这份延续十三个世纪的鲜活记忆。",
     "ctaPrimary": "下载应用",
     "ctaSecondary": "观看旅程",
-    "trust": ["AR 现实世界任务", "电影化叙事", "适合家庭", "14 种语言"],
+    "trust": [
+      "AR 现实世界任务",
+      "电影化叙事",
+      "适合家庭",
+      "14 种语言"
+    ],
     "mapLabel": "保加利亚隐藏记忆互动地图",
     "phoneDomain": "名字之域",
     "phoneTitle": "古都",
@@ -64,10 +69,26 @@
       }
     ],
     "flow": [
-      { "icon": "◉", "name": "检查点", "sub": "真实地点 · 故事 · 线索" },
-      { "icon": "⌘", "name": "路线 + 遗物", "sub": "5 个检查点 · 1 件文物" },
-      { "icon": "◈", "name": "领域 + 印记", "sub": "3 条路线 · 1 枚区域印记" },
-      { "icon": "✦", "name": "Keeper — Пазител", "sub": "6 个领域 · 完整解锁保加利亚" }
+      {
+        "icon": "◉",
+        "name": "检查点",
+        "sub": "真实地点 · 故事 · 线索"
+      },
+      {
+        "icon": "⌘",
+        "name": "路线 + 遗物",
+        "sub": "5 个检查点 · 1 件文物"
+      },
+      {
+        "icon": "◈",
+        "name": "领域 + 印记",
+        "sub": "3 条路线 · 1 枚区域印记"
+      },
+      {
+        "icon": "✦",
+        "name": "Keeper — Пазител",
+        "sub": "6 个领域 · 完整解锁保加利亚"
+      }
     ]
   },
   "domains": {
@@ -84,7 +105,6 @@
     "heading": "看见\n他人无法看见之物。",
     "lede": "Guardian Sight 是 Unlocking Bulgaria 中可选的增强现实相机模式。将镜头对准世界 — 看见其下隐藏的层次。",
     "sightBody": "将相机对准世界。\n隐藏层会在现实之下显现。",
-    "sightNote": "可选 AR · 每个时刻都有非 AR 路径",
     "ariaVisual": "Guardian Sight AR 界面 — 动画扫描环",
     "floatTag1": "隐藏层已揭示",
     "floatTag2": "检查点 · 82m",
@@ -93,22 +113,26 @@
       {
         "icon": "◈",
         "title": "象征痕迹",
-        "desc": "古老符号、字形和路线碎片会在有意义的地点叠加于现实世界之上。"
+        "subtitle": "痕迹永不消失",
+        "desc": "有些地方保留着人们、事件和传说的印记。守护者之眼帮助你重新看见它们。"
       },
       {
         "icon": "◉",
-        "title": "检查点存在感",
-        "desc": "附近的检查点会以光能脉动。你越接近，信号越强。"
+        "title": "场所的存在",
+        "subtitle": "每个地方都承载记忆",
+        "desc": "当你靠近一个重要地点时，世界开始揭示其历史的隐藏层次。"
       },
       {
         "icon": "✦",
-        "title": "始终可访问",
-        "desc": "AR 是可选的。每个 AR 时刻都有完整的非 AR 路径，包含可阅读内容、字幕和清晰的完成逻辑。"
+        "title": "始终可及",
+        "subtitle": "故事始终可及",
+        "desc": "AR是一个附加层。所有内容都可以在没有它的情况下体验，随时随地。"
       },
       {
         "icon": "⌘",
-        "title": "关键地点的重磅时刻",
-        "desc": "英雄检查点和领域终章包含更深入的 AR 片段 — 重建场景、文物揭示和电影化时刻。"
+        "title": "英雄时刻",
+        "subtitle": "启示的时刻",
+        "desc": "在圣地、路线终点和关键发现处——特别场景和奖励等待着你。"
       }
     ]
   },
@@ -164,27 +188,63 @@
   },
   "features": {
     "eyebrow": "应用功能",
-    "heading": "为发现而生，\n不是为分心而生。",
-    "lede": "每项功能都旨在加深你与所到真实地点之间的连接。",
+    "heading": "活态探索所需\n的一切。",
+    "lede": "这些功能不会分散旅途的注意力——它们引导、深化并使旅途更易于体验。",
     "items": [
-      { "icon": "◉", "title": "现实世界任务", "desc": "围绕真实 GPS 检查点构建的路线。应用引导你抵达地点 — 地点用自己的故事回馈你。" },
-      { "icon": "▶", "title": "电影化叙事", "desc": "每个检查点都会揭示一个扎根于历史、神话、地方记忆或自然遗产的叙事时刻。" },
-      { "icon": "◎", "title": "Guardian Sight AR", "desc": "可选的增强现实会在真实世界上叠加显示符号、文物和隐藏层。" },
-      { "icon": "⌛", "title": "历史时间线", "desc": "一张穿越 1345 年保加利亚记忆的互动地图 — 与你行走的路线相连。" },
-      { "icon": "◈", "title": "遗物与文物", "desc": "在完成路线时收集永久数字遗物。建立属于你的保加利亚隐藏历史档案。" },
-      { "icon": "✦", "title": "领域与印记", "desc": "完成区域领域。赢得印记。逐步揭示保加利亚记忆的完整地图。" },
-      { "icon": "⊕", "title": "14 种语言", "desc": "完整多语言支持 — 包括保加利亚语、英语、德语、匈牙利语、中文、希腊语、俄语、日语等。" },
-      { "icon": "❖", "title": "家庭探索", "desc": "节奏模式和内容可适配家庭、学校以及各年龄段的文化旅行者。" },
-      { "icon": "⊞", "title": "离线支持", "desc": "为信号有限的山区、村庄和遗产地点提前准备关键路线内容。" },
-      { "icon": "⊗", "title": "合作伙伴路线", "desc": "市政机构、博物馆和旅游企业可以共同创建与真实地方遗产相连的路线。" }
+      {
+        "icon": "◉",
+        "title": "真实任务",
+        "desc": "基于GPS的路线引导你前往真实地点，在当地体验历史。"
+      },
+      {
+        "icon": "▶",
+        "title": "电影式叙事",
+        "desc": "每个检查点揭示一个简短的叙事时刻，旨在像场景而非干燥的情况说明。"
+      },
+      {
+        "icon": "◎",
+        "title": "Guardian Sight AR",
+        "desc": "可选的AR层在现实世界上揭示符号、文物和隐藏痕迹。"
+      },
+      {
+        "icon": "⌛",
+        "title": "历史时间线",
+        "desc": "这段旅程将各地与1345年的记忆相连——清晰、直观、有意义。"
+      },
+      {
+        "icon": "◈",
+        "title": "文物与遗物",
+        "desc": "你收集象征性的发现，标记进度并解锁故事的更深层次。"
+      },
+      {
+        "icon": "✦",
+        "title": "领域、印章与钥匙",
+        "desc": "每完成一个阶段，守护者就更接近更大的国家启示。"
+      },
+      {
+        "icon": "⊕",
+        "title": "14种语言",
+        "desc": "该应用为国际旅行者、家庭和文化探索者准备。"
+      },
+      {
+        "icon": "❖",
+        "title": "家庭探索",
+        "desc": "专为希望一起发现保加利亚的父母、孩子和朋友设计。"
+      }
     ]
   },
   "download": {
     "eyebrow": "下载应用",
     "heading": "成为保加利亚的\nKeeper。",
     "lede": "应用即将登陆 iOS 和 Android。加入发布名单，在大门开启时准备解锁首批领域。",
-    "appStore": { "label": "下载于", "name": "App Store" },
-    "googlePlay": { "label": "获取于", "name": "Google Play" },
+    "appStore": {
+      "label": "下载于",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "label": "获取于",
+      "name": "Google Play"
+    },
     "trust": "iOS & Android · 免费探索 · 提供高级路线",
     "comingSoon": "即将推出"
   },
@@ -319,35 +379,80 @@
       {
         "label": "探索",
         "links": [
-          { "label": "玩法介绍", "href": "#how-it-works" },
-          { "label": "领域", "href": "#domains" },
-          { "label": "Guardian Sight", "href": "#guardian-sight" },
-          { "label": "时间线", "href": "#timeline" }
+          {
+            "label": "玩法介绍",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "领域",
+            "href": "#domains"
+          },
+          {
+            "label": "Guardian Sight",
+            "href": "#guardian-sight"
+          },
+          {
+            "label": "时间线",
+            "href": "#timeline"
+          }
         ]
       },
       {
         "label": "产品",
         "links": [
-          { "label": "功能", "href": "#features" },
-          { "label": "下载", "href": "#download" },
-          { "label": "常见问题", "href": "#faq" },
-          { "label": "支持", "href": "#contact" }
+          {
+            "label": "功能",
+            "href": "#features"
+          },
+          {
+            "label": "下载",
+            "href": "#download"
+          },
+          {
+            "label": "常见问题",
+            "href": "#faq"
+          },
+          {
+            "label": "支持",
+            "href": "#contact"
+          }
         ]
       },
       {
         "label": "合作伙伴",
         "links": [
-          { "label": "成为合作伙伴", "href": "#partners" },
-          { "label": "市政机构", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "博物馆", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "媒体", "href": "mailto:media@unlockingbulgaria.com" }
+          {
+            "label": "成为合作伙伴",
+            "href": "#partners"
+          },
+          {
+            "label": "市政机构",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "博物馆",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "媒体",
+            "href": "mailto:media@unlockingbulgaria.com"
+          }
         ]
       }
     ],
     "legal": [
-      { "label": "隐私政策", "href": "#privacy" },
-      { "label": "使用条款", "href": "#terms" },
-      { "label": "Cookie", "href": "#cookies" }
+      {
+        "label": "隐私政策",
+        "href": "#privacy"
+      },
+      {
+        "label": "使用条款",
+        "href": "#terms"
+      },
+      {
+        "label": "Cookie",
+        "href": "#cookies"
+      }
     ]
   },
   "langSelector": {
@@ -363,14 +468,39 @@
     "post": "一个幸存十三个世纪的谜。"
   },
   "journey": {
-    "eyebrow": "路径",
+    "eyebrow": "旅途如何展开",
     "heading": "五次发现。\n一次蜕变。",
     "items": [
-      { "num": "01", "sym": "✦", "name": "Keeper", "desc": "完成完整旅程者赢得的称号。保加利亚鲜活记忆的守护者 — Пазител。" },
-      { "num": "02", "sym": "⌘", "name": "路线", "desc": "五个真实地点。由历史相连。走完路线 — 解锁隐藏在它们之间的故事。" },
-      { "num": "03", "sym": "◈", "name": "遗物", "desc": "完成一条路线。获得一件永久文物。一片永远属于你的保加利亚记忆。" },
-      { "num": "04", "sym": "◉", "name": "领域", "desc": "六个地区。每个都有自己的路线、自己的时代、自己的秘密。揭示一个领域 — 认领一层记忆。" },
-      { "num": "05", "sym": "◎", "name": "印记", "desc": "完成领域的标记。六枚印记。六层记忆。全部六枚 — 保加利亚便属于你。" }
+      {
+        "num": "01",
+        "sym": "◉",
+        "name": "检查点",
+        "desc": "初次相遇。\n一个真实的地方开始揭示它的记忆。"
+      },
+      {
+        "num": "02",
+        "sym": "⌘",
+        "name": "路线",
+        "desc": "痕迹相连。\n几个地方构成一条叙事弧线。"
+      },
+      {
+        "num": "03",
+        "sym": "◈",
+        "name": "领域",
+        "desc": "图景扩展。\n完成的路线解锁保加利亚更深的一层。"
+      },
+      {
+        "num": "04",
+        "sym": "✦",
+        "name": "主钥匙",
+        "desc": "发现成为知识。\n土地、灵魂、精神与身体开始对齐。"
+      },
+      {
+        "num": "05",
+        "sym": "◎",
+        "name": "活约",
+        "desc": "最终的启示。\n当钥匙汇聚，守护者理解了为何名字长存。"
+      }
     ]
   },
   "skipLink": "跳至内容",

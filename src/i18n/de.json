@@ -26,7 +26,12 @@
     "lede": "Reise durch Bulgarien. Enthülle die alten Geheimnisse. Werde ein Hüter — ein Bewahrer des lebendigen Gedächtnisses, das dreizehn Jahrhunderte überdauert hat.",
     "ctaPrimary": "App herunterladen",
     "ctaSecondary": "Die Reise ansehen",
-    "trust": ["AR Echte Quests", "Cineastisches Storytelling", "Familienfreundlich", "14 Sprachen"],
+    "trust": [
+      "AR Echte Quests",
+      "Cineastisches Storytelling",
+      "Familienfreundlich",
+      "14 Sprachen"
+    ],
     "mapLabel": "Interaktive Karte von Bulgariens verborgenem Gedächtnis",
     "phoneDomain": "Domäne des Namens",
     "phoneTitle": "Die alten Hauptstädte",
@@ -64,10 +69,26 @@
       }
     ],
     "flow": [
-      { "icon": "◉", "name": "Kontrollpunkt", "sub": "Echter Ort · Geschichte · Hinweis" },
-      { "icon": "⌘", "name": "Route + Relic", "sub": "4 checkpoints · 4 artifacts · 1 relic" },
-      { "icon": "◈", "name": "Domain + Seal", "sub": "4 routes · 1 seal · 1 Master Key" },
-      { "icon": "✦", "name": "Keeper — Пазител", "sub": "4 Master Keys · Living Covenant" }
+      {
+        "icon": "◉",
+        "name": "Kontrollpunkt",
+        "sub": "Echter Ort · Geschichte · Hinweis"
+      },
+      {
+        "icon": "⌘",
+        "name": "Route + Relic",
+        "sub": "4 checkpoints · 4 artifacts · 1 relic"
+      },
+      {
+        "icon": "◈",
+        "name": "Domain + Seal",
+        "sub": "4 routes · 1 seal · 1 Master Key"
+      },
+      {
+        "icon": "✦",
+        "name": "Keeper — Пазител",
+        "sub": "4 Master Keys · Living Covenant"
+      }
     ]
   },
   "domains": {
@@ -84,7 +105,6 @@
     "heading": "Sieh, was\nandere nicht können.",
     "lede": "Der Wächterblick ist der optionale Augmented-Reality-Kameramodus in Unlocking Bulgaria. Richte ihn auf die Welt — und sieh die verborgene Schicht darunter.",
     "sightBody": "Richte die Kamera auf die Welt.\nDie verborgene Schicht erscheint unter der Realität.",
-    "sightNote": "Optionales AR · Jeder Moment hat einen Nicht-AR-Pfad",
     "ariaVisual": "Wächterblick AR-Oberfläche — animierte Scan-Ringe",
     "floatTag1": "Verborgene Schicht enthüllt",
     "floatTag2": "Kontrollpunkt · 82m",
@@ -93,22 +113,26 @@
       {
         "icon": "◈",
         "title": "Symbolische Spuren",
-        "desc": "Antike Symbole, Glyphen und Routenfragmente erscheinen über der realen Welt an bedeutungsvollen Orten."
+        "subtitle": "Die Spuren verschwinden nie",
+        "desc": "Manche Orte bewahren Abdrücke von Menschen, Ereignissen und Legenden. Der Blick des Hüters hilft dir, sie wieder zu sehen."
       },
       {
         "icon": "◉",
-        "title": "Kontrollpunkt-Präsenz",
-        "desc": "Nahegelegene Kontrollpunkte pulsieren mit Lichtenergie. Je näher du bist, desto stärker das Signal."
+        "title": "Präsenz am Ort",
+        "subtitle": "Jeder Ort trägt Erinnerung",
+        "desc": "Wenn du dich einer bedeutsamen Stätte näherst, beginnt die Welt, die verborgenen Schichten ihrer Geschichte zu enthüllen."
       },
       {
         "icon": "✦",
         "title": "Immer zugänglich",
-        "desc": "AR ist optional. Jeder AR-Moment hat einen vollständigen Nicht-AR-Pfad mit lesbarem Inhalt, Untertiteln und klarer Abschlusslogik."
+        "subtitle": "Die Geschichte bleibt zugänglich",
+        "desc": "AR ist eine zusätzliche Ebene. Alle Inhalte können auch ohne sie erlebt werden, überall und jederzeit."
       },
       {
         "icon": "⌘",
-        "title": "Tiefere Momente an Schlüsselorten",
-        "desc": "Haupt-Kontrollpunkte und Domänen-Finale bieten tiefere AR-Sequenzen — rekonstruierte Szenen, Artefakt-Enthüllungen und cineastische Momente."
+        "title": "Heroische Momente",
+        "subtitle": "Momente der Enthüllung",
+        "desc": "An heiligen Stätten, bei Routenfinales und bei Schlüsselentdeckungen erwarten dich besondere Szenen und Belohnungen."
       }
     ]
   },
@@ -164,27 +188,63 @@
   },
   "features": {
     "eyebrow": "App-Funktionen",
-    "heading": "Gebaut für Entdeckung,\nnicht für Ablenkung.",
-    "lede": "Jede Funktion existiert, um deine Verbindung zu den echten Orten, die du besuchst, zu vertiefen.",
+    "heading": "Alles, was du für\nein lebendiges Erkunden brauchst.",
+    "lede": "Die Funktionen lenken nicht von der Reise ab — sie leiten sie, vertiefen sie und machen sie zugänglich.",
     "items": [
-      { "icon": "◉", "title": "Echte Quests", "desc": "Routen rund um echte GPS-Kontrollpunkte. Die App führt dich zum Ort — der Ort belohnt dich mit seiner Geschichte." },
-      { "icon": "▶", "title": "Cineastisches Storytelling", "desc": "Jeder Kontrollpunkt enthüllt einen Erzählmoment, der in Geschichte, Mythologie, lokalem Gedächtnis oder Naturerbe verwurzelt ist." },
-      { "icon": "◎", "title": "Wächterblick AR", "desc": "Optionale Augmented Reality enthüllt Symbole, Artefakte und verborgene Schichten, die der realen Welt überlagert sind." },
-      { "icon": "⌛", "title": "Historische Zeitleiste", "desc": "Eine interaktive Karte durch 1345 Jahre bulgarisches Gedächtnis — verbunden mit den Routen, die du gehst." },
-      { "icon": "◈", "title": "Relikte und Artefakte", "desc": "Sammle dauerhafte digitale Relikte beim Abschluss einer Route. Baue ein persönliches Archiv der verborgenen Geschichte Bulgariens auf." },
-      { "icon": "✦", "title": "Domänen und Siegel", "desc": "Schließe regionale Domänen ab. Verdiene Siegel. Enthülle schrittweise die vollständige Karte des bulgarischen Gedächtnisses." },
-      { "icon": "⊕", "title": "14 Sprachen", "desc": "Full multilingual support for the main international audiences, with Bulgarian meaning preserved at the source." },
-      { "icon": "❖", "title": "Familienerkundung", "desc": "Tempoeinstellungen und Inhaltsebenen für Familien, Schulen und Kulturtouristen jeden Alters." },
-      { "icon": "⊞", "title": "Offline-Unterstützung", "desc": "Wichtige Routeninhalte werden für Berg-, Dorf- und Kulturerbestätten mit eingeschränktem Signal vorbereitet." },
-      { "icon": "⊗", "title": "Partner-Routen", "desc": "Gemeinden, Museen und Tourismusunternehmen können Routen mitgestalten, die mit echtem lokalem Erbe verbunden sind." }
+      {
+        "icon": "◉",
+        "title": "Echte Quests",
+        "desc": "GPS-basierte Routen führen dich zu echten Orten, wo Geschichte vor Ort erlebt wird."
+      },
+      {
+        "icon": "▶",
+        "title": "Filmisches Erzählen",
+        "desc": "Jeder Kontrollpunkt enthüllt einen kurzen narrativen Moment, der wie eine Szene wirkt, nicht wie ein trockenes Faktblatt."
+      },
+      {
+        "icon": "◎",
+        "title": "Guardian Sight AR",
+        "desc": "Eine optionale AR-Ebene enthüllt Symbole, Artefakte und verborgene Spuren über der realen Welt."
+      },
+      {
+        "icon": "⌛",
+        "title": "Historische Zeitleiste",
+        "desc": "Die Reise verbindet Orte mit 1345 Jahren Erinnerung — klar, visuell und bedeutsam."
+      },
+      {
+        "icon": "◈",
+        "title": "Artefakte und Relikte",
+        "desc": "Du sammelst symbolische Entdeckungen, die den Fortschritt markieren und tiefere Schichten der Geschichte erschließen."
+      },
+      {
+        "icon": "✦",
+        "title": "Domänen, Siegel und Schlüssel",
+        "desc": "Jede abgeschlossene Etappe bringt den Hüter der größeren nationalen Enthüllung näher."
+      },
+      {
+        "icon": "⊕",
+        "title": "14 Sprachen",
+        "desc": "Die App ist für internationale Reisende, Familien und Kulturentdecker vorbereitet."
+      },
+      {
+        "icon": "❖",
+        "title": "Familienentdeckung",
+        "desc": "Für Eltern, Kinder und Freunde, die Bulgarien gemeinsam entdecken möchten."
+      }
     ]
   },
   "download": {
     "eyebrow": "App herunterladen",
     "heading": "Werde ein Hüter\nvon Bulgarien.",
     "lede": "Die App erscheint für iOS und Android. Trage dich in die Startliste ein und sei bereit, die ersten Domänen freizuschalten, wenn die Tore sich öffnen.",
-    "appStore": { "label": "Laden im", "name": "App Store" },
-    "googlePlay": { "label": "Laden bei", "name": "Google Play" },
+    "appStore": {
+      "label": "Laden im",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "label": "Laden bei",
+      "name": "Google Play"
+    },
     "trust": "iOS und Android · Kostenlose Erkundung · Premium-Routen verfügbar",
     "comingSoon": "Demnächst verfügbar"
   },
@@ -319,35 +379,80 @@
       {
         "label": "Erkunden",
         "links": [
-          { "label": "Wie es funktioniert", "href": "#how-it-works" },
-          { "label": "Domänen", "href": "#domains" },
-          { "label": "Wächterblick", "href": "#guardian-sight" },
-          { "label": "Zeitleiste", "href": "#timeline" }
+          {
+            "label": "Wie es funktioniert",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "Domänen",
+            "href": "#domains"
+          },
+          {
+            "label": "Wächterblick",
+            "href": "#guardian-sight"
+          },
+          {
+            "label": "Zeitleiste",
+            "href": "#timeline"
+          }
         ]
       },
       {
         "label": "Produkt",
         "links": [
-          { "label": "Funktionen", "href": "#features" },
-          { "label": "Herunterladen", "href": "#download" },
-          { "label": "FAQ", "href": "#faq" },
-          { "label": "Support", "href": "#contact" }
+          {
+            "label": "Funktionen",
+            "href": "#features"
+          },
+          {
+            "label": "Herunterladen",
+            "href": "#download"
+          },
+          {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "label": "Support",
+            "href": "#contact"
+          }
         ]
       },
       {
         "label": "Partner",
         "links": [
-          { "label": "Partner werden", "href": "#partners" },
-          { "label": "Gemeinden", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Museen", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Medien", "href": "mailto:media@unlockingbulgaria.com" }
+          {
+            "label": "Partner werden",
+            "href": "#partners"
+          },
+          {
+            "label": "Gemeinden",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Museen",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Medien",
+            "href": "mailto:media@unlockingbulgaria.com"
+          }
         ]
       }
     ],
     "legal": [
-      { "label": "Datenschutzrichtlinie", "href": "#privacy" },
-      { "label": "Nutzungsbedingungen", "href": "#terms" },
-      { "label": "Cookies", "href": "#cookies" }
+      {
+        "label": "Datenschutzrichtlinie",
+        "href": "#privacy"
+      },
+      {
+        "label": "Nutzungsbedingungen",
+        "href": "#terms"
+      },
+      {
+        "label": "Cookies",
+        "href": "#cookies"
+      }
     ]
   },
   "langSelector": {
@@ -363,14 +468,39 @@
     "post": "Ein Geheimnis, das dreizehn Jahrhunderte überlebte."
   },
   "journey": {
-    "eyebrow": "Der Weg",
-    "heading": "Fünf Entdeckungen.\nEine Verwandlung.",
+    "eyebrow": "Wie die Reise sich entfaltet",
+    "heading": "Fünf Entdeckungen.\nEine Transformation.",
     "items": [
-      { "num": "01", "sym": "✦", "name": "Hüter", "desc": "Der Titel, den jene verdienen, die die gesamte Reise abgeschlossen haben. Bewahrer des lebendigen Gedächtnisses Bulgariens — Пазител." },
-      { "num": "02", "sym": "⌘", "name": "Route", "desc": "Fünf echte Orte. Verbunden durch Geschichte. Geh die Route — schalte die Geschichte frei, die zwischen ihnen verborgen ist." },
-      { "num": "03", "sym": "◈", "name": "Relikt", "desc": "Schließe eine Route ab. Erhalte ein dauerhaftes Artefakt. Ein Stück bulgarischen Gedächtnisses, das für immer dir gehört." },
-      { "num": "04", "sym": "◉", "name": "Domäne", "desc": "Sechs Regionen. Jede birgt eigene Routen, eigene Epochen, eigene Geheimnisse. Enthülle eine Domäne — beanspruche eine Schicht." },
-      { "num": "05", "sym": "◎", "name": "Siegel", "desc": "Das Zeichen einer abgeschlossenen Domäne. Sechs Siegel. Sechs Schichten des Gedächtnisses. Alle sechs — und Bulgarien gehört dir." }
+      {
+        "num": "01",
+        "sym": "◉",
+        "name": "Kontrollpunkt",
+        "desc": "Die erste Begegnung.\nEin realer Ort beginnt, seine Erinnerung zu enthüllen."
+      },
+      {
+        "num": "02",
+        "sym": "⌘",
+        "name": "Route",
+        "desc": "Die Spuren verbinden sich.\nMehrere Orte bilden einen narrativen Bogen."
+      },
+      {
+        "num": "03",
+        "sym": "◈",
+        "name": "Domäne",
+        "desc": "Das Bild erweitert sich.\nAbgeschlossene Routen erschließen eine tiefere Schicht Bulgariens."
+      },
+      {
+        "num": "04",
+        "sym": "✦",
+        "name": "Hauptschlüssel",
+        "desc": "Entdeckungen werden zu Wissen.\nErde, Seele, Geist und Körper beginnen sich zu fügen."
+      },
+      {
+        "num": "05",
+        "sym": "◎",
+        "name": "Das Lebendige Bündnis",
+        "desc": "Die endgültige Enthüllung.\nWenn die Schlüssel zusammenkommen, versteht der Hüter, warum der Name bestanden hat."
+      }
     ]
   },
   "skipLink": "Zum Inhalt springen",

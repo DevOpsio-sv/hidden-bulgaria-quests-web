@@ -26,7 +26,12 @@
     "lede": "Viaggia attraverso la Bulgaria. Rivela i segreti antichi. Diventa un Custode — guardiano della memoria viva che ha resistito per tredici secoli.",
     "ctaPrimary": "Scarica l'app",
     "ctaSecondary": "Guarda il viaggio",
-    "trust": ["Missioni AR reali", "Narrazione cinematografica", "Per famiglie", "14 lingue"],
+    "trust": [
+      "Missioni AR reali",
+      "Narrazione cinematografica",
+      "Per famiglie",
+      "14 lingue"
+    ],
     "mapLabel": "Mappa interattiva della memoria nascosta della Bulgaria",
     "phoneDomain": "Dominio del Nome",
     "phoneTitle": "Le antiche capitali",
@@ -64,10 +69,26 @@
       }
     ],
     "flow": [
-      { "icon": "◉", "name": "Punto di controllo", "sub": "Luogo reale · Storia · Indizio" },
-      { "icon": "⌘", "name": "Percorso + Reliquia", "sub": "5 punti · 1 artefatto" },
-      { "icon": "◈", "name": "Dominio + Sigillo", "sub": "3 percorsi · 1 sigillo regionale" },
-      { "icon": "✦", "name": "Custode — Пазител", "sub": "6 domini · Tutta la Bulgaria sbloccata" }
+      {
+        "icon": "◉",
+        "name": "Punto di controllo",
+        "sub": "Luogo reale · Storia · Indizio"
+      },
+      {
+        "icon": "⌘",
+        "name": "Percorso + Reliquia",
+        "sub": "5 punti · 1 artefatto"
+      },
+      {
+        "icon": "◈",
+        "name": "Dominio + Sigillo",
+        "sub": "3 percorsi · 1 sigillo regionale"
+      },
+      {
+        "icon": "✦",
+        "name": "Custode — Пазител",
+        "sub": "6 domini · Tutta la Bulgaria sbloccata"
+      }
     ]
   },
   "domains": {
@@ -84,7 +105,6 @@
     "heading": "Vedi ciò che\ngli altri non possono.",
     "lede": "La Vista del Custode è la modalità fotocamera di realtà aumentata opzionale in Unlocking Bulgaria. Puntala verso il mondo — e vedi lo strato nascosto al di sotto.",
     "sightBody": "Punta la fotocamera verso il mondo.\nLo strato nascosto appare sotto il reale.",
-    "sightNote": "RA opzionale · Ogni momento ha un percorso senza RA",
     "ariaVisual": "Interfaccia RA Vista del Custode — anelli di scansione animati",
     "floatTag1": "Strato nascosto rivelato",
     "floatTag2": "Punto di controllo · 82m",
@@ -93,22 +113,26 @@
       {
         "icon": "◈",
         "title": "Tracce simboliche",
-        "desc": "Simboli antichi, glifi e frammenti di percorsi appaiono sul mondo reale in luoghi significativi."
+        "subtitle": "Le tracce non scompaiono mai",
+        "desc": "Alcuni luoghi conservano impronte di persone, eventi e leggende. Lo Sguardo del Custode ti aiuta a vederle di nuovo."
       },
       {
         "icon": "◉",
-        "title": "Presenza del punto di controllo",
-        "desc": "I punti di controllo vicini pulsano con energia luminosa. Più sei vicino, più forte è il segnale."
+        "title": "Presenza nel luogo",
+        "subtitle": "Ogni luogo porta memoria",
+        "desc": "Quando ti avvicini a un luogo significativo, il mondo inizia a rivelare gli strati nascosti della sua storia."
       },
       {
         "icon": "✦",
         "title": "Sempre accessibile",
-        "desc": "La RA è opzionale. Ogni momento RA ha un percorso completo senza RA con contenuto leggibile, didascalie e logica di completamento chiara."
+        "subtitle": "La storia rimane accessibile",
+        "desc": "La RA è uno strato aggiuntivo. Tutti i contenuti possono essere vissuti senza di essa, ovunque e in qualsiasi momento."
       },
       {
         "icon": "⌘",
-        "title": "Momenti più profondi nei siti chiave",
-        "desc": "I punti di controllo principali e i finali dei domini offrono sequenze RA più profonde — scene ricostruite, rivelazioni di artefatti e momenti cinematografici."
+        "title": "Momenti eroici",
+        "subtitle": "Momenti di rivelazione",
+        "desc": "In luoghi sacri, nei finali dei percorsi e nelle scoperte chiave, ti aspettano scene speciali e ricompense."
       }
     ]
   },
@@ -164,27 +188,63 @@
   },
   "features": {
     "eyebrow": "Funzionalità dell'app",
-    "heading": "Costruito per la scoperta,\nnon per la distrazione.",
-    "lede": "Ogni funzionalità esiste per approfondire la tua connessione con i luoghi reali che visiti.",
+    "heading": "Tutto il necessario per\nun'esplorazione viva.",
+    "lede": "Le funzionalità non distraggono dal viaggio — lo guidano, lo approfondiscono e lo rendono accessibile.",
     "items": [
-      { "icon": "◉", "title": "Missioni reali", "desc": "Percorsi costruiti attorno a veri punti GPS. L'app ti guida al luogo — il luogo ti ricompensa con la sua storia." },
-      { "icon": "▶", "title": "Narrazione cinematografica", "desc": "Ogni punto di controllo rivela un momento narrativo radicato nella storia, nella mitologia, nella memoria locale o nel patrimonio naturale." },
-      { "icon": "◎", "title": "Vista del Custode RA", "desc": "La realtà aumentata opzionale rivela simboli, artefatti e strati nascosti sovrapposti al mondo reale." },
-      { "icon": "⌛", "title": "Cronologia storica", "desc": "Una mappa interattiva attraverso 1345 anni di memoria bulgara — collegata ai percorsi che compi." },
-      { "icon": "◈", "title": "Reliquie e artefatti", "desc": "Colleziona reliquie digitali permanenti al completamento di un percorso. Costruisci un archivio personale della storia nascosta della Bulgaria." },
-      { "icon": "✦", "title": "Domini e sigilli", "desc": "Completa i domini regionali. Guadagna sigilli. Rivela progressivamente la mappa completa della memoria bulgara." },
-      { "icon": "⊕", "title": "14 lingue", "desc": "Supporto multilingue completo — incluso bulgaro, inglese, tedesco, ungherese, cinese, greco, russo, giapponese e altro." },
-      { "icon": "❖", "title": "Esplorazione in famiglia", "desc": "Modalità di ritmo e contenuti scalabili per famiglie, scuole e viaggiatori culturali di ogni età." },
-      { "icon": "⊞", "title": "Supporto offline", "desc": "Contenuti chiave dei percorsi preparati per siti montani, rurali e del patrimonio con segnale limitato." },
-      { "icon": "⊗", "title": "Percorsi partner", "desc": "Comuni, musei e aziende turistiche possono co-creare percorsi legati al reale patrimonio locale." }
+      {
+        "icon": "◉",
+        "title": "Quest reali",
+        "desc": "I percorsi GPS ti guidano verso luoghi reali dove la storia si vive sul posto."
+      },
+      {
+        "icon": "▶",
+        "title": "Narrazione cinematografica",
+        "desc": "Ogni checkpoint svela un breve momento narrativo pensato per sembrare una scena, non una scheda informativa."
+      },
+      {
+        "icon": "◎",
+        "title": "Guardian Sight AR",
+        "desc": "Uno strato AR opzionale rivela simboli, artefatti e tracce nascoste sul mondo reale."
+      },
+      {
+        "icon": "⌛",
+        "title": "Cronologia storica",
+        "desc": "Il viaggio collega i luoghi a 1345 anni di memoria — chiaramente, visivamente e in modo significativo."
+      },
+      {
+        "icon": "◈",
+        "title": "Artefatti e reliquie",
+        "desc": "Raccogli scoperte simboliche che segnano i progressi e sbloccano strati più profondi della storia."
+      },
+      {
+        "icon": "✦",
+        "title": "Domini, sigilli e chiavi",
+        "desc": "Ogni tappa completata avvicina il Custode alla grande rivelazione nazionale."
+      },
+      {
+        "icon": "⊕",
+        "title": "14 lingue",
+        "desc": "L'app è preparata per viaggiatori internazionali, famiglie ed esploratori culturali."
+      },
+      {
+        "icon": "❖",
+        "title": "Esplorazione in famiglia",
+        "desc": "Progettata per genitori, bambini e amici che vogliono scoprire la Bulgaria insieme."
+      }
     ]
   },
   "download": {
     "eyebrow": "Scarica l'app",
     "heading": "Diventa Custode\ndella Bulgaria.",
     "lede": "L'app arriva su iOS e Android. Unisciti alla lista di lancio e preparati a sbloccare i primi domini quando le porte si apriranno.",
-    "appStore": { "label": "Scarica su", "name": "App Store" },
-    "googlePlay": { "label": "Disponibile su", "name": "Google Play" },
+    "appStore": {
+      "label": "Scarica su",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "label": "Disponibile su",
+      "name": "Google Play"
+    },
     "trust": "iOS e Android · Esplorazione gratuita · Percorsi premium disponibili",
     "comingSoon": "Prossimamente"
   },
@@ -319,35 +379,80 @@
       {
         "label": "Esplora",
         "links": [
-          { "label": "Come funziona", "href": "#how-it-works" },
-          { "label": "Domini", "href": "#domains" },
-          { "label": "Vista del Custode", "href": "#guardian-sight" },
-          { "label": "Cronologia", "href": "#timeline" }
+          {
+            "label": "Come funziona",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "Domini",
+            "href": "#domains"
+          },
+          {
+            "label": "Vista del Custode",
+            "href": "#guardian-sight"
+          },
+          {
+            "label": "Cronologia",
+            "href": "#timeline"
+          }
         ]
       },
       {
         "label": "Prodotto",
         "links": [
-          { "label": "Funzionalità", "href": "#features" },
-          { "label": "Scarica", "href": "#download" },
-          { "label": "FAQ", "href": "#faq" },
-          { "label": "Supporto", "href": "#contact" }
+          {
+            "label": "Funzionalità",
+            "href": "#features"
+          },
+          {
+            "label": "Scarica",
+            "href": "#download"
+          },
+          {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "label": "Supporto",
+            "href": "#contact"
+          }
         ]
       },
       {
         "label": "Partner",
         "links": [
-          { "label": "Diventa partner", "href": "#partners" },
-          { "label": "Comuni", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Musei", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Media", "href": "mailto:media@unlockingbulgaria.com" }
+          {
+            "label": "Diventa partner",
+            "href": "#partners"
+          },
+          {
+            "label": "Comuni",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Musei",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Media",
+            "href": "mailto:media@unlockingbulgaria.com"
+          }
         ]
       }
     ],
     "legal": [
-      { "label": "Informativa sulla privacy", "href": "#privacy" },
-      { "label": "Termini di utilizzo", "href": "#terms" },
-      { "label": "Cookie", "href": "#cookies" }
+      {
+        "label": "Informativa sulla privacy",
+        "href": "#privacy"
+      },
+      {
+        "label": "Termini di utilizzo",
+        "href": "#terms"
+      },
+      {
+        "label": "Cookie",
+        "href": "#cookies"
+      }
     ]
   },
   "langSelector": {
@@ -363,14 +468,39 @@
     "post": "Un mistero sopravvissuto tredici secoli."
   },
   "journey": {
-    "eyebrow": "Il Cammino",
+    "eyebrow": "Come si svolge il viaggio",
     "heading": "Cinque scoperte.\nUna trasformazione.",
     "items": [
-      { "num": "01", "sym": "✦", "name": "Custode", "desc": "Il titolo guadagnato da coloro che completano l'intero viaggio. Guardiano della memoria viva della Bulgaria — Пазител." },
-      { "num": "02", "sym": "⌘", "name": "Percorso", "desc": "Cinque luoghi reali. Collegati dalla storia. Percorri il percorso — sblocca la storia nascosta tra di loro." },
-      { "num": "03", "sym": "◈", "name": "Reliquia", "desc": "Completa un percorso. Ricevi un artefatto permanente. Un frammento della memoria bulgara che è tuo per sempre." },
-      { "num": "04", "sym": "◉", "name": "Dominio", "desc": "Sei regioni. Ognuna custodisce i propri percorsi, la propria epoca, i propri segreti. Rivela un dominio — rivendica uno strato." },
-      { "num": "05", "sym": "◎", "name": "Sigillo", "desc": "Il marchio di un dominio completato. Sei sigilli. Sei strati di memoria. Tutti e sei — e la Bulgaria è tua." }
+      {
+        "num": "01",
+        "sym": "◉",
+        "name": "Checkpoint",
+        "desc": "Il primo incontro.\nUn luogo reale inizia a rivelare la sua memoria."
+      },
+      {
+        "num": "02",
+        "sym": "⌘",
+        "name": "Percorso",
+        "desc": "Le tracce si connettono.\nDiversi luoghi formano un arco narrativo."
+      },
+      {
+        "num": "03",
+        "sym": "◈",
+        "name": "Dominio",
+        "desc": "Il quadro si espande.\nI percorsi completati sbloccano uno strato più profondo della Bulgaria."
+      },
+      {
+        "num": "04",
+        "sym": "✦",
+        "name": "Chiave Maestra",
+        "desc": "Le scoperte diventano conoscenza.\nTerra, Anima, Spirito e Corpo iniziano ad allinearsi."
+      },
+      {
+        "num": "05",
+        "sym": "◎",
+        "name": "Il Patto Vivente",
+        "desc": "La rivelazione finale.\nQuando le chiavi si uniscono, il Custode capisce perché il Nome è sopravvissuto."
+      }
     ]
   },
   "skipLink": "Vai al contenuto",

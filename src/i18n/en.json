@@ -26,7 +26,12 @@
     "lede": "Walk the real land of Bulgaria. Awaken memory at sacred places. Become a Keeper - the one who carries the living memory of the Name.",
     "ctaPrimary": "Download the App",
     "ctaSecondary": "Watch the Journey",
-    "trust": ["AR real-world quests", "Cinematic storytelling", "Family-friendly", "14 languages"],
+    "trust": [
+      "AR real-world quests",
+      "Cinematic storytelling",
+      "Family-friendly",
+      "14 languages"
+    ],
     "mapLabel": "Interactive map of Bulgaria's hidden memory",
     "phoneDomain": "Cave Gateway",
     "phoneTitle": "Prohodna",
@@ -66,10 +71,26 @@
       }
     ],
     "flow": [
-      { "icon": "◉", "name": "Checkpoint", "sub": "Real location · Story · Clue" },
-      { "icon": "⌘", "name": "Route + Relic", "sub": "4 checkpoints · 4 artifacts · 1 relic" },
-      { "icon": "◈", "name": "Domain + Seal", "sub": "4 routes · 1 seal · 1 Master Key" },
-      { "icon": "✦", "name": "Keeper — Пазител", "sub": "4 Master Keys · Living Covenant" }
+      {
+        "icon": "◉",
+        "name": "Checkpoint",
+        "sub": "Real location · Story · Clue"
+      },
+      {
+        "icon": "⌘",
+        "name": "Route + Relic",
+        "sub": "4 checkpoints · 4 artifacts · 1 relic"
+      },
+      {
+        "icon": "◈",
+        "name": "Domain + Seal",
+        "sub": "4 routes · 1 seal · 1 Master Key"
+      },
+      {
+        "icon": "✦",
+        "name": "Keeper — Пазител",
+        "sub": "4 Master Keys · Living Covenant"
+      }
     ]
   },
   "domains": {
@@ -142,7 +163,6 @@
     "heading": "See what\nothers cannot.",
     "lede": "Guardian Sight is the Keeper's optional way of seeing what a place has witnessed. It reveals traces, symbols, and memory without making AR required.",
     "sightBody": "Point the camera at the world.\nThe hidden layer appears beneath the real.",
-    "sightNote": "Optional AR · Every moment has a non-AR path",
     "ariaVisual": "Guardian Sight AR interface — animated scanning rings",
     "floatTag1": "Hidden layer revealed",
     "floatTag2": "Checkpoint · 82m",
@@ -153,22 +173,26 @@
       {
         "icon": "◈",
         "title": "Symbolic traces",
-        "desc": "Ancient symbols, light traces, and memory marks appear over the real world at meaningful locations."
+        "subtitle": "The traces never disappear",
+        "desc": "Some places hold imprints from people, events, and legends. The Keeper's Sight helps you see them again."
       },
       {
         "icon": "◉",
-        "title": "Checkpoint presence",
-        "desc": "Nearby checkpoints signal that a place has been witnessed. The closer you are, the clearer the call becomes."
+        "title": "Presence at the site",
+        "subtitle": "Every place holds memory",
+        "desc": "When you approach a meaningful location, the world begins revealing the hidden layers of its history."
       },
       {
         "icon": "✦",
         "title": "Always accessible",
-        "desc": "AR is optional. Every AR moment has a full non-AR path with readable content, captions, and clear completion logic."
+        "subtitle": "The story remains accessible",
+        "desc": "AR is an additional layer. All content can be experienced without it, anywhere and at any time."
       },
       {
         "icon": "⌘",
-        "title": "Hero moments at sacred sites",
-        "desc": "Hero checkpoints and finales can open deeper sequences — artifact resonance, symbolic scenes, and cinematic memory reveals."
+        "title": "Heroic moments",
+        "subtitle": "Moments of revelation",
+        "desc": "At sacred sites, at route finales, and at key discoveries — special scenes and rewards await."
       }
     ],
     "prohodna": {
@@ -240,27 +264,63 @@
   },
   "features": {
     "eyebrow": "App features",
-    "heading": "Built for discovery,\nnot distraction.",
-    "lede": "Every feature exists to deepen your connection with the real places you visit.",
+    "heading": "Everything needed for\na living exploration.",
+    "lede": "The features do not distract from the journey — they guide it, deepen it and keep it accessible.",
     "items": [
-      { "icon": "◉", "title": "Real-world quests", "desc": "Routes built around real GPS checkpoints. The app guides you to the place — the place rewards you with its story." },
-      { "icon": "▶", "title": "Cinematic storytelling", "desc": "Each checkpoint reveals a narrative moment rooted in history, mythology, local memory, or natural heritage." },
-      { "icon": "◎", "title": "Guardian Sight AR", "desc": "Optional augmented reality reveals symbols, artifacts, and hidden layers overlaid on the real world." },
-      { "icon": "⌛", "title": "Historical timeline", "desc": "A path through 1345 years of Bulgarian memory — linked to the places you walk." },
-      { "icon": "◈", "title": "Artifacts and relics", "desc": "Collect one Artifact at each checkpoint. Assemble four Artifacts into a permanent Route Relic." },
-      { "icon": "✦", "title": "Domains, seals, and Master Keys", "desc": "Complete Domains. Earn Seals. Assemble the four Master Keys that unlock the Living Covenant." },
-      { "icon": "⊕", "title": "14 languages", "desc": "Full multilingual support for the main international audiences, with Bulgarian meaning preserved at the source." },
-      { "icon": "❖", "title": "Family exploration", "desc": "Pacing modes and content scales for families, schools, and cultural travelers of every age." },
-      { "icon": "⊞", "title": "Offline support", "desc": "Key route content prepared in advance for mountain, village, and heritage sites with limited signal." },
-      { "icon": "⊗", "title": "Partner routes", "desc": "Municipalities, museums, and tourism businesses can co-create routes tied to real local heritage." }
+      {
+        "icon": "◉",
+        "title": "Real quests",
+        "desc": "GPS-based routes guide you to real places where history is experienced on location."
+      },
+      {
+        "icon": "▶",
+        "title": "Cinematic storytelling",
+        "desc": "Each checkpoint unlocks a short narrative moment designed to feel like a scene, not a dry fact sheet."
+      },
+      {
+        "icon": "◎",
+        "title": "Guardian Sight AR",
+        "desc": "An optional AR layer reveals symbols, artifacts and hidden traces over the real world."
+      },
+      {
+        "icon": "⌛",
+        "title": "Historical timeline",
+        "desc": "The journey connects places with 1345 years of memory — clearly, visually and meaningfully."
+      },
+      {
+        "icon": "◈",
+        "title": "Artifacts and relics",
+        "desc": "You collect symbolic discoveries that mark progress and unlock deeper layers of the story."
+      },
+      {
+        "icon": "✦",
+        "title": "Domains, seals and keys",
+        "desc": "Each completed stage brings the Keeper closer to the greater national revelation."
+      },
+      {
+        "icon": "⊕",
+        "title": "14 languages",
+        "desc": "The app is prepared for international travelers, families and cultural explorers."
+      },
+      {
+        "icon": "❖",
+        "title": "Family exploration",
+        "desc": "Designed for parents, children and friends who want to discover Bulgaria together."
+      }
     ]
   },
   "download": {
     "eyebrow": "Download the app",
     "heading": "Become a Keeper\nof Bulgaria.",
     "lede": "The app is coming to iOS and Android. Join the launch list and be ready for the Cave gateway, the first routes, and the four Master Key Domains.",
-    "appStore": { "label": "Download on the", "name": "App Store" },
-    "googlePlay": { "label": "Get it on", "name": "Google Play" },
+    "appStore": {
+      "label": "Download on the",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "label": "Get it on",
+      "name": "Google Play"
+    },
     "trust": "iOS & Android · Free to explore · Premium routes available",
     "comingSoon": "Coming soon"
   },
@@ -395,35 +455,80 @@
       {
         "label": "Explore",
         "links": [
-          { "label": "How it works", "href": "#how-it-works" },
-          { "label": "Domains", "href": "#domains" },
-          { "label": "Guardian Sight", "href": "#guardian-sight" },
-          { "label": "Timeline", "href": "#timeline" }
+          {
+            "label": "How it works",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "Domains",
+            "href": "#domains"
+          },
+          {
+            "label": "Guardian Sight",
+            "href": "#guardian-sight"
+          },
+          {
+            "label": "Timeline",
+            "href": "#timeline"
+          }
         ]
       },
       {
         "label": "Product",
         "links": [
-          { "label": "Features", "href": "#features" },
-          { "label": "Download", "href": "#download" },
-          { "label": "FAQ", "href": "#faq" },
-          { "label": "Support", "href": "#contact" }
+          {
+            "label": "Features",
+            "href": "#features"
+          },
+          {
+            "label": "Download",
+            "href": "#download"
+          },
+          {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "label": "Support",
+            "href": "#contact"
+          }
         ]
       },
       {
         "label": "Partners",
         "links": [
-          { "label": "Become a partner", "href": "#partners" },
-          { "label": "Municipalities", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Museums", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Media", "href": "mailto:media@unlockingbulgaria.com" }
+          {
+            "label": "Become a partner",
+            "href": "#partners"
+          },
+          {
+            "label": "Municipalities",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Museums",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Media",
+            "href": "mailto:media@unlockingbulgaria.com"
+          }
         ]
       }
     ],
     "legal": [
-      { "label": "Privacy Policy", "href": "#privacy" },
-      { "label": "Terms of Use", "href": "#terms" },
-      { "label": "Cookies", "href": "#cookies" }
+      {
+        "label": "Privacy Policy",
+        "href": "#privacy"
+      },
+      {
+        "label": "Terms of Use",
+        "href": "#terms"
+      },
+      {
+        "label": "Cookies",
+        "href": "#cookies"
+      }
     ]
   },
   "langSelector": {
@@ -439,14 +544,39 @@
     "post": "A mystery that survived thirteen centuries."
   },
   "journey": {
-    "eyebrow": "The Path",
+    "eyebrow": "How the journey unfolds",
     "heading": "Five discoveries.\nOne transformation.",
     "items": [
-      { "num": "01", "sym": "◉", "name": "Checkpoint", "desc": "A real GPS-verified place where story, physical presence, and memory overlap." },
-      { "num": "02", "sym": "⌘", "name": "Route", "desc": "Four real checkpoints. One narrative arc. Walk the route and assemble its Relic from four Artifacts." },
-      { "num": "03", "sym": "◈", "name": "Domain", "desc": "Four routes form a Master Key Domain. Complete them to earn a Seal and awaken one pillar of the answer." },
-      { "num": "04", "sym": "✦", "name": "Master Key", "desc": "Earth, Soul, Spirit, and Body: four symbolic keys completed by the four main quest Domains." },
-      { "num": "05", "sym": "◎", "name": "Living Covenant", "desc": "The final revelation. When the four Master Keys are assembled, the Keeper understands why the Name endured." }
+      {
+        "num": "01",
+        "sym": "◉",
+        "name": "Checkpoint",
+        "desc": "The first encounter.\nA real place begins to reveal its memory."
+      },
+      {
+        "num": "02",
+        "sym": "⌘",
+        "name": "Route",
+        "desc": "The traces connect.\nSeveral places form one narrative arc."
+      },
+      {
+        "num": "03",
+        "sym": "◈",
+        "name": "Domain",
+        "desc": "The picture expands.\nCompleted routes unlock a deeper layer of Bulgaria."
+      },
+      {
+        "num": "04",
+        "sym": "✦",
+        "name": "Master Key",
+        "desc": "Discoveries become knowledge.\nLand, Soul, Spirit and Body begin to align."
+      },
+      {
+        "num": "05",
+        "sym": "◎",
+        "name": "The Living Covenant",
+        "desc": "The final revelation.\nWhen the keys come together, the Keeper understands why the Name endured."
+      }
     ]
   },
   "map": {

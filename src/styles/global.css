@@ -912,10 +912,14 @@ h3{
   margin-bottom:20px;
 }
 /* Sight note — was .8rem (~13.5px), bumped to .96rem */
-.sight-note{
-  color:var(--text-3);
-  font-size:.96rem;
-  letter-spacing:.04em;
+.sight-feat-sub{
+  color:var(--gold);
+  font-family:var(--ff-display);
+  font-size:.82rem;
+  font-style:italic;
+  letter-spacing:.02em;
+  margin-bottom:6px;
+  opacity:.8;
 }
 
 /* ─── DOWNLOAD ───────────────────────────────────────────────── */
@@ -1422,11 +1426,10 @@ textarea.form-control{min-height:122px;resize:vertical}
   }
   .ji{border-right:none;border-bottom:1px solid var(--border-lt)}
   .ji:last-child{border-bottom:none}
-  .tl-track::before{left:clamp(48px,8vw,80px)}
-  .tl-item{
-    grid-template-columns:clamp(48px,8vw,80px) 1fr;
-  }
-  .tl-item::before{left:clamp(44px,7.5vw,76px)}
+  .tl-track::before{left:clamp(72px,8vw,80px)}
+  .tl-item{grid-template-columns:clamp(72px,8vw,80px) 1fr}
+  .tl-item::before{left:clamp(67px,7.5vw,76px)}
+  .tli-year{font-size:clamp(1.1rem,2.5vw,1.5rem);padding-right:14px}
   .memory-name{font-size:clamp(4rem,14vw,10rem)}
 }
 @media(max-width:600px){
@@ -2308,9 +2311,10 @@ textarea.form-control{min-height:122px;resize:vertical}
 .sight-feat h3{
   font-size:.88rem;
   letter-spacing:.04em;
-  margin-bottom:7px;
+  margin-bottom:4px;
 }
 .sight-feat p{color:var(--text-3);font-size:.84rem;line-height:1.65}
+.sight-feat p.sight-feat-sub{color:var(--gold);font-family:var(--ff-display);font-size:.82rem;font-style:italic;letter-spacing:.02em;margin-bottom:6px;opacity:.8}
 .sight-demo-link{
   display:inline-flex;
   margin-top:clamp(20px,3vw,32px);
@@ -2768,24 +2772,31 @@ textarea.form-control{min-height:122px;resize:vertical}
 
 /* ─── 480px small mobile ──────────────────────────────────────── */
 @media(max-width:480px){
+  .seo-device-card h2,.seo-story-card h2{font-size:1.75rem}
   .memory-name{font-size:clamp(2.8rem,13vw,5.5rem)}
   .hero-line{font-size:clamp(2.4rem,10vw,4rem)}
-  .hero-question{font-size:clamp(1.4rem,5vw,2.2rem)}
+  .hero-question{font-size:clamp(2rem,7vw,2.8rem)}
   .hero-lede{font-size:1rem;margin-bottom:22px}
   .hero-trust-chip{font-size:.72rem;padding:6px 11px}
   .hero-eyebrow{letter-spacing:.14em;margin-bottom:18px}
   .hero-section{padding-top:82px;padding-bottom:44px}
   .hiw-step{gap:10px;grid-template-columns:28px 1fr;padding-left:10px}
+  .hiw-step-num{font-size:.95rem}
+  .hiw-step-label{font-size:.86rem;letter-spacing:.15em}
   .tli-body-text{max-width:100%}
   .band-statement{font-size:clamp(1.3rem,4.5vw,2rem)}
+  .band-sub{font-size:1.15rem}
+  .memory-pre,.memory-post{font-size:1.2rem}
+  .eyebrow{font-size:.95rem;letter-spacing:.16em}
 }
 
 /* ─── 360px very small mobile ────────────────────────────────── */
 @media(max-width:360px){
   :root{--pad-x:16px}
+  .seo-device-card h2,.seo-story-card h2{font-size:1.5rem}
   .memory-name{font-size:clamp(2.2rem,11vw,4rem)}
   .hero-line{font-size:clamp(2rem,9vw,3.2rem)}
-  .hero-question{font-size:clamp(1.2rem,5vw,1.8rem)}
+  .hero-question{font-size:clamp(1.7rem,6.5vw,2.5rem)}
   .hero-section{padding-top:76px;padding-bottom:40px}
   .hero-ctas{flex-direction:column;align-items:stretch}
   .hero-ctas .btn{justify-content:center;width:100%}

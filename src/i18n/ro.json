@@ -26,7 +26,12 @@
     "lede": "Călătorește prin Bulgaria. Dezvăluie secretele antice. Devino un Pazitor — un gardian al memoriei vii care a dăinuit treisprezece secole.",
     "ctaPrimary": "Descarcă aplicația",
     "ctaSecondary": "Vezi călătoria",
-    "trust": ["Misiuni AR reale", "Povestire cinematografică", "Potrivit pentru familii", "14 limbi"],
+    "trust": [
+      "Misiuni AR reale",
+      "Povestire cinematografică",
+      "Potrivit pentru familii",
+      "14 limbi"
+    ],
     "mapLabel": "Harta interactivă a memoriei ascunse a Bulgariei",
     "phoneDomain": "Domeniul Numelui",
     "phoneTitle": "Vechile capitale",
@@ -64,10 +69,26 @@
       }
     ],
     "flow": [
-      { "icon": "◉", "name": "Punct de control", "sub": "Loc real · Poveste · Indiciu" },
-      { "icon": "⌘", "name": "Traseu + Relicvă", "sub": "5 puncte · 1 artefact" },
-      { "icon": "◈", "name": "Domeniu + Pecete", "sub": "3 trasee · 1 pecete regională" },
-      { "icon": "✦", "name": "Pazitor — Пазител", "sub": "6 domenii · Bulgaria întreagă deblocată" }
+      {
+        "icon": "◉",
+        "name": "Punct de control",
+        "sub": "Loc real · Poveste · Indiciu"
+      },
+      {
+        "icon": "⌘",
+        "name": "Traseu + Relicvă",
+        "sub": "5 puncte · 1 artefact"
+      },
+      {
+        "icon": "◈",
+        "name": "Domeniu + Pecete",
+        "sub": "3 trasee · 1 pecete regională"
+      },
+      {
+        "icon": "✦",
+        "name": "Pazitor — Пазител",
+        "sub": "6 domenii · Bulgaria întreagă deblocată"
+      }
     ]
   },
   "domains": {
@@ -84,7 +105,6 @@
     "heading": "Vezi ce\nalții nu pot.",
     "lede": "Privirea Pazitorului este modul opțional de cameră cu realitate augmentată din Unlocking Bulgaria. Îndreptați-o spre lume — și vedeți stratul ascuns dedesubt.",
     "sightBody": "Îndreptați camera spre lume.\nStratul ascuns apare sub realitate.",
-    "sightNote": "RA opțională · Fiecare moment are o cale fără RA",
     "ariaVisual": "Interfața RA Privirea Pazitorului — inele de scanare animate",
     "floatTag1": "Strat ascuns dezvăluit",
     "floatTag2": "Punct de control · 82m",
@@ -93,22 +113,26 @@
       {
         "icon": "◈",
         "title": "Urme simbolice",
-        "desc": "Simboluri antice, glife și fragmente de trasee apar peste lumea reală în locuri semnificative."
+        "subtitle": "Urmele nu dispar niciodată",
+        "desc": "Unele locuri păstrează amprente ale oamenilor, evenimentelor și legendelor. Privirea Paznicului te ajută să le vezi din nou."
       },
       {
         "icon": "◉",
-        "title": "Prezența punctului de control",
-        "desc": "Punctele de control din apropiere pulsează cu energie luminoasă. Cu cât ești mai aproape, cu atât semnalul este mai puternic."
+        "title": "Prezență la locație",
+        "subtitle": "Fiecare loc deține o memorie",
+        "desc": "Când te apropii de o locație semnificativă, lumea începe să dezvăluie straturile ascunse ale istoriei sale."
       },
       {
         "icon": "✦",
-        "title": "Întotdeauna accesibil",
-        "desc": "RA este opțională. Fiecare moment RA are o cale completă fără RA cu conținut lizibil, subtitrări și logică clară de finalizare."
+        "title": "Mereu accesibil",
+        "subtitle": "Povestea rămâne accesibilă",
+        "desc": "AR este un strat suplimentar. Tot conținutul poate fi trăit fără el, oriunde și oricând."
       },
       {
         "icon": "⌘",
-        "title": "Momente mai profunde la situri cheie",
-        "desc": "Punctele de control principale și finalele de domeniu oferă secvențe RA mai profunde — scene reconstruite, dezvăluiri de artefacte și momente cinematografice."
+        "title": "Momente eroice",
+        "subtitle": "Momente de revelație",
+        "desc": "La locuri sacre, la finalurile traseelor și la descoperiri cheie — scene speciale și recompense te așteaptă."
       }
     ]
   },
@@ -163,28 +187,64 @@
     ]
   },
   "features": {
-    "eyebrow": "Funcționalitățile aplicației",
-    "heading": "Construit pentru descoperire,\nnu pentru distragere.",
-    "lede": "Fiecare funcționalitate există pentru a aprofunda conexiunea ta cu locurile reale pe care le vizitezi.",
+    "eyebrow": "Funcții ale aplicației",
+    "heading": "Tot ce ai nevoie pentru\no explorare vie.",
+    "lede": "Funcțiile nu distrag de la călătorie — o ghidează, o aprofundează și o fac accesibilă.",
     "items": [
-      { "icon": "◉", "title": "Misiuni reale", "desc": "Trasee construite în jurul unor puncte GPS reale. Aplicația te ghidează la loc — locul te recompensează cu povestea sa." },
-      { "icon": "▶", "title": "Povestire cinematografică", "desc": "Fiecare punct de control dezvăluie un moment narativ înrădăcinat în istorie, mitologie, memorie locală sau patrimoniu natural." },
-      { "icon": "◎", "title": "Privirea Pazitorului RA", "desc": "Realitatea augmentată opțională dezvăluie simboluri, artefacte și straturi ascunse suprapuse lumii reale." },
-      { "icon": "⌛", "title": "Cronologie istorică", "desc": "O hartă interactivă prin 1345 de ani de memorie bulgară — legată de traseele pe care le parcurgi." },
-      { "icon": "◈", "title": "Relicve și artefacte", "desc": "Colecționează relicve digitale permanente la completarea unui traseu. Construiește o arhivă personală a istoriei ascunse a Bulgariei." },
-      { "icon": "✦", "title": "Domenii și peceți", "desc": "Completează domenii regionale. Câștigă peceți. Dezvăluie progresiv harta completă a memoriei bulgare." },
-      { "icon": "⊕", "title": "13 limbi", "desc": "Suport multilingv complet — inclusiv bulgară, engleză, germană, greacă, rusă, japoneză și altele." },
-      { "icon": "❖", "title": "Explorare în familie", "desc": "Moduri de ritm și niveluri de conținut pentru familii, școli și călători culturali de toate vârstele." },
-      { "icon": "⊞", "title": "Suport offline", "desc": "Conținut esențial al traseelor pregătit pentru situri montane, rurale și de patrimoniu cu semnal limitat." },
-      { "icon": "⊗", "title": "Trasee partener", "desc": "Municipalitățile, muzeele și companiile turistice pot co-crea trasee legate de patrimoniul local real." }
+      {
+        "icon": "◉",
+        "title": "Quest-uri reale",
+        "desc": "Rutele GPS te ghidează spre locuri reale unde istoria se trăiește pe teren."
+      },
+      {
+        "icon": "▶",
+        "title": "Narațiune cinematografică",
+        "desc": "Fiecare punct de control dezvăluie un scurt moment narativ conceput să pară o scenă, nu o fișă informativă."
+      },
+      {
+        "icon": "◎",
+        "title": "Guardian Sight AR",
+        "desc": "Un strat AR opțional dezvăluie simboluri, artefacte și urme ascunse peste lumea reală."
+      },
+      {
+        "icon": "⌛",
+        "title": "Cronologie istorică",
+        "desc": "Călătoria conectează locurile cu 1345 de ani de memorie — clar, vizual și semnificativ."
+      },
+      {
+        "icon": "◈",
+        "title": "Artefacte și relicve",
+        "desc": "Colectezi descoperiri simbolice care marchează progresul și deblochează straturi mai profunde."
+      },
+      {
+        "icon": "✦",
+        "title": "Domenii, sigilii și chei",
+        "desc": "Fiecare etapă completată îl aduce pe Paznic mai aproape de marea revelație națională."
+      },
+      {
+        "icon": "⊕",
+        "title": "14 limbi",
+        "desc": "Aplicația este pregătită pentru călători internaționali, familii și exploratori culturali."
+      },
+      {
+        "icon": "❖",
+        "title": "Explorare în familie",
+        "desc": "Concepută pentru părinți, copii și prieteni care vor să descopere Bulgaria împreună."
+      }
     ]
   },
   "download": {
     "eyebrow": "Descarcă aplicația",
     "heading": "Devino Pazitor\nal Bulgariei.",
     "lede": "Aplicația vine pe iOS și Android. Înscrie-te pe lista de lansare și fii gata să deblochezi primele domenii când porțile se deschid.",
-    "appStore": { "label": "Descarcă din", "name": "App Store" },
-    "googlePlay": { "label": "Disponibil pe", "name": "Google Play" },
+    "appStore": {
+      "label": "Descarcă din",
+      "name": "App Store"
+    },
+    "googlePlay": {
+      "label": "Disponibil pe",
+      "name": "Google Play"
+    },
     "trust": "iOS și Android · Explorare gratuită · Trasee premium disponibile",
     "comingSoon": "În curând"
   },
@@ -319,35 +379,80 @@
       {
         "label": "Explorează",
         "links": [
-          { "label": "Cum funcționează", "href": "#how-it-works" },
-          { "label": "Domenii", "href": "#domains" },
-          { "label": "Privirea Pazitorului", "href": "#guardian-sight" },
-          { "label": "Cronologie", "href": "#timeline" }
+          {
+            "label": "Cum funcționează",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "Domenii",
+            "href": "#domains"
+          },
+          {
+            "label": "Privirea Pazitorului",
+            "href": "#guardian-sight"
+          },
+          {
+            "label": "Cronologie",
+            "href": "#timeline"
+          }
         ]
       },
       {
         "label": "Produs",
         "links": [
-          { "label": "Funcționalități", "href": "#features" },
-          { "label": "Descarcă", "href": "#download" },
-          { "label": "Întrebări", "href": "#faq" },
-          { "label": "Suport", "href": "#contact" }
+          {
+            "label": "Funcționalități",
+            "href": "#features"
+          },
+          {
+            "label": "Descarcă",
+            "href": "#download"
+          },
+          {
+            "label": "Întrebări",
+            "href": "#faq"
+          },
+          {
+            "label": "Suport",
+            "href": "#contact"
+          }
         ]
       },
       {
         "label": "Parteneri",
         "links": [
-          { "label": "Devino partener", "href": "#partners" },
-          { "label": "Municipalități", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Muzee", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Media", "href": "mailto:media@unlockingbulgaria.com" }
+          {
+            "label": "Devino partener",
+            "href": "#partners"
+          },
+          {
+            "label": "Municipalități",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Muzee",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Media",
+            "href": "mailto:media@unlockingbulgaria.com"
+          }
         ]
       }
     ],
     "legal": [
-      { "label": "Politica de confidențialitate", "href": "#privacy" },
-      { "label": "Termeni de utilizare", "href": "#terms" },
-      { "label": "Cookie-uri", "href": "#cookies" }
+      {
+        "label": "Politica de confidențialitate",
+        "href": "#privacy"
+      },
+      {
+        "label": "Termeni de utilizare",
+        "href": "#terms"
+      },
+      {
+        "label": "Cookie-uri",
+        "href": "#cookies"
+      }
     ]
   },
   "langSelector": {
@@ -363,14 +468,39 @@
     "post": "Un mister care a supraviețuit treisprezece secole."
   },
   "journey": {
-    "eyebrow": "Calea",
+    "eyebrow": "Cum se desfășoară călătoria",
     "heading": "Cinci descoperiri.\nO transformare.",
     "items": [
-      { "num": "01", "sym": "✦", "name": "Pazitor", "desc": "Titlul câștigat de cei care completează întreaga călătorie. Gardian al memoriei vii a Bulgariei — Пазител." },
-      { "num": "02", "sym": "⌘", "name": "Traseu", "desc": "Cinci locuri reale. Unite de istorie. Parcurge traseul — deblochează povestea ascunsă între ele." },
-      { "num": "03", "sym": "◈", "name": "Relicvă", "desc": "Completează un traseu. Primești un artefact permanent. O bucată din memoria Bulgariei care îți aparține pentru totdeauna." },
-      { "num": "04", "sym": "◉", "name": "Domeniu", "desc": "Șase regiuni. Fiecare ascunde propriile trasee, propria epocă, propriile secrete. Dezvăluie un domeniu — revendică un strat." },
-      { "num": "05", "sym": "◎", "name": "Pecete", "desc": "Marca unui domeniu completat. Șase peceți. Șase straturi de memorie. Toate șase — și Bulgaria este a ta." }
+      {
+        "num": "01",
+        "sym": "◉",
+        "name": "Punct de control",
+        "desc": "Prima întâlnire.\nUn loc real începe să-și dezvăluie memoria."
+      },
+      {
+        "num": "02",
+        "sym": "⌘",
+        "name": "Rută",
+        "desc": "Urmele se conectează.\nMai multe locuri formează un arc narativ."
+      },
+      {
+        "num": "03",
+        "sym": "◈",
+        "name": "Domeniu",
+        "desc": "Imaginea se extinde.\nRutele completate deblochează un strat mai profund al Bulgariei."
+      },
+      {
+        "num": "04",
+        "sym": "✦",
+        "name": "Cheia Maestru",
+        "desc": "Descoperirile devin cunoaștere.\nPământ, Suflet, Spirit și Trup încep să se alinieze."
+      },
+      {
+        "num": "05",
+        "sym": "◎",
+        "name": "Legământul Viu",
+        "desc": "Revelația finală.\nCând cheile se reunesc, Paznicul înțelege de ce Numele a durat."
+      }
     ]
   },
   "skipLink": "Salt la conținut",

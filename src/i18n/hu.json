@@ -26,7 +26,12 @@
     "lede": "Utazz be Bulgáriát. Fedd fel az ősi titkokat. Válj Keeperré - a tizenhárom évszázadon át fennmaradt élő emlékezet őrzőjévé.",
     "ctaPrimary": "Az alkalmazás letöltése",
     "ctaSecondary": "Nézd meg az utazást",
-    "trust": ["AR valós küldetések", "Filmszerű történetmesélés", "Családbarát", "14 nyelv"],
+    "trust": [
+      "AR valós küldetések",
+      "Filmszerű történetmesélés",
+      "Családbarát",
+      "14 nyelv"
+    ],
     "mapLabel": "Interaktív térkép Bulgária rejtett emlékezetéről",
     "phoneDomain": "A Név tartománya",
     "phoneTitle": "A régi fővárosok",
@@ -64,10 +69,26 @@
       }
     ],
     "flow": [
-      { "icon": "◉", "name": "Ellenőrzőpont", "sub": "Valós helyszín · Történet · Nyom" },
-      { "icon": "⌘", "name": "Útvonal + ereklye", "sub": "5 ellenőrzőpont · 1 műtárgy" },
-      { "icon": "◈", "name": "Tartomány + pecsét", "sub": "3 útvonal · 1 regionális pecsét" },
-      { "icon": "✦", "name": "Keeper — Пазител", "sub": "6 tartomány · Teljes Bulgária feloldva" }
+      {
+        "icon": "◉",
+        "name": "Ellenőrzőpont",
+        "sub": "Valós helyszín · Történet · Nyom"
+      },
+      {
+        "icon": "⌘",
+        "name": "Útvonal + ereklye",
+        "sub": "5 ellenőrzőpont · 1 műtárgy"
+      },
+      {
+        "icon": "◈",
+        "name": "Tartomány + pecsét",
+        "sub": "3 útvonal · 1 regionális pecsét"
+      },
+      {
+        "icon": "✦",
+        "name": "Keeper — Пазител",
+        "sub": "6 tartomány · Teljes Bulgária feloldva"
+      }
     ]
   },
   "domains": {
@@ -84,7 +105,6 @@
     "heading": "Lásd meg azt,\namit mások nem.",
     "lede": "A Guardian Sight az Unlocking Bulgaria opcionális kiterjesztett valóságú kameramódja. Irányítsd a világra - és lásd meg az alatta rejlő réteget.",
     "sightBody": "Irányítsd a kamerát a világra.\nA rejtett réteg megjelenik a valóság alatt.",
-    "sightNote": "Opcionális AR · Minden pillanathoz tartozik nem AR-alapú út",
     "ariaVisual": "Guardian Sight AR felület - animált pásztázó gyűrűk",
     "floatTag1": "Rejtett réteg feltárva",
     "floatTag2": "Ellenőrzőpont · 82 m",
@@ -93,22 +113,26 @@
       {
         "icon": "◈",
         "title": "Szimbolikus nyomok",
-        "desc": "Ősi szimbólumok, jelek és útvonaltöredékek jelennek meg a valós világ felett, jelentős helyszíneken."
+        "subtitle": "A nyomok soha nem tűnnek el",
+        "desc": "Egyes helyek megőrzik emberek, események és legendák lenyomatait. Az Őrző Tekintete segít meglátnod ezeket újra."
       },
       {
         "icon": "◉",
-        "title": "Ellenőrzőpont-jelenlét",
-        "desc": "A közeli ellenőrzőpontok fényenergiával pulzálnak. Minél közelebb vagy, annál erősebb a jel."
+        "title": "Jelenlét a helyszínen",
+        "subtitle": "Minden helynek van emléke",
+        "desc": "Amikor közelítesz egy jelentős helyszínhez, a világ elkezdi felfedni történelmének rejtett rétegeit."
       },
       {
         "icon": "✦",
-        "title": "Mindig hozzáférhető",
-        "desc": "Az AR opcionális. Minden AR-pillanathoz teljes nem AR-alapú út tartozik olvasható tartalommal, feliratokkal és egyértelmű teljesítési logikával."
+        "title": "Mindig elérhető",
+        "subtitle": "A történet elérhető marad",
+        "desc": "Az AR egy kiegészítő réteg. Az összes tartalom megtapasztalható nélküle is, bárhol és bármikor."
       },
       {
         "icon": "⌘",
-        "title": "Nagyobb pillanatok kulcshelyszíneken",
-        "desc": "A kiemelt ellenőrzőpontok és tartományzárások mélyebb AR-szekvenciákat kínálnak - rekonstruált jeleneteket, műtárgyfeltárásokat és filmszerű pillanatokat."
+        "title": "Hősi pillanatok",
+        "subtitle": "A felfedezés pillanatai",
+        "desc": "Szent helyszíneken, útvonal-fináléknál és kulcsfontosságú felfedezéseknél különleges jelenetek és jutalmak várnak."
       }
     ]
   },
@@ -163,28 +187,64 @@
     ]
   },
   "features": {
-    "eyebrow": "Alkalmazásfunkciók",
-    "heading": "Felfedezésre épült,\nnem figyelemelterelésre.",
-    "lede": "Minden funkció azért létezik, hogy elmélyítse a kapcsolatodat a valós helyekkel, amelyeket felkeresel.",
+    "eyebrow": "App funkciók",
+    "heading": "Minden, ami kell egy\nélő felfedezéshez.",
+    "lede": "A funkciók nem vonják el a figyelmet az utazástól — irányítják, elmélyítik és hozzáférhetővé teszik.",
     "items": [
-      { "icon": "◉", "title": "Valós helyszíni küldetések", "desc": "Valós GPS-ellenőrzőpontokra épülő útvonalak. Az alkalmazás elvezet a helyhez - a hely pedig a történetével jutalmaz." },
-      { "icon": "▶", "title": "Filmszerű történetmesélés", "desc": "Minden ellenőrzőpont egy történeti, mitológiai, helyi emlékezeti vagy természeti örökségben gyökerező narratív pillanatot tár fel." },
-      { "icon": "◎", "title": "Guardian Sight AR", "desc": "Az opcionális kiterjesztett valóság szimbólumokat, műtárgyakat és rejtett rétegeket fed fel a valós világra vetítve." },
-      { "icon": "⌛", "title": "Történelmi idővonal", "desc": "Interaktív térkép a bolgár emlékezet 1345 évén át - összekapcsolva azokkal az útvonalakkal, amelyeket bejársz." },
-      { "icon": "◈", "title": "Ereklyék és műtárgyak", "desc": "Gyűjts maradandó digitális ereklyéket az útvonalak teljesítésekor. Építs személyes archívumot Bulgária rejtett történelméből." },
-      { "icon": "✦", "title": "Tartományok és pecsétek", "desc": "Teljesíts regionális tartományokat. Szerezz pecséteket. Fokozatosan fedd fel a bolgár emlékezet teljes térképét." },
-      { "icon": "⊕", "title": "14 nyelv", "desc": "Teljes többnyelvű támogatás - többek között bolgár, angol, német, magyar, kínai, görög, orosz, japán és más nyelveken." },
-      { "icon": "❖", "title": "Családi felfedezés", "desc": "Tempómódok és tartalom, amely családokhoz, iskolákhoz és minden korosztály kulturális utazóihoz igazodik." },
-      { "icon": "⊞", "title": "Offline támogatás", "desc": "Előre előkészített kulcsfontosságú útvonaltartalom hegyi, falusi és örökségi helyszínekhez, ahol korlátozott lehet a térerő." },
-      { "icon": "⊗", "title": "Partnerútvonalak", "desc": "Önkormányzatok, múzeumok és turisztikai vállalkozások közösen hozhatnak létre valódi helyi örökséghez kötődő útvonalakat." }
+      {
+        "icon": "◉",
+        "title": "Valódi küldetések",
+        "desc": "GPS-alapú útvonalak kalauzolnak valódi helyekre, ahol a történelem helyszínen élhető meg."
+      },
+      {
+        "icon": "▶",
+        "title": "Filmszerű mesélés",
+        "desc": "Minden ellenőrzőpont rövid narratív pillanatot tár fel, amely jelenetnek érződik, nem száraz tájékoztatónak."
+      },
+      {
+        "icon": "◎",
+        "title": "Guardian Sight AR",
+        "desc": "Egy opcionális AR-réteg szimbólumokat, tárgyakat és rejtett nyomokat tár fel a valós világ felett."
+      },
+      {
+        "icon": "⌛",
+        "title": "Történelmi idősor",
+        "desc": "Az utazás 1345 évnyi emlékezeten át köti össze a helyszíneket — érthetően, vizuálisan és értelemmel."
+      },
+      {
+        "icon": "◈",
+        "title": "Tárgyak és ereklyék",
+        "desc": "Szimbolikus felfedezéseket gyűjtesz, amelyek jelzik az előrehaladást és mélyebb rétegeket nyitnak meg."
+      },
+      {
+        "icon": "✦",
+        "title": "Területek, pecsétek és kulcsok",
+        "desc": "Minden befejezett szakasz közelebb viszi az Őrzőt a nagy nemzeti kinyilatkoztatáshoz."
+      },
+      {
+        "icon": "⊕",
+        "title": "14 nyelv",
+        "desc": "Az app felkészített nemzetközi utazók, családok és kulturális felfedezők számára."
+      },
+      {
+        "icon": "❖",
+        "title": "Családi felfedezés",
+        "desc": "Szülők, gyerekek és barátok számára tervezve, akik együtt szeretnék felfedezni Bulgáriát."
+      }
     ]
   },
   "download": {
     "eyebrow": "Az alkalmazás letöltése",
     "heading": "Válj Bulgária\nKeeperévé.",
     "lede": "Az alkalmazás hamarosan iOS-re és Androidra érkezik. Csatlakozz az indulási listához, és készülj fel az első tartományok feloldására, amikor megnyílnak a kapuk.",
-    "appStore": { "label": "Letöltés az", "name": "App Store-ból" },
-    "googlePlay": { "label": "Szerezd be a", "name": "Google Playen" },
+    "appStore": {
+      "label": "Letöltés az",
+      "name": "App Store-ból"
+    },
+    "googlePlay": {
+      "label": "Szerezd be a",
+      "name": "Google Playen"
+    },
     "trust": "iOS és Android · Ingyenesen felfedezhető · Prémium útvonalak elérhetők",
     "comingSoon": "Hamarosan"
   },
@@ -319,35 +379,80 @@
       {
         "label": "Felfedezés",
         "links": [
-          { "label": "Hogyan működik", "href": "#how-it-works" },
-          { "label": "Tartományok", "href": "#domains" },
-          { "label": "Guardian Sight", "href": "#guardian-sight" },
-          { "label": "Idővonal", "href": "#timeline" }
+          {
+            "label": "Hogyan működik",
+            "href": "#how-it-works"
+          },
+          {
+            "label": "Tartományok",
+            "href": "#domains"
+          },
+          {
+            "label": "Guardian Sight",
+            "href": "#guardian-sight"
+          },
+          {
+            "label": "Idővonal",
+            "href": "#timeline"
+          }
         ]
       },
       {
         "label": "Termék",
         "links": [
-          { "label": "Funkciók", "href": "#features" },
-          { "label": "Letöltés", "href": "#download" },
-          { "label": "GYIK", "href": "#faq" },
-          { "label": "Támogatás", "href": "#contact" }
+          {
+            "label": "Funkciók",
+            "href": "#features"
+          },
+          {
+            "label": "Letöltés",
+            "href": "#download"
+          },
+          {
+            "label": "GYIK",
+            "href": "#faq"
+          },
+          {
+            "label": "Támogatás",
+            "href": "#contact"
+          }
         ]
       },
       {
         "label": "Partnerek",
         "links": [
-          { "label": "Legyél partner", "href": "#partners" },
-          { "label": "Önkormányzatok", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Múzeumok", "href": "mailto:partners@unlockingbulgaria.com" },
-          { "label": "Média", "href": "mailto:media@unlockingbulgaria.com" }
+          {
+            "label": "Legyél partner",
+            "href": "#partners"
+          },
+          {
+            "label": "Önkormányzatok",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Múzeumok",
+            "href": "mailto:partners@unlockingbulgaria.com"
+          },
+          {
+            "label": "Média",
+            "href": "mailto:media@unlockingbulgaria.com"
+          }
         ]
       }
     ],
     "legal": [
-      { "label": "Adatvédelmi irányelvek", "href": "#privacy" },
-      { "label": "Felhasználási feltételek", "href": "#terms" },
-      { "label": "Sütik", "href": "#cookies" }
+      {
+        "label": "Adatvédelmi irányelvek",
+        "href": "#privacy"
+      },
+      {
+        "label": "Felhasználási feltételek",
+        "href": "#terms"
+      },
+      {
+        "label": "Sütik",
+        "href": "#cookies"
+      }
     ]
   },
   "langSelector": {
@@ -363,14 +468,39 @@
     "post": "Egy rejtély, amely tizenhárom évszázadot túlélt."
   },
   "journey": {
-    "eyebrow": "Az út",
+    "eyebrow": "Hogyan bontakozik ki az utazás",
     "heading": "Öt felfedezés.\nEgy átalakulás.",
     "items": [
-      { "num": "01", "sym": "✦", "name": "Keeper", "desc": "A cím, amelyet azok érdemelnek ki, akik teljesítik az egész utazást. Bulgária élő emlékezetének őrzője - Пазител." },
-      { "num": "02", "sym": "⌘", "name": "Útvonal", "desc": "Öt valós hely. Történelem köti össze őket. Járd be az útvonalat - oldd fel a köztük rejtőző történetet." },
-      { "num": "03", "sym": "◈", "name": "Ereklye", "desc": "Teljesíts egy útvonalat. Kapj egy maradandó műtárgyat. Bulgária emlékezetének egy darabját, amely örökre a tiéd." },
-      { "num": "04", "sym": "◉", "name": "Tartomány", "desc": "Hat régió. Mindegyik saját útvonalakat, saját korszakot, saját titkokat őriz. Fedd fel a tartományt - igényelj egy réteget." },
-      { "num": "05", "sym": "◎", "name": "Pecsét", "desc": "A teljesített tartomány jele. Hat pecsét. Az emlékezet hat rétege. Mind a hat - és Bulgária a tiéd." }
+      {
+        "num": "01",
+        "sym": "◉",
+        "name": "Ellenőrzőpont",
+        "desc": "Az első találkozás.\nEgy valós hely elkezdi feltárni emlékeit."
+      },
+      {
+        "num": "02",
+        "sym": "⌘",
+        "name": "Útvonal",
+        "desc": "A nyomok összekapcsolódnak.\nTöbb hely alkot egy narratív ívet."
+      },
+      {
+        "num": "03",
+        "sym": "◈",
+        "name": "Terület",
+        "desc": "A kép tágul.\nA teljesített útvonalak Bulgária mélyebb rétegét nyitják meg."
+      },
+      {
+        "num": "04",
+        "sym": "✦",
+        "name": "Mesterkulcs",
+        "desc": "A felfedezések tudássá válnak.\nFöld, Lélek, Szellem és Test elkezd összerendeződni."
+      },
+      {
+        "num": "05",
+        "sym": "◎",
+        "name": "Az Élő Szövetség",
+        "desc": "A végső kinyilatkoztatás.\nAmikor a kulcsok összekapcsolódnak, az Őrző megérti, miért maradt fenn a Név."
+      }
     ]
   },
   "skipLink": "Ugrás a tartalomra",
