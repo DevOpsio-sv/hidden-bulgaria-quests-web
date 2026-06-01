@@ -26,7 +26,7 @@
     "lede": "Bulgaristan'da yolculuk et. Kadim sırları ortaya çıkar. On üç yüzyıl boyunca varlığını sürdüren yaşayan belleğin koruyucusu — Bir Koruyucu ol.",
     "ctaPrimary": "Uygulamayı İndir",
     "ctaSecondary": "Yolculuğu İzle",
-    "trust": ["AR gerçek görevler", "Sinematik hikaye anlatımı", "Aile dostu", "13 dil"],
+    "trust": ["AR gerçek görevler", "Sinematik hikaye anlatımı", "Aile dostu", "14 dil"],
     "mapLabel": "Bulgaristan'ın gizli belleğinin interaktif haritası",
     "phoneDomain": "İsmin Bölgesi",
     "phoneTitle": "Eski başkentler",
@@ -72,78 +72,12 @@
   },
   "domains": {
     "eyebrow": "Bölgeleri keşfet",
-    "heading": "Her bölge\nbir dünya saklar.",
-    "lede": "Altı bölgesel alan, Bulgaristan'ın gizli belleğinin haritasını oluşturur. Her birinin kendine ait rotaları, emanetleri, dönemi ve son mührü vardır.",
     "explore": "Keşfet",
     "continue": "Devam et",
     "locked": "Kilitli",
     "epochBefore": "İsimden Önce",
     "epochAfter": "İsimden Sonra",
-    "routesOf": "3 rotadan tamamlandı",
-    "lures": [
-      "Tuna'nın imparatorlukla buluştuğu yer.\nKaleler tarihin unuttuğunu hatırlar.",
-      "Pliska. Preslav. Tarnovo.\nÜç başkent. Asla düşmeyen bir isim.",
-      "Antik limanlar. Ada manastırları.\nDeniz, karanın sırlarını korudu.",
-      "Altın mezarlar. Gül tarlaları.\nBu toprakların en eski belleği.",
-      "Orfeus burada yürüdü.\nMüzik hâlâ kayalarda yaşıyor.",
-      "Şehrin altında Roma kalıntıları.\nHer katman farklı bir hikaye anlatır."
-    ],
-    "cards": [
-      {
-        "region": "Tuna ve Kuzeybatı",
-        "name": "Taş ve Nehir Bölgesi",
-        "epoch": "before",
-        "key": "Kaleler, nehirler, Roma yolları ve Belogradchik kaya oluşumları — Tuna'nın imparatorluğun sınırını çizdiği yer.",
-        "progress": 0,
-        "emblem": "🏔",
-        "status": "explore"
-      },
-      {
-        "region": "Eski başkentler",
-        "name": "İsmin Bölgesi",
-        "epoch": "after",
-        "key": "Pliska, Preslav, Tarnovo — Bulgaristan'ın adını fetihler, ateş ve yeniden doğuş boyunca taşıyan üç başkent.",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
-        "region": "Karadeniz kıyısı",
-        "name": "Deniz Kapısı Bölgesi",
-        "epoch": "before",
-        "key": "Antik limanlar, burunlar, tuzlu göller, ada manastırları — Yunan kolonilerinin Trak kıyılarıyla buluştuğu ve denizin sınır olduğu yer.",
-        "progress": 0,
-        "emblem": "🌊",
-        "status": "explore"
-      },
-      {
-        "region": "Trakya vadisi",
-        "name": "Krallar Bölgesi",
-        "epoch": "before",
-        "key": "Trak tümülüsleri, ritüel tepeler, gül tarlaları, bağlar ve altın eserler — bu topraklarda korunan en eski bellek.",
-        "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "Rodop Dağları",
-        "name": "Ses ve Taş Bölgesi",
-        "epoch": "after",
-        "key": "Orfeus mitleri, kutsal mağaralar, eski köprüler, taş köyler, ormanlar ve Avrupa'nın en eski yaşayan müzik geleneği.",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "Sofya ve Batı Bulgaristan",
-        "name": "Kavşaklar Bölgesi",
-        "epoch": "after",
-        "key": "Kentsel katmanlar, şehrin altındaki Serdica kalıntıları, Vitosha dağ yolları, antik kaynaklar ve canlı pazarlar.",
-        "progress": 0,
-        "emblem": "✦",
-        "status": "explore"
-      }
-    ]
+    "routesOf": "4 rotadan tamamlandı"
   },
   "guardianSight": {
     "eyebrow": "Koruyucunun Bakışı",

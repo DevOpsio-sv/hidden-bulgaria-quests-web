@@ -83,20 +83,20 @@
     "epochAfter": "After the Name",
     "routesOf": "of 4 routes completed",
     "lures": [
-      "Before the Name, the land already remembered.\nStone, root, and sanctuary hold the first key.",
+      "Before the Name, the land already remembered.\nThracian tombs, royal valleys, and the Black Stone hold the Earth Master Key.",
       "The sea does not remember names.\nIt remembers movement, courage, and the spark that endures.",
-      "The Danube is a line of vigilance.\nIts watchers kept memory awake in the dark.",
+      "Sacred routes and monasteries kept vigilance alive in the north.\nThe White Flame burned in prayer on the watchtowers.",
       "The mountain tests the body.\nProtection becomes worthy only when it serves something greater.",
       "The caves are thresholds.\nProhodna opens the path before the answer begins."
     ],
     "cards": [
       {
-        "region": "Ancient land and stone sanctuaries",
-        "name": "Stone Domain",
+        "region": "Thracian Valley",
+        "name": "The Kings Domain",
         "epoch": "before",
-        "key": "Earth memory, stone sanctuaries, megaliths, roots, and the Black Stone — the first Master Key.",
+        "key": "Thracian royal tombs, the Rose Valley, Perperikon, and the Black Stone — the Earth Master Key.",
         "progress": 0,
-        "emblem": "🏔",
+        "emblem": "🏛",
         "status": "explore"
       },
       {
@@ -109,19 +109,19 @@
         "status": "explore"
       },
       {
-        "region": "Northern Bulgaria / Danube",
-        "name": "The Danube Domain",
+        "region": "Northern Bulgaria — Sacred Routes",
+        "name": "The Sacred Traces",
         "epoch": "after",
-        "key": "River sentinels, fortress lines, rulers' roads, and the White Flame — the Spirit Master Key.",
+        "key": "Sacred routes, monasteries, watchpost fortresses, and the White Flame — the Spirit Master Key.",
         "progress": 0,
-        "emblem": "🌊",
+        "emblem": "✦",
         "status": "explore"
       },
       {
-        "region": "Mountain Bulgaria / Balkan",
-        "name": "The Golden Crown",
+        "region": "Mountain Bulgaria / Balkan Passes",
+        "name": "The Golden Gate",
         "epoch": "after",
-        "key": "Mountain guardians, refuges, paths of defense, and the Golden Spear — the Body Master Key.",
+        "key": "Mountain passes, fortress guardians, refuges, and the Golden Spear — the Body Master Key.",
         "progress": 0,
         "emblem": "⚔",
         "status": "explore"

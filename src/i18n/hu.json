@@ -72,78 +72,12 @@
   },
   "domains": {
     "eyebrow": "Tartományok felfedezése",
-    "heading": "Minden régió\negy világot rejt.",
-    "lede": "Hat regionális tartomány alkotja Bulgária rejtett emlékezetének térképét. Mindegyik saját útvonalakat, ereklyéket, korszakot és végső pecsétet őriz.",
     "explore": "Felfedezés",
     "continue": "Folytatás",
     "locked": "Zárolva",
     "epochBefore": "A Név előtt",
     "epochAfter": "A Név után",
-    "routesOf": "a 3 útvonalból teljesítve",
-    "lures": [
-      "Ahol a Duna találkozott a birodalommal.\nAz erődök emlékeznek arra, amit a történelem elfelejtett.",
-      "Pliska. Preslav. Tarnovo.\nHárom főváros. Egy név, amely sosem bukott el.",
-      "Ősi kikötők. Szigetkolostorok.\nAhol a tenger megőrizte a szárazföld titkait.",
-      "Arany sírok. Rózsamezők.\nA vidék legősibb emlékezete.",
-      "Orpheusz itt járt.\nA zene még mindig él a sziklákban.",
-      "Római romok a város alatt.\nMinden réteg más történetet mesél."
-    ],
-    "cards": [
-      {
-        "region": "Duna és Északnyugat",
-        "name": "A Kő és Folyó tartománya",
-        "epoch": "before",
-        "key": "Erődök, folyók, római utak és a belogradcsiki sziklaformációk - ahol a Duna kijelölte a birodalom peremét.",
-        "progress": 0,
-        "emblem": "🏔",
-        "status": "explore"
-      },
-      {
-        "region": "Régi fővárosok",
-        "name": "A Név tartománya",
-        "epoch": "after",
-        "key": "Pliska, Preslav, Tarnovo - a három főváros, amely hódításon, tűzön és újjászületésen át hordozta Bulgária nevét.",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
-        "region": "Fekete-tenger partvidéke",
-        "name": "A Tengeri Kapu tartománya",
-        "epoch": "before",
-        "key": "Ősi kikötők, fokok, sós tavak, szigetkolostorok - ahol a görög kolóniák találkoztak a trák partokkal, és a tenger határrá vált.",
-        "progress": 0,
-        "emblem": "🌊",
-        "status": "explore"
-      },
-      {
-        "region": "Trák-völgy",
-        "name": "A Királyok tartománya",
-        "epoch": "before",
-        "key": "Trák sírok, rituális dombok, rózsamezők, borvidék és aranyleletek - a legrégebbi emlékezet, amely megőrződött ezen a földön.",
-        "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "Rodope-hegység",
-        "name": "A Hang és Kő tartománya",
-        "epoch": "after",
-        "key": "Orpheusz-mítoszok, szent barlangok, ősi hidak, kőfalvak, erdők és Európa legrégebbi élő zenei hagyománya.",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "Szófia és Nyugat-Bulgária",
-        "name": "Az Útkereszteződések tartománya",
-        "epoch": "after",
-        "key": "Városi rétegek, Serdica romjai a város alatt, vitosai hegyi ösvények, ősi források és élő piacok.",
-        "progress": 0,
-        "emblem": "✦",
-        "status": "explore"
-      }
-    ]
+    "routesOf": "a 4 útvonalból teljesítve"
   },
   "guardianSight": {
     "eyebrow": "Guardian Sight",

@@ -72,78 +72,12 @@
   },
   "domains": {
     "eyebrow": "Domänen erkunden",
-    "heading": "Jede Region\nbirgt eine Welt.",
-    "lede": "Four main quest Domains hold the Master Keys of Bulgaria's living memory. The Cave Domain stands apart as the gateway where the Keeper first awakens.",
     "explore": "Erkunden",
     "continue": "Fortsetzen",
     "locked": "Gesperrt",
     "epochBefore": "Vor dem Namen",
     "epochAfter": "Nach dem Namen",
-    "routesOf": "of 4 routes completed",
-    "lures": [
-      "Wo die Donau das Reich berührte.\nFestungen erinnern, was die Geschichte vergaß.",
-      "Pliska. Preslav. Tarnowo.\nDrei Hauptstädte. Ein Name, der nie fiel.",
-      "Antike Häfen. Inselklöster.\nDas Meer bewahrte die Geheimnisse des Landes.",
-      "Goldene Gräber. Rosenfelder.\nDas älteste Gedächtnis des Landes.",
-      "Orpheus wandelte hier.\nDie Musik lebt noch in den Felsen.",
-      "Römische Ruinen unter der Stadt.\nJede Schicht erzählt eine andere Geschichte."
-    ],
-    "cards": [
-      {
-        "region": "Donau und Nordwest",
-        "name": "Domäne von Stein und Fluss",
-        "epoch": "before",
-        "key": "Festungen, Flüsse, römische Straßen und die Belogradchik-Steinformationen — wo die Donau den Rand des Imperiums markierte.",
-        "progress": 0,
-        "emblem": "🏔",
-        "status": "explore"
-      },
-      {
-        "region": "Die alten Hauptstädte",
-        "name": "Domäne des Namens",
-        "epoch": "after",
-        "key": "Pliska, Preslav, Tarnowo — die drei Hauptstädte, die den Namen Bulgariens durch Eroberung, Feuer und Wiedergeburt trugen.",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
-        "region": "Schwarzmeerküste",
-        "name": "Domäne des Meerestores",
-        "epoch": "before",
-        "key": "Antike Häfen, Kaps, Salzseen, Inselklöster — wo griechische Kolonien auf thrakische Küsten trafen und das Meer zur Grenze wurde.",
-        "progress": 0,
-        "emblem": "🌊",
-        "status": "explore"
-      },
-      {
-        "region": "Thrakisches Tal",
-        "name": "Domäne der Könige",
-        "epoch": "before",
-        "key": "Thrakische Grabhügel, Ritualhügel, Rosenfelder, Weinland und goldene Artefakte — das älteste im Land bewahrte Gedächtnis.",
-        "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "Rhodopengebirge",
-        "name": "Domäne der Stimme und des Steins",
-        "epoch": "after",
-        "key": "Orpheus-Mythen, heilige Höhlen, alte Brücken, Steindörfer, Wälder und die älteste lebendige Musiktradition Europas.",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "Sofia und Westbulgarien",
-        "name": "Domäne der Kreuzwege",
-        "epoch": "after",
-        "key": "Urbane Schichten, Serdica-Ruinen unter der Stadt, Vitosha-Bergpfade, antike Quellen und lebendige Märkte.",
-        "progress": 0,
-        "emblem": "✦",
-        "status": "explore"
-      }
-    ]
+    "routesOf": "von 4 Routen abgeschlossen"
   },
   "guardianSight": {
     "eyebrow": "Wächterblick",

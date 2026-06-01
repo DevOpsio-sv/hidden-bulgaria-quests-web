@@ -72,78 +72,12 @@
   },
   "domains": {
     "eyebrow": "探索领域",
-    "heading": "每个地区\n都隐藏着一个世界。",
-    "lede": "六个区域领域构成保加利亚隐藏记忆的地图。每个领域都有自己的路线、遗物、时代和最终印记。",
     "explore": "探索",
     "continue": "继续",
     "locked": "已锁定",
     "epochBefore": "名字之前",
     "epochAfter": "名字之后",
-    "routesOf": "条路线已完成，共 3 条",
-    "lures": [
-      "多瑙河与帝国相遇之处。\n堡垒记得历史遗忘的事。",
-      "普利斯卡。普雷斯拉夫。特尔诺沃。\n三座都城。一个从未倒下的名字。",
-      "古老港口。岛上修道院。\n大海守护陆地秘密的地方。",
-      "黄金墓冢。玫瑰田野。\n这片土地上最古老的记忆。",
-      "俄耳甫斯曾在此行走。\n音乐仍在岩石中回响。",
-      "城市之下的罗马遗迹。\n每一层都讲述不同的故事。"
-    ],
-    "cards": [
-      {
-        "region": "多瑙河与西北部",
-        "name": "石与河之域",
-        "epoch": "before",
-        "key": "堡垒、河流、罗马道路和贝洛格拉奇克岩石群 — 多瑙河在这里划定帝国边缘。",
-        "progress": 0,
-        "emblem": "🏔",
-        "status": "explore"
-      },
-      {
-        "region": "古都",
-        "name": "名字之域",
-        "epoch": "after",
-        "key": "普利斯卡、普雷斯拉夫、特尔诺沃 — 三座都城在征服、战火与重生中承载着保加利亚之名。",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
-        "region": "黑海海岸",
-        "name": "海门之域",
-        "epoch": "before",
-        "key": "古老港口、海角、盐湖、岛上修道院 — 希腊殖民地在此遇见色雷斯海岸，大海成为边界。",
-        "progress": 0,
-        "emblem": "🌊",
-        "status": "explore"
-      },
-      {
-        "region": "色雷斯山谷",
-        "name": "诸王之域",
-        "epoch": "before",
-        "key": "色雷斯墓冢、仪式山丘、玫瑰田、葡萄酒乡和黄金文物 — 这片土地保存的最古老记忆。",
-        "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "罗多彼山脉",
-        "name": "声音与石之域",
-        "epoch": "after",
-        "key": "俄耳甫斯神话、神圣洞穴、古桥、石村、森林，以及欧洲最古老的鲜活音乐传统。",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "索非亚与保加利亚西部",
-        "name": "十字路口之域",
-        "epoch": "after",
-        "key": "城市层叠的历史、城下塞尔迪卡遗迹、维托沙山路径、古老泉水和鲜活市集。",
-        "progress": 0,
-        "emblem": "✦",
-        "status": "explore"
-      }
-    ]
+    "routesOf": "条路线已完成，共 4 条"
   },
   "guardianSight": {
     "eyebrow": "Guardian Sight",

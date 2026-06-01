@@ -26,7 +26,7 @@
     "lede": "Călătorește prin Bulgaria. Dezvăluie secretele antice. Devino un Pazitor — un gardian al memoriei vii care a dăinuit treisprezece secole.",
     "ctaPrimary": "Descarcă aplicația",
     "ctaSecondary": "Vezi călătoria",
-    "trust": ["Misiuni AR reale", "Povestire cinematografică", "Potrivit pentru familii", "13 limbi"],
+    "trust": ["Misiuni AR reale", "Povestire cinematografică", "Potrivit pentru familii", "14 limbi"],
     "mapLabel": "Harta interactivă a memoriei ascunse a Bulgariei",
     "phoneDomain": "Domeniul Numelui",
     "phoneTitle": "Vechile capitale",
@@ -72,78 +72,12 @@
   },
   "domains": {
     "eyebrow": "Explorează domeniile",
-    "heading": "Fiecare regiune\nascunde o lume.",
-    "lede": "Șase domenii regionale formează harta memoriei ascunse a Bulgariei. Fiecare deține propriile trasee, relicve, epocă și pecete finală.",
     "explore": "Explorează",
     "continue": "Continuă",
     "locked": "Blocat",
     "epochBefore": "Înainte de Nume",
     "epochAfter": "După Nume",
-    "routesOf": "din 3 trasee completate",
-    "lures": [
-      "Acolo unde Dunărea întâlnea imperiul.\nFortărețele țin minte ceea ce istoria a uitat.",
-      "Pliska. Preslav. Tarnovo.\nTrei capitale. Un nume care nu a căzut niciodată.",
-      "Porturi antice. Mănăstiri insulare.\nMarea păstra secretele pământului.",
-      "Morminte de aur. Câmpuri de trandafiri.\nCea mai veche memorie a acestui pământ.",
-      "Orfeu a călcat pe aici.\nMuzica trăiește încă în stânci.",
-      "Ruine romane sub oraș.\nFiecare strat spune o altă poveste."
-    ],
-    "cards": [
-      {
-        "region": "Dunărea și Nord-Vest",
-        "name": "Domeniul Pietrei și Râului",
-        "epoch": "before",
-        "key": "Cetăți, râuri, drumuri romane și formațiunile stâncoase de la Belogradchik — acolo unde Dunărea marca marginea imperiului.",
-        "progress": 0,
-        "emblem": "🏔",
-        "status": "explore"
-      },
-      {
-        "region": "Vechile capitale",
-        "name": "Domeniul Numelui",
-        "epoch": "after",
-        "key": "Pliska, Preslav, Tarnovo — cele trei capitale care au purtat numele Bulgariei prin cuceriri, foc și renaștere.",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
-        "region": "Coasta Mării Negre",
-        "name": "Domeniul Porții Mării",
-        "epoch": "before",
-        "key": "Porturi antice, capuri, lacuri sărate, mănăstiri insulare — acolo unde coloniile grecești au întâlnit țărmurile trace și marea a devenit graniță.",
-        "progress": 0,
-        "emblem": "🌊",
-        "status": "explore"
-      },
-      {
-        "region": "Valea Traciei",
-        "name": "Domeniul Regilor",
-        "epoch": "before",
-        "key": "Tumuli traci, coline rituale, câmpuri de trandafiri, podgorii și artefacte de aur — cea mai veche memorie păstrată în acest pământ.",
-        "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "Munții Rodopi",
-        "name": "Domeniul Vocii și Pietrei",
-        "epoch": "after",
-        "key": "Mituri ale lui Orfeu, peșteri sacre, poduri antice, sate de piatră, păduri și cea mai veche tradiție muzicală vie din Europa.",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "Sofia și Bulgaria de Vest",
-        "name": "Domeniul Răscrucilor",
-        "epoch": "after",
-        "key": "Straturi urbane, ruinele Serdicăi sub oraș, poteci pe muntele Vitosha, izvoare antice și piețe vii.",
-        "progress": 0,
-        "emblem": "✦",
-        "status": "explore"
-      }
-    ]
+    "routesOf": "din 4 trasee completate"
   },
   "guardianSight": {
     "eyebrow": "Privirea Pazitorului",

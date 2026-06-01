@@ -72,78 +72,12 @@
   },
   "domains": {
     "eyebrow": "Explorar dominios",
-    "heading": "Cada región\nesconde un mundo.",
-    "lede": "Seis dominios regionales forman el mapa de la memoria oculta de Bulgaria. Cada uno alberga sus propias rutas, reliquias, época y sello final.",
     "explore": "Explorar",
     "continue": "Continuar",
     "locked": "Bloqueado",
     "epochBefore": "Antes del Nombre",
     "epochAfter": "Después del Nombre",
-    "routesOf": "de 3 rutas completadas",
-    "lures": [
-      "Donde el Danubio encontró el imperio.\nLas fortalezas recuerdan lo que la historia olvidó.",
-      "Pliska. Preslav. Tarnovo.\nTres capitales. Un nombre que nunca cayó.",
-      "Puertos antiguos. Monasterios insulares.\nEl mar guardaba los secretos de la tierra.",
-      "Tumbas de oro. Campos de rosas.\nLa memoria más antigua del país.",
-      "Orfeo caminó aquí.\nLa música vive aún en las rocas.",
-      "Ruinas romanas bajo la ciudad.\nCada capa cuenta una historia diferente."
-    ],
-    "cards": [
-      {
-        "region": "Danubio y Noroeste",
-        "name": "Dominio de Piedra y Río",
-        "epoch": "before",
-        "key": "Fortalezas, ríos, calzadas romanas y las formaciones rocosas de Belogradchik — donde el Danubio marcaba el borde del imperio.",
-        "progress": 0,
-        "emblem": "🏔",
-        "status": "explore"
-      },
-      {
-        "region": "Las antiguas capitales",
-        "name": "Dominio del Nombre",
-        "epoch": "after",
-        "key": "Pliska, Preslav, Tarnovo — las tres capitales que llevaron el nombre de Bulgaria a través de conquistas, fuego y renacimiento.",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
-        "region": "Costa del Mar Negro",
-        "name": "Dominio de la Puerta del Mar",
-        "epoch": "before",
-        "key": "Puertos antiguos, cabos, lagos salados, monasterios insulares — donde colonias griegas encontraron costas tracias y el mar se convirtió en frontera.",
-        "progress": 0,
-        "emblem": "🌊",
-        "status": "explore"
-      },
-      {
-        "region": "Valle de Tracia",
-        "name": "Dominio de los Reyes",
-        "epoch": "before",
-        "key": "Túmulos tracios, colinas rituales, campos de rosas, viñedos y artefactos de oro — la memoria más antigua preservada en esta tierra.",
-        "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "Montañas de los Ródopes",
-        "name": "Dominio de la Voz y la Piedra",
-        "epoch": "after",
-        "key": "Mitos de Orfeo, cuevas sagradas, puentes antiguos, pueblos de piedra, bosques y la tradición musical viva más antigua de Europa.",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "Sofía y Bulgaria occidental",
-        "name": "Dominio de la Encrucijada",
-        "epoch": "after",
-        "key": "Capas urbanas, ruinas de Serdica bajo la ciudad, senderos del monte Vitosha, manantiales antiguos y mercados vivos.",
-        "progress": 0,
-        "emblem": "✦",
-        "status": "explore"
-      }
-    ]
+    "routesOf": "de 4 rutas completadas"
   },
   "guardianSight": {
     "eyebrow": "Visión del Guardián",

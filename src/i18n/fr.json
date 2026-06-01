@@ -26,7 +26,7 @@
     "lede": "Voyagez à travers la Bulgarie. Révélez les secrets anciens. Devenez un Gardien — un gardien de la mémoire vivante qui a perduré treize siècles.",
     "ctaPrimary": "Télécharger l'application",
     "ctaSecondary": "Voir le voyage",
-    "trust": ["Quêtes AR réelles", "Narration cinématographique", "Familles bienvenues", "13 langues"],
+    "trust": ["Quêtes AR réelles", "Narration cinématographique", "Familles bienvenues", "14 langues"],
     "mapLabel": "Carte interactive de la mémoire cachée de la Bulgarie",
     "phoneDomain": "Domaine du Nom",
     "phoneTitle": "Les anciennes capitales",
@@ -72,78 +72,12 @@
   },
   "domains": {
     "eyebrow": "Explorer les domaines",
-    "heading": "Chaque région\ncache un monde.",
-    "lede": "Six domaines régionaux forment la carte de la mémoire cachée de la Bulgarie. Chacun possède ses propres parcours, reliques, époque et sceau final.",
     "explore": "Explorer",
     "continue": "Continuer",
     "locked": "Verrouillé",
     "epochBefore": "Avant le Nom",
     "epochAfter": "Après le Nom",
-    "routesOf": "sur 3 parcours complétés",
-    "lures": [
-      "Là où le Danube rencontrait l'empire.\nLes forteresses se souviennent de ce que l'histoire a oublié.",
-      "Pliska. Preslav. Tarnovo.\nTrois capitales. Un nom qui ne tomba jamais.",
-      "Ports antiques. Monastères insulaires.\nLa mer gardait les secrets de la terre.",
-      "Tombes d'or. Champs de roses.\nLa mémoire la plus ancienne du pays.",
-      "Orphée a marché ici.\nLa musique vit encore dans les rochers.",
-      "Ruines romaines sous la ville.\nChaque couche raconte une histoire différente."
-    ],
-    "cards": [
-      {
-        "region": "Danube et Nord-Ouest",
-        "name": "Domaine de la Pierre et de la Rivière",
-        "epoch": "before",
-        "key": "Forteresses, rivières, routes romaines et les formations rocheuses de Belogradchik — là où le Danube marquait la frontière de l'empire.",
-        "progress": 0,
-        "emblem": "🏔",
-        "status": "explore"
-      },
-      {
-        "region": "Les anciennes capitales",
-        "name": "Domaine du Nom",
-        "epoch": "after",
-        "key": "Pliska, Preslav, Tarnovo — les trois capitales qui ont porté le nom de la Bulgarie à travers conquêtes, incendies et renaissances.",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
-        "region": "Côte de la mer Noire",
-        "name": "Domaine de la Porte de la Mer",
-        "epoch": "before",
-        "key": "Ports antiques, caps, lacs salés, monastères insulaires — là où les colonies grecques rencontraient les rivages thraces et la mer devenait frontière.",
-        "progress": 0,
-        "emblem": "🌊",
-        "status": "explore"
-      },
-      {
-        "region": "Vallée de Thrace",
-        "name": "Domaine des Rois",
-        "epoch": "before",
-        "key": "Tumuli thraces, collines rituelles, champs de roses, vignobles et artefacts en or — la mémoire la plus ancienne préservée dans cette terre.",
-        "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "Montagnes des Rhodopes",
-        "name": "Domaine de la Voix et de la Pierre",
-        "epoch": "after",
-        "key": "Mythes d'Orphée, grottes sacrées, ponts anciens, villages de pierre, forêts et la plus vieille tradition musicale vivante d'Europe.",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "Sofia et Bulgarie occidentale",
-        "name": "Domaine du Carrefour",
-        "epoch": "after",
-        "key": "Couches urbaines, ruines de Serdica sous la ville, sentiers du mont Vitosha, sources antiques et marchés vivants.",
-        "progress": 0,
-        "emblem": "✦",
-        "status": "explore"
-      }
-    ]
+    "routesOf": "sur 4 parcours complétés"
   },
   "guardianSight": {
     "eyebrow": "Vision du Gardien",
