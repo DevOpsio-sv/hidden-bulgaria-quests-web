@@ -103,6 +103,17 @@ const a = dict.arrival;
           <li class="hero-trust-chip">{chip}</li>
         ))}
       </ul>
+
+      <a
+        class="hero-scroll-hint"
+        href={`/${lang}#journey`}
+        aria-label={a.cta}
+      >
+        <span class="hero-scroll-label">{a.cta}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22" aria-hidden="true">
+          <path d="M12 4v16M5 13l7 7 7-7"/>
+        </svg>
+      </a>
     </div>
 
     <!-- Phone mockup (desktop only) -->
@@ -116,18 +127,6 @@ const a = dict.arrival;
       <p class="hero-phone-progress">{h.phoneProgress}</p>
     </div>
   </div>
-
-  <!-- Scroll hint -->
-  <a
-    class="hero-scroll-hint"
-    href={`/${lang}#journey`}
-    aria-label={a.cta}
-  >
-    <span class="hero-scroll-label">{a.cta}</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="22" height="22" aria-hidden="true">
-      <path d="M12 4v16M5 13l7 7 7-7"/>
-    </svg>
-  </a>
 
   <div class="arrival-veil" aria-hidden="true"></div>
 </section>
