@@ -18,17 +18,17 @@
     "menuLabel": "Menü"
   },
   "hero": {
-    "eyebrow": "Offizielle Produktwebsite",
+    "eyebrow": "Interaktive AR-Mobilapp",
     "line1": "1345 Jahre.",
     "line2": "Ein Name",
     "line3": "überlebte.",
     "question": "Wie?",
-    "lede": "Reise durch Bulgarien. Enthülle die alten Geheimnisse. Werde ein Hüter — ein Bewahrer des lebendigen Gedächtnisses, das dreizehn Jahrhunderte überdauert hat.",
+    "lede": "Geh den Weg. Erwecke die Erinnerung. Werde ein Hüter.",
     "ctaPrimary": "App herunterladen",
-    "ctaSecondary": "Die Reise ansehen",
+    "ctaSecondary": "Intro ansehen",
     "trust": [
-      "AR Echte Quests",
-      "Cineastisches Storytelling",
+      "AR Live-Abenteuer",
+      "Filmische Erzählung",
       "Familienfreundlich",
       "14 Sprachen"
     ],
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Wächterblick",
-    "heading": "Sieh, was\nandere nicht können.",
+    "heading": "Jeder Ort erinnert sich.",
     "lede": "Der Wächterblick ist der optionale Augmented-Reality-Kameramodus in Unlocking Bulgaria. Richte ihn auf die Welt — und sieh die verborgene Schicht darunter.",
-    "sightBody": "Richte die Kamera auf die Welt.\nDie verborgene Schicht erscheint unter der Realität.",
+    "sightBody": "Richte deine Kamera auf das Land. Die verborgene Schicht erscheint unter dem, was die Zeit verborgen hat.",
     "ariaVisual": "Wächterblick AR-Oberfläche — animierte Scan-Ringe",
     "floatTag1": "Verborgene Schicht enthüllt",
     "floatTag2": "Kontrollpunkt · 82m",
@@ -133,6 +133,35 @@
         "title": "Heroische Momente",
         "subtitle": "Momente der Enthüllung",
         "desc": "An heiligen Stätten, bei Routenfinales und bei Schlüsselentdeckungen erwarten dich besondere Szenen und Belohnungen."
+      }
+    ],
+    "flowLabel1": "Realität",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Enthüllt",
+    "scenes": [
+      {
+        "name": "Prohodna-Höhle",
+        "icon": "◎",
+        "reality": "Eine natürliche Höhle. Zwei Öffnungen zum Himmel. Stein, geformt durch Jahrtausende von Regen.",
+        "revealed": "Der Heilige Stein spricht. Die Augen Gottes erschließen die verborgene Erinnerung des Landes."
+      },
+      {
+        "name": "Madara-Reiter",
+        "icon": "◈",
+        "reality": "Ein Relief, vor 1300 Jahren in lebendigen Fels gemeißelt. Für alle sichtbar. Von wenigen verstanden.",
+        "revealed": "Alte Inschriften tauchen auf. Die Geschichte des Reiters — und der Ursprung des Namens — werden lesbar."
+      },
+      {
+        "name": "Alte Festung",
+        "icon": "◉",
+        "reality": "Ruinen auf einem Hügel. Steine, die Jahrhunderte überdauert haben. Ein stilles Zeugnis.",
+        "revealed": "Die Festungsmauern erheben sich wieder. Die Verteidigung des Namens und seines Volkes wird sichtbar."
+      },
+      {
+        "name": "Heilige Stätte",
+        "icon": "✦",
+        "reality": "Ein unscheinbarer Ort. Von der Oberfläche aus nichts Sichtbares.",
+        "revealed": "Energiespuren tauchen auf. Ein Artefakt wartet. Die Quest geht eine Schicht tiefer."
       }
     ]
   },

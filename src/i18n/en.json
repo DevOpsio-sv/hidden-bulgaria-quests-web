@@ -18,17 +18,17 @@
     "menuLabel": "Menu"
   },
   "hero": {
-    "eyebrow": "Official product website",
+    "eyebrow": "Interactive AR mobile app",
     "line1": "1345 Years.",
     "line2": "One Name",
     "line3": "Survived.",
     "question": "How?",
-    "lede": "Walk the real land of Bulgaria. Awaken memory at sacred places. Become a Keeper - the one who carries the living memory of the Name.",
+    "lede": "Walk the path. Awaken memory. Become a Keeper.",
     "ctaPrimary": "Download the App",
-    "ctaSecondary": "Watch the Journey",
+    "ctaSecondary": "Watch intro",
     "trust": [
-      "AR real-world quests",
-      "Cinematic storytelling",
+      "AR live adventure",
+      "Cinematic narrative",
       "Family-friendly",
       "14 languages"
     ],
@@ -37,6 +37,9 @@
     "phoneTitle": "Prohodna",
     "phoneDesc": "Enter the place where the land was watching before the Name.",
     "phoneProgress": "Gateway Seal awakening",
+    "portalAwakenCta": "Awaken the Seal",
+    "portalUnlockedCta": "The portal is awake",
+    "portalFinalCta": "✨ The connection is established! To activate the live AR sight beneath the Eyes of God, download the app:",
     "videoTitle": "The Journey — Unlocking Bulgaria",
     "videoClose": "Close"
   },
@@ -160,9 +163,9 @@
   },
   "guardianSight": {
     "eyebrow": "Guardian Sight",
-    "heading": "See what\nothers cannot.",
+    "heading": "Every place remembers.",
     "lede": "Guardian Sight is the Keeper's optional way of seeing what a place has witnessed. It reveals traces, symbols, and memory without making AR required.",
-    "sightBody": "Point the camera at the world.\nThe hidden layer appears beneath the real.",
+    "sightBody": "Point your camera at the land. The hidden layer appears beneath what time concealed.",
     "ariaVisual": "Guardian Sight AR interface — animated scanning rings",
     "floatTag1": "Hidden layer revealed",
     "floatTag2": "Checkpoint · 82m",
@@ -210,7 +213,36 @@
       "liveOn": "Guardian Sight activated — sacred layer revealed",
       "liveOff": "Guardian Sight deactivated",
       "credit": "Photo: placeholder · Licensed image of Prohodna Cave required · See README"
-    }
+    },
+    "flowLabel1": "Reality",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Revealed",
+    "scenes": [
+      {
+        "name": "Prohodna Cave",
+        "icon": "◎",
+        "reality": "A natural cave. Two sky openings above. Stone worn by millennia of rain.",
+        "revealed": "The Sacred Stone speaks. The Eyes of God unlock the hidden memory of the land."
+      },
+      {
+        "name": "Madara Rider",
+        "icon": "◈",
+        "reality": "A relief carved 1300 years ago into living rock. Visible to all. Understood by few.",
+        "revealed": "Ancient inscriptions emerge. The rider's story — and the origin of the Name — become legible."
+      },
+      {
+        "name": "Ancient Fortress",
+        "icon": "◉",
+        "reality": "Ruins on a hilltop. Stones worn by centuries. A silent record of what stood here.",
+        "revealed": "The fortress walls rise again. The defense of the Name and its people becomes visible."
+      },
+      {
+        "name": "Sacred Site",
+        "icon": "✦",
+        "reality": "An unremarkable place. Nothing visible from the surface.",
+        "revealed": "Energy traces surface. An Artifact waits. The quest moves one layer deeper."
+      }
+    ]
   },
   "timeline": {
     "eyebrow": "Historical timeline",

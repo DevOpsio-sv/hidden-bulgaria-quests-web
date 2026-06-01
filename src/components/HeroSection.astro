@@ -1,10 +1,14 @@
 ---
 import type { Dict } from "../i18n";
 import { GOOGLE_PLAY_URL } from "../config/appLinks";
+import PortalCard from "./PortalCard.astro";
 interface Props { dict: Dict; lang: string; }
 const { dict, lang } = Astro.props;
 const h = dict.hero;
 const a = dict.arrival;
+const line1Match = h.line1.match(/^(\d+)(.*)$/);
+const heroNumber = line1Match?.[1];
+const heroLine1Rest = line1Match?.[2] ?? h.line1;
 ---
 
 <section class="hero-section" aria-label={dict.ariaHero}>
@@ -78,12 +82,20 @@ const a = dict.arrival;
       <span class="hero-eyebrow">{h.eyebrow}</span>
 
       <h1 class="hero-headline">
-        <span class="hero-line hl-1">{h.line1}</span>
+        <span class="hero-line hl-1">
+          {heroNumber && <span class="hero-number">{heroNumber}</span>}{heroLine1Rest}
+        </span>
         <span class="hero-line hl-2">{h.line2} {h.line3}</span>
         <span class="hero-question">{h.question}</span>
       </h1>
 
       <p class="hero-lede">{h.lede}</p>
+
+      <ul class="hero-trust" role="list" aria-label={h.mapLabel}>
+        {h.trust.map((chip) => (
+          <li class="hero-trust-chip">{chip}</li>
+        ))}
+      </ul>
 
       <div class="hero-ctas">
         <a class="btn btn-gold" href={GOOGLE_PLAY_URL}>{h.ctaPrimary}</a>
@@ -94,15 +106,12 @@ const a = dict.arrival;
           aria-controls="hero-lightbox"
           aria-expanded="false"
         >
+          <svg class="btn-play-icon" viewBox="0 0 10 12" fill="currentColor" width="10" height="12" aria-hidden="true">
+            <path d="M0 0L10 6L0 12V0Z"/>
+          </svg>
           {h.ctaSecondary}
         </button>
       </div>
-
-      <ul class="hero-trust" role="list" aria-label={h.mapLabel}>
-        {h.trust.map((chip) => (
-          <li class="hero-trust-chip">{chip}</li>
-        ))}
-      </ul>
 
       <a
         class="hero-scroll-hint"
@@ -116,16 +125,7 @@ const a = dict.arrival;
       </a>
     </div>
 
-    <!-- Phone mockup (desktop only) -->
-    <div class="hero-phone" aria-hidden="true">
-      <p class="hero-phone-domain">{h.phoneDomain}</p>
-      <p class="hero-phone-title">{h.phoneTitle}</p>
-      <p class="hero-phone-desc">{h.phoneDesc}</p>
-      <div class="hero-phone-bar-wrap">
-        <div class="hero-phone-bar"></div>
-      </div>
-      <p class="hero-phone-progress">{h.phoneProgress}</p>
-    </div>
+    <PortalCard dict={dict} />
   </div>
 
   <div class="arrival-veil" aria-hidden="true"></div>

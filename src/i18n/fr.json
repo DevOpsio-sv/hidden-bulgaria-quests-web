@@ -18,17 +18,17 @@
     "menuLabel": "Menu"
   },
   "hero": {
-    "eyebrow": "Site officiel du produit",
+    "eyebrow": "Application mobile AR interactive",
     "line1": "1345 ans.",
     "line2": "Un Nom",
     "line3": "a survécu.",
     "question": "Comment ?",
-    "lede": "Voyagez à travers la Bulgarie. Révélez les secrets anciens. Devenez un Gardien — un gardien de la mémoire vivante qui a perduré treize siècles.",
+    "lede": "Marche sur le chemin. Éveille la mémoire. Deviens un Gardien.",
     "ctaPrimary": "Télécharger l'application",
-    "ctaSecondary": "Voir le voyage",
+    "ctaSecondary": "Voir l'intro",
     "trust": [
-      "Quêtes AR réelles",
-      "Narration cinématographique",
+      "Aventure AR en direct",
+      "Récit cinématographique",
       "Familles bienvenues",
       "14 langues"
     ],
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Vision du Gardien",
-    "heading": "Voyez ce que\nd'autres ne peuvent pas.",
+    "heading": "Chaque lieu se souvient.",
     "lede": "La Vision du Gardien est le mode caméra de réalité augmentée optionnel dans Unlocking Bulgaria. Pointez-le vers le monde — et voyez la couche cachée en dessous.",
-    "sightBody": "Pointez la caméra vers le monde.\nLa couche cachée apparaît sous le réel.",
+    "sightBody": "Pointez votre caméra vers la terre. La couche cachée apparaît sous ce que le temps a dissimulé.",
     "ariaVisual": "Interface RA Vision du Gardien — anneaux de scan animés",
     "floatTag1": "Couche cachée révélée",
     "floatTag2": "Point de contrôle · 82m",
@@ -133,6 +133,35 @@
         "title": "Moments héroïques",
         "subtitle": "Moments de révélation",
         "desc": "Dans les lieux sacrés, lors des finales de parcours et des découvertes clés, des scènes spéciales et des récompenses t'attendent."
+      }
+    ],
+    "flowLabel1": "Réalité",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Révélé",
+    "scenes": [
+      {
+        "name": "Grotte de Prohodna",
+        "icon": "◎",
+        "reality": "Une grotte naturelle. Deux ouvertures vers le ciel. Pierre usée par des millénaires de pluie.",
+        "revealed": "La Pierre Sacrée parle. Les Yeux de Dieu déverrouillent la mémoire cachée de la terre."
+      },
+      {
+        "name": "Cavalier de Madara",
+        "icon": "◈",
+        "reality": "Un relief gravé il y a 1300 ans dans la roche vive. Visible pour tous. Compris par peu.",
+        "revealed": "Des inscriptions anciennes émergent. L'histoire du cavalier — et l'origine du Nom — deviennent lisibles."
+      },
+      {
+        "name": "Forteresse antique",
+        "icon": "◉",
+        "reality": "Des ruines sur une colline. Des pierres usées par des siècles. Un témoignage silencieux.",
+        "revealed": "Les murs de la forteresse se dressent à nouveau. La défense du Nom et de son peuple devient visible."
+      },
+      {
+        "name": "Site sacré",
+        "icon": "✦",
+        "reality": "Un endroit banal. Rien de visible en surface.",
+        "revealed": "Des traces d'énergie émergent. Un Artefact attend. La quête descend d'une couche plus profonde."
       }
     ]
   },

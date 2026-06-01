@@ -6,44 +6,66 @@ const d = dict.guardianSight;
 ---
 
 <section class="s-sight" id="guardian-sight" aria-labelledby="sight-heading">
-  <div class="sight-layout wrap">
-    <!-- AR rings visual -->
-    <div class="sight-visual reveal" aria-label={d.ariaVisual}>
-      <div class="gs-rings" aria-hidden="true">
-        <div class="gs-ring gs-ring-a"></div>
-        <div class="gs-ring gs-ring-b"></div>
-        <div class="gs-ring gs-ring-c"></div>
-        <div class="gs-center">
-          <span class="gs-icon">◎</span>
-        </div>
-      </div>
-      <div class="gs-tag gs-tag-a" aria-hidden="true">{d.floatTag1}</div>
-      <div class="gs-tag gs-tag-b" aria-hidden="true">{d.floatTag2}</div>
+  <div class="wrap">
+
+    <!-- Section intro — centered, benefit-led headline -->
+    <div class="sight-intro reveal">
+      <p class="eyebrow">{d.eyebrow}</p>
+      <h2 id="sight-heading">{d.heading}</h2>
+      <p class="sight-body">{d.sightBody}</p>
     </div>
 
-    <!-- Copy + features -->
-    <div class="sight-copy reveal reveal-d2">
-      <p class="eyebrow">{d.eyebrow}</p>
-      <h2 id="sight-heading" style="white-space:pre-line">{d.heading}</h2>
-      <p class="sight-body" style="white-space:pre-line">{d.sightBody}</p>
-
-      <div class="sight-features">
-        {d.features.map((feat, i) => {
-          const delay = i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : i === 3 ? " reveal-d3" : "";
-          return (
-            <div class={`sight-feat reveal${delay}`}>
-              <div class="sight-feat-icon" aria-hidden="true">{feat.icon}</div>
-              <h3>{feat.title}</h3>
-              {feat.subtitle && <p class="sight-feat-sub">{feat.subtitle}</p>}
-              <p>{feat.desc}</p>
+    <!-- Reality → Revealed: 4 location demonstration cards -->
+    <div class="sight-scenes">
+      {d.scenes.map((scene: { icon: string; name: string; reality: string; revealed: string }, i: number) => {
+        const delay = i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : i === 3 ? " reveal-d3" : "";
+        return (
+          <article class={`ss-card reveal${delay}`}>
+            <div class="ss-card-head">
+              <span class="ss-icon" aria-hidden="true">{scene.icon}</span>
+              <p class="ss-name">{scene.name}</p>
             </div>
-          );
-        })}
-      </div>
 
+            <div class="ss-state ss-reality">
+              <span class="ss-tag ss-tag-reality">{d.flowLabel1}</span>
+              <p class="ss-text">{scene.reality}</p>
+            </div>
+
+            <div class="ss-divider" aria-hidden="true">
+              <span class="ss-divider-line"></span>
+              <span class="ss-divider-icon">◎</span>
+              <span class="ss-divider-line"></span>
+            </div>
+
+            <div class="ss-state ss-revealed">
+              <span class="ss-tag ss-tag-revealed">{d.flowLabel3}</span>
+              <p class="ss-text ss-text-revealed">{scene.revealed}</p>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <!-- Capability grid — what Guardian Sight reveals (secondary) -->
+    <div class="sight-features">
+      {d.features.map((feat: { icon: string; title: string; subtitle?: string; desc: string }, i: number) => {
+        const delay = i === 1 ? " reveal-d1" : i === 2 ? " reveal-d2" : i === 3 ? " reveal-d3" : "";
+        return (
+          <div class={`sight-feat reveal${delay}`}>
+            <div class="sight-feat-icon" aria-hidden="true">{feat.icon}</div>
+            <h3>{feat.title}</h3>
+            {feat.subtitle && <p class="sight-feat-sub">{feat.subtitle}</p>}
+            <p>{feat.desc}</p>
+          </div>
+        );
+      })}
+    </div>
+
+    <div class="sight-cta reveal">
       <a class="sight-demo-link btn btn-ghost" href={`/${lang}/places/prohodna-cave`}>
         {d.centerLabel.replace("\n", " ")} →
       </a>
     </div>
+
   </div>
 </section>

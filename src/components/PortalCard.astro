@@ -1,0 +1,664 @@
+---
+import type { Dict } from "../i18n";
+import { GOOGLE_PLAY_URL } from "../config/appLinks";
+
+interface Props { dict: Dict; }
+
+const { dict } = Astro.props;
+const h = dict.hero;
+const APP_STORE_URL = "https://www.apple.com/app-store/";
+---
+
+<div
+  class="portal-card"
+  data-portal-card
+  data-unlocked-label={h.portalUnlockedCta}
+  data-final-message={h.portalFinalCta}
+  data-google-play-url={GOOGLE_PLAY_URL}
+  data-app-store-url={APP_STORE_URL}
+>
+  <video
+    class="portal-cave-video"
+    muted
+    playsinline
+    preload="metadata"
+    aria-hidden="true"
+  >
+    <source src="/video/prohodna-portal.mp4" type="video/mp4" />
+  </video>
+
+  <div class="portal-panel">
+    <div class="portal-panel-bg" aria-hidden="true"></div>
+    <div class="portal-scanline" aria-hidden="true"></div>
+
+    <div class="portal-copy portal-copy-initial">
+      <p class="portal-kicker">{h.phoneDomain}</p>
+      <h2 class="portal-title">{h.phoneTitle}</h2>
+      <div class="portal-description-wrap" data-portal-description-wrap>
+        <p class="portal-description">{h.phoneDesc}</p>
+      </div>
+
+      <button class="portal-awaken" type="button" data-portal-trigger>
+        {h.portalAwakenCta}
+      </button>
+
+      <div class="portal-progress" aria-hidden="true">
+        <span class="portal-progress-fill"></span>
+      </div>
+      <p class="portal-progress-label">{h.phoneProgress}</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  type ThreeNamespace = {
+    Scene: new () => any;
+    PerspectiveCamera: new (fov: number, aspect: number, near: number, far: number) => any;
+    WebGLRenderer: new (options: { canvas: HTMLCanvasElement; alpha: boolean; antialias: boolean }) => any;
+    MeshStandardMaterial: new (options: Record<string, unknown>) => any;
+    Shape: new () => any;
+    CanvasTexture: new (canvas: HTMLCanvasElement) => any;
+    ExtrudeGeometry: new (shape: any, options: Record<string, unknown>) => any;
+    Mesh: new (geometry: any, material: any) => any;
+    PMREMGenerator: new (renderer: any) => any;
+    PointLight: new (...args: number[]) => any;
+    DirectionalLight: new (...args: number[]) => any;
+    AmbientLight: new (...args: number[]) => any;
+  };
+
+  declare global {
+    interface Window {
+      THREE?: ThreeNamespace;
+    }
+  }
+
+  const portalCards = document.querySelectorAll<HTMLElement>("[data-portal-card]");
+  const threeUrl = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+  let threePromise: Promise<ThreeNamespace | null> | null = null;
+
+  const loadThree = () => {
+    if (window.THREE) return Promise.resolve(window.THREE);
+    if (threePromise) return threePromise;
+
+    threePromise = new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = threeUrl;
+      script.async = true;
+      script.onload = () => resolve(window.THREE ?? null);
+      script.onerror = () => resolve(null);
+      document.head.append(script);
+    });
+
+    return threePromise;
+  };
+
+  const firePortalRunes = async (source: HTMLElement) => {
+    const THREE = await loadThree();
+    if (!THREE) return;
+
+    const rect = source.getBoundingClientRect();
+    const canvas = document.createElement("canvas");
+    canvas.style.cssText = "position:fixed;inset:0;z-index:9999;pointer-events:none;background:transparent;";
+    document.body.append(canvas);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    const cameraZ = 18;
+
+    camera.position.z = cameraZ;
+    camera.lookAt(0, 0, 0);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x000000, 0);
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.18;
+
+    const envCanvas = document.createElement("canvas");
+    envCanvas.width = 512;
+    envCanvas.height = 256;
+    const envCtx = envCanvas.getContext("2d");
+    if (envCtx) {
+      const sky = envCtx.createLinearGradient(0, 0, 512, 256);
+      sky.addColorStop(0, "#fff7d6");
+      sky.addColorStop(0.24, "#f1b84b");
+      sky.addColorStop(0.52, "#141018");
+      sky.addColorStop(0.78, "#f7d778");
+      sky.addColorStop(1, "#ffffff");
+      envCtx.fillStyle = sky;
+      envCtx.fillRect(0, 0, 512, 256);
+      envCtx.fillStyle = "rgba(255,255,255,.95)";
+      envCtx.fillRect(214, 18, 84, 220);
+      envCtx.fillStyle = "rgba(255,190,48,.8)";
+      envCtx.fillRect(32, 42, 54, 170);
+      envCtx.fillRect(426, 32, 46, 188);
+    }
+    const envTexture = new THREE.CanvasTexture(envCanvas);
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    const envMap = pmrem.fromEquirectangular(envTexture);
+    scene.environment = envMap.texture;
+
+    scene.add(new THREE.AmbientLight(0xffe7a3, 0.5));
+
+    const keyLight = new THREE.DirectionalLight(0xffffff, 2.8);
+    keyLight.position.set(2, 5, 10);
+    scene.add(keyLight);
+
+    const frontLight = new THREE.DirectionalLight(0xffffff, 4);
+    frontLight.position.set(0, 0, 10);
+    scene.add(frontLight);
+
+    const rimLight = new THREE.PointLight(0xf3d36b, 2.1, 28);
+    rimLight.position.set(-3.5, 2.4, 8);
+    scene.add(rimLight);
+
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const visibleHeight = 2 * Math.tan((45 * Math.PI) / 360) * cameraZ;
+    const visibleWidth = visibleHeight * camera.aspect;
+    const startX = (centerX / window.innerWidth - 0.5) * visibleWidth;
+    const startY = -(centerY / window.innerHeight - 0.5) * visibleHeight;
+
+    const runeCount = 5 + Math.floor(Math.random() * 4);
+    const extrudeSettings = {
+      depth: 0.02,
+      bevelEnabled: true,
+      bevelThickness: 0.01,
+      bevelSize: 0.005,
+      bevelSegments: 3,
+      curveSegments: 12,
+    };
+    const createGlyphShape = (variant: number) => {
+      const shape = new THREE.Shape();
+
+      if (variant === 0) {
+        shape.moveTo(0, 0.82);
+        shape.bezierCurveTo(-0.18, 0.62, -0.42, 0.22, -0.5, -0.08);
+        shape.quadraticCurveTo(-0.58, -0.42, -0.28, -0.68);
+        shape.quadraticCurveTo(-0.05, -0.86, 0.16, -0.68);
+        shape.quadraticCurveTo(-0.18, -0.22, -0.06, 0.24);
+        shape.lineTo(0.34, -0.18);
+        shape.quadraticCurveTo(0.52, -0.34, 0.62, -0.08);
+        shape.quadraticCurveTo(0.54, 0.28, 0.12, 0.44);
+        shape.lineTo(0, 0.82);
+      } else if (variant === 1) {
+        shape.moveTo(-0.34, 0.78);
+        shape.lineTo(-0.08, 0.78);
+        shape.lineTo(-0.08, 0.28);
+        shape.quadraticCurveTo(0.42, 0.34, 0.54, 0.02);
+        shape.quadraticCurveTo(0.66, -0.32, 0.12, -0.44);
+        shape.lineTo(-0.08, -0.48);
+        shape.lineTo(-0.08, -0.78);
+        shape.lineTo(-0.34, -0.78);
+        shape.lineTo(-0.34, 0.78);
+      } else {
+        if (variant === 2) {
+          shape.moveTo(0, 0.78);
+          shape.lineTo(0.13, 0.2);
+          shape.lineTo(0.58, 0.6);
+          shape.lineTo(0.34, 0.05);
+          shape.lineTo(0.68, -0.5);
+          shape.lineTo(0.12, -0.18);
+          shape.lineTo(0, -0.82);
+          shape.lineTo(-0.12, -0.18);
+          shape.lineTo(-0.68, -0.5);
+          shape.lineTo(-0.34, 0.05);
+          shape.lineTo(-0.58, 0.6);
+          shape.lineTo(-0.13, 0.2);
+          shape.lineTo(0, 0.78);
+        } else {
+          shape.moveTo(-0.56, 0.72);
+          shape.quadraticCurveTo(-0.46, 0.84, -0.34, 0.72);
+          shape.lineTo(-0.34, -0.22);
+          shape.lineTo(-0.08, -0.22);
+          shape.lineTo(-0.08, 0.58);
+          shape.quadraticCurveTo(0.02, 0.72, 0.14, 0.58);
+          shape.lineTo(0.14, -0.22);
+          shape.lineTo(0.42, -0.22);
+          shape.lineTo(0.42, 0.72);
+          shape.quadraticCurveTo(0.54, 0.84, 0.64, 0.7);
+          shape.lineTo(0.64, -0.48);
+          shape.lineTo(0.18, -0.48);
+          shape.lineTo(0.02, -0.82);
+          shape.lineTo(-0.16, -0.48);
+          shape.lineTo(-0.56, -0.48);
+          shape.lineTo(-0.56, 0.72);
+        }
+      }
+
+      shape.closePath();
+      return shape;
+    };
+    const geometries = [0, 1, 2, 3].map((variant) => {
+      const geometry = new THREE.ExtrudeGeometry(createGlyphShape(variant), extrudeSettings);
+      geometry.center();
+      return geometry;
+    });
+    const runes = Array.from({ length: runeCount }, (_, index) => {
+      const material = new THREE.MeshStandardMaterial({
+        color: 0xe5a93c,
+        envMapIntensity: 2.8,
+        metalness: 1,
+        opacity: 1,
+        roughness: 0.02,
+        transparent: true,
+      });
+      const mesh = new THREE.Mesh(geometries[index % geometries.length], material);
+      const angle = (index / runeCount) * Math.PI * 2;
+      const spread = 0.55 + Math.random() * 0.7;
+
+      mesh.position.set(startX, startY, 0);
+      mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+      mesh.scale.setScalar(1.8);
+      scene.add(mesh);
+
+      return {
+        mesh,
+        material,
+        spin: {
+          x: 0.9 + Math.random() * 1.9,
+          y: 1.1 + Math.random() * 2.2,
+          z: 0.75 + Math.random() * 1.7,
+        },
+        angle,
+        delay: index < 2 ? Math.random() * 0.04 : 0.16 + (index - 2) * 0.045 + Math.random() * 0.08,
+        openRadius: 2.4 + spread * 1.55,
+        closeRadius: 0.95 + Math.random() * 0.75,
+        launchSpeed: 1 + Math.random() * 0.35,
+        swirlPhase: angle + Math.random() * Math.PI,
+        swirlRadius: 0.22 + Math.random() * 0.36,
+        swirlSpeed: 1.8 + Math.random() * 1.4,
+      };
+    });
+
+    const duration = 2850;
+    const startedAt = performance.now();
+    let frameId = 0;
+
+    const cleanup = () => {
+      cancelAnimationFrame(frameId);
+      runes.forEach(({ mesh, material }) => {
+        scene.remove(mesh);
+        material.dispose();
+      });
+      geometries.forEach((geometry) => geometry.dispose());
+      envTexture.dispose();
+      envMap.dispose();
+      pmrem.dispose();
+      renderer.dispose();
+      canvas.remove();
+    };
+
+    const animate = (now: number) => {
+      const elapsed = (now - startedAt) / 1000;
+      const smoothstep = (edge0: number, edge1: number, value: number) => {
+        const t = Math.min(Math.max((value - edge0) / (edge1 - edge0), 0), 1);
+        return t * t * (3 - 2 * t);
+      };
+      const lerp = (from: number, to: number, amount: number) => from + (to - from) * amount;
+      rimLight.intensity = 1.7 + Math.sin(elapsed * 6) * 0.45;
+
+      runes.forEach(({ mesh, material, spin, angle, delay, openRadius, closeRadius, launchSpeed, swirlPhase, swirlRadius, swirlSpeed }) => {
+        const localTime = elapsed - delay;
+        if (localTime <= 0) {
+          material.opacity = 0;
+          return;
+        }
+
+        const phase1 = smoothstep(0, 0.6, localTime);
+        const phase2 = smoothstep(0.6, 1.5, localTime);
+        const phase3 = smoothstep(1.5, 2.85, localTime);
+        const openX = Math.cos(angle) * openRadius;
+        const openY = Math.sin(angle) * openRadius * 0.72;
+        const closeX = Math.cos(angle + Math.PI * 0.22) * closeRadius;
+        const closeY = Math.sin(angle + Math.PI * 0.22) * closeRadius * 0.72;
+        const swirl = Math.sin((localTime * swirlSpeed + swirlPhase) * Math.PI) * swirlRadius;
+        const breathing = Math.sin(localTime * 8 + swirlPhase) * 0.08;
+
+        const phase12X = lerp(lerp(startX, openX, phase1), closeX, phase2);
+        const phase12Y = lerp(lerp(startY, openY, phase1), closeY, phase2);
+        const phase12Z = lerp(0.15 * phase1, 1.35 + breathing, phase2);
+        const currentX = phase12X + Math.cos(angle + localTime * 2.2) * swirl;
+        const currentY = phase12Y + Math.sin(angle + localTime * 2.6) * swirl * 0.65;
+        const fanDistance = phase3 * (openRadius * 2.8 + 2.2);
+        const launchX = currentX + Math.cos(angle) * fanDistance;
+        const launchY = currentY + Math.sin(angle) * fanDistance * 0.78;
+        const maxSpeedZ = 0.15;
+        const launchZ = phase12Z + phase3 * maxSpeedZ * 60 * launchSpeed;
+
+        mesh.position.set(
+          lerp(currentX, launchX, phase3),
+          lerp(currentY, launchY, phase3),
+          lerp(phase12Z, launchZ, phase3)
+        );
+
+        const spinEnergy = 0.9 * (1 - phase1) + 0.42 * phase2 + 0.75 * phase3;
+        const maxRotationStep = 0.02;
+        mesh.rotation.x += Math.min(spin.x * 0.004 * spinEnergy, maxRotationStep);
+        mesh.rotation.y += Math.min(spin.y * 0.004 * spinEnergy, maxRotationStep);
+        mesh.rotation.z += Math.min(spin.z * 0.004 * spinEnergy, maxRotationStep);
+
+        const depth = Math.min(Math.max(mesh.position.z / cameraZ, 0), 1);
+        const fade = Math.max(smoothstep(1.5, 2.85, localTime), smoothstep(0.7, 0.9, depth));
+        const maxScale = 2;
+        const scale = Math.min(1.48 + phase1 * 0.34 + phase2 * 0.18 + phase3 * (0.28 + depth * 0.18), maxScale);
+
+        mesh.scale.setScalar(scale);
+        material.opacity = Math.max(0, 1 - fade);
+      });
+
+      renderer.render(scene, camera);
+
+      if (elapsed * 1000 < duration) {
+        frameId = requestAnimationFrame(animate);
+      } else {
+        cleanup();
+      }
+    };
+
+    frameId = requestAnimationFrame(animate);
+  };
+
+  portalCards.forEach((card) => {
+    const trigger = card.querySelector<HTMLButtonElement>("[data-portal-trigger]");
+    const caveVideo = card.querySelector<HTMLVideoElement>(".portal-cave-video");
+    const descriptionWrap = card.querySelector<HTMLElement>("[data-portal-description-wrap]");
+    let activated = false;
+
+    const playVideo = (video: HTMLVideoElement | null) => {
+      if (!video) return;
+      video.currentTime = 0;
+      const play = video.play();
+      if (play) play.catch(() => undefined);
+    };
+
+    const renderDownloadState = () => {
+      if (!descriptionWrap) return;
+
+      const message = card.dataset.finalMessage ?? "";
+      const googlePlayUrl = card.dataset.googlePlayUrl ?? "#";
+      const appStoreUrl = card.dataset.appStoreUrl ?? "#";
+
+      descriptionWrap.classList.add("is-changing");
+
+      window.setTimeout(() => {
+        descriptionWrap.innerHTML = `
+          <p class="portal-description">${message}</p>
+          <div class="portal-download-links">
+            <a class="portal-store-link" href="${appStoreUrl}" target="_blank" rel="noopener">App Store</a>
+            <a class="portal-store-link" href="${googlePlayUrl}" target="_blank" rel="noopener">Google Play</a>
+          </div>
+        `;
+        descriptionWrap.classList.remove("is-changing");
+      }, 180);
+    };
+
+    const unlockPortal = () => {
+      if (trigger) {
+        trigger.textContent = card.dataset.unlockedLabel ?? "Portal awakened";
+        trigger.disabled = true;
+      }
+      card.classList.add("is-complete");
+      renderDownloadState();
+      firePortalRunes(trigger ?? card);
+    };
+
+    trigger?.addEventListener("click", () => {
+      if (activated) return;
+      activated = true;
+
+      trigger.disabled = true;
+      card.classList.add("is-charging");
+
+      window.setTimeout(() => {
+        card.classList.add("is-open");
+        playVideo(caveVideo);
+        unlockPortal();
+      }, 1500);
+    });
+  });
+</script>
+
+<style>
+  .portal-card{
+    flex-shrink:0;
+    position:relative;
+    width:min(100%,320px);
+  }
+
+  .portal-cave-video{
+    border-radius:30px;
+    height:100%;
+    inset:0;
+    object-fit:cover;
+    opacity:0;
+    position:absolute;
+    transform:scale(1.04);
+    transition:opacity .7s var(--ease),transform 1.5s var(--ease);
+    width:100%;
+    z-index:0;
+  }
+
+  .portal-card.is-open .portal-cave-video{
+    opacity:.92;
+    transform:scale(1);
+  }
+
+  .portal-panel{
+    border:1px solid var(--border);
+    border-radius:30px;
+    box-shadow:var(--glow-lg);
+    min-height:380px;
+    overflow:hidden;
+    padding:30px 24px;
+    position:relative;
+    text-align:left;
+    z-index:1;
+  }
+
+  .portal-panel-bg{
+    background:
+      radial-gradient(ellipse 78% 48% at 50% 8%,rgba(216,181,106,.18),transparent 70%),
+      linear-gradient(180deg,rgba(8,16,31,.94),rgba(3,6,16,.98));
+    inset:0;
+    position:absolute;
+    transition:opacity .7s var(--ease),-webkit-mask-image 1s var(--ease),mask-image 1s var(--ease);
+    z-index:-2;
+  }
+
+  .portal-card.is-open .portal-panel-bg{
+    opacity:.9;
+    -webkit-mask-image:radial-gradient(ellipse 58% 34% at 50% 42%,transparent 0 46%,#000 61%);
+    mask-image:radial-gradient(ellipse 58% 34% at 50% 42%,transparent 0 46%,#000 61%);
+  }
+
+  .portal-scanline{
+    background:linear-gradient(90deg,transparent,rgba(216,181,106,.62),transparent);
+    height:1px;
+    left:18px;
+    opacity:.5;
+    position:absolute;
+    right:18px;
+    top:20px;
+  }
+
+  .portal-copy{
+    display:flex;
+    flex-direction:column;
+    min-height:320px;
+    position:relative;
+    z-index:1;
+  }
+
+  .portal-kicker{
+    color:var(--gold);
+    font-family:var(--ff-title);
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:.22em;
+    margin-bottom:10px;
+    text-transform:uppercase;
+  }
+
+  .portal-title{
+    color:var(--text-1);
+    font-family:var(--ff-display);
+    font-size:clamp(1.75rem,3.2vw,2.35rem);
+    font-weight:500;
+    line-height:1.05;
+    margin-bottom:14px;
+  }
+
+  .portal-description-wrap{
+    transition:opacity .22s var(--ease),transform .22s var(--ease);
+  }
+
+  .portal-description-wrap.is-changing{
+    opacity:0;
+    transform:translateY(8px);
+  }
+
+  .portal-description{
+    color:var(--text-2);
+    font-size:.95rem;
+    line-height:1.62;
+  }
+
+  .portal-download-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+  }
+
+  .portal-store-link{
+    align-items:center;
+    background:rgba(216,181,106,.12);
+    border:1px solid rgba(216,181,106,.62);
+    border-radius:var(--r-pill);
+    color:var(--gold-lt);
+    display:inline-flex;
+    flex:1 1 120px;
+    font-family:var(--ff-title);
+    font-size:.72rem;
+    font-weight:800;
+    justify-content:center;
+    letter-spacing:.11em;
+    min-height:42px;
+    padding:0 14px;
+    text-transform:uppercase;
+    transition:background var(--fast) var(--ease),border-color var(--fast) var(--ease),transform var(--fast) var(--ease);
+  }
+
+  .portal-store-link:hover,
+  .portal-store-link:focus-visible{
+    background:rgba(216,181,106,.2);
+    border-color:var(--gold-lt);
+    transform:translateY(-2px);
+  }
+
+  .portal-awaken{
+    align-items:center;
+    background:linear-gradient(135deg,var(--gold),var(--gold-dk));
+    border:0;
+    border-radius:var(--r-pill);
+    box-shadow:var(--glow-sm);
+    color:var(--bg-0);
+    cursor:pointer;
+    display:inline-flex;
+    font-family:var(--ff-title);
+    font-size:.78rem;
+    font-weight:800;
+    justify-content:center;
+    letter-spacing:.14em;
+    margin-top:auto;
+    min-height:48px;
+    padding:0 20px;
+    text-transform:uppercase;
+    transition:filter var(--fast) var(--ease),transform var(--fast) var(--ease);
+    width:100%;
+  }
+
+  .portal-awaken:hover,
+  .portal-awaken:focus-visible{
+    filter:brightness(1.08);
+    transform:translateY(-2px);
+  }
+
+  .portal-awaken:disabled{
+    cursor:default;
+    filter:saturate(.9);
+    opacity:.88;
+    transform:none;
+  }
+
+  .portal-progress{
+    background:var(--border-lt);
+    border-radius:var(--r-pill);
+    height:4px;
+    margin-top:18px;
+    overflow:hidden;
+  }
+
+  .portal-progress-fill{
+    background:linear-gradient(90deg,var(--gold),var(--gold-lt),var(--gold-dk));
+    border-radius:inherit;
+    box-shadow:0 0 18px rgba(216,181,106,.45);
+    display:block;
+    height:100%;
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition:transform 1.5s var(--ease);
+  }
+
+  .portal-card.is-charging .portal-progress-fill{transform:scaleX(1)}
+
+  .portal-progress-label{
+    color:var(--text-3);
+    font-size:.76rem;
+    letter-spacing:.04em;
+    margin-top:10px;
+  }
+
+  @media(max-width:1079px){
+    .portal-card{
+      margin-top:22px;
+      width:min(100%,340px);
+    }
+
+    .portal-panel{
+      min-height:300px;
+      padding:22px 20px;
+      text-align:left;
+    }
+
+    .portal-copy{min-height:256px}
+  }
+
+  @media(max-width:520px){
+    .portal-card{width:100%}
+    .portal-panel{
+      border-radius:24px;
+      min-height:260px;
+      padding:18px 16px;
+    }
+    .portal-cave-video{border-radius:24px}
+    .portal-copy{min-height:224px}
+    .portal-title{font-size:1.5rem}
+    .portal-description{font-size:.88rem;line-height:1.5}
+    .portal-awaken{font-size:.68rem;min-height:42px}
+    .portal-progress{margin-top:12px}
+    .portal-download-links{gap:8px;margin-top:14px}
+    .portal-store-link{font-size:.66rem;min-height:38px}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .portal-cave-video,
+    .portal-panel-bg,
+    .portal-progress-fill,
+    .portal-description-wrap{
+      transition:none;
+    }
+  }
+</style>

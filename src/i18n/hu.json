@@ -18,17 +18,17 @@
     "menuLabel": "Menü"
   },
   "hero": {
-    "eyebrow": "Hivatalos termékweboldal",
+    "eyebrow": "Interaktív AR mobilalkalmazás",
     "line1": "1345 év.",
     "line2": "Egy név",
     "line3": "túlélte.",
     "question": "Hogyan?",
-    "lede": "Utazz be Bulgáriát. Fedd fel az ősi titkokat. Válj Keeperré - a tizenhárom évszázadon át fennmaradt élő emlékezet őrzőjévé.",
+    "lede": "Járd be az utat. Ébreszd fel az emléket. Légy Őrző.",
     "ctaPrimary": "Az alkalmazás letöltése",
-    "ctaSecondary": "Nézd meg az utazást",
+    "ctaSecondary": "Intro megtekintése",
     "trust": [
-      "AR valós küldetések",
-      "Filmszerű történetmesélés",
+      "Élő AR kaland",
+      "Filmes elbeszélés",
       "Családbarát",
       "14 nyelv"
     ],
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Guardian Sight",
-    "heading": "Lásd meg azt,\namit mások nem.",
+    "heading": "Minden hely emlékszik.",
     "lede": "A Guardian Sight az Unlocking Bulgaria opcionális kiterjesztett valóságú kameramódja. Irányítsd a világra - és lásd meg az alatta rejlő réteget.",
-    "sightBody": "Irányítsd a kamerát a világra.\nA rejtett réteg megjelenik a valóság alatt.",
+    "sightBody": "Irányítsd a kamerádat a föld felé. A rejtett réteg megjelenik az idő által elrejtett dolgok alatt.",
     "ariaVisual": "Guardian Sight AR felület - animált pásztázó gyűrűk",
     "floatTag1": "Rejtett réteg feltárva",
     "floatTag2": "Ellenőrzőpont · 82 m",
@@ -133,6 +133,35 @@
         "title": "Hősi pillanatok",
         "subtitle": "A felfedezés pillanatai",
         "desc": "Szent helyszíneken, útvonal-fináléknál és kulcsfontosságú felfedezéseknél különleges jelenetek és jutalmak várnak."
+      }
+    ],
+    "flowLabel1": "Valóság",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Feltárva",
+    "scenes": [
+      {
+        "name": "Prohodna-barlang",
+        "icon": "◎",
+        "reality": "Természetes barlang. Két nyílás az ég felé. Évezredes esőtől formált kő.",
+        "revealed": "A Szent Kő megszólal. Isten Szemei feloldják a föld rejtett emlékét."
+      },
+      {
+        "name": "Madara-lovas",
+        "icon": "◈",
+        "reality": "Élő sziklába vésett dombormű 1300 évvel ezelőtt. Mindenki számára látható. Kevesek által értett.",
+        "revealed": "Ősi feliratok bukkannak fel. A lovas története — és a Név eredete — olvashatóvá válik."
+      },
+      {
+        "name": "Ókori erőd",
+        "icon": "◉",
+        "reality": "Romok egy dombon. Évszázadok által koptatott kövek. Néma tanúság.",
+        "revealed": "Az erőd falai ismét magasba törnek. A Név és népe védelmének védelme láthatóvá válik."
+      },
+      {
+        "name": "Szent helyszín",
+        "icon": "✦",
+        "reality": "Hétköznapi hely. Semmi sem látható a felszínről.",
+        "revealed": "Energianyomok bukkannak fel. Egy Tárgy vár. A küldetés egy réteggel mélyebbre száll."
       }
     ]
   },

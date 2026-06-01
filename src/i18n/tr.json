@@ -18,17 +18,17 @@
     "menuLabel": "Menü"
   },
   "hero": {
-    "eyebrow": "Resmi ürün web sitesi",
+    "eyebrow": "Etkileşimli AR mobil uygulaması",
     "line1": "1345 Yıl.",
     "line2": "Bir İsim",
     "line3": "hayatta kaldı.",
     "question": "Nasıl?",
-    "lede": "Bulgaristan'da yolculuk et. Kadim sırları ortaya çıkar. On üç yüzyıl boyunca varlığını sürdüren yaşayan belleğin koruyucusu — Bir Koruyucu ol.",
+    "lede": "Yolu yürü. Belleği uyandır. Bir Bekçi ol.",
     "ctaPrimary": "Uygulamayı İndir",
-    "ctaSecondary": "Yolculuğu İzle",
+    "ctaSecondary": "İntroyu izle",
     "trust": [
-      "AR gerçek görevler",
-      "Sinematik hikaye anlatımı",
+      "Canlı AR macerası",
+      "Sinematik anlatı",
       "Aile dostu",
       "14 dil"
     ],
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Koruyucunun Bakışı",
-    "heading": "Başkalarının göremediğini\ngör.",
+    "heading": "Her yer hatırlar.",
     "lede": "Koruyucunun Bakışı, Unlocking Bulgaria'daki isteğe bağlı artırılmış gerçeklik kamera modudur. Dünyaya doğrult — ve altındaki gizli katmanı gör.",
-    "sightBody": "Kamerayı dünyaya doğrult.\nGizli katman gerçekliğin altında belirir.",
+    "sightBody": "Kameranı toprağa doğrult. Gizli katman, zamanın gizlediği şeyin altında belirir.",
     "ariaVisual": "Koruyucunun Bakışı AR arayüzü — animasyonlu tarama halkaları",
     "floatTag1": "Gizli katman açığa çıktı",
     "floatTag2": "Kontrol noktası · 82m",
@@ -133,6 +133,35 @@
         "title": "Kahramanlık anları",
         "subtitle": "Açılış anları",
         "desc": "Kutsal yerlerde, güzergah finallerinde ve önemli keşiflerde özel sahneler ve ödüller sizi bekliyor."
+      }
+    ],
+    "flowLabel1": "Gerçeklik",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Açığa çıkarıldı",
+    "scenes": [
+      {
+        "name": "Prohodna Mağarası",
+        "icon": "◎",
+        "reality": "Doğal bir mağara. Yukarıda iki gökyüzü açıklığı. Milenyumlarca yağmurla şekillenmiş taş.",
+        "revealed": "Kutsal Taş konuşuyor. Tanrının Gözleri toprağın gizli belleğini açıyor."
+      },
+      {
+        "name": "Madara Atlısı",
+        "icon": "◈",
+        "reality": "1300 yıl önce canlı kayaya oyulmuş bir kabartma. Herkes tarafından görülen. Pek azı tarafından anlaşılan.",
+        "revealed": "Eski yazıtlar beliriyor. Atlının hikayesi — ve İsmin kökeni — okunabilir hale geliyor."
+      },
+      {
+        "name": "Antik Kale",
+        "icon": "◉",
+        "reality": "Bir tepedeki kalıntılar. Yüzyılların aşındırdığı taşlar. Sessiz bir tanıklık.",
+        "revealed": "Kale duvarları yeniden yükseliyor. İsmin ve halkının savunması görünür oluyor."
+      },
+      {
+        "name": "Kutsal Alan",
+        "icon": "✦",
+        "reality": "Sıradan bir yer. Yüzeyde görünür hiçbir şey yok.",
+        "revealed": "Enerji izleri yüzeye çıkıyor. Bir Eser bekliyor. Görev bir katman daha derine iniyor."
       }
     ]
   },

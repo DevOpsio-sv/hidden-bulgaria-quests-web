@@ -18,17 +18,17 @@
     "menuLabel": "Menú"
   },
   "hero": {
-    "eyebrow": "Sitio web oficial del producto",
+    "eyebrow": "Aplicación móvil AR interactiva",
     "line1": "1345 años.",
     "line2": "Un Nombre",
     "line3": "sobrevivió.",
     "question": "¿Cómo?",
-    "lede": "Viaja por Bulgaria. Revela los secretos ancestrales. Conviértete en Guardián — custodio de la memoria viva que ha perdurado trece siglos.",
+    "lede": "Camina el sendero. Despierta la memoria. Conviértete en Guardián.",
     "ctaPrimary": "Descargar la aplicación",
-    "ctaSecondary": "Ver el viaje",
+    "ctaSecondary": "Ver intro",
     "trust": [
-      "Misiones AR reales",
-      "Narración cinematográfica",
+      "Aventura AR en vivo",
+      "Narrativa cinematográfica",
       "Apto para familias",
       "14 idiomas"
     ],
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Visión del Guardián",
-    "heading": "Ve lo que\notros no pueden.",
+    "heading": "Cada lugar recuerda.",
     "lede": "La Visión del Guardián es el modo de cámara de realidad aumentada opcional en Unlocking Bulgaria. Apúntalo al mundo — y ve la capa oculta debajo.",
-    "sightBody": "Apunta la cámara al mundo.\nLa capa oculta aparece bajo lo real.",
+    "sightBody": "Apunta tu cámara a la tierra. La capa oculta aparece bajo lo que el tiempo ha ocultado.",
     "ariaVisual": "Interfaz RA Visión del Guardián — anillos de escaneo animados",
     "floatTag1": "Capa oculta revelada",
     "floatTag2": "Punto de control · 82m",
@@ -133,6 +133,35 @@
         "title": "Momentos heroicos",
         "subtitle": "Momentos de revelación",
         "desc": "En lugares sagrados, en los finales de rutas y en descubrimientos clave, te esperan escenas especiales y recompensas."
+      }
+    ],
+    "flowLabel1": "Realidad",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Revelado",
+    "scenes": [
+      {
+        "name": "Cueva de Prohodna",
+        "icon": "◎",
+        "reality": "Una cueva natural. Dos aberturas hacia el cielo. Piedra desgastada por milenios de lluvia.",
+        "revealed": "La Piedra Sagrada habla. Los Ojos de Dios revelan la memoria oculta de la tierra."
+      },
+      {
+        "name": "Jinete de Madara",
+        "icon": "◈",
+        "reality": "Un relieve tallado hace 1300 años en roca viva. Visible para todos. Comprendido por pocos.",
+        "revealed": "Inscripciones antiguas emergen. La historia del jinete — y el origen del Nombre — se vuelven legibles."
+      },
+      {
+        "name": "Fortaleza antigua",
+        "icon": "◉",
+        "reality": "Ruinas en una colina. Piedras desgastadas por siglos. Un testimonio silencioso.",
+        "revealed": "Los muros de la fortaleza se elevan de nuevo. La defensa del Nombre y su pueblo se vuelve visible."
+      },
+      {
+        "name": "Lugar sagrado",
+        "icon": "✦",
+        "reality": "Un lugar ordinario. Nada visible en la superficie.",
+        "revealed": "Trazas de energía emergen. Un Artefacto espera. La misión desciende una capa más profunda."
       }
     ]
   },

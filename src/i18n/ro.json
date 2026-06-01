@@ -18,17 +18,17 @@
     "menuLabel": "Meniu"
   },
   "hero": {
-    "eyebrow": "Site-ul oficial al produsului",
+    "eyebrow": "Aplicație mobilă AR interactivă",
     "line1": "1345 de ani.",
     "line2": "Un singur Nume",
     "line3": "a supraviețuit.",
     "question": "Cum?",
-    "lede": "Călătorește prin Bulgaria. Dezvăluie secretele antice. Devino un Pazitor — un gardian al memoriei vii care a dăinuit treisprezece secole.",
+    "lede": "Mergi pe cale. Trezește memoria. Devino un Paznic.",
     "ctaPrimary": "Descarcă aplicația",
-    "ctaSecondary": "Vezi călătoria",
+    "ctaSecondary": "Vezi intro",
     "trust": [
-      "Misiuni AR reale",
-      "Povestire cinematografică",
+      "Aventură AR live",
+      "Narațiune cinematografică",
       "Potrivit pentru familii",
       "14 limbi"
     ],
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Privirea Pazitorului",
-    "heading": "Vezi ce\nalții nu pot.",
+    "heading": "Fiecare loc își amintește.",
     "lede": "Privirea Pazitorului este modul opțional de cameră cu realitate augmentată din Unlocking Bulgaria. Îndreptați-o spre lume — și vedeți stratul ascuns dedesubt.",
-    "sightBody": "Îndreptați camera spre lume.\nStratul ascuns apare sub realitate.",
+    "sightBody": "Îndreptați camera spre pământ. Stratul ascuns apare sub ceea ce timpul a ascuns.",
     "ariaVisual": "Interfața RA Privirea Pazitorului — inele de scanare animate",
     "floatTag1": "Strat ascuns dezvăluit",
     "floatTag2": "Punct de control · 82m",
@@ -133,6 +133,35 @@
         "title": "Momente eroice",
         "subtitle": "Momente de revelație",
         "desc": "La locuri sacre, la finalurile traseelor și la descoperiri cheie — scene speciale și recompense te așteaptă."
+      }
+    ],
+    "flowLabel1": "Realitate",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Dezvăluit",
+    "scenes": [
+      {
+        "name": "Peștera Prohodna",
+        "icon": "◎",
+        "reality": "O peșteră naturală. Două deschideri spre cer. Piatră uzată de milenii de ploaie.",
+        "revealed": "Piatra Sacră vorbește. Ochii lui Dumnezeu deblochează memoria ascunsă a pământului."
+      },
+      {
+        "name": "Călărețul de la Madara",
+        "icon": "◈",
+        "reality": "Un relief sculptat acum 1300 de ani în stâncă vie. Vizibil pentru toți. Înțeles de puțini.",
+        "revealed": "Inscripții antice ies la suprafață. Povestea călărețului — și originea Numelui — devin lizibile."
+      },
+      {
+        "name": "Cetate antică",
+        "icon": "◉",
+        "reality": "Ruine pe un deal. Pietre uzate de secole. O mărturie tăcută.",
+        "revealed": "Zidurile cetății se ridică din nou. Apărarea Numelui și a poporului său devine vizibilă."
+      },
+      {
+        "name": "Loc sacru",
+        "icon": "✦",
+        "reality": "Un loc obișnuit. Nimic vizibil la suprafață.",
+        "revealed": "Urme de energie apar. Un Artefact așteaptă. Misiunea coboară un strat mai adânc."
       }
     ]
   },

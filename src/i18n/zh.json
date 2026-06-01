@@ -18,17 +18,17 @@
     "menuLabel": "菜单"
   },
   "hero": {
-    "eyebrow": "官方产品网站",
+    "eyebrow": "互动AR移动应用",
     "line1": "1345 年。",
     "line2": "一个名字",
     "line3": "幸存下来。",
     "question": "如何做到？",
-    "lede": "穿越保加利亚。揭开古老的秘密。成为 Keeper — 守护这份延续十三个世纪的鲜活记忆。",
+    "lede": "踏上旅程。唤醒记忆。成为守护者。",
     "ctaPrimary": "下载应用",
-    "ctaSecondary": "观看旅程",
+    "ctaSecondary": "观看介绍",
     "trust": [
-      "AR 现实世界任务",
-      "电影化叙事",
+      "AR现场探险",
+      "电影式叙事",
       "适合家庭",
       "14 种语言"
     ],
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Guardian Sight",
-    "heading": "看见\n他人无法看见之物。",
+    "heading": "每个地方都记得。",
     "lede": "Guardian Sight 是 Unlocking Bulgaria 中可选的增强现实相机模式。将镜头对准世界 — 看见其下隐藏的层次。",
-    "sightBody": "将相机对准世界。\n隐藏层会在现实之下显现。",
+    "sightBody": "将相机对准大地。隐藏的层次出现在时间掩盖的事物之下。",
     "ariaVisual": "Guardian Sight AR 界面 — 动画扫描环",
     "floatTag1": "隐藏层已揭示",
     "floatTag2": "检查点 · 82m",
@@ -133,6 +133,35 @@
         "title": "英雄时刻",
         "subtitle": "启示的时刻",
         "desc": "在圣地、路线终点和关键发现处——特别场景和奖励等待着你。"
+      }
+    ],
+    "flowLabel1": "现实",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "揭示",
+    "scenes": [
+      {
+        "name": "普罗霍德纳洞穴",
+        "icon": "◎",
+        "reality": "一个天然洞穴。上方两个天空开口。被数千年雨水侵蚀的岩石。",
+        "revealed": "圣石开口说话。上帝之眼解锁了大地的隐藏记忆。"
+      },
+      {
+        "name": "马达拉骑士",
+        "icon": "◈",
+        "reality": "1300年前雕刻在活岩石上的浮雕。人人可见，却鲜为人所理解。",
+        "revealed": "古老的铭文浮现。骑士的故事——以及名字的起源——变得可以解读。"
+      },
+      {
+        "name": "古代要塞",
+        "icon": "◉",
+        "reality": "山顶上的废墟。被数百年岁月磨损的石头。沉默的见证。",
+        "revealed": "要塞城墙重新竖起。名字及其人民的守护变得清晰可见。"
+      },
+      {
+        "name": "神圣遗址",
+        "icon": "✦",
+        "reality": "一个普通的地方。表面上什么都看不见。",
+        "revealed": "能量痕迹浮现。一件文物在等待。任务深入一个层次。"
       }
     ]
   },

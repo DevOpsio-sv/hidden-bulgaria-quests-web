@@ -18,16 +18,16 @@
     "menuLabel": "Menu"
   },
   "hero": {
-    "eyebrow": "Sito ufficiale del prodotto",
+    "eyebrow": "App mobile AR interattiva",
     "line1": "1345 anni.",
     "line2": "Un Nome",
     "line3": "è sopravvissuto.",
     "question": "Come?",
-    "lede": "Viaggia attraverso la Bulgaria. Rivela i segreti antichi. Diventa un Custode — guardiano della memoria viva che ha resistito per tredici secoli.",
+    "lede": "Percorri il cammino. Risvegli la memoria. Diventa un Custode.",
     "ctaPrimary": "Scarica l'app",
-    "ctaSecondary": "Guarda il viaggio",
+    "ctaSecondary": "Guarda l'intro",
     "trust": [
-      "Missioni AR reali",
+      "Avventura AR dal vivo",
       "Narrazione cinematografica",
       "Per famiglie",
       "14 lingue"
@@ -102,9 +102,9 @@
   },
   "guardianSight": {
     "eyebrow": "Vista del Custode",
-    "heading": "Vedi ciò che\ngli altri non possono.",
+    "heading": "Ogni luogo ricorda.",
     "lede": "La Vista del Custode è la modalità fotocamera di realtà aumentata opzionale in Unlocking Bulgaria. Puntala verso il mondo — e vedi lo strato nascosto al di sotto.",
-    "sightBody": "Punta la fotocamera verso il mondo.\nLo strato nascosto appare sotto il reale.",
+    "sightBody": "Punta la fotocamera verso la terra. Lo strato nascosto appare sotto ciò che il tempo ha celato.",
     "ariaVisual": "Interfaccia RA Vista del Custode — anelli di scansione animati",
     "floatTag1": "Strato nascosto rivelato",
     "floatTag2": "Punto di controllo · 82m",
@@ -133,6 +133,35 @@
         "title": "Momenti eroici",
         "subtitle": "Momenti di rivelazione",
         "desc": "In luoghi sacri, nei finali dei percorsi e nelle scoperte chiave, ti aspettano scene speciali e ricompense."
+      }
+    ],
+    "flowLabel1": "Realtà",
+    "flowLabel2": "Guardian Sight",
+    "flowLabel3": "Rivelato",
+    "scenes": [
+      {
+        "name": "Grotta di Prohodna",
+        "icon": "◎",
+        "reality": "Una grotta naturale. Due aperture verso il cielo. Pietra consumata da millenni di pioggia.",
+        "revealed": "La Pietra Sacra parla. Gli Occhi di Dio svelano la memoria nascosta della terra."
+      },
+      {
+        "name": "Cavaliere di Madara",
+        "icon": "◈",
+        "reality": "Un rilievo scolpito 1300 anni fa nella roccia viva. Visibile a tutti. Compreso da pochi.",
+        "revealed": "Iscrizioni antiche emergono. La storia del cavaliere — e l'origine del Nome — diventano leggibili."
+      },
+      {
+        "name": "Fortezza antica",
+        "icon": "◉",
+        "reality": "Rovine su una collina. Pietre consumate dai secoli. Una silenziosa testimonianza.",
+        "revealed": "Le mura della fortezza si ergono di nuovo. La difesa del Nome e del suo popolo diventa visibile."
+      },
+      {
+        "name": "Sito sacro",
+        "icon": "✦",
+        "reality": "Un luogo ordinario. Nulla di visibile dalla superficie.",
+        "revealed": "Tracce di energia emergono. Un Artefatto attende. La missione scende un livello più in profondità."
       }
     ]
   },
