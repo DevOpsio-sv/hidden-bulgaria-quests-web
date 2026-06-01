@@ -41,7 +41,7 @@ const schemas = [
   }}
 >
   <Header dict={dict} lang={lang as string} />
-  <main id="main">
+  <main id="main" transition:name="main-content" transition:animate="slide">
     <DomainPageTemplate dict={dict} lang={lang as string} domain={domain} route={route} />
   </main>
   <Footer dict={dict} lang={lang as string} />

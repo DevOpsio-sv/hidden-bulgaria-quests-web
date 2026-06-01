@@ -26,7 +26,7 @@ const dict = getDict(lang as Lang);
 >
   <Header dict={dict} lang={lang as string} />
 
-  <main id="main">
+  <main id="main" transition:name="main-content" transition:animate="slide">
     <LivingMap dict={dict} lang={lang as string} />
   </main>
 

@@ -133,6 +133,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
     }
     ::view-transition-new(root){
       animation:ub-page-enter .5s ease-in-out both;
+      animation-fill-mode:forwards;
       max-width:100vw;
       overflow:hidden;
       transform-origin:left center;
@@ -270,7 +271,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   <slot />
 
   <!-- Header scroll state -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     var h=document.querySelector("[data-header]");
     if(!h)return;
@@ -280,7 +281,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Book-flip transition sparks -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     if(window.__ubBookMagicInit)return;
     window.__ubBookMagicInit=true;
@@ -362,7 +363,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Mobile nav -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     var btn=document.querySelector("[data-menu-btn]");
     var nav=document.querySelector("[data-mobile-nav]");
@@ -383,7 +384,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Language overlay -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     var openBtns=document.querySelectorAll("[data-lang-btn],[data-lang-btn-mobile]");
     var overlay=document.querySelector("[data-lang-overlay]");
@@ -429,7 +430,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- FAQ accordion -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     var list=document.querySelector("[data-faq]");
     if(!list)return;
@@ -448,7 +449,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Scroll reveal -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     if(window.matchMedia("(prefers-reduced-motion:reduce)").matches){
       document.querySelectorAll(".reveal").forEach(function(e){e.classList.add("visible");});return;
@@ -461,7 +462,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Hero: pause video for reduced-motion; lightbox toggle -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     /* Pause hero background video for reduced-motion users */
     var bgVid=document.querySelector('.hero-video');
@@ -538,7 +539,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Scroll spine -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     var wrap=document.getElementById('spine-wrap');
     var fill=document.getElementById('spine-fill');
@@ -560,7 +561,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Custom scanning-lens cursor (desktop / fine pointer) -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     if(!window.matchMedia('(pointer:fine)').matches)return;
     if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
@@ -592,7 +593,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   </script>
 
   <!-- Partner form -->
-  <script is:inline>
+  <script is:inline data-astro-rerun>
   (function(){
     var form=document.querySelector("[data-partner-form]");
     var note=document.querySelector("[data-form-note]");

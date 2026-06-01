@@ -219,9 +219,5 @@ const baseImage = "/media/prohodna/prohodna-placeholder.svg";
 
 <script>
   import { initGuardianSight } from "../utils/guardian-sight";
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initGuardianSight);
-  } else {
-    initGuardianSight();
-  }
+  document.addEventListener("astro:page-load", initGuardianSight);
 </script>

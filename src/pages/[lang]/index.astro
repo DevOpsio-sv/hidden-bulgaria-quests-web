@@ -28,7 +28,7 @@ const dict = getDict(lang as Lang);
 <Base dict={dict} lang={lang as string}>
   <Header dict={dict} lang={lang as string} />
 
-  <main id="main">
+  <main id="main" transition:name="main-content" transition:animate="slide">
     <HeroSection dict={dict} lang={lang as string} />
     <BandSection dict={dict} />
     <MemorySection dict={dict} />

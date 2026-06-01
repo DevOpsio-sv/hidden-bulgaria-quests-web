@@ -53,60 +53,64 @@ const pathways = [
 </div>
 
 <script>
-  const background = document.querySelector<HTMLElement>("[data-living-background]");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const coarsePointer = window.matchMedia("(hover: none), (pointer: coarse)");
+  const initLivingBackground = () => {
+    const background = document.querySelector<HTMLElement>("[data-living-background]");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const coarsePointer = window.matchMedia("(hover: none), (pointer: coarse)");
 
-  if (background && !reducedMotion.matches) {
-    let lastY = window.scrollY;
-    let lastTime = performance.now();
-    let boost = 0;
-    let raf = 0;
+    if (background && !reducedMotion.matches) {
+      let lastY = window.scrollY;
+      let lastTime = performance.now();
+      let boost = 0;
+      let raf = 0;
 
-    const updateScrollBoost = () => {
-      const now = performance.now();
-      const dy = Math.abs(window.scrollY - lastY);
-      const dt = Math.max(16, now - lastTime);
-      lastY = window.scrollY;
-      lastTime = now;
-      boost = Math.min(1, dy / dt / 2.5);
-      background.style.setProperty("--bg-scroll-boost", boost.toFixed(3));
-      window.clearTimeout(settleTimer);
-      settleTimer = window.setTimeout(() => {
-        background.style.setProperty("--bg-scroll-boost", "0");
-      }, 160);
-    };
-
-    let settleTimer = window.setTimeout(() => undefined, 0);
-    window.addEventListener("scroll", updateScrollBoost, { passive: true });
-
-    if (!coarsePointer.matches) {
-      const cursorAurora = background.querySelector<HTMLElement>("[data-cursor-aurora]");
-      let targetX = 0;
-      let targetY = 0;
-      let currentX = 0;
-      let currentY = 0;
-
-      const onPointerMove = (event: PointerEvent) => {
-        targetX = (event.clientX / window.innerWidth - 0.5) * 28;
-        targetY = (event.clientY / window.innerHeight - 0.5) * 20;
-        if (!raf) raf = window.requestAnimationFrame(tick);
+      const updateScrollBoost = () => {
+        const now = performance.now();
+        const dy = Math.abs(window.scrollY - lastY);
+        const dt = Math.max(16, now - lastTime);
+        lastY = window.scrollY;
+        lastTime = now;
+        boost = Math.min(1, dy / dt / 2.5);
+        background.style.setProperty("--bg-scroll-boost", boost.toFixed(3));
+        window.clearTimeout(settleTimer);
+        settleTimer = window.setTimeout(() => {
+          background.style.setProperty("--bg-scroll-boost", "0");
+        }, 160);
       };
 
-      const tick = () => {
-        currentX += (targetX - currentX) * 0.055;
-        currentY += (targetY - currentY) * 0.055;
-        cursorAurora?.style.setProperty("--cursor-dx", `${currentX.toFixed(2)}px`);
-        cursorAurora?.style.setProperty("--cursor-dy", `${currentY.toFixed(2)}px`);
+      let settleTimer = window.setTimeout(() => undefined, 0);
+      window.addEventListener("scroll", updateScrollBoost, { passive: true });
 
-        if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
-          raf = window.requestAnimationFrame(tick);
-        } else {
-          raf = 0;
-        }
-      };
+      if (!coarsePointer.matches) {
+        const cursorAurora = background.querySelector<HTMLElement>("[data-cursor-aurora]");
+        let targetX = 0;
+        let targetY = 0;
+        let currentX = 0;
+        let currentY = 0;
 
-      window.addEventListener("pointermove", onPointerMove, { passive: true });
+        const onPointerMove = (event: PointerEvent) => {
+          targetX = (event.clientX / window.innerWidth - 0.5) * 28;
+          targetY = (event.clientY / window.innerHeight - 0.5) * 20;
+          if (!raf) raf = window.requestAnimationFrame(tick);
+        };
+
+        const tick = () => {
+          currentX += (targetX - currentX) * 0.055;
+          currentY += (targetY - currentY) * 0.055;
+          cursorAurora?.style.setProperty("--cursor-dx", `${currentX.toFixed(2)}px`);
+          cursorAurora?.style.setProperty("--cursor-dy", `${currentY.toFixed(2)}px`);
+
+          if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+            raf = window.requestAnimationFrame(tick);
+          } else {
+            raf = 0;
+          }
+        };
+
+        window.addEventListener("pointermove", onPointerMove, { passive: true });
+      }
     }
-  }
+  };
+
+  document.addEventListener("astro:page-load", initLivingBackground);
 </script>

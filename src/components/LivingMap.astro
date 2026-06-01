@@ -241,9 +241,5 @@ const SILHOUETTE = "M 0,33 L 142,0 L 310,13 L 529,13 L 658,33 L 723,67 L 787,117
 
 <script>
   import { initLivingMap } from "../utils/living-map";
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initLivingMap);
-  } else {
-    initLivingMap();
-  }
+  document.addEventListener("astro:page-load", initLivingMap);
 </script>

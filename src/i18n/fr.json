@@ -33,39 +33,37 @@
       "14 langues"
     ],
     "mapLabel": "Carte interactive de la mémoire cachée de la Bulgarie",
-    "phoneDomain": "Domaine du Nom",
-    "phoneTitle": "Les anciennes capitales",
-    "phoneDesc": "Visitez les lieux où la mémoire est devenue État.",
-    "phoneProgress": "4 sceaux découverts sur 7"
+    "phoneDomain": "Portail de la grotte",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Entre dans le lieu où la terre regardait avant le Nom.",
+    "phoneProgress": "Le Sceau du Portail s'éveille",
+    "portalAwakenCta": "ÉVEILLER LE SCEAU",
+    "portalUnlockedCta": "LE PORTAIL EST ÉVEILLÉ",
+    "portalFinalCta": "✨ La connexion est établie ! Pour activer la vision AR en direct, télécharge l'application :"
   },
   "band": {
-    "sub": "Pas un guide. Pas une carte. Pas un jeu.",
-    "statement": "Un vrai voyage à travers la mémoire vivante de la Bulgarie."
+    "sub": "Plus qu'un guide. Plus qu'un jeu.",
+    "statement": "Une aventure interactive qui transforme la Bulgarie en ta prochaine mission."
   },
   "howItWorks": {
     "eyebrow": "Comment ça fonctionne",
-    "heading": "Devenez Gardien,\nun lieu à la fois.",
-    "lede": "Chaque voyage dans Unlocking Bulgaria suit une progression claire — d'un simple point de contrôle jusqu'au déverrouillage complet de la mémoire cachée de la Bulgarie.",
+    "heading": "Deviens Gardien,\ndéverrouille la Bulgarie.",
+    "lede": "Transforme ta promenade en exploration historique en trois étapes simples :",
     "steps": [
       {
         "label": "Étape 1",
-        "title": "Visiter un point de contrôle",
-        "desc": "Rendez-vous dans un lieu réel. Activez le point de contrôle en arrivant sur place. Débloquez une histoire, un indice ou une couche cachée."
+        "title": "Choisis une destination et pars",
+        "desc": "Voyage vers de vrais sites historiques et naturels en Bulgarie. Quand tu arrives sur place, l'application s'active."
       },
       {
-        "label": "Étape 2 — 5 points",
-        "title": "Terminer un parcours → Collecter une relique",
-        "desc": "Cinq points de contrôle reliés forment un parcours. Terminez-le pour recevoir une relique numérique permanente — un artefact de l'histoire bulgare."
+        "label": "Étape 2",
+        "title": "Déverrouille le passé caché (AR)",
+        "desc": "Regarde à travers ton téléphone. Oriente la caméra et vois l'histoire prendre vie sous tes yeux grâce à la réalité augmentée, aux indices numériques et aux récits cinématographiques."
       },
       {
-        "label": "Étape 3 — 3 parcours",
-        "title": "Déverrouiller un domaine → Gagner un sceau",
-        "desc": "Trois parcours déverrouillent un domaine régional. Gagnez son sceau — symbole de la maîtrise de la mémoire cachée de cette région."
-      },
-      {
-        "label": "Étape 4 — 6 domaines",
-        "title": "Déverrouillage national → Devenir Gardien",
-        "desc": "Complétez les six domaines. Déverrouillez toute la mémoire de la Bulgarie. Recevez le titre de Gardien — Пазител."
+        "label": "Étape 3",
+        "title": "Collecte des reliques et progresse",
+        "desc": "Résous des mystères sur place, trouve des artefacts numériques cachés et traverse les quatre Clés Maîtresses pour devenir un véritable Gardien de la Bulgarie."
       }
     ],
     "flow": [
@@ -77,17 +75,17 @@
       {
         "icon": "⌘",
         "name": "Parcours + Relique",
-        "sub": "5 points · 1 artefact"
+        "sub": "4 points · 4 artefacts · 1 relique"
       },
       {
         "icon": "◈",
         "name": "Domaine + Sceau",
-        "sub": "3 parcours · 1 sceau régional"
+        "sub": "4 parcours · 1 sceau · 1 Clé Maîtresse"
       },
       {
         "icon": "✦",
-        "name": "Gardien — Пазител",
-        "sub": "6 domaines · Bulgarie entière déverrouillée"
+        "name": "Gardien",
+        "sub": "4 Clés Maîtresses · Le Testament Vivant"
       }
     ]
   },
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "Réalité",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "Vision du Gardien",
     "flowLabel3": "Révélé",
     "scenes": [
       {
@@ -347,7 +345,7 @@
       },
       {
         "q": "Quelles langues sont supportées ?",
-        "a": "L'application supporte 13 langues : bulgare, anglais, allemand, français, espagnol, italien, roumain, turc, grec, polonais, russe, japonais et serbe."
+        "a": "L'application prend en charge 14 langues : bulgare, anglais, allemand, français, espagnol, italien, roumain, turc, grec, hongrois, chinois, russe, japonais et serbe."
       },
       {
         "q": "Ai-je besoin d'un compte ?",
@@ -355,7 +353,7 @@
       },
       {
         "q": "Comment fonctionne la tarification ?",
-        "a": "Certains aperçus de points de contrôle sont gratuits. L'accès complet aux parcours et aux packs de domaines est disponible via des achats intégrés. La tarification est premium et transparente — payez pour ce que vous souhaitez explorer."
+        "a": "Les visiteurs peuvent prévisualiser la carte, les Domaines, les parcours, les teasers de points de contrôle et une démo de Vision du Gardien. Les parcours complets et les packs de Domaines sont des achats premium uniques : payez une fois, gardez pour toujours."
       },
       {
         "q": "Les communes et entreprises peuvent-elles s'associer à l'application ?",
@@ -531,6 +529,23 @@
         "desc": "La révélation finale.\nLorsque les clés se réunissent, le Gardien comprend pourquoi le Nom a survécu."
       }
     ]
+  },
+  "map": {
+    "eyebrow": "Carte vivante",
+    "title": "Carte vivante de la Bulgarie",
+    "subtitle": "La géographie cachée de la mémoire — quatre Domaines principaux, un portail de grotte et de vrais points de contrôle.",
+    "legendTitle": "Légende de la carte",
+    "legendHero": "Point de contrôle héroïque",
+    "legendStandard": "Point de contrôle standard",
+    "legendBefore": "Avant le Nom — mémoire ancienne",
+    "legendAfter": "Après le Nom — identité durable",
+    "epochBefore": "Avant le Nom",
+    "epochAfter": "Après le Nom",
+    "viewPlace": "Visiter le lieu",
+    "viewDomain": "Voir le domaine",
+    "lockedLabel": "Bientôt disponible",
+    "regionsLabel": "Carte interactive des quatre Domaines principaux de la Bulgarie et du portail de la grotte",
+    "nodesLabel": "Nœuds des points de contrôle"
   },
   "skipLink": "Aller au contenu",
   "ariaNav": "Navigation principale",

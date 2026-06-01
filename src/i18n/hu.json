@@ -2,14 +2,14 @@
   "lang": "hu",
   "meta": {
     "title": "Unlocking Bulgaria - Utazás Bulgária rejtett emlékezetén át",
-    "description": "Prémium mobilalkalmazás Bulgária felfedezéséhez valós helyszíni küldetéseken, filmszerű történetmesélésen, opcionális AR-élményeken, történelmi útvonalakon, ereklyéken és kulturális felfedezéseken keresztül. Válj Keeperré.",
+    "description": "Prémium mobilalkalmazás Bulgária felfedezéséhez valós rejtély-küldetéseken, filmszerű történetmesélésen, opcionális Őrző Tekintetén, műtárgyakon, útvonal-ereklyéken, tartománypecséteken és a négy Mesterkulcson keresztül. Válj Őrzővé.",
     "ogTitle": "Unlocking Bulgaria - 1345 év. Egy név túlélte.",
-    "ogDescription": "Utazz be Bulgáriát. Fedd fel az ősi titkokat. Válj Keeperré."
+    "ogDescription": "Utazz be Bulgáriát. Fedd fel az ősi titkokat. Válj Őrzővé."
   },
   "nav": {
     "howItWorks": "Hogyan működik",
     "domains": "Tartományok",
-    "guardianSight": "Guardian Sight",
+    "guardianSight": "Őrző Tekintete",
     "timeline": "Idővonal",
     "partners": "Partnerek",
     "faq": "GYIK",
@@ -33,39 +33,37 @@
       "14 nyelv"
     ],
     "mapLabel": "Interaktív térkép Bulgária rejtett emlékezetéről",
-    "phoneDomain": "A Név tartománya",
-    "phoneTitle": "A régi fővárosok",
-    "phoneDesc": "Látogasd meg azokat a helyeket, ahol az emlékezet államisággá vált.",
-    "phoneProgress": "7 pecsétből 4 felfedezve"
+    "phoneDomain": "Barlangportál",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Lépj be arra a helyre, ahol a föld már a Név előtt figyelt.",
+    "phoneProgress": "A Portál pecsétje ébredezik",
+    "portalAwakenCta": "ÉBRESZD FEL A PECSÉTET",
+    "portalUnlockedCta": "A PORTÁL FELÉBREDT",
+    "portalFinalCta": "✨ A kapcsolat létrejött! Az élő AR-tekintet aktiválásához töltsd le az alkalmazást:"
   },
   "band": {
-    "sub": "Nem útikalauz. Nem térkép. Nem játék.",
-    "statement": "Valós utazás Bulgária élő emlékezetén át."
+    "sub": "Több mint útikalauz. Több mint játék.",
+    "statement": "Interaktív kaland, amely Bulgáriát a következő küldetéseddé alakítja."
   },
   "howItWorks": {
     "eyebrow": "Hogyan működik",
-    "heading": "Válj Keeperré,\negyik helyről a másikra.",
-    "lede": "Az Unlocking Bulgaria minden utazása világos fejlődési ívet követ - egyetlen ellenőrzőponttól Bulgária rejtett emlékezetének teljes feloldásáig.",
+    "heading": "Válj Őrzővé,\nnyisd fel Bulgáriát.",
+    "lede": "Alakítsd a sétádat történelmi felfedezéssé három egyszerű lépésben:",
     "steps": [
       {
         "label": "1. lépés",
-        "title": "Látogass meg egy ellenőrzőpontot",
-        "desc": "Utazz el egy valós helyre. Aktiváld az ellenőrzőpontot azzal, hogy megérkezel a helyszínre. Oldj fel egy történetet, egy nyomot vagy egy rejtett réteget."
+        "title": "Válassz úti célt és indulj el",
+        "desc": "Utazz Bulgária valós történelmi és természeti helyszíneire. Amikor megérkezel, az alkalmazás aktiválódik."
       },
       {
-        "label": "2. lépés - 5 ellenőrzőpont",
-        "title": "Teljesíts egy útvonalat -> Gyűjts be egy ereklyét",
-        "desc": "Öt összekapcsolt ellenőrzőpont alkot egy útvonalat. Teljesítsd az útvonalat, hogy megkapj egy maradandó digitális ereklyét - Bulgária történelmének egy tárgyát."
+        "label": "2. lépés",
+        "title": "Oldd fel a rejtett múltat (AR)",
+        "desc": "Nézz a telefonodon keresztül. Irányítsd a kamerát, és lásd, ahogy a történelem életre kel előtted kiterjesztett valóság, digitális nyomok és filmszerű történetek révén."
       },
       {
-        "label": "3. lépés - 3 útvonal",
-        "title": "Oldj fel egy tartományt -> Szerezz pecsétet",
-        "desc": "Három útvonal felold egy regionális tartományt. Szerezd meg a pecsétjét - a régió rejtett emlékezete feletti jártasság jelképeként."
-      },
-      {
-        "label": "4. lépés - 6 tartomány",
-        "title": "Nemzeti feloldás -> Válj Keeperré",
-        "desc": "Teljesítsd mind a hat tartományt. Oldd fel Bulgária teljes emlékezetét. Kapd meg a Keeper - Пазител címet."
+        "label": "3. lépés",
+        "title": "Gyűjts ereklyéket és haladj tovább",
+        "desc": "Fejts meg rejtélyeket a helyszínen, találj rejtett digitális tárgyakat, és haladj át a négy Mesterkulcson, hogy Bulgária valódi Őrzőjévé válj."
       }
     ],
     "flow": [
@@ -77,17 +75,17 @@
       {
         "icon": "⌘",
         "name": "Útvonal + ereklye",
-        "sub": "5 ellenőrzőpont · 1 műtárgy"
+        "sub": "4 pont · 4 műtárgy · 1 ereklye"
       },
       {
         "icon": "◈",
         "name": "Tartomány + pecsét",
-        "sub": "3 útvonal · 1 regionális pecsét"
+        "sub": "4 útvonal · 1 pecsét · 1 Mesterkulcs"
       },
       {
         "icon": "✦",
-        "name": "Keeper — Пазител",
-        "sub": "6 tartomány · Teljes Bulgária feloldva"
+        "name": "Őrző",
+        "sub": "4 Mesterkulcs · Az Élő Szövetség"
       }
     ]
   },
@@ -101,14 +99,14 @@
     "routesOf": "a 4 útvonalból teljesítve"
   },
   "guardianSight": {
-    "eyebrow": "Guardian Sight",
+    "eyebrow": "Őrző Tekintete",
     "heading": "Minden hely emlékszik.",
-    "lede": "A Guardian Sight az Unlocking Bulgaria opcionális kiterjesztett valóságú kameramódja. Irányítsd a világra - és lásd meg az alatta rejlő réteget.",
+    "lede": "Az Őrző Tekintete az Unlocking Bulgaria opcionális kiterjesztett valóságú kameramódja. Irányítsd a világra - és lásd meg az alatta rejlő réteget.",
     "sightBody": "Irányítsd a kamerádat a föld felé. A rejtett réteg megjelenik az idő által elrejtett dolgok alatt.",
-    "ariaVisual": "Guardian Sight AR felület - animált pásztázó gyűrűk",
+    "ariaVisual": "Őrző Tekintete AR felület - animált pásztázó gyűrűk",
     "floatTag1": "Rejtett réteg feltárva",
     "floatTag2": "Ellenőrzőpont · 82 m",
-    "centerLabel": "Guardian\nSight",
+    "centerLabel": "Őrző\nTekintete",
     "features": [
       {
         "icon": "◈",
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "Valóság",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "Őrző Tekintete",
     "flowLabel3": "Feltárva",
     "scenes": [
       {
@@ -339,7 +337,7 @@
       },
       {
         "q": "Szükséges az AR az alkalmazás használatához?",
-        "a": "Nem. A Guardian Sight AR teljesen opcionális. Minden AR-pillanathoz teljes nem AR-alapú alternatíva tartozik olvasható tartalommal, feliratokkal és egyértelmű teljesítési logikával. Az alapvető küldetésélmény teljesen működik AR nélkül is."
+        "a": "Nem. Az Őrző Tekintete AR teljesen opcionális. Minden AR-pillanathoz teljes nem AR-alapú alternatíva tartozik olvasható tartalommal, feliratokkal és egyértelmű teljesítési logikával. Az alapvető küldetésélmény teljesen működik AR nélkül is."
       },
       {
         "q": "Alkalmas az alkalmazás gyerekeknek?",
@@ -355,7 +353,7 @@
       },
       {
         "q": "Hogyan működik az árazás?",
-        "a": "Egyes ellenőrzőpont-előnézetek ingyenesek. A teljes útvonal-hozzáférés és a tartománycsomagok alkalmazáson belüli vásárlással érhetők el. Az árazás prémium és átlátható - azért fizetsz, amit fel szeretnél fedezni."
+        "a": "A vendégek előnézhetik a térképet, a Tartományokat, az útvonalakat, az ellenőrzőpont-teasereket és egy Őrző Tekintete demót. A teljes útvonalak és Tartomány-csomagok prémium egyszeri vásárlások: egyszer fizetsz, örökre megtartod."
       },
       {
         "q": "Önkormányzatok és vállalkozások partnerként csatlakozhatnak az alkalmazáshoz?",
@@ -417,7 +415,7 @@
             "href": "#domains"
           },
           {
-            "label": "Guardian Sight",
+            "label": "Őrző Tekintete",
             "href": "#guardian-sight"
           },
           {
@@ -531,6 +529,23 @@
         "desc": "A végső kinyilatkoztatás.\nAmikor a kulcsok összekapcsolódnak, az Őrző megérti, miért maradt fenn a Név."
       }
     ]
+  },
+  "map": {
+    "eyebrow": "Élő térkép",
+    "title": "Bulgária élő térképe",
+    "subtitle": "Az emlékezet rejtett földrajza — négy fő Tartomány, egy Barlangportál és valós ellenőrzőpontok.",
+    "legendTitle": "Térképjelmagyarázat",
+    "legendHero": "Hősi ellenőrzőpont",
+    "legendStandard": "Szabványos ellenőrzőpont",
+    "legendBefore": "A Név előtt — ősi emlékezet",
+    "legendAfter": "A Név után — fennmaradó identitás",
+    "epochBefore": "A Név előtt",
+    "epochAfter": "A Név után",
+    "viewPlace": "Hely meglátogatása",
+    "viewDomain": "Tartomány megtekintése",
+    "lockedLabel": "Hamarosan",
+    "regionsLabel": "Bulgária négy fő Tartományának és a Barlangportálnak interaktív térképe",
+    "nodesLabel": "Térképes ellenőrzőpontok"
   },
   "skipLink": "Ugrás a tartalomra",
   "ariaNav": "Fő navigáció",

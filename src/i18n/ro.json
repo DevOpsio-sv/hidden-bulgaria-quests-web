@@ -33,39 +33,37 @@
       "14 limbi"
     ],
     "mapLabel": "Harta interactivă a memoriei ascunse a Bulgariei",
-    "phoneDomain": "Domeniul Numelui",
-    "phoneTitle": "Vechile capitale",
-    "phoneDesc": "Vizitează locurile unde memoria a devenit stat.",
-    "phoneProgress": "4 din 7 sigilii descoperite"
+    "phoneDomain": "Portalul peșterii",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Intră în locul unde pământul privea înainte de Nume.",
+    "phoneProgress": "Pecetea Portalului se trezește",
+    "portalAwakenCta": "TREZEȘTE PECETEA",
+    "portalUnlockedCta": "PORTALUL S-A TREZIT",
+    "portalFinalCta": "✨ Conexiunea este stabilită! Pentru a activa privirea AR live, descarcă aplicația:"
   },
   "band": {
-    "sub": "Nu este un ghid. Nu este o hartă. Nu este un joc.",
-    "statement": "O călătorie reală prin memoria vie a Bulgariei."
+    "sub": "Mai mult decât un ghid. Mai mult decât un joc.",
+    "statement": "O aventură interactivă care transformă Bulgaria în următoarea ta misiune."
   },
   "howItWorks": {
     "eyebrow": "Cum funcționează",
-    "heading": "Devino Pazitor,\nun loc pe rând.",
-    "lede": "Fiecare călătorie în Unlocking Bulgaria urmează o progresie clară — de la un singur punct de control până la deblocarea completă a memoriei ascunse a Bulgariei.",
+    "heading": "Devino Păzitor,\ndeblochează Bulgaria.",
+    "lede": "Transformă plimbarea ta într-o explorare istorică în trei pași simpli:",
     "steps": [
       {
         "label": "Pasul 1",
-        "title": "Vizitează un punct de control",
-        "desc": "Călătorește la un loc real. Activează punctul de control la sosire. Deblochează o poveste, un indiciu sau un strat ascuns."
+        "title": "Alege o destinație și pornește",
+        "desc": "Călătorește la locuri istorice și naturale reale din Bulgaria. Când ajungi la fața locului, aplicația se activează."
       },
       {
-        "label": "Pasul 2 — 5 puncte",
-        "title": "Completează un traseu → Colectează o relicvă",
-        "desc": "Cinci puncte de control conectate formează un traseu. Completează-l pentru a primi o relicvă digitală permanentă — un artefact din istoria Bulgariei."
+        "label": "Pasul 2",
+        "title": "Deblochează trecutul ascuns (AR)",
+        "desc": "Privește prin telefon. Îndreaptă camera și vezi cum istoria prinde viață în fața ta prin realitate augmentată, indicii digitale și povești cinematografice."
       },
       {
-        "label": "Pasul 3 — 3 trasee",
-        "title": "Deblochează un domeniu → Câștigă o pecete",
-        "desc": "Trei trasee deblochează un domeniu regional. Câștigă pecetea sa — simbol al stăpânirii memoriei ascunse a acelei regiuni."
-      },
-      {
-        "label": "Pasul 4 — 6 domenii",
-        "title": "Deblocare națională → Devino Pazitor",
-        "desc": "Completează toate cele șase domenii. Deblochează întreaga memorie a Bulgariei. Primește titlul de Pazitor — Пазител."
+        "label": "Pasul 3",
+        "title": "Colectează relicve și avansează",
+        "desc": "Dezleagă mistere pe teren, găsește artefacte digitale ascunse și treci prin cele patru Chei Maestre pentru a deveni un adevărat Păzitor al Bulgariei."
       }
     ],
     "flow": [
@@ -77,17 +75,17 @@
       {
         "icon": "⌘",
         "name": "Traseu + Relicvă",
-        "sub": "5 puncte · 1 artefact"
+        "sub": "4 puncte · 4 artefacte · 1 relicvă"
       },
       {
         "icon": "◈",
         "name": "Domeniu + Pecete",
-        "sub": "3 trasee · 1 pecete regională"
+        "sub": "4 trasee · 1 pecete · 1 Cheie Maestră"
       },
       {
         "icon": "✦",
-        "name": "Pazitor — Пазител",
-        "sub": "6 domenii · Bulgaria întreagă deblocată"
+        "name": "Păzitor",
+        "sub": "4 Chei Maestre · Legământul Viu"
       }
     ]
   },
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "Realitate",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "Privirea Păzitorului",
     "flowLabel3": "Dezvăluit",
     "scenes": [
       {
@@ -347,7 +345,7 @@
       },
       {
         "q": "Ce limbi sunt acceptate?",
-        "a": "Aplicația acceptă 13 limbi: bulgară, engleză, germană, franceză, spaniolă, italiană, română, turcă, greacă, poloneză, rusă, japoneză și sârbă."
+        "a": "Aplicația acceptă 14 limbi: bulgară, engleză, germană, franceză, spaniolă, italiană, română, turcă, greacă, maghiară, chineză, rusă, japoneză și sârbă."
       },
       {
         "q": "Am nevoie de un cont?",
@@ -355,7 +353,7 @@
       },
       {
         "q": "Cum funcționează prețurile?",
-        "a": "Anumite previzualizări ale punctelor de control sunt gratuite. Accesul complet la trasee și pachetele de domenii sunt disponibile prin achiziții în aplicație. Prețurile sunt premium și transparente — plătești pentru ceea ce vrei să explorezi."
+        "a": "Oaspeții pot previzualiza harta, Domeniile, traseele, teaserele punctelor de control și un demo al Privirii Păzitorului. Traseele complete și pachetele de Domenii sunt achiziții premium unice: plătești o dată, păstrezi pentru totdeauna."
       },
       {
         "q": "Pot municipalitățile și companiile să colaboreze cu aplicația?",
@@ -531,6 +529,23 @@
         "desc": "Revelația finală.\nCând cheile se reunesc, Paznicul înțelege de ce Numele a durat."
       }
     ]
+  },
+  "map": {
+    "eyebrow": "Hartă vie",
+    "title": "Harta vie a Bulgariei",
+    "subtitle": "Geografia ascunsă a memoriei — patru Domenii principale, un portal de peșteră și puncte reale de control.",
+    "legendTitle": "Legenda hărții",
+    "legendHero": "Punct de control eroic",
+    "legendStandard": "Punct de control standard",
+    "legendBefore": "Înainte de Nume — memorie veche",
+    "legendAfter": "După Nume — identitate durabilă",
+    "epochBefore": "Înainte de Nume",
+    "epochAfter": "După Nume",
+    "viewPlace": "Vizitează locul",
+    "viewDomain": "Vezi domeniul",
+    "lockedLabel": "În curând",
+    "regionsLabel": "Hartă interactivă a celor patru Domenii principale ale Bulgariei și a portalului peșterii",
+    "nodesLabel": "Noduri ale punctelor de control"
   },
   "skipLink": "Salt la conținut",
   "ariaNav": "Navigare principală",

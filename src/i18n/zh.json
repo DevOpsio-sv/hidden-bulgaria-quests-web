@@ -2,14 +2,14 @@
   "lang": "zh",
   "meta": {
     "title": "Unlocking Bulgaria — 穿越保加利亚隐藏的记忆",
-    "description": "一款高级移动应用，通过现实世界任务、电影化叙事、可选 AR、历史路线、遗物和文化发现来探索保加利亚。成为 Keeper。",
+    "description": "一款高级移动应用，通过现实世界的神秘任务、电影式叙事、可选守护者之眼、文物、路线遗物、领域封印和四把主钥匙来探索保加利亚。成为守护者。",
     "ogTitle": "Unlocking Bulgaria — 1345 年。一个名字幸存了下来。",
-    "ogDescription": "穿越保加利亚。揭开古老的秘密。成为 Keeper。"
+    "ogDescription": "穿越保加利亚。揭开古老的秘密。成为守护者。"
   },
   "nav": {
     "howItWorks": "玩法介绍",
     "domains": "领域",
-    "guardianSight": "Guardian Sight",
+    "guardianSight": "守护者之眼",
     "timeline": "时间线",
     "partners": "合作伙伴",
     "faq": "常见问题",
@@ -33,39 +33,37 @@
       "14 种语言"
     ],
     "mapLabel": "保加利亚隐藏记忆互动地图",
-    "phoneDomain": "名字之域",
-    "phoneTitle": "古都",
-    "phoneDesc": "走访记忆成为国家之处。",
-    "phoneProgress": "已发现 7 枚印记中的 4 枚"
+    "phoneDomain": "洞穴门户",
+    "phoneTitle": "普罗霍德纳",
+    "phoneDesc": "进入大地在名字之前就已凝望的地方。",
+    "phoneProgress": "门户封印正在苏醒",
+    "portalAwakenCta": "唤醒封印",
+    "portalUnlockedCta": "门户已苏醒",
+    "portalFinalCta": "✨ 连接已建立！若要激活实时 AR 视野，请下载应用："
   },
   "band": {
-    "sub": "不是指南。不是地图。不是游戏。",
-    "statement": "一场穿越保加利亚鲜活记忆的现实世界旅程。"
+    "sub": "不止是指南。不止是游戏。",
+    "statement": "一场互动冒险，把保加利亚变成你的下一项任务。"
   },
   "howItWorks": {
     "eyebrow": "玩法介绍",
-    "heading": "成为 Keeper，\n一次走进一个地点。",
-    "lede": "Unlocking Bulgaria 中的每段旅程都遵循清晰的进程 — 从一个检查点到完整解锁保加利亚隐藏的记忆。",
+    "heading": "成为守护者，\n解锁保加利亚。",
+    "lede": "用三个简单步骤，把一次步行变成历史探索：",
     "steps": [
       {
         "label": "第 1 步",
-        "title": "到访一个检查点",
-        "desc": "前往真实地点。抵达后激活检查点。解锁一段故事、一条线索或一个隐藏层。"
+        "title": "选择目的地并出发",
+        "desc": "前往保加利亚真实的历史与自然地点。抵达现场后，应用会自动激活。"
       },
       {
-        "label": "第 2 步 — 5 个检查点",
-        "title": "完成一条路线 → 收集一件遗物",
-        "desc": "五个相连的检查点组成一条路线。完成路线即可获得一件永久数字遗物 — 保加利亚历史中的一件文物。"
+        "label": "第 2 步",
+        "title": "解锁隐藏的过去（AR）",
+        "desc": "透过手机观看。对准相机，通过增强现实、数字线索和电影式叙事，看见历史在眼前复活。"
       },
       {
-        "label": "第 3 步 — 3 条路线",
-        "title": "解锁一个领域 → 赢得一枚印记",
-        "desc": "三条路线会解锁一个区域领域。赢得它的印记 — 这是掌握该地区隐藏记忆的象征。"
-      },
-      {
-        "label": "第 4 步 — 6 个领域",
-        "title": "全国解锁 → 成为 Keeper",
-        "desc": "完成全部六个领域。解锁保加利亚的完整记忆。获得 Keeper — Пазител 的称号。"
+        "label": "第 3 步",
+        "title": "收集遗物并推进",
+        "desc": "在现场解开谜团，找到隐藏的数字文物，并穿越四把主钥匙，成为保加利亚真正的守护者。"
       }
     ],
     "flow": [
@@ -77,17 +75,17 @@
       {
         "icon": "⌘",
         "name": "路线 + 遗物",
-        "sub": "5 个检查点 · 1 件文物"
+        "sub": "4 个点 · 4 件文物 · 1 件遗物"
       },
       {
         "icon": "◈",
-        "name": "领域 + 印记",
-        "sub": "3 条路线 · 1 枚区域印记"
+        "name": "领域 + 封印",
+        "sub": "4 条路线 · 1 枚封印 · 1 把主钥匙"
       },
       {
         "icon": "✦",
-        "name": "Keeper — Пазител",
-        "sub": "6 个领域 · 完整解锁保加利亚"
+        "name": "守护者",
+        "sub": "4 把主钥匙 · 活的契约"
       }
     ]
   },
@@ -101,14 +99,14 @@
     "routesOf": "条路线已完成，共 4 条"
   },
   "guardianSight": {
-    "eyebrow": "Guardian Sight",
+    "eyebrow": "守护者之眼",
     "heading": "每个地方都记得。",
-    "lede": "Guardian Sight 是 Unlocking Bulgaria 中可选的增强现实相机模式。将镜头对准世界 — 看见其下隐藏的层次。",
+    "lede": "守护者之眼是 Unlocking Bulgaria 中可选的增强现实相机模式。将镜头对准世界 — 看见其下隐藏的层次。",
     "sightBody": "将相机对准大地。隐藏的层次出现在时间掩盖的事物之下。",
-    "ariaVisual": "Guardian Sight AR 界面 — 动画扫描环",
+    "ariaVisual": "守护者之眼 AR 界面 — 动画扫描环",
     "floatTag1": "隐藏层已揭示",
     "floatTag2": "检查点 · 82m",
-    "centerLabel": "Guardian\nSight",
+    "centerLabel": "守护者\n之眼",
     "features": [
       {
         "icon": "◈",
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "现实",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "守护者之眼",
     "flowLabel3": "揭示",
     "scenes": [
       {
@@ -339,7 +337,7 @@
       },
       {
         "q": "使用应用必须使用 AR 吗？",
-        "a": "不需要。Guardian Sight AR 完全可选。每个 AR 时刻都有完整的非 AR 替代方案，包含可阅读内容、字幕和清晰的完成逻辑。核心任务体验完全不依赖 AR。"
+        "a": "不需要。守护者之眼 AR 完全可选。每个 AR 时刻都有完整的非 AR 替代方案，包含可阅读内容、字幕和清晰的完成逻辑。核心任务体验完全不依赖 AR。"
       },
       {
         "q": "这款应用适合儿童吗？",
@@ -355,7 +353,7 @@
       },
       {
         "q": "定价如何运作？",
-        "a": "部分检查点预览免费。完整路线访问和领域套餐可通过应用内购买获得。定价高级且透明 — 只为你想探索的内容付费。"
+        "a": "游客可以预览地图、领域、路线、检查点预告和守护者之眼演示。完整路线和领域包是高级一次性购买：支付一次，永久保留。"
       },
       {
         "q": "市政机构和企业可以与应用合作吗？",
@@ -417,7 +415,7 @@
             "href": "#domains"
           },
           {
-            "label": "Guardian Sight",
+            "label": "守护者之眼",
             "href": "#guardian-sight"
           },
           {
@@ -531,6 +529,23 @@
         "desc": "最终的启示。\n当钥匙汇聚，守护者理解了为何名字长存。"
       }
     ]
+  },
+  "map": {
+    "eyebrow": "活地图",
+    "title": "保加利亚活地图",
+    "subtitle": "记忆的隐藏地理 — 四个主要领域、一个洞穴门户和真实检查点。",
+    "legendTitle": "地图图例",
+    "legendHero": "英雄检查点",
+    "legendStandard": "标准检查点",
+    "legendBefore": "名字之前 — 古老记忆",
+    "legendAfter": "名字之后 — 延续的身份",
+    "epochBefore": "名字之前",
+    "epochAfter": "名字之后",
+    "viewPlace": "访问地点",
+    "viewDomain": "查看领域",
+    "lockedLabel": "即将推出",
+    "regionsLabel": "保加利亚四个主要领域与洞穴门户的互动地图",
+    "nodesLabel": "地图检查点节点"
   },
   "skipLink": "跳至内容",
   "ariaNav": "主导航",

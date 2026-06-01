@@ -64,6 +64,8 @@ const APP_STORE_URL = "https://www.apple.com/app-store/";
     PointLight: new (...args: number[]) => any;
     DirectionalLight: new (...args: number[]) => any;
     AmbientLight: new (...args: number[]) => any;
+    ACESFilmicToneMapping: unknown;
+    sRGBEncoding: unknown;
   };
 
   declare global {
@@ -72,7 +74,6 @@ const APP_STORE_URL = "https://www.apple.com/app-store/";
     }
   }
 
-  const portalCards = document.querySelectorAll<HTMLElement>("[data-portal-card]");
   const threeUrl = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
   let threePromise: Promise<ThreeNamespace | null> | null = null;
 
@@ -360,64 +361,70 @@ const APP_STORE_URL = "https://www.apple.com/app-store/";
     frameId = requestAnimationFrame(animate);
   };
 
-  portalCards.forEach((card) => {
-    const trigger = card.querySelector<HTMLButtonElement>("[data-portal-trigger]");
-    const caveVideo = card.querySelector<HTMLVideoElement>(".portal-cave-video");
-    const descriptionWrap = card.querySelector<HTMLElement>("[data-portal-description-wrap]");
-    let activated = false;
+  const initPortalCards = () => {
+    const portalCards = document.querySelectorAll<HTMLElement>("[data-portal-card]");
 
-    const playVideo = (video: HTMLVideoElement | null) => {
-      if (!video) return;
-      video.currentTime = 0;
-      const play = video.play();
-      if (play) play.catch(() => undefined);
-    };
+    portalCards.forEach((card) => {
+      const trigger = card.querySelector<HTMLButtonElement>("[data-portal-trigger]");
+      const caveVideo = card.querySelector<HTMLVideoElement>(".portal-cave-video");
+      const descriptionWrap = card.querySelector<HTMLElement>("[data-portal-description-wrap]");
+      let activated = false;
 
-    const renderDownloadState = () => {
-      if (!descriptionWrap) return;
+      const playVideo = (video: HTMLVideoElement | null) => {
+        if (!video) return;
+        video.currentTime = 0;
+        const play = video.play();
+        if (play) play.catch(() => undefined);
+      };
 
-      const message = card.dataset.finalMessage ?? "";
-      const googlePlayUrl = card.dataset.googlePlayUrl ?? "#";
-      const appStoreUrl = card.dataset.appStoreUrl ?? "#";
+      const renderDownloadState = () => {
+        if (!descriptionWrap) return;
 
-      descriptionWrap.classList.add("is-changing");
+        const message = card.dataset.finalMessage ?? "";
+        const googlePlayUrl = card.dataset.googlePlayUrl ?? "#";
+        const appStoreUrl = card.dataset.appStoreUrl ?? "#";
 
-      window.setTimeout(() => {
-        descriptionWrap.innerHTML = `
-          <p class="portal-description">${message}</p>
-          <div class="portal-download-links">
-            <a class="portal-store-link" href="${appStoreUrl}" target="_blank" rel="noopener">App Store</a>
-            <a class="portal-store-link" href="${googlePlayUrl}" target="_blank" rel="noopener">Google Play</a>
-          </div>
-        `;
-        descriptionWrap.classList.remove("is-changing");
-      }, 180);
-    };
+        descriptionWrap.classList.add("is-changing");
 
-    const unlockPortal = () => {
-      if (trigger) {
-        trigger.textContent = card.dataset.unlockedLabel ?? "Portal awakened";
+        window.setTimeout(() => {
+          descriptionWrap.innerHTML = `
+            <p class="portal-description">${message}</p>
+            <div class="portal-download-links">
+              <a class="portal-store-link" href="${appStoreUrl}" target="_blank" rel="noopener">App Store</a>
+              <a class="portal-store-link" href="${googlePlayUrl}" target="_blank" rel="noopener">Google Play</a>
+            </div>
+          `;
+          descriptionWrap.classList.remove("is-changing");
+        }, 180);
+      };
+
+      const unlockPortal = () => {
+        if (trigger) {
+          trigger.textContent = card.dataset.unlockedLabel ?? "Portal awakened";
+          trigger.disabled = true;
+        }
+        card.classList.add("is-complete");
+        renderDownloadState();
+        firePortalRunes(trigger ?? card);
+      };
+
+      trigger?.addEventListener("click", () => {
+        if (activated) return;
+        activated = true;
+
         trigger.disabled = true;
-      }
-      card.classList.add("is-complete");
-      renderDownloadState();
-      firePortalRunes(trigger ?? card);
-    };
+        card.classList.add("is-charging");
 
-    trigger?.addEventListener("click", () => {
-      if (activated) return;
-      activated = true;
-
-      trigger.disabled = true;
-      card.classList.add("is-charging");
-
-      window.setTimeout(() => {
-        card.classList.add("is-open");
-        playVideo(caveVideo);
-        unlockPortal();
-      }, 1500);
+        window.setTimeout(() => {
+          card.classList.add("is-open");
+          playVideo(caveVideo);
+          unlockPortal();
+        }, 1500);
+      });
     });
-  });
+  };
+
+  document.addEventListener("astro:page-load", initPortalCards);
 </script>
 
 <style>

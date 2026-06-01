@@ -33,39 +33,37 @@
       "14 Sprachen"
     ],
     "mapLabel": "Interaktive Karte von Bulgariens verborgenem Gedächtnis",
-    "phoneDomain": "Domäne des Namens",
-    "phoneTitle": "Die alten Hauptstädte",
-    "phoneDesc": "Besuche die Orte, an denen Gedächtnis zur Staatlichkeit wurde.",
-    "phoneProgress": "Gateway Seal awakening"
+    "phoneDomain": "Höhlenportal",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Betritt den Ort, an dem die Erde schon vor dem Namen blickte.",
+    "phoneProgress": "Das Siegel des Portals erwacht",
+    "portalAwakenCta": "SIEGEL ERWECKEN",
+    "portalUnlockedCta": "DAS PORTAL IST ERWACHT",
+    "portalFinalCta": "✨ Die Verbindung ist hergestellt! Lade die App herunter, um den Live-AR-Blick zu aktivieren:"
   },
   "band": {
-    "sub": "Kein Reiseführer. Keine Karte. Kein Spiel.",
-    "statement": "Eine echte Reise durch das lebendige Gedächtnis Bulgariens."
+    "sub": "Mehr als ein Reiseführer. Mehr als ein Spiel.",
+    "statement": "Ein interaktives Abenteuer, das Bulgarien in deine nächste Mission verwandelt."
   },
   "howItWorks": {
     "eyebrow": "Wie es funktioniert",
-    "heading": "Werde ein Hüter,\nein Ort nach dem anderen.",
-    "lede": "Jede Reise in Unlocking Bulgaria folgt einer klaren Progression — von einem einzelnen Kontrollpunkt bis zur vollständigen Freischaltung des verborgenen Gedächtnisses Bulgariens.",
+    "heading": "Werde ein Hüter,\nentsperre Bulgarien.",
+    "lede": "Verwandle deinen Spaziergang in drei einfachen Schritten in eine historische Erkundung:",
     "steps": [
       {
         "label": "Schritt 1",
-        "title": "Einen Kontrollpunkt besuchen",
-        "desc": "Reise zu einem echten Ort. Aktiviere den Kontrollpunkt durch deine Ankunft. Schalte eine Geschichte, einen Hinweis oder eine verborgene Ebene frei."
+        "title": "Wähle ein Ziel und brich auf",
+        "desc": "Reise zu echten historischen und natürlichen Orten in Bulgarien. Wenn du vor Ort ankommst, wird die App aktiviert."
       },
       {
-        "label": "Step 2 — 4 Checkpoints",
-        "title": "Route abschließen → Relikt sammeln",
-        "desc": "Four connected checkpoints form a Route. Each checkpoint grants an Artifact. Complete the route to assemble a permanent Route Relic."
+        "label": "Schritt 2",
+        "title": "Entsperre die verborgene Vergangenheit (AR)",
+        "desc": "Schau durch dein Telefon. Richte die Kamera aus und sieh, wie Geschichte durch Augmented Reality, digitale Hinweise und filmische Erzählungen lebendig wird."
       },
       {
-        "label": "Step 3 — 4 Routes",
-        "title": "Domäne freischalten → Siegel verdienen",
-        "desc": "Four routes complete a Master Key Domain. Earn its Seal — the mark of mastery over that memory layer."
-      },
-      {
-        "label": "Step 4 — 4 Master Keys",
-        "title": "Nationales Freischalten → Hüter werden",
-        "desc": "Complete the four main Domains. Assemble the four Master Keys. Unlock the Living Covenant and receive the responsibility of Keeper — Пазител."
+        "label": "Schritt 3",
+        "title": "Sammle Relikte und schreite voran",
+        "desc": "Entwirre Rätsel vor Ort, finde versteckte digitale Artefakte und durchlaufe die vier Hauptschlüssel, um ein wahrer Hüter Bulgariens zu werden."
       }
     ],
     "flow": [
@@ -76,18 +74,18 @@
       },
       {
         "icon": "⌘",
-        "name": "Route + Relic",
-        "sub": "4 checkpoints · 4 artifacts · 1 relic"
+        "name": "Route + Relikt",
+        "sub": "4 Punkte · 4 Artefakte · 1 Relikt"
       },
       {
         "icon": "◈",
-        "name": "Domain + Seal",
-        "sub": "4 routes · 1 seal · 1 Master Key"
+        "name": "Domäne + Siegel",
+        "sub": "4 Routen · 1 Siegel · 1 Hauptschlüssel"
       },
       {
         "icon": "✦",
-        "name": "Keeper — Пазител",
-        "sub": "4 Master Keys · Living Covenant"
+        "name": "Hüter",
+        "sub": "4 Hauptschlüssel · Das Lebendige Vermächtnis"
       }
     ]
   },
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "Realität",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "Wächterblick",
     "flowLabel3": "Enthüllt",
     "scenes": [
       {
@@ -347,7 +345,7 @@
       },
       {
         "q": "Welche Sprachen werden unterstützt?",
-        "a": "The app supports 14 languages: Bulgarian, English, German, French, Spanish, Italian, Romanian, Turkish, Greek, Hungarian, Chinese, Russian, Japanese, and Serbian."
+        "a": "Die App unterstützt 14 Sprachen: Bulgarisch, Englisch, Deutsch, Französisch, Spanisch, Italienisch, Rumänisch, Türkisch, Griechisch, Ungarisch, Chinesisch, Russisch, Japanisch und Serbisch."
       },
       {
         "q": "Benötige ich ein Konto?",
@@ -355,7 +353,7 @@
       },
       {
         "q": "Wie funktioniert die Preisgestaltung?",
-        "a": "Ausgewählte Kontrollpunkt-Vorschauen sind kostenlos. Vollständiger Routenzugang und Domänenpakete sind über In-App-Käufe verfügbar. Die Preise sind Premium und transparent — zahle für das, was du erkunden möchtest."
+        "a": "Gäste können die Karte, Domänen, Routen, Kontrollpunkt-Teaser und eine Wächterblick-Demo ansehen. Vollständige Routen und Domänenpakete sind Premium-Einmalkäufe: einmal zahlen, für immer behalten."
       },
       {
         "q": "Können Gemeinden und Unternehmen mit der App kooperieren?",
@@ -531,6 +529,23 @@
         "desc": "Die endgültige Enthüllung.\nWenn die Schlüssel zusammenkommen, versteht der Hüter, warum der Name bestanden hat."
       }
     ]
+  },
+  "map": {
+    "eyebrow": "Lebendige Karte",
+    "title": "Lebendige Karte Bulgariens",
+    "subtitle": "Die verborgene Geografie der Erinnerung — vier Hauptdomänen, ein Höhlenportal und echte Kontrollpunkte.",
+    "legendTitle": "Kartenlegende",
+    "legendHero": "Heroischer Kontrollpunkt",
+    "legendStandard": "Standard-Kontrollpunkt",
+    "legendBefore": "Vor dem Namen — alte Erinnerung",
+    "legendAfter": "Nach dem Namen — beständige Identität",
+    "epochBefore": "Vor dem Namen",
+    "epochAfter": "Nach dem Namen",
+    "viewPlace": "Ort besuchen",
+    "viewDomain": "Domäne ansehen",
+    "lockedLabel": "Demnächst",
+    "regionsLabel": "Interaktive Karte der vier Hauptdomänen Bulgariens und des Höhlenportals",
+    "nodesLabel": "Karten-Kontrollpunkte"
   },
   "skipLink": "Zum Inhalt springen",
   "ariaNav": "Hauptnavigation",

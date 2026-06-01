@@ -33,39 +33,37 @@
       "14 idiomas"
     ],
     "mapLabel": "Mapa interactivo de la memoria oculta de Bulgaria",
-    "phoneDomain": "Dominio del Nombre",
-    "phoneTitle": "Las antiguas capitales",
-    "phoneDesc": "Visita los lugares donde la memoria se convirtió en Estado.",
-    "phoneProgress": "4 de 7 sellos descubiertos"
+    "phoneDomain": "Portal de la cueva",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Entra en el lugar donde la tierra miraba antes del Nombre.",
+    "phoneProgress": "El Sello del Portal despierta",
+    "portalAwakenCta": "DESPERTAR EL SELLO",
+    "portalUnlockedCta": "EL PORTAL ESTÁ DESPIERTO",
+    "portalFinalCta": "✨ ¡La conexión está establecida! Para activar la visión AR en vivo, descarga la aplicación:"
   },
   "band": {
-    "sub": "No es una guía. No es un mapa. No es un juego.",
-    "statement": "Un viaje real por la memoria viva de Bulgaria."
+    "sub": "Más que una guía. Más que un juego.",
+    "statement": "Una aventura interactiva que convierte Bulgaria en tu próxima misión."
   },
   "howItWorks": {
     "eyebrow": "Cómo funciona",
-    "heading": "Conviértete en Guardián,\nun lugar a la vez.",
-    "lede": "Cada viaje en Unlocking Bulgaria sigue una progresión clara — desde un único punto de control hasta el desbloqueo completo de la memoria oculta de Bulgaria.",
+    "heading": "Conviértete en Guardián,\ndesbloquea Bulgaria.",
+    "lede": "Convierte tu paseo en una exploración histórica en tres pasos sencillos:",
     "steps": [
       {
         "label": "Paso 1",
-        "title": "Visitar un punto de control",
-        "desc": "Viaja a un lugar real. Activa el punto de control al llegar. Desbloquea una historia, una pista o una capa oculta."
+        "title": "Elige un destino y sal",
+        "desc": "Viaja a lugares históricos y naturales reales de Bulgaria. Al llegar al sitio, la aplicación se activa."
       },
       {
-        "label": "Paso 2 — 5 puntos",
-        "title": "Completar una ruta → Recoger una reliquia",
-        "desc": "Cinco puntos de control conectados forman una ruta. Complétala para recibir una reliquia digital permanente — un artefacto de la historia de Bulgaria."
+        "label": "Paso 2",
+        "title": "Desbloquea el pasado oculto (AR)",
+        "desc": "Mira a través del teléfono. Apunta la cámara y ve cómo la historia cobra vida ante tus ojos mediante realidad aumentada, pistas digitales y relatos cinematográficos."
       },
       {
-        "label": "Paso 3 — 3 rutas",
-        "title": "Desbloquear un dominio → Ganar un sello",
-        "desc": "Tres rutas desbloquean un dominio regional. Gana su sello — símbolo del dominio sobre la memoria oculta de esa región."
-      },
-      {
-        "label": "Paso 4 — 6 dominios",
-        "title": "Desbloqueo nacional → Convertirse en Guardián",
-        "desc": "Completa los seis dominios. Desbloquea toda la memoria de Bulgaria. Recibe el título de Guardián — Пазител."
+        "label": "Paso 3",
+        "title": "Recoge reliquias y avanza",
+        "desc": "Resuelve misterios en el lugar, encuentra artefactos digitales ocultos y atraviesa las cuatro Llaves Maestras para convertirte en un verdadero Guardián de Bulgaria."
       }
     ],
     "flow": [
@@ -77,17 +75,17 @@
       {
         "icon": "⌘",
         "name": "Ruta + Reliquia",
-        "sub": "5 puntos · 1 artefacto"
+        "sub": "4 puntos · 4 artefactos · 1 reliquia"
       },
       {
         "icon": "◈",
         "name": "Dominio + Sello",
-        "sub": "3 rutas · 1 sello regional"
+        "sub": "4 rutas · 1 sello · 1 Llave Maestra"
       },
       {
         "icon": "✦",
-        "name": "Guardián — Пазител",
-        "sub": "6 dominios · Bulgaria completa desbloqueada"
+        "name": "Guardián",
+        "sub": "4 Llaves Maestras · El Testamento Viviente"
       }
     ]
   },
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "Realidad",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "Visión del Guardián",
     "flowLabel3": "Revelado",
     "scenes": [
       {
@@ -355,7 +353,7 @@
       },
       {
         "q": "¿Cómo funciona el precio?",
-        "a": "Algunas vistas previas de puntos de control son gratuitas. El acceso completo a rutas y paquetes de dominios está disponible mediante compras dentro de la aplicación. Los precios son premium y transparentes — paga por lo que quieres explorar."
+        "a": "Los visitantes pueden previsualizar el mapa, los Dominios, las rutas, los teasers de puntos de control y una demo de la Vista del Guardián. Las rutas completas y los paquetes de Dominios son compras premium de una sola vez: paga una vez, conserva para siempre."
       },
       {
         "q": "¿Pueden los municipios y empresas asociarse con la aplicación?",
@@ -531,6 +529,23 @@
         "desc": "La revelación final.\nCuando las llaves se reúnen, el Guardián entiende por qué el Nombre perduró."
       }
     ]
+  },
+  "map": {
+    "eyebrow": "Mapa vivo",
+    "title": "Mapa vivo de Bulgaria",
+    "subtitle": "La geografía oculta de la memoria — cuatro Dominios principales, un portal de cueva y puntos de control reales.",
+    "legendTitle": "Leyenda del mapa",
+    "legendHero": "Punto de control heroico",
+    "legendStandard": "Punto de control estándar",
+    "legendBefore": "Antes del Nombre — memoria antigua",
+    "legendAfter": "Después del Nombre — identidad perdurable",
+    "epochBefore": "Antes del Nombre",
+    "epochAfter": "Después del Nombre",
+    "viewPlace": "Visitar lugar",
+    "viewDomain": "Ver dominio",
+    "lockedLabel": "Próximamente",
+    "regionsLabel": "Mapa interactivo de los cuatro Dominios principales de Bulgaria y el portal de la cueva",
+    "nodesLabel": "Nodos de puntos de control"
   },
   "skipLink": "Ir al contenido",
   "ariaNav": "Navegación principal",

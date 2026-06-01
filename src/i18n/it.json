@@ -33,39 +33,37 @@
       "14 lingue"
     ],
     "mapLabel": "Mappa interattiva della memoria nascosta della Bulgaria",
-    "phoneDomain": "Dominio del Nome",
-    "phoneTitle": "Le antiche capitali",
-    "phoneDesc": "Visita i luoghi dove la memoria divenne Stato.",
-    "phoneProgress": "4 sigilli scoperti su 7"
+    "phoneDomain": "Portale della grotta",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Entra nel luogo in cui la terra guardava prima del Nome.",
+    "phoneProgress": "Il Sigillo del Portale si risveglia",
+    "portalAwakenCta": "RISVEGLIA IL SIGILLO",
+    "portalUnlockedCta": "IL PORTALE È RISVEGLIATO",
+    "portalFinalCta": "✨ La connessione è stabilita! Per attivare la vista AR dal vivo, scarica l'app:"
   },
   "band": {
-    "sub": "Non è una guida. Non è una mappa. Non è un gioco.",
-    "statement": "Un viaggio reale attraverso la memoria viva della Bulgaria."
+    "sub": "Più di una guida. Più di un gioco.",
+    "statement": "Un'avventura interattiva che trasforma la Bulgaria nella tua prossima missione."
   },
   "howItWorks": {
     "eyebrow": "Come funziona",
-    "heading": "Diventa Custode,\nun luogo alla volta.",
-    "lede": "Ogni viaggio in Unlocking Bulgaria segue una progressione chiara — da un singolo punto di controllo fino allo sblocco completo della memoria nascosta della Bulgaria.",
+    "heading": "Diventa Custode,\nsblocca la Bulgaria.",
+    "lede": "Trasforma la tua passeggiata in un'esplorazione storica in tre semplici passi:",
     "steps": [
       {
         "label": "Passo 1",
-        "title": "Visitare un punto di controllo",
-        "desc": "Recati in un luogo reale. Attiva il punto di controllo al tuo arrivo. Sblocca una storia, un indizio o uno strato nascosto."
+        "title": "Scegli una destinazione e parti",
+        "desc": "Viaggia verso veri luoghi storici e naturali in Bulgaria. Quando arrivi sul posto, l'app si attiva."
       },
       {
-        "label": "Passo 2 — 5 punti",
-        "title": "Completare un percorso → Raccogliere una reliquia",
-        "desc": "Cinque punti di controllo collegati formano un percorso. Completalo per ricevere una reliquia digitale permanente — un artefatto della storia bulgara."
+        "label": "Passo 2",
+        "title": "Sblocca il passato nascosto (AR)",
+        "desc": "Guarda attraverso il telefono. Punta la fotocamera e vedi la storia prendere vita davanti ai tuoi occhi con realtà aumentata, indizi digitali e racconti cinematografici."
       },
       {
-        "label": "Passo 3 — 3 percorsi",
-        "title": "Sbloccare un dominio → Guadagnare un sigillo",
-        "desc": "Tre percorsi sbloccano un dominio regionale. Guadagna il suo sigillo — simbolo del dominio sulla memoria nascosta di quella regione."
-      },
-      {
-        "label": "Passo 4 — 6 domini",
-        "title": "Sblocco nazionale → Diventare Custode",
-        "desc": "Completa tutti e sei i domini. Sblocca l'intera memoria della Bulgaria. Ricevi il titolo di Custode — Пазител."
+        "label": "Passo 3",
+        "title": "Raccogli reliquie e avanza",
+        "desc": "Risolvi misteri sul posto, trova artefatti digitali nascosti e attraversa le quattro Chiavi Maestre per diventare un vero Custode della Bulgaria."
       }
     ],
     "flow": [
@@ -77,17 +75,17 @@
       {
         "icon": "⌘",
         "name": "Percorso + Reliquia",
-        "sub": "5 punti · 1 artefatto"
+        "sub": "4 punti · 4 artefatti · 1 reliquia"
       },
       {
         "icon": "◈",
         "name": "Dominio + Sigillo",
-        "sub": "3 percorsi · 1 sigillo regionale"
+        "sub": "4 percorsi · 1 sigillo · 1 Chiave Maestra"
       },
       {
         "icon": "✦",
-        "name": "Custode — Пазител",
-        "sub": "6 domini · Tutta la Bulgaria sbloccata"
+        "name": "Custode",
+        "sub": "4 Chiavi Maestre · Il Testamento Vivente"
       }
     ]
   },
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "Realtà",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "Vista del Custode",
     "flowLabel3": "Rivelato",
     "scenes": [
       {
@@ -355,7 +353,7 @@
       },
       {
         "q": "Come funziona il prezzo?",
-        "a": "Alcune anteprime dei punti di controllo sono gratuite. L'accesso completo ai percorsi e i pacchetti di domini sono disponibili tramite acquisti in-app. Il prezzo è premium e trasparente — paga per ciò che vuoi esplorare."
+        "a": "Gli ospiti possono vedere in anteprima la mappa, i Domini, i percorsi, i teaser dei punti di controllo e una demo della Vista del Custode. I percorsi completi e i pacchetti dei Domini sono acquisti premium una tantum: paghi una volta, conservi per sempre."
       },
       {
         "q": "I comuni e le aziende possono collaborare con l'app?",
@@ -531,6 +529,23 @@
         "desc": "La rivelazione finale.\nQuando le chiavi si uniscono, il Custode capisce perché il Nome è sopravvissuto."
       }
     ]
+  },
+  "map": {
+    "eyebrow": "Mappa viva",
+    "title": "Mappa viva della Bulgaria",
+    "subtitle": "La geografia nascosta della memoria — quattro Domini principali, un portale di grotta e veri punti di controllo.",
+    "legendTitle": "Legenda della mappa",
+    "legendHero": "Punto di controllo eroico",
+    "legendStandard": "Punto di controllo standard",
+    "legendBefore": "Prima del Nome — memoria antica",
+    "legendAfter": "Dopo il Nome — identità resistente",
+    "epochBefore": "Prima del Nome",
+    "epochAfter": "Dopo il Nome",
+    "viewPlace": "Visita luogo",
+    "viewDomain": "Vedi dominio",
+    "lockedLabel": "Prossimamente",
+    "regionsLabel": "Mappa interattiva dei quattro Domini principali della Bulgaria e del portale della grotta",
+    "nodesLabel": "Nodi dei punti di controllo"
   },
   "skipLink": "Vai al contenuto",
   "ariaNav": "Navigazione principale",

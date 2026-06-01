@@ -58,7 +58,7 @@ const schemas = [
   }}
 >
   <Header dict={dict} lang={lang as string} />
-  <main id="main">
+  <main id="main" transition:name="main-content" transition:animate="slide">
     <PlacePageTemplate dict={dict} lang={lang as string} place={place} route={route} />
     {place.slug === "prohodna-cave" && (
       <GuardianSightProhodna dict={dict} lang={lang as string} />

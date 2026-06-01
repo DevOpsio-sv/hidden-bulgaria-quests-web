@@ -33,44 +33,39 @@
       "14 languages"
     ],
     "mapLabel": "Interactive map of Bulgaria's hidden memory",
-    "phoneDomain": "Cave Gateway",
+    "phoneDomain": "Cave Portal",
     "phoneTitle": "Prohodna",
     "phoneDesc": "Enter the place where the land was watching before the Name.",
-    "phoneProgress": "Gateway Seal awakening",
-    "portalAwakenCta": "Awaken the Seal",
-    "portalUnlockedCta": "The portal is awake",
-    "portalFinalCta": "✨ The connection is established! To activate the live AR sight beneath the Eyes of God, download the app:",
+    "phoneProgress": "The Portal Seal is awakening",
+    "portalAwakenCta": "AWAKEN THE SEAL",
+    "portalUnlockedCta": "THE PORTAL IS AWAKE",
+    "portalFinalCta": "✨ The connection is established! To activate the live AR sight, download the app:",
     "videoTitle": "The Journey — Unlocking Bulgaria",
     "videoClose": "Close"
   },
   "band": {
-    "sub": "Not a guide. Not a map. Not a game.",
-    "statement": "A real-world journey through Bulgaria's living memory."
+    "sub": "More than a guide. More than a game.",
+    "statement": "An interactive adventure that turns Bulgaria into your next mission."
   },
   "howItWorks": {
     "eyebrow": "How it works",
-    "heading": "Become a Keeper,\none place at a time.",
-    "lede": "Every journey in Unlocking Bulgaria follows a clear progression — from one real checkpoint to the four Master Keys and the Living Covenant.",
+    "heading": "Become a Keeper,\nunlock Bulgaria.",
+    "lede": "Turn your walk into a historical exploration in three simple steps:",
     "steps": [
       {
         "label": "Step 1",
-        "title": "Visit a Checkpoint",
-        "desc": "Travel to a real place. Activate the checkpoint by arriving at the location. Unlock a story, a clue, or a hidden layer."
+        "title": "Choose a destination and go",
+        "desc": "Travel to real historical and natural places in Bulgaria. When you arrive on site, the app activates."
       },
       {
-        "label": "Step 2 — 4 Checkpoints",
-        "title": "Complete a Route → Collect a Relic",
-        "desc": "Four connected checkpoints form a Route. Each checkpoint grants an Artifact. Complete the route to assemble a permanent Route Relic."
+        "label": "Step 2",
+        "title": "Unlock the hidden past (AR)",
+        "desc": "Look through your phone. Point the camera and see history come alive before your eyes through augmented reality, digital clues, and cinematic stories."
       },
       {
-        "label": "Step 3 — 4 Routes",
-        "title": "Complete a Domain → Earn a Seal",
-        "desc": "Four routes complete a Master Key Domain. Earn its Seal — the mark of mastery over that memory layer."
-      },
-      {
-        "label": "Step 4 — 4 Master Keys",
-        "title": "Living Covenant → Become a Keeper",
-        "desc": "Complete the four main Domains. Assemble the four Master Keys. Unlock the Living Covenant and receive the responsibility of Keeper — Пазител."
+        "label": "Step 3",
+        "title": "Collect relics and progress",
+        "desc": "Unravel mysteries on site, find hidden digital artifacts, and pass through the four Master Keys to become a true Keeper of Bulgaria."
       }
     ],
     "flow": [
@@ -82,7 +77,7 @@
       {
         "icon": "⌘",
         "name": "Route + Relic",
-        "sub": "4 checkpoints · 4 artifacts · 1 relic"
+        "sub": "4 points · 4 artifacts · 1 relic"
       },
       {
         "icon": "◈",
@@ -91,8 +86,8 @@
       },
       {
         "icon": "✦",
-        "name": "Keeper — Пазител",
-        "sub": "4 Master Keys · Living Covenant"
+        "name": "Keeper",
+        "sub": "4 Master Keys · The Living Covenant"
       }
     ]
   },
@@ -344,7 +339,7 @@
   "download": {
     "eyebrow": "Download the app",
     "heading": "Become a Keeper\nof Bulgaria.",
-    "lede": "The app is coming to iOS and Android. Join the launch list and be ready for the Cave gateway, the first routes, and the four Master Key Domains.",
+    "lede": "The app is coming to iOS and Android. Join the launch list and be ready for the Cave Portal, the first routes, and the four Master Key Domains.",
     "appStore": {
       "label": "Download on the",
       "name": "App Store"
@@ -573,7 +568,7 @@
   "memory": {
     "pre": "Not a country.",
     "name": "Bulgaria.",
-    "post": "A mystery that survived thirteen centuries."
+    "post": "A mystery that survived 1345 years."
   },
   "journey": {
     "eyebrow": "How the journey unfolds",
@@ -614,7 +609,7 @@
   "map": {
     "eyebrow": "Living Map",
     "title": "Living Map of Bulgaria",
-    "subtitle": "The hidden geography of memory — four main Domains, a Cave gateway, real checkpoints.",
+    "subtitle": "The hidden geography of memory — four main Domains, a Cave Portal, real checkpoints.",
     "legendTitle": "Map legend",
     "legendHero": "Hero checkpoint",
     "legendStandard": "Standard checkpoint",
@@ -625,7 +620,7 @@
     "viewPlace": "Visit place",
     "viewDomain": "View domain",
     "lockedLabel": "Coming soon",
-    "regionsLabel": "Interactive map of Bulgaria's four main Domains and Cave gateway",
+    "regionsLabel": "Interactive map of Bulgaria's four main Domains and Cave Portal",
     "nodesLabel": "Map checkpoint nodes"
   },
   "skipLink": "Skip to content",

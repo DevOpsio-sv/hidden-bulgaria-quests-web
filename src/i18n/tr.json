@@ -33,39 +33,37 @@
       "14 dil"
     ],
     "mapLabel": "Bulgaristan'ın gizli belleğinin interaktif haritası",
-    "phoneDomain": "İsmin Bölgesi",
-    "phoneTitle": "Eski başkentler",
-    "phoneDesc": "Belleğin devlete dönüştüğü yerleri ziyaret et.",
-    "phoneProgress": "7 mühürden 4'ü keşfedildi"
+    "phoneDomain": "Mağara Portalı",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Toprağın İsimden önce baktığı yere gir.",
+    "phoneProgress": "Portal Mührü uyanıyor",
+    "portalAwakenCta": "MÜHRÜ UYANDIR",
+    "portalUnlockedCta": "PORTAL UYANDI",
+    "portalFinalCta": "✨ Bağlantı kuruldu! Canlı AR bakışını etkinleştirmek için uygulamayı indir:"
   },
   "band": {
-    "sub": "Bir rehber değil. Bir harita değil. Bir oyun değil.",
-    "statement": "Bulgaristan'ın yaşayan belleğinde gerçek bir yolculuk."
+    "sub": "Bir rehberden fazlası. Bir oyundan fazlası.",
+    "statement": "Bulgaristan'ı bir sonraki görevine dönüştüren interaktif bir macera."
   },
   "howItWorks": {
     "eyebrow": "Nasıl çalışır",
-    "heading": "Bir Koruyucu ol,\nbir yer bir yer.",
-    "lede": "Unlocking Bulgaria'daki her yolculuk açık bir ilerlemeyi takip eder — tek bir kontrol noktasından Bulgaristan'ın gizli belleğinin tam olarak açılmasına kadar.",
+    "heading": "Koruyucu ol,\nBulgaristan'ın kilidini aç.",
+    "lede": "Yürüyüşünü üç basit adımda tarihsel bir keşfe dönüştür:",
     "steps": [
       {
         "label": "Adım 1",
-        "title": "Bir kontrol noktasını ziyaret et",
-        "desc": "Gerçek bir yere git. Varışınla kontrol noktasını etkinleştir. Bir hikaye, ipucu ya da gizli katmanın kilidini aç."
+        "title": "Bir hedef seç ve yola çık",
+        "desc": "Bulgaristan'daki gerçek tarihi ve doğal yerlere seyahat et. Mekâna vardığında uygulama etkinleşir."
       },
       {
-        "label": "Adım 2 — 5 nokta",
-        "title": "Rotayı tamamla → Emanet topla",
-        "desc": "Beş bağlantılı kontrol noktası bir rota oluşturur. Rotayı tamamlayarak kalıcı bir dijital emanet al — Bulgaristan tarihinden bir eser."
+        "label": "Adım 2",
+        "title": "Gizli geçmişi aç (AR)",
+        "desc": "Telefonundan bak. Kamerayı yönelt ve artırılmış gerçeklik, dijital ipuçları ve sinematik anlatılarla tarihin gözlerinin önünde canlandığını gör."
       },
       {
-        "label": "Adım 3 — 3 rota",
-        "title": "Bir bölgenin kilidini aç → Mühür kazan",
-        "desc": "Üç rota bölgesel bir alanın kilidini açar. Mührünü kazan — o bölgenin gizli belleğine hakim olmanın simgesi."
-      },
-      {
-        "label": "Adım 4 — 6 bölge",
-        "title": "Ulusal kilit açma → Koruyucu ol",
-        "desc": "Altı bölgenin tümünü tamamla. Bulgaristan'ın tam belleğini aç. Koruyucu unvanını al — Пазител."
+        "label": "Adım 3",
+        "title": "Emanetler topla ve ilerle",
+        "desc": "Mekânda gizemleri çöz, gizli dijital eserler bul ve Bulgaristan'ın gerçek bir Koruyucusu olmak için dört Ana Anahtardan geç."
       }
     ],
     "flow": [
@@ -77,17 +75,17 @@
       {
         "icon": "⌘",
         "name": "Rota + Emanet",
-        "sub": "5 nokta · 1 eser"
+        "sub": "4 nokta · 4 eser · 1 emanet"
       },
       {
         "icon": "◈",
         "name": "Bölge + Mühür",
-        "sub": "3 rota · 1 bölgesel mühür"
+        "sub": "4 rota · 1 mühür · 1 Ana Anahtar"
       },
       {
         "icon": "✦",
-        "name": "Koruyucu — Пазител",
-        "sub": "6 bölge · Tüm Bulgaristan açıldı"
+        "name": "Koruyucu",
+        "sub": "4 Ana Anahtar · Yaşayan Ahit"
       }
     ]
   },
@@ -136,7 +134,7 @@
       }
     ],
     "flowLabel1": "Gerçeklik",
-    "flowLabel2": "Guardian Sight",
+    "flowLabel2": "Koruyucunun Bakışı",
     "flowLabel3": "Açığa çıkarıldı",
     "scenes": [
       {
@@ -347,7 +345,7 @@
       },
       {
         "q": "Hangi diller destekleniyor?",
-        "a": "Uygulama 13 dili destekler: Bulgarca, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Rumence, Türkçe, Yunanca, Lehçe, Rusça, Japonca ve Sırpça."
+        "a": "Uygulama 14 dili destekler: Bulgarca, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Rumence, Türkçe, Yunanca, Macarca, Çince, Rusça, Japonca ve Sırpça."
       },
       {
         "q": "Bir hesaba ihtiyacım var mı?",
@@ -355,7 +353,7 @@
       },
       {
         "q": "Fiyatlandırma nasıl işliyor?",
-        "a": "Seçili kontrol noktası önizlemeleri ücretsizdir. Tam rota erişimi ve bölge paketleri uygulama içi satın alma yoluyla mevcuttur. Fiyatlar premium ve şeffaftır — keşfetmek istediğin şey için ödeme yaparsın."
+        "a": "Misafirler haritayı, Bölgeleri, rotaları, kontrol noktası tanıtımlarını ve Koruyucu Bakışı demosunu önizleyebilir. Tam rotalar ve Bölge paketleri premium tek seferlik satın almalardır: bir kez öde, sonsuza kadar sakla."
       },
       {
         "q": "Belediyeler ve işletmeler uygulamayla ortaklık kurabilir mi?",
@@ -531,6 +529,23 @@
         "desc": "Son açılım.\nAnahtarlar bir araya geldiğinde Bekçi, İsmin neden ayakta kaldığını anlar."
       }
     ]
+  },
+  "map": {
+    "eyebrow": "Yaşayan Harita",
+    "title": "Bulgaristan'ın Yaşayan Haritası",
+    "subtitle": "Belleğin gizli coğrafyası — dört ana Bölge, bir Mağara Portalı ve gerçek kontrol noktaları.",
+    "legendTitle": "Harita açıklaması",
+    "legendHero": "Kahraman kontrol noktası",
+    "legendStandard": "Standart kontrol noktası",
+    "legendBefore": "İsimden Önce — kadim bellek",
+    "legendAfter": "İsimden Sonra — dayanıklı kimlik",
+    "epochBefore": "İsimden Önce",
+    "epochAfter": "İsimden Sonra",
+    "viewPlace": "Yeri ziyaret et",
+    "viewDomain": "Bölgeyi görüntüle",
+    "lockedLabel": "Yakında",
+    "regionsLabel": "Bulgaristan'ın dört ana Bölgesi ve Mağara Portalının interaktif haritası",
+    "nodesLabel": "Harita kontrol noktaları"
   },
   "skipLink": "İçeriğe geç",
   "ariaNav": "Ana navigasyon",
