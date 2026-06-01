@@ -72,10 +72,11 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   ))}
   <link rel="alternate" hreflang="x-default" href={`${SITE_ORIGIN}/en${canonicalPath}`} />
 
-  <!-- Fonts -->
+  <!-- Fonts: preload as style so fetch is non-blocking; onload swaps rel to stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500;600&display=swap" /></noscript>
 
   <!-- Structured data -->
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
@@ -106,26 +107,6 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
     if(!h)return;
     var u=function(){h.toggleAttribute("data-scrolled",window.scrollY>60)};
     u();window.addEventListener("scroll",u,{passive:true});
-  })();
-  </script>
-
-  <!-- Globe scroll rotation -->
-  <script is:inline>
-  (function(){
-    var grid=document.getElementById("globe-grid");
-    if(!grid||window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
-    var auto=0,last=null,scrollAdd=0;
-    function tick(ts){
-      if(last!==null)auto+=(ts-last)*0.004;
-      last=ts;
-      var total=auto+scrollAdd;
-      grid.setAttribute("transform","rotate("+total+",250,250)");
-      requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-    window.addEventListener("scroll",function(){
-      scrollAdd=window.scrollY*0.04;
-    },{passive:true});
   })();
   </script>
 
@@ -267,10 +248,11 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
     var wrap=document.getElementById('spine-wrap');
     var fill=document.getElementById('spine-fill');
     if(!wrap||!fill||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    var h=wrap.offsetHeight;
+    window.addEventListener('resize',function(){h=wrap.offsetHeight;},{passive:true});
     function update(){
       var r=wrap.getBoundingClientRect();
       var wh=window.innerHeight;
-      var h=wrap.offsetHeight;
       var scrolled=Math.max(0,wh-r.top);
       var total=h+wh;
       var prog=Math.min(1,scrolled/total);
@@ -292,22 +274,25 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
     lens.setAttribute('aria-hidden','true');
     document.body.appendChild(lens);
     var mx=0,my=0,lx=0,ly=0,raf=0;
-    function move(e){mx=e.clientX;my=e.clientY}
+    function move(e){
+      mx=e.clientX;my=e.clientY;
+      if(!raf)raf=requestAnimationFrame(tick);
+    }
     function tick(){
       lx+=(mx-lx)*.18;ly+=(my-ly)*.18;
       lens.style.transform='translate('+(lx-19)+'px,'+(ly-19)+'px)';
       lens.style.opacity='1';
-      raf=requestAnimationFrame(tick);
+      if(Math.abs(mx-lx)>.3||Math.abs(my-ly)>.3){
+        raf=requestAnimationFrame(tick);
+      }else{
+        raf=0;
+      }
     }
     document.addEventListener('mousemove',move,{passive:true});
-    document.addEventListener('mouseenter',function(){
-      if(!raf)raf=requestAnimationFrame(tick);
-    });
     document.addEventListener('mouseleave',function(){
       lens.style.opacity='0';
       cancelAnimationFrame(raf);raf=0;
     });
-    raf=requestAnimationFrame(tick);
   })();
   </script>
 
