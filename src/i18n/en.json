@@ -2,9 +2,9 @@
   "lang": "en",
   "meta": {
     "title": "Unlocking Bulgaria — Travel Through the Hidden Memory of Bulgaria",
-    "description": "A premium mobile app for exploring Bulgaria through real-world quests, cinematic storytelling, optional AR, historical routes, relics, and cultural discoveries. Become a Keeper.",
+    "description": "A premium mobile app for exploring Bulgaria through real-world mystery quests, four Master Key Domains, a Cave gateway, optional Guardian Sight, permanent relics, and the Living Covenant. Become a Keeper.",
     "ogTitle": "Unlocking Bulgaria — 1345 Years. One Name Survived.",
-    "ogDescription": "Travel through Bulgaria. Reveal the ancient secrets. Become a Keeper."
+    "ogDescription": "Walk the real land. Awaken memory. Become a Keeper."
   },
   "nav": {
     "howItWorks": "How it works",
@@ -23,15 +23,15 @@
     "line2": "One Name",
     "line3": "Survived.",
     "question": "How?",
-    "lede": "Travel through Bulgaria. Reveal the ancient secrets. Become a Keeper — a guardian of the living memory that has endured for thirteen centuries.",
+    "lede": "Walk the real land of Bulgaria. Awaken memory at sacred places. Become a Keeper — one who carries the living memory of the Name.",
     "ctaPrimary": "Download the App",
     "ctaSecondary": "Watch the Journey",
     "trust": ["Real-world quests", "Cinematic storytelling", "Optional AR", "Family-friendly", "14 languages"],
     "mapLabel": "Interactive map of Bulgaria's hidden memory",
-    "phoneDomain": "Domain of the Name",
-    "phoneTitle": "The Old Capitals",
-    "phoneDesc": "Visit the places where memory became statehood.",
-    "phoneProgress": "4 of 7 seals discovered",
+    "phoneDomain": "Cave Gateway",
+    "phoneTitle": "Prohodna",
+    "phoneDesc": "Enter the place where the land was watching before the Name.",
+    "phoneProgress": "Gateway Seal awakening",
     "videoTitle": "The Journey — Unlocking Bulgaria",
     "videoClose": "Close"
   },
@@ -42,7 +42,7 @@
   "howItWorks": {
     "eyebrow": "How it works",
     "heading": "Become a Keeper,\none place at a time.",
-    "lede": "Every journey in Unlocking Bulgaria follows a clear progression — from a single checkpoint to the full unlock of Bulgaria's hidden memory.",
+    "lede": "Every journey in Unlocking Bulgaria follows a clear progression — from one real checkpoint to the four Master Keys and the Living Covenant.",
     "steps": [
       {
         "label": "Step 1",
@@ -50,99 +50,89 @@
         "desc": "Travel to a real place. Activate the checkpoint by arriving at the location. Unlock a story, a clue, or a hidden layer."
       },
       {
-        "label": "Step 2 — 5 Checkpoints",
+        "label": "Step 2 — 4 Checkpoints",
         "title": "Complete a Route → Collect a Relic",
-        "desc": "Five connected checkpoints form a Route. Complete the route to receive a permanent digital relic — an artifact of Bulgaria's history."
+        "desc": "Four connected checkpoints form a Route. Each checkpoint grants an Artifact. Complete the route to assemble a permanent Route Relic."
       },
       {
-        "label": "Step 3 — 3 Routes",
-        "title": "Unlock a Domain → Earn a Seal",
-        "desc": "Three routes unlock a regional Domain. Earn its Seal — a symbol of mastery over that region's hidden memory."
+        "label": "Step 3 — 4 Routes",
+        "title": "Complete a Domain → Earn a Seal",
+        "desc": "Four routes complete a Master Key Domain. Earn its Seal — the mark of mastery over that memory layer."
       },
       {
-        "label": "Step 4 — 6 Domains",
-        "title": "National Unlock → Become a Keeper",
-        "desc": "Complete all six domains. Unlock the full memory of Bulgaria. Receive the title of Keeper — Пазител."
+        "label": "Step 4 — 4 Master Keys",
+        "title": "Living Covenant → Become a Keeper",
+        "desc": "Complete the four main Domains. Assemble the four Master Keys. Unlock the Living Covenant and receive the responsibility of Keeper — Пазител."
       }
     ],
     "flow": [
       { "icon": "◉", "name": "Checkpoint", "sub": "Real location · Story · Clue" },
-      { "icon": "⌘", "name": "Route + Relic", "sub": "5 checkpoints · 1 artifact" },
-      { "icon": "◈", "name": "Domain + Seal", "sub": "3 routes · 1 regional seal" },
-      { "icon": "✦", "name": "Keeper — Пазител", "sub": "6 domains · Full Bulgaria unlocked" }
+      { "icon": "⌘", "name": "Route + Relic", "sub": "4 checkpoints · 4 artifacts · 1 relic" },
+      { "icon": "◈", "name": "Domain + Seal", "sub": "4 routes · 1 seal · 1 Master Key" },
+      { "icon": "✦", "name": "Keeper — Пазител", "sub": "4 Master Keys · Living Covenant" }
     ]
   },
   "domains": {
     "eyebrow": "Explore domains",
-    "heading": "Every region\nhides a world.",
-    "lede": "Six regional domains form the map of Bulgaria's hidden memory. Each holds its own routes, relics, epoch, and final seal.",
+    "heading": "Four pillars.\nOne hidden answer.",
+    "lede": "Four main quest Domains hold the Master Keys of Bulgaria's living memory. The Cave Domain stands apart as the gateway where the Keeper first awakens.",
     "explore": "Explore",
     "continue": "Continue",
     "locked": "Locked",
     "epochBefore": "Before the Name",
     "epochAfter": "After the Name",
-    "routesOf": "of 3 routes completed",
+    "routesOf": "of 4 routes completed",
     "lures": [
-      "Where the Danube met the empire.\nFortresses remember what history forgot.",
-      "Pliska. Preslav. Tarnovo.\nThree capitals. One name that never fell.",
-      "Ancient ports. Island monasteries.\nWhere the sea kept the secrets of the land.",
-      "Tombs of gold. Rose fields.\nThe oldest memory in the land.",
-      "Orpheus walked here.\nThe music still lives in the rocks.",
-      "Roman ruins beneath the city.\nEvery layer tells a different story."
+      "Before the Name, the land already remembered.\nStone, root, and sanctuary hold the first key.",
+      "The sea does not remember names.\nIt remembers movement, courage, and the spark that endures.",
+      "The Danube is a line of vigilance.\nIts watchers kept memory awake in the dark.",
+      "The mountain tests the body.\nProtection becomes worthy only when it serves something greater.",
+      "The caves are thresholds.\nProhodna opens the path before the answer begins."
     ],
     "cards": [
       {
-        "region": "Danube & Northwest",
-        "name": "Domain of Stone and River",
+        "region": "Ancient land and stone sanctuaries",
+        "name": "Stone Domain",
         "epoch": "before",
-        "key": "Fortresses, rivers, Roman roads, and the Belogradchik stone formations — where the Danube defined the edge of empire.",
+        "key": "Earth memory, stone sanctuaries, megaliths, roots, and the Black Stone — the first Master Key.",
         "progress": 0,
         "emblem": "🏔",
         "status": "explore"
       },
       {
-        "region": "Old Capitals",
-        "name": "Domain of the Name",
-        "epoch": "after",
-        "key": "Pliska, Preslav, Tarnovo — the three capitals that carried the name of Bulgaria through conquest, fire, and rebirth.",
-        "progress": 33,
-        "emblem": "⚔",
-        "status": "continue"
-      },
-      {
         "region": "Black Sea Coast",
-        "name": "Domain of the Sea Gate",
-        "epoch": "before",
-        "key": "Ancient ports, capes, salt lakes, island monasteries — where Greek colonies met Thracian shores and the sea became a border.",
+        "name": "The Sea Gate",
+        "epoch": "after",
+        "key": "Harbors, cliffs, fortresses, vows, and the Living Spark — the Soul Master Key.",
         "progress": 0,
         "emblem": "🌊",
         "status": "explore"
       },
       {
-        "region": "Thracian Valley",
-        "name": "Domain of Kings",
+        "region": "Northern Bulgaria / Danube",
+        "name": "The Danube Domain",
+        "epoch": "after",
+        "key": "River sentinels, fortress lines, rulers' roads, and the White Flame — the Spirit Master Key.",
+        "progress": 0,
+        "emblem": "🌊",
+        "status": "explore"
+      },
+      {
+        "region": "Mountain Bulgaria / Balkan",
+        "name": "The Golden Crown",
+        "epoch": "after",
+        "key": "Mountain guardians, refuges, paths of defense, and the Golden Spear — the Body Master Key.",
+        "progress": 0,
+        "emblem": "⚔",
+        "status": "explore"
+      },
+      {
+        "region": "Cave Bulgaria / Prohodna first",
+        "name": "The Cave Domain",
         "epoch": "before",
-        "key": "Thracian tombs, ritual hills, rose fields, wine country, and golden artifacts — the oldest memory preserved in the land.",
+        "key": "A pre-sequel gateway of caves and thresholds. Prohodna awakens the Keeper before the main quest.",
         "progress": 0,
-        "emblem": "🏛",
-        "status": "explore"
-      },
-      {
-        "region": "Rhodope Mountains",
-        "name": "Domain of Voice and Stone",
-        "epoch": "after",
-        "key": "Orpheus myths, sacred caves, ancient bridges, stone villages, forests, and the oldest living music tradition in Europe.",
-        "progress": 0,
-        "emblem": "♪",
-        "status": "explore"
-      },
-      {
-        "region": "Sofia & Western Bulgaria",
-        "name": "Domain of Crossroads",
-        "epoch": "after",
-        "key": "Urban layers, Serdica ruins beneath the city, Vitosha mountain paths, ancient springs, and living markets.",
-        "progress": 0,
-        "emblem": "✦",
+        "emblem": "◎",
         "status": "explore"
       }
     ]
@@ -150,7 +140,7 @@
   "guardianSight": {
     "eyebrow": "Guardian Sight",
     "heading": "See what\nothers cannot.",
-    "lede": "Guardian Sight is the optional augmented reality camera mode inside Unlocking Bulgaria. Point it at the world — and see the hidden layer beneath.",
+    "lede": "Guardian Sight is the Keeper's optional way of seeing what a place has witnessed. It reveals traces, symbols, and memory without making AR required.",
     "sightBody": "Point the camera at the world.\nThe hidden layer appears beneath the real.",
     "sightNote": "Optional AR · Every moment has a non-AR path",
     "ariaVisual": "Guardian Sight AR interface — animated scanning rings",
@@ -163,12 +153,12 @@
       {
         "icon": "◈",
         "title": "Symbolic traces",
-        "desc": "Ancient symbols, glyphs, and route fragments appear over the real world at meaningful locations."
+        "desc": "Ancient symbols, light traces, and memory marks appear over the real world at meaningful locations."
       },
       {
         "icon": "◉",
         "title": "Checkpoint presence",
-        "desc": "Nearby checkpoints pulse with light energy. The closer you are, the stronger the signal."
+        "desc": "Nearby checkpoints signal that a place has been witnessed. The closer you are, the clearer the call becomes."
       },
       {
         "icon": "✦",
@@ -177,22 +167,22 @@
       },
       {
         "icon": "⌘",
-        "title": "Heavier moments at key sites",
-        "desc": "Hero checkpoints and domain finales feature deeper AR sequences — reconstructed scenes, artifact reveals, and cinematic moments."
+        "title": "Hero moments at sacred sites",
+        "desc": "Hero checkpoints and finales can open deeper sequences — artifact resonance, symbolic scenes, and cinematic memory reveals."
       }
     ],
     "prohodna": {
       "eyebrow": "Guardian Sight · Prohodna Cave",
       "heading": "The Eyes of God\nremember.",
-      "lede": "Stand inside Prohodna. Look up through the twin openings. This is what the land kept secret for a thousand years.",
+      "lede": "Stand inside Prohodna. Look up through the twin openings. Before the Name, the Earth was already watching.",
       "sliderLabel": "Drag to reveal the Guardian Sight sacred layer",
       "keyEarth": "ЗЕМЯ · Earth",
       "keySpirit": "ДУХ · Spirit",
       "guruCaptionBg": "Преди Името… Земята вече помнеше.",
       "guruCaption": "Before the Name, the land already remembered.",
-      "guruNote": "Guardian Sight reveals a sacred hidden layer at this checkpoint — ancient axis, Keeper glyphs, and the light that never left.",
+      "guruNote": "Guardian Sight reveals Prohodna as a threshold — Earth below, sky above, and the first question a Keeper must answer.",
       "altBase": "Prohodna Cave, Bulgaria — the two natural sky openings called the Eyes of God, seen from inside the cave tunnel",
-      "altOverlay": "Guardian Sight layer: celestial light beams through the Eyes of God, Earth–Spirit axis glyphs ЗЕМЯ and ДУХ, a slow keeper-resonance glow — the sacred hidden memory of the land",
+      "altOverlay": "Guardian Sight layer: celestial light through the Eyes of God, Earth-memory glyphs, and a slow Keeper resonance — the cave as witness before the Name",
       "liveOn": "Guardian Sight activated — sacred layer revealed",
       "liveOff": "Guardian Sight deactivated",
       "credit": "Photo: placeholder · Licensed image of Prohodna Cave required · See README"
@@ -256,10 +246,10 @@
       { "icon": "◉", "title": "Real-world quests", "desc": "Routes built around real GPS checkpoints. The app guides you to the place — the place rewards you with its story." },
       { "icon": "▶", "title": "Cinematic storytelling", "desc": "Each checkpoint reveals a narrative moment rooted in history, mythology, local memory, or natural heritage." },
       { "icon": "◎", "title": "Guardian Sight AR", "desc": "Optional augmented reality reveals symbols, artifacts, and hidden layers overlaid on the real world." },
-      { "icon": "⌛", "title": "Historical timeline", "desc": "An interactive map through 1345 years of Bulgarian memory — linked to the routes you walk." },
-      { "icon": "◈", "title": "Relics and artifacts", "desc": "Collect permanent digital relics at route completion. Build a personal archive of Bulgaria's hidden history." },
-      { "icon": "✦", "title": "Domains and seals", "desc": "Complete regional domains. Earn seals. Gradually reveal the full map of Bulgarian memory." },
-      { "icon": "⊕", "title": "14 languages", "desc": "Full multilingual support — including Bulgarian, English, German, Hungarian, Chinese, Greek, Russian, Japanese, and more." },
+      { "icon": "⌛", "title": "Historical timeline", "desc": "A path through 1345 years of Bulgarian memory — linked to the places you walk." },
+      { "icon": "◈", "title": "Artifacts and relics", "desc": "Collect one Artifact at each checkpoint. Assemble four Artifacts into a permanent Route Relic." },
+      { "icon": "✦", "title": "Domains, seals, and Master Keys", "desc": "Complete Domains. Earn Seals. Assemble the four Master Keys that unlock the Living Covenant." },
+      { "icon": "⊕", "title": "14 languages", "desc": "Full multilingual support for the main international audiences, with Bulgarian meaning preserved at the source." },
       { "icon": "❖", "title": "Family exploration", "desc": "Pacing modes and content scales for families, schools, and cultural travelers of every age." },
       { "icon": "⊞", "title": "Offline support", "desc": "Key route content prepared in advance for mountain, village, and heritage sites with limited signal." },
       { "icon": "⊗", "title": "Partner routes", "desc": "Municipalities, museums, and tourism businesses can co-create routes tied to real local heritage." }
@@ -268,7 +258,7 @@
   "download": {
     "eyebrow": "Download the app",
     "heading": "Become a Keeper\nof Bulgaria.",
-    "lede": "The app is coming to iOS and Android. Join the launch list and be ready to unlock the first domains when the gates open.",
+    "lede": "The app is coming to iOS and Android. Join the launch list and be ready for the Cave gateway, the first routes, and the four Master Key Domains.",
     "appStore": { "label": "Download on the", "name": "App Store" },
     "googlePlay": { "label": "Get it on", "name": "Google Play" },
     "trust": "iOS & Android · Free to explore · Premium routes available",
@@ -324,7 +314,7 @@
     "items": [
       {
         "q": "What is Unlocking Bulgaria?",
-        "a": "Unlocking Bulgaria is a premium mobile app for exploring Bulgaria through real-world quests, cinematic storytelling, optional AR layers, historical routes, collectible relics, and regional domains. It is built around one central question: how has the name of Bulgaria survived for 1345 years?"
+        "a": "Unlocking Bulgaria is a premium mobile app for exploring Bulgaria through real-world mystery quests, cinematic storytelling, optional Guardian Sight, Artifacts, Route Relics, Domain Seals, and the four Master Keys. It is built around one central question: how has the Name of Bulgaria survived for 1345 years?"
       },
       {
         "q": "Is it a game or a travel guide?",
@@ -332,7 +322,7 @@
       },
       {
         "q": "Do I need to be physically in Bulgaria?",
-        "a": "Most of the experience is designed for real-world exploration — visiting actual places in Bulgaria. However, the timeline, domain overviews, and some story content are accessible from anywhere to plan and prepare your journey."
+        "a": "Most of the experience is designed for real-world exploration — visiting actual places in Bulgaria. The map, Domain previews, Cave gateway, and planning content can be explored from anywhere before your journey begins."
       },
       {
         "q": "Is AR required to use the app?",
@@ -348,11 +338,11 @@
       },
       {
         "q": "Do I need an account?",
-        "a": "Basic exploration is available without an account. An account is required to save route progress, collect relics, track domain completion, and sync across devices."
+        "a": "Basic exploration is available without an account. An account is required to save route progress, collect Artifacts and Relics, track Domain completion, and sync across devices."
       },
       {
         "q": "How does pricing work?",
-        "a": "Selected checkpoint previews are free. Full route access and domain bundles are available through in-app purchase. Pricing is premium and transparent — pay for what you want to explore."
+        "a": "Guests can preview the map, Domains, routes, checkpoint teasers, and a Guardian Sight demo. Full routes and Domain bundles are premium one-time purchases: pay once, keep forever."
       },
       {
         "q": "Can municipalities and businesses partner with the app?",
@@ -452,17 +442,17 @@
     "eyebrow": "The Path",
     "heading": "Five discoveries.\nOne transformation.",
     "items": [
-      { "num": "01", "sym": "✦", "name": "Keeper", "desc": "The title earned by those who complete the full journey. Guardian of Bulgaria's living memory — Пазител." },
-      { "num": "02", "sym": "⌘", "name": "Route", "desc": "Five real places. Connected by history. Walk the route — unlock the story hidden between them." },
-      { "num": "03", "sym": "◈", "name": "Relic", "desc": "Complete a route. Receive a permanent artifact. A piece of Bulgaria's memory that is yours forever." },
-      { "num": "04", "sym": "◉", "name": "Domain", "desc": "Six regions. Each holds its own routes, its own epoch, its own secrets. Reveal a domain — claim a layer." },
-      { "num": "05", "sym": "◎", "name": "Seal", "desc": "The mark of a completed domain. Six seals. Six layers of memory. All six — and Bulgaria is yours." }
+      { "num": "01", "sym": "◉", "name": "Checkpoint", "desc": "A real GPS-verified place where story, physical presence, and memory overlap." },
+      { "num": "02", "sym": "⌘", "name": "Route", "desc": "Four real checkpoints. One narrative arc. Walk the route and assemble its Relic from four Artifacts." },
+      { "num": "03", "sym": "◈", "name": "Domain", "desc": "Four routes form a Master Key Domain. Complete them to earn a Seal and awaken one pillar of the answer." },
+      { "num": "04", "sym": "✦", "name": "Master Key", "desc": "Earth, Soul, Spirit, and Body: four symbolic keys completed by the four main quest Domains." },
+      { "num": "05", "sym": "◎", "name": "Living Covenant", "desc": "The final revelation. When the four Master Keys are assembled, the Keeper understands why the Name endured." }
     ]
   },
   "map": {
     "eyebrow": "Living Map",
     "title": "Living Map of Bulgaria",
-    "subtitle": "The hidden geography of memory — six domains, real checkpoints.",
+    "subtitle": "The hidden geography of memory — four main Domains, a Cave gateway, real checkpoints.",
     "legendTitle": "Map legend",
     "legendHero": "Hero checkpoint",
     "legendStandard": "Standard checkpoint",
@@ -473,7 +463,7 @@
     "viewPlace": "Visit place",
     "viewDomain": "View domain",
     "lockedLabel": "Coming soon",
-    "regionsLabel": "Interactive map of Bulgaria's six domains",
+    "regionsLabel": "Interactive map of Bulgaria's four main Domains and Cave gateway",
     "nodesLabel": "Map checkpoint nodes"
   },
   "skipLink": "Skip to content",
@@ -487,11 +477,11 @@
     "common": {
       "domain": "Domain",
       "place": "Place",
-      "draft": "Draft route order",
+      "draft": "Preview route order",
       "downloadApp": "Download the app",
       "exploreRoute": "Explore the route",
       "onlyInApp": "Only in the app",
-      "onlyInAppBody": "AR scenes, riddles, relics, route unlocks, the full cinematic story, progress, and rewards stay exclusive to Unlocking Bulgaria.",
+      "onlyInAppBody": "Guardian Sight scenes, choices, Artifacts, Route Relics, route unlocks, the full cinematic story, progress, and rewards stay exclusive to Unlocking Bulgaria.",
       "tourism": "Why visit",
       "history": "History layer",
       "story": "Story teaser",

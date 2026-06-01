@@ -20,7 +20,7 @@ export interface LocalizedSeoCopy {
 }
 
 export type DomainEpoch = "before" | "after";
-export type DomainMasterKey = "spirit" | "soul" | "body" | "earth";
+export type DomainMasterKey = "spirit" | "soul" | "body" | "earth" | "gateway";
 
 export interface SeoDomain {
   id: string;
@@ -77,23 +77,22 @@ export interface SeoPlace {
 }
 
 export const SITE_ORIGIN = "https://unlockingbulgaria.com";
-export const SEO_PAGE_IMAGE = `${SITE_ORIGIN}/favicon.svg`;
+export const SEO_PAGE_IMAGE = `${SITE_ORIGIN}/og-image.png`;
 
-// Domain IDs — order matches dict.domains.cards (0-5)
-export const STONE_RIVER_DOMAIN_ID = "stone-river-domain";
-export const OLD_CAPITALS_DOMAIN_ID = "old-capitals-domain";
-export const SEA_DOMAIN_ID = "sea-domain";
-export const KINGS_DOMAIN_ID = "kings-domain";
-export const VOICE_STONE_DOMAIN_ID = "voice-stone-domain";
-export const CROSSROADS_DOMAIN_ID = "crossroads-domain";
+// Domain IDs mirror the app canon: 4 main Master Key Domains + Cave gateway.
+export const STONE_DOMAIN_ID = "region-1-earth-domain";
+export const SEA_DOMAIN_ID = "region-2-sea-gate";
+export const DANUBE_DOMAIN_ID = "region-3-danube-domain";
+export const GOLDEN_CROWN_DOMAIN_ID = "region-4-mountain-region";
+export const CAVE_DOMAIN_ID = "region-5-cave-domain";
 
-export const SEA_ROUTE_ID = "sea-coast-route";
-export const DEMO_ROUTE_ID = "demo-route";
+export const SEA_ROUTE_ID = "route-3-1";
+export const CAVE_DEMO_ROUTE_ID = "route-cave-prohodna-gateway";
 
 const commonFaqBg = [
   {
     q: "Трябва ли ми приложението, за да посетя мястото?",
-    a: "Не. Страницата дава основна туристическа и практическа информация. Приложението добавя куестове, AR сцени, реликви, прогрес и пълната кинематографична история.",
+    a: "Не. Страницата дава основна туристическа и практическа информация. Приложението добавя Поглед на Пазителя, Артефакти, Реликви, прогрес и пълната кинематографична история.",
   },
   {
     q: "Подходящо ли е за семейства?",
@@ -104,7 +103,7 @@ const commonFaqBg = [
 const commonFaqEn = [
   {
     q: "Do I need the app to visit this place?",
-    a: "No. This page gives core tourism and practical information. The app adds quests, AR scenes, relics, progress, and the full cinematic story.",
+    a: "No. This page gives core tourism and practical information. The app adds Guardian Sight, Artifacts, Relics, progress, and the full cinematic story.",
   },
   {
     q: "Is it family-friendly?",
@@ -123,114 +122,100 @@ const REGION_SW    = "M 0,305 L 205,295 L 285,432 L 172,455 L 26,450 L 0,380 Z";
 const REGION_W     = "M 0,225 L 210,225 L 220,305 L 0,305 Z";
 
 export const seoDomains: SeoDomain[] = [
-  // Index 0 — matches dict.domains.cards[0]
+  // Index 0 — Stone Domain / Earth Master Key
   {
-    id: STONE_RIVER_DOMAIN_ID,
-    slug: "stone-river-domain",
+    id: STONE_DOMAIN_ID,
+    slug: "stone-domain",
     routeIds: [],
     status: "draft",
     coordinates: { lat: 43.8, lng: 24.0 },
     images: [SEO_PAGE_IMAGE],
-    appDeepLink: "unlockingbulgaria://domains/stone-river-domain",
+    appDeepLink: "unlockingbulgaria://domains/region-1-earth-domain",
     epoch: "before",
     masterKey: "earth",
     mapRegion: { path: REGION_NW, accent: "#1e3a5f" },
     translations: {},
   },
-  // Index 1 — matches dict.domains.cards[1]
+  // Index 1 — The Sea Gate / Soul Master Key
   {
-    id: OLD_CAPITALS_DOMAIN_ID,
-    slug: "old-capitals-domain",
-    routeIds: [],
+    id: SEA_DOMAIN_ID,
+    slug: "sea-gate",
+    routeIds: [SEA_ROUTE_ID],
     status: "draft",
     coordinates: { lat: 43.1, lng: 25.6 },
     images: [SEO_PAGE_IMAGE],
-    appDeepLink: "unlockingbulgaria://domains/old-capitals-domain",
+    appDeepLink: "unlockingbulgaria://domains/region-2-sea-gate",
     epoch: "after",
-    masterKey: "spirit",
-    mapRegion: { path: REGION_NC, accent: "#4a2010" },
-    translations: {},
-  },
-  // Index 2 — matches dict.domains.cards[2] — Sea Domain (full data)
-  {
-    id: SEA_DOMAIN_ID,
-    slug: "sea-domain",
-    routeIds: [SEA_ROUTE_ID],
-    status: "draft",
-    coordinates: { lat: 42.65, lng: 27.9 },
-    images: [SEO_PAGE_IMAGE],
-    appDeepLink: "unlockingbulgaria://domains/sea-domain",
-    epoch: "before",
-    masterKey: "body",
+    masterKey: "soul",
     mapRegion: { path: REGION_COAST, accent: "#1e3a5f" },
     translations: {
       bg: {
         title: "Морски Предел",
-        subtitle: "Домейнът, в който морето пази най-старите врати към България.",
-        shortDescription: "Северното и южното Черноморие са подредени като кинематографичен маршрут от езера, носове, антични градове, светилища и резервати.",
-        tourismSummary: "Морският Предел събира реални места по Черноморието, които могат да бъдат посетени самостоятелно или като бъдещ маршрут в Unlocking Bulgaria.",
-        storyTeaser: "В публичната версия виждаш пътя. В приложението морето започва да отговаря с улики, реликви и скрити сцени.",
-        historySummary: "От праисторически некрополи и тракийски светилища до гръцки колонии, римски крепости и средновековни пристанища, брегът пази пластове памет.",
-        practicalInfo: "Планирай домейна като серия от отделни пътувания. Някои места са градски и лесни, други изискват автомобил, сезонно съобразяване и внимание към защитени територии.",
+        subtitle: "Пределът на Душата, в който морето пази Живата Искра.",
+        shortDescription: "Морският Предел е един от четирите основни Предела на Главните Ключове: 4 маршрута, 16 контролни точки, 4 реликви, Печат и Главен Ключ.",
+        tourismSummary: "Морският Предел събира реални места по Черноморието, които могат да бъдат посетени самостоятелно, а в приложението се превръщат в маршрут на памет, движение и смелост.",
+        storyTeaser: "В публичната версия виждаш прага. В приложението морето започва да отговаря с улики, Артефакти, Реликви и сцени на Погледа на Пазителя.",
+        historySummary: "От праисторически некрополи и носове до фарове, крепости и крайбрежни обети, брегът пази пластове памет, събрани около Живата Искра.",
+        practicalInfo: "Планирай Предела като серия от маршрути. Първият маршрут следва северния бряг и завършва при Калиакра като Route Finale.",
         bestSeason: "Късна пролет, ранно лято и ранна есен",
-        seoTitle: "Морски Предел | Черноморски маршрут в Unlocking Bulgaria",
-        seoDescription: "Открий Морския Предел: Черноморски домейн с места като Дуранкулак, Шабла, Калиакра, Несебър, Созопол, Бегликташ и Ропотамо.",
+        seoTitle: "Морски Предел | The Sea Gate в Unlocking Bulgaria",
+        seoDescription: "Открий Морския Предел: Пределът на Душата и Живата Искра, с маршрути по Черноморието и първи северен път към Калиакра.",
         faq: commonFaqBg,
       },
       en: {
-        title: "Sea Domain",
-        subtitle: "The domain where the sea guards Bulgaria's oldest gates.",
-        shortDescription: "The northern and southern Black Sea coast become a cinematic route of lakes, capes, ancient towns, sanctuaries, and reserves.",
-        tourismSummary: "The Sea Domain brings together real places along the Black Sea that can be visited independently or later followed as an Unlocking Bulgaria route.",
-        storyTeaser: "On the public site, you see the path. In the app, the sea begins to answer with clues, relics, and hidden scenes.",
-        historySummary: "From prehistoric necropolises and Thracian sanctuaries to Greek colonies, Roman forts, and medieval ports, the coast preserves layers of memory.",
-        practicalInfo: "Plan the domain as a sequence of separate trips. Some places are urban and easy, while others require a car, seasonal planning, and care around protected areas.",
+        title: "The Sea Gate",
+        subtitle: "The Soul Domain where the sea keeps the Living Spark.",
+        shortDescription: "The Sea Gate is one of the four main Master Key Domains: 4 routes, 16 checkpoints, 4 relics, a Seal, and one Master Key.",
+        tourismSummary: "The Sea Gate brings together real Black Sea places that can be visited independently and become a route of memory, movement, and courage inside the app.",
+        storyTeaser: "On the public site, you see the threshold. In the app, the sea begins to answer with clues, Artifacts, Relics, and Guardian Sight scenes.",
+        historySummary: "From prehistoric necropolises and capes to lighthouses, fortresses, and coastal vows, the shore preserves layers of memory gathered around the Living Spark.",
+        practicalInfo: "Plan the Domain as a sequence of routes. The first route follows the northern shore and closes at Kaliakra as the Route Finale.",
         bestSeason: "Late spring, early summer, and early autumn",
-        seoTitle: "Sea Domain | Black Sea Route in Unlocking Bulgaria",
-        seoDescription: "Explore the Sea Domain: a Black Sea route with Durankulak, Shabla, Kaliakra, Nessebar, Sozopol, Begliktash, Ropotamo, and more.",
+        seoTitle: "The Sea Gate | Black Sea Master Key Domain",
+        seoDescription: "Explore The Sea Gate: the Soul Domain and Living Spark of Unlocking Bulgaria, with Black Sea routes and a northern path toward Kaliakra.",
         faq: commonFaqEn,
       },
     },
   },
-  // Index 3 — matches dict.domains.cards[3]
+  // Index 2 — Danube Domain / Spirit Master Key
   {
-    id: KINGS_DOMAIN_ID,
-    slug: "kings-domain",
+    id: DANUBE_DOMAIN_ID,
+    slug: "danube-domain",
     routeIds: [],
     status: "draft",
     coordinates: { lat: 42.2, lng: 25.4 },
     images: [SEO_PAGE_IMAGE],
-    appDeepLink: "unlockingbulgaria://domains/kings-domain",
-    epoch: "before",
-    masterKey: "soul",
+    appDeepLink: "unlockingbulgaria://domains/region-3-danube-domain",
+    epoch: "after",
+    masterKey: "spirit",
     mapRegion: { path: REGION_SC, accent: "#1e3a5f" },
     translations: {},
   },
-  // Index 4 — matches dict.domains.cards[4]
+  // Index 3 — Golden Crown / Body Master Key
   {
-    id: VOICE_STONE_DOMAIN_ID,
-    slug: "voice-stone-domain",
+    id: GOLDEN_CROWN_DOMAIN_ID,
+    slug: "golden-crown",
     routeIds: [],
     status: "draft",
     coordinates: { lat: 41.6, lng: 24.7 },
     images: [SEO_PAGE_IMAGE],
-    appDeepLink: "unlockingbulgaria://domains/voice-stone-domain",
+    appDeepLink: "unlockingbulgaria://domains/region-4-mountain-region",
     epoch: "after",
-    masterKey: "spirit",
+    masterKey: "body",
     mapRegion: { path: REGION_SW, accent: "#4a2010" },
     translations: {},
   },
-  // Index 5 — matches dict.domains.cards[5]
+  // Cave pre-sequel gateway — not required for Living Covenant.
   {
-    id: CROSSROADS_DOMAIN_ID,
-    slug: "crossroads-domain",
-    routeIds: [DEMO_ROUTE_ID],
+    id: CAVE_DOMAIN_ID,
+    slug: "cave-domain",
+    routeIds: [CAVE_DEMO_ROUTE_ID],
     status: "draft",
     coordinates: { lat: 42.7, lng: 23.3 },
     images: [SEO_PAGE_IMAGE],
-    appDeepLink: "unlockingbulgaria://domains/crossroads-domain",
-    epoch: "after",
-    masterKey: "earth",
+    appDeepLink: "unlockingbulgaria://domains/region-5-cave-domain",
+    epoch: "before",
+    masterKey: "gateway",
     mapRegion: { path: REGION_W, accent: "#4a2010" },
     translations: {},
   },
@@ -247,47 +232,36 @@ export const seoRoutes: SeoRoute[] = [
       "shabla",
       "tyulenovo",
       "kaliakra",
-      "balchik",
-      "varna",
-      "pobiti-kamani",
-      "byala",
-      "cape-emine",
-      "nessebar",
-      "pomorie",
-      "sozopol",
-      "begliktash",
-      "ropotamo",
-      "rusokastro",
     ],
     translations: {
       bg: {
-        title: "Маршрут на Морския Предел",
-        subtitle: "От северните езера до южните светилища.",
-        shortDescription: "Чернова на последователността. Финалната история и реликви остават запазени за приложението.",
+        title: "Пристанищата на паметта",
+        subtitle: "Първи маршрут на Морския Предел: Дуранкулак, Шабла, Тюленово, Калиакра.",
+        shortDescription: "Четири контролни точки по северния бряг. В приложението те отключват четири Артефакта и една Реликва на Маршрута.",
       },
       en: {
-        title: "Sea Domain Route",
-        subtitle: "From northern lakes to southern sanctuaries.",
-        shortDescription: "Draft route order. The final story and relic logic stay reserved for the app.",
+        title: "Harbors of Memory",
+        subtitle: "The Sea Gate Route 1: Durankulak, Shabla, Tyulenovo, Kaliakra.",
+        shortDescription: "Four checkpoints on the northern shore. In the app, they unlock four Artifacts and one Route Relic.",
       },
     },
   },
   {
-    id: DEMO_ROUTE_ID,
-    domainId: "crossroads-domain",
-    slug: "demo-route",
+    id: CAVE_DEMO_ROUTE_ID,
+    domainId: CAVE_DOMAIN_ID,
+    slug: "prohodna-gateway-route",
     status: "draft",
     placeIds: ["prohodna-cave"],
     translations: {
       bg: {
-        title: "Демо маршрут",
-        subtitle: "Героичен пример извън Морския Предел.",
-        shortDescription: "Проходна показва как може да изглежда публична страница за силна героична контролна точка.",
+        title: "Пещерен портал",
+        subtitle: "Първата среща с Пещерния Предел.",
+        shortDescription: "Проходна е flagship героична контролна точка и pre-sequel праг към основния път на Пазителя.",
       },
       en: {
-        title: "Demo Route",
-        subtitle: "A hero example outside the Sea Domain.",
-        shortDescription: "Prohodna shows how a public page can frame a strong hero checkpoint.",
+        title: "Cave Gateway",
+        subtitle: "The first encounter with the Cave Domain.",
+        shortDescription: "Prohodna is the flagship hero checkpoint and pre-sequel threshold before the Keeper's main path.",
       },
     },
   },
@@ -338,10 +312,10 @@ function makeSeaPlace(index: number, row: (typeof seaPlaces)[number]): SeoPlace 
     translations: {
       bg: {
         title: bgName,
-        subtitle: "Контролна точка от черновия маршрут на Морския Предел.",
+        subtitle: "Контролна точка от първия маршрут на Морския Предел.",
         shortDescription: `${bgName} е публична страница за планиране на посещение и вход към бъдещото преживяване в Unlocking Bulgaria.`,
         tourismSummary: `Посети ${bgName} като реално място по Черноморието и го използвай като отправна точка за по-дълбок културен маршрут.`,
-        storyTeaser: `В приложението ${bgName} ще отключи скрит разказ, улика и връзка към следващата точка от Морския Предел.`,
+        storyTeaser: `В приложението ${bgName} отключва скрит разказ, улика, Артефакт и връзка към Реликвата на маршрута.`,
         historySummary: `${bgName} е част от крайбрежната памет на България, където природа, древни пътища, пристанища и местни легенди се преплитат.`,
         practicalInfo: `Планирай ${durationBg} на място. Провери сезона, достъпа и времето предварително, особено при носове, резервати и открити крайбрежни зони.`,
         bestSeason: "Късна пролет, лято и ранна есен",
@@ -351,15 +325,15 @@ function makeSeaPlace(index: number, row: (typeof seaPlaces)[number]): SeoPlace 
       },
       en: {
         title: enName,
-        subtitle: "A checkpoint in the draft Sea Domain route.",
+        subtitle: "A checkpoint in The Sea Gate's first route.",
         shortDescription: `${enName} is a public planning page and an entry point into the future Unlocking Bulgaria experience.`,
         tourismSummary: `Visit ${enName} as a real Black Sea place and use it as a starting point for deeper cultural exploration.`,
-        storyTeaser: `In the app, ${enName} will unlock a hidden story, a clue, and a connection to the next Sea Domain checkpoint.`,
+        storyTeaser: `In the app, ${enName} unlocks a hidden story, a clue, an Artifact, and a connection to the Route Relic.`,
         historySummary: `${enName} belongs to Bulgaria's coastal memory, where nature, ancient paths, ports, and local legends meet.`,
         practicalInfo: `Plan ${durationEn} on site. Check season, access, and weather in advance, especially around capes, reserves, and exposed coastal areas.`,
         bestSeason: "Late spring, summer, and early autumn",
-        seoTitle: `${enName} | Sea Domain Place`,
-        seoDescription: `Plan a visit to ${enName} and see how the place connects to the Sea Domain in Unlocking Bulgaria.`,
+        seoTitle: `${enName} | The Sea Gate Checkpoint`,
+        seoDescription: `Plan a visit to ${enName} and see how the place connects to The Sea Gate in Unlocking Bulgaria.`,
         faq: commonFaqEn,
       },
     },
@@ -371,8 +345,8 @@ export const seoPlaces: SeoPlace[] = [
   {
     id: "prohodna-cave",
     slug: "prohodna-cave",
-    domainId: "crossroads-domain",
-    routeId: DEMO_ROUTE_ID,
+    domainId: CAVE_DOMAIN_ID,
+    routeId: CAVE_DEMO_ROUTE_ID,
     type: "demo",
     status: "draft",
     coordinates: { lat: 43.173, lng: 24.071 },
@@ -384,34 +358,34 @@ export const seoPlaces: SeoPlace[] = [
     audioUrl: "unlockingbulgaria://audio/prohodna-cave",
     nearbyPlaces: [],
     appDeepLink: "unlockingbulgaria://places/prohodna-cave",
-    epoch: "after",
+    epoch: "before",
     map: geoToMap(43.173, 24.071),
     guardianSight: { overlayImage: "/media/prohodna/prohodna-overlay.png" },
     translations: {
       bg: {
         title: "Пещера Проходна",
-        subtitle: "Демо героична контролна точка извън Морския Предел.",
-        shortDescription: "Проходна показва как публична страница може да подготви посетителя за силно кинематографично преживяване в приложението.",
-        tourismSummary: "Пещерата е лесно разпознаваема с естествените отвори, известни като Очите на Бога, и е подходяща за кратко културно и природно посещение.",
-        storyTeaser: "В приложението светлината, камъкът и отворите могат да се превърнат в скрит слой от загадки и разказ.",
-        historySummary: "Проходна е част от карстовия пейзаж на Северна България и носи силна визуална памет, която я прави естествен герой за демо преживяване.",
+        subtitle: "Първата героична контролна точка на Пещерния Предел.",
+        shortDescription: "Проходна подготвя посетителя за Пещерния портал — pre-sequel преживяване, в което земята гледа преди Името.",
+        tourismSummary: "Пещерата е разпознаваема с естествените отвори, известни като Очите на Бога, но в Unlocking Bulgaria тя е преди всичко праг към паметта на земята.",
+        storyTeaser: "В приложението светлината, камъкът и отворите се превръщат в първия въпрос към Пазителя.",
+        historySummary: "Проходна е част от карстовия пейзаж на Северна България и носи силна визуална памет: място, където земя, тъмнина, дъх и небе се срещат.",
         practicalInfo: "Планирай 1-2 часа. Носи удобни обувки, провери условията след дъжд и следвай обозначените подходи.",
         bestSeason: "Пролет, лято и есен",
-        seoTitle: "Пещера Проходна | Демо страница в Unlocking Bulgaria",
-        seoDescription: "Виж демо страница за пещера Проходна и как героична контролна точка може да води към приложение с AR, загадки и история.",
+        seoTitle: "Пещера Проходна | Пещерен Предел в Unlocking Bulgaria",
+        seoDescription: "Виж Проходна като първата героична контролна точка на Пещерния Предел и pre-sequel портал към пътя на Пазителя.",
         faq: commonFaqBg,
       },
       en: {
         title: "Prohodna Cave",
-        subtitle: "A demo hero checkpoint outside the Sea Domain.",
-        shortDescription: "Prohodna shows how a public page can prepare visitors for a strong cinematic experience in the app.",
-        tourismSummary: "The cave is known for its natural openings called the Eyes of God and works well for a short cultural and nature visit.",
-        storyTeaser: "In the app, light, stone, and the cave openings can become a hidden layer of riddles and story.",
-        historySummary: "Prohodna belongs to the karst landscape of northern Bulgaria and carries a strong visual memory that makes it a natural demo hero.",
+        subtitle: "The first hero checkpoint of the Cave Domain.",
+        shortDescription: "Prohodna prepares visitors for the Cave gateway: a pre-sequel experience where the land watches before the Name.",
+        tourismSummary: "The cave is known for the natural openings called the Eyes of God, but in Unlocking Bulgaria it is first a threshold into earth memory.",
+        storyTeaser: "In the app, light, stone, and the cave openings become the first question asked of the Keeper.",
+        historySummary: "Prohodna belongs to the karst landscape of northern Bulgaria and carries a strong visual memory: a place where earth, darkness, breath, and sky meet.",
         practicalInfo: "Plan 1-2 hours. Wear comfortable shoes, check conditions after rain, and follow marked approaches.",
         bestSeason: "Spring, summer, and autumn",
-        seoTitle: "Prohodna Cave | Demo Page in Unlocking Bulgaria",
-        seoDescription: "See a demo page for Prohodna Cave and how a hero checkpoint can lead into an app with AR, riddles, and story.",
+        seoTitle: "Prohodna Cave | Cave Domain in Unlocking Bulgaria",
+        seoDescription: "See Prohodna as the first hero checkpoint of the Cave Domain and the pre-sequel gateway into the Keeper's path.",
         faq: commonFaqEn,
       },
     },
@@ -432,7 +406,7 @@ export function getLocalizedRouteCopy(route: SeoRoute, lang: string) {
 }
 
 export function getSeoDomain(slug: string) {
-  return seoDomains.find((domain) => domain.slug === slug);
+  return seoDomains.find((domain) => domain.slug === slug || domain.id === slug);
 }
 
 export function getSeoPlace(slug: string) {

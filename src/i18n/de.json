@@ -26,12 +26,12 @@
     "lede": "Reise durch Bulgarien. Enthülle die alten Geheimnisse. Werde ein Hüter — ein Bewahrer des lebendigen Gedächtnisses, das dreizehn Jahrhunderte überdauert hat.",
     "ctaPrimary": "App herunterladen",
     "ctaSecondary": "Die Reise ansehen",
-    "trust": ["Echte Quests", "Cineastisches Storytelling", "Optionales AR", "Familienfreundlich", "13 Sprachen"],
+    "trust": ["Echte Quests", "Cineastisches Storytelling", "Optionales AR", "Familienfreundlich", "14 Sprachen"],
     "mapLabel": "Interaktive Karte von Bulgariens verborgenem Gedächtnis",
     "phoneDomain": "Domäne des Namens",
     "phoneTitle": "Die alten Hauptstädte",
     "phoneDesc": "Besuche die Orte, an denen Gedächtnis zur Staatlichkeit wurde.",
-    "phoneProgress": "4 von 7 Siegeln entdeckt"
+    "phoneProgress": "Gateway Seal awakening"
   },
   "band": {
     "sub": "Kein Reiseführer. Keine Karte. Kein Spiel.",
@@ -48,38 +48,38 @@
         "desc": "Reise zu einem echten Ort. Aktiviere den Kontrollpunkt durch deine Ankunft. Schalte eine Geschichte, einen Hinweis oder eine verborgene Ebene frei."
       },
       {
-        "label": "Schritt 2 — 5 Kontrollpunkte",
+        "label": "Step 2 — 4 Checkpoints",
         "title": "Route abschließen → Relikt sammeln",
-        "desc": "Fünf verbundene Kontrollpunkte bilden eine Route. Schließe die Route ab und erhalte ein dauerhaftes digitales Relikt — ein Artefakt aus Bulgariens Geschichte."
+        "desc": "Four connected checkpoints form a Route. Each checkpoint grants an Artifact. Complete the route to assemble a permanent Route Relic."
       },
       {
-        "label": "Schritt 3 — 3 Routen",
+        "label": "Step 3 — 4 Routes",
         "title": "Domäne freischalten → Siegel verdienen",
-        "desc": "Drei Routen schalten eine regionale Domäne frei. Verdiene ihr Siegel — ein Symbol der Beherrschung des verborgenen Gedächtnisses dieser Region."
+        "desc": "Four routes complete a Master Key Domain. Earn its Seal — the mark of mastery over that memory layer."
       },
       {
-        "label": "Schritt 4 — 6 Domänen",
+        "label": "Step 4 — 4 Master Keys",
         "title": "Nationales Freischalten → Hüter werden",
-        "desc": "Schließe alle sechs Domänen ab. Schalte das vollständige Gedächtnis Bulgariens frei. Erhalte den Titel Hüter — Пазител."
+        "desc": "Complete the four main Domains. Assemble the four Master Keys. Unlock the Living Covenant and receive the responsibility of Keeper — Пазител."
       }
     ],
     "flow": [
       { "icon": "◉", "name": "Kontrollpunkt", "sub": "Echter Ort · Geschichte · Hinweis" },
-      { "icon": "⌘", "name": "Route + Relikt", "sub": "5 Kontrollpunkte · 1 Artefakt" },
-      { "icon": "◈", "name": "Domäne + Siegel", "sub": "3 Routen · 1 regionales Siegel" },
-      { "icon": "✦", "name": "Hüter — Пазител", "sub": "6 Domänen · Ganz Bulgarien freigeschaltet" }
+      { "icon": "⌘", "name": "Route + Relic", "sub": "4 checkpoints · 4 artifacts · 1 relic" },
+      { "icon": "◈", "name": "Domain + Seal", "sub": "4 routes · 1 seal · 1 Master Key" },
+      { "icon": "✦", "name": "Keeper — Пазител", "sub": "4 Master Keys · Living Covenant" }
     ]
   },
   "domains": {
     "eyebrow": "Domänen erkunden",
     "heading": "Jede Region\nbirgt eine Welt.",
-    "lede": "Sechs regionale Domänen bilden die Karte von Bulgariens verborgenem Gedächtnis. Jede hält ihre eigenen Routen, Relikte, Epochen und das abschließende Siegel.",
+    "lede": "Four main quest Domains hold the Master Keys of Bulgaria's living memory. The Cave Domain stands apart as the gateway where the Keeper first awakens.",
     "explore": "Erkunden",
     "continue": "Fortsetzen",
     "locked": "Gesperrt",
     "epochBefore": "Vor dem Namen",
     "epochAfter": "Nach dem Namen",
-    "routesOf": "von 3 Routen abgeschlossen",
+    "routesOf": "of 4 routes completed",
     "lures": [
       "Wo die Donau das Reich berührte.\nFestungen erinnern, was die Geschichte vergaß.",
       "Pliska. Preslav. Tarnowo.\nDrei Hauptstädte. Ein Name, der nie fiel.",
@@ -239,7 +239,7 @@
       { "icon": "⌛", "title": "Historische Zeitleiste", "desc": "Eine interaktive Karte durch 1345 Jahre bulgarisches Gedächtnis — verbunden mit den Routen, die du gehst." },
       { "icon": "◈", "title": "Relikte und Artefakte", "desc": "Sammle dauerhafte digitale Relikte beim Abschluss einer Route. Baue ein persönliches Archiv der verborgenen Geschichte Bulgariens auf." },
       { "icon": "✦", "title": "Domänen und Siegel", "desc": "Schließe regionale Domänen ab. Verdiene Siegel. Enthülle schrittweise die vollständige Karte des bulgarischen Gedächtnisses." },
-      { "icon": "⊕", "title": "13 Sprachen", "desc": "Vollständige Mehrsprachigkeit — darunter Bulgarisch, Englisch, Deutsch, Griechisch, Russisch, Japanisch und mehr." },
+      { "icon": "⊕", "title": "14 Sprachen", "desc": "Full multilingual support for the main international audiences, with Bulgarian meaning preserved at the source." },
       { "icon": "❖", "title": "Familienerkundung", "desc": "Tempoeinstellungen und Inhaltsebenen für Familien, Schulen und Kulturtouristen jeden Alters." },
       { "icon": "⊞", "title": "Offline-Unterstützung", "desc": "Wichtige Routeninhalte werden für Berg-, Dorf- und Kulturerbestätten mit eingeschränktem Signal vorbereitet." },
       { "icon": "⊗", "title": "Partner-Routen", "desc": "Gemeinden, Museen und Tourismusunternehmen können Routen mitgestalten, die mit echtem lokalem Erbe verbunden sind." }
@@ -324,7 +324,7 @@
       },
       {
         "q": "Welche Sprachen werden unterstützt?",
-        "a": "Die App unterstützt 13 Sprachen: Bulgarisch, Englisch, Deutsch, Französisch, Spanisch, Italienisch, Rumänisch, Türkisch, Griechisch, Polnisch, Russisch, Japanisch und Serbisch."
+        "a": "The app supports 14 languages: Bulgarian, English, German, French, Spanish, Italian, Romanian, Turkish, Greek, Hungarian, Chinese, Russian, Japanese, and Serbian."
       },
       {
         "q": "Benötige ich ein Konto?",

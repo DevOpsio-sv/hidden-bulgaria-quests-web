@@ -212,17 +212,19 @@ h3{
   border-bottom-color:var(--border-lt);
   padding-top:12px;padding-bottom:12px;
 }
-.header-brand{align-items:center;display:inline-flex;gap:10px;flex-shrink:0}
-/* Brand mark — was .66rem, bumped to .72rem */
-.brand-mark{
-  align-items:center;
-  background:linear-gradient(135deg,var(--gold),var(--gold-dk));
-  border-radius:var(--r-pill);color:var(--bg-0);
-  display:inline-flex;
-  font-family:var(--ff-title);font-size:.72rem;font-weight:700;
-  height:36px;justify-content:center;letter-spacing:.1em;width:36px;
+.header-brand{align-items:center;display:inline-flex;flex-shrink:0;line-height:0}
+.brand-logo{
+  display:block;
+  height:clamp(38px,4.2vw,52px);
+  clip-path:inset(0 1.4% 0 0);
+  filter:brightness(1.08) contrast(1.08) saturate(.92) drop-shadow(0 0 18px rgba(216,181,106,.12));
+  mix-blend-mode:screen;
+  object-fit:contain;
+  opacity:.92;
+  width:auto;
   flex-shrink:0;
 }
+.site-header[data-scrolled] .brand-logo{opacity:.96}
 /* Brand name — was .88rem, bumped to .96rem */
 .brand-name{
   color:var(--text-1);display:block;
@@ -1319,7 +1321,7 @@ textarea.form-control{min-height:122px;resize:vertical}
   display:grid;gap:clamp(32px,5vw,56px);
   grid-template-columns:auto 1fr auto;
 }
-.footer-brand .brand-name{font-size:1rem;margin-bottom:8px}
+.footer-brand .brand-logo{height:clamp(46px,6vw,64px);opacity:.82}
 /* Footer tagline — was .84rem (~14px), bumped to .96rem */
 .footer-tagline{color:var(--text-3);font-size:.96rem;line-height:1.58;margin-top:14px;max-width:230px}
 .footer-links{display:flex;gap:clamp(24px,4vw,52px);justify-content:center;flex-wrap:wrap}
@@ -1425,16 +1427,10 @@ textarea.form-control{min-height:122px;resize:vertical}
     flex:1 1 auto;
     min-width:0;
   }
-  .header-brand > span:not(.brand-mark){
-    min-width:0;
+  .brand-logo{
+    height:38px;
+    max-width:min(44vw,160px);
   }
-  .brand-name{
-    max-width:clamp(5.5rem,28vw,7.5rem);
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
-  .brand-tag{display:none}
   .header-actions{gap:6px}
   .btn-dl{
     font-size:.9rem;
@@ -1924,7 +1920,8 @@ textarea.form-control{min-height:122px;resize:vertical}
   transition:color var(--fast);
   z-index:2;
 }
-.hero-scroll-hint:hover{color:var(--gold)}
+.hero-scroll-hint:hover,.hero-scroll-hint:focus-visible{color:var(--gold)}
+.hero-scroll-hint:focus-visible{outline:2px solid var(--gold);outline-offset:8px}
 .hero-scroll-hint svg{animation:arrow-bob 2.6s ease-in-out 5s infinite}
 .hero-scroll-label{display:block}
 

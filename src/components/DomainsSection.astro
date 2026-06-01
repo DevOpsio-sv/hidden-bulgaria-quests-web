@@ -22,7 +22,7 @@ const veils = ["◉", "⌘", "◈", "✦", "♪", "◎"];
     {d.cards.map((card, i) => {
       const epochLabel = card.epoch === "before" ? d.epochBefore : d.epochAfter;
       const delay = i % 2 === 1 ? " reveal-d1" : "";
-      const href = i === 2 ? `/${lang}/sea-domain` : undefined;
+      const href = i === 1 ? `/${lang}/sea-domain` : undefined;
       const content = (
         <>
           <div class="dc-atmo" aria-hidden="true"></div>
