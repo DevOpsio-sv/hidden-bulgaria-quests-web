@@ -1322,16 +1322,17 @@ textarea.form-control{min-height:122px;resize:vertical}
 /* ─── Footer ─────────────────────────────────────────────────── */
 .site-footer{
   border-top:1px solid var(--border-lt);
-  padding:clamp(44px,6vw,64px) 0 clamp(28px,4vw,44px);
+  padding:clamp(44px,6vw,64px) 0 0;
 }
-.footer-grid{
-  display:grid;gap:clamp(32px,5vw,56px);
-  grid-template-columns:auto 1fr auto;
+.footer-main{
+  display:grid;
+  gap:clamp(24px,4vw,64px);
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  padding-bottom:48px;
 }
 .footer-brand .brand-logo{height:clamp(44px,5.2vw,60px);opacity:.9}
 /* Footer tagline — was .84rem (~14px), bumped to .96rem */
 .footer-tagline{color:var(--text-3);font-size:.96rem;line-height:1.58;margin-top:14px;max-width:230px}
-.footer-links{display:flex;gap:clamp(24px,4vw,52px);justify-content:center;flex-wrap:wrap}
 /* Footer group headings — was .62rem (~10.5px), very tiny; bumped to .76rem */
 .footer-group h4{
   color:var(--text-3);font-family:var(--ff-title);font-size:.76rem;
@@ -1343,30 +1344,37 @@ textarea.form-control{min-height:122px;resize:vertical}
   margin-bottom:12px;transition:color var(--fast);
 }
 .footer-group a:hover{color:var(--gold)}
-.footer-legal{align-items:flex-end;display:flex;flex-direction:column;gap:10px}
-/* Footer legal text — was .76rem (~12.9px), bumped to .86rem */
-.footer-legal p{color:var(--text-3);font-size:.86rem;text-align:right}
-.footer-legal-links{display:flex;flex-wrap:wrap;gap:16px;justify-content:flex-end}
-/* Footer legal links — was .76rem, bumped to .86rem */
-.footer-legal-links a{color:var(--text-3);font-size:.86rem;transition:color var(--fast)}
-.footer-legal-links a:hover{color:var(--gold)}
-
-.footer-colophon{
-  border-top:1px solid var(--border-lt);
-  margin-top:clamp(24px,3vw,36px);
-  padding:14px 0;
+.footer-divider{
+  border:none;
+  border-top:1px solid rgba(216,181,106,0.15);
+  margin:0;
 }
-.footer-colophon .wrap{
-  align-items:center;display:flex;
-  flex-direction:column;gap:4px;
+.footer-bottom{
+  align-items:center;
+  color:var(--text-3);
+  display:flex;
+  font-size:.78rem;
+  justify-content:space-between;
+  padding:20px 0;
 }
-.footer-colophon-heart{
-  color:var(--text-3);font-size:.82rem;letter-spacing:.02em;
+.footer-copy{color:var(--text-3)}
+.footer-legal{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.footer-legal a{color:var(--text-3);transition:color var(--fast)}
+.footer-legal a:hover{color:var(--gold)}
+.footer-legal a + a::before{
+  color:var(--text-3);
+  content:"·";
+  margin-right:10px;
+  opacity:.75;
 }
-.footer-colophon-credit{
-  color:var(--text-4);font-size:.78rem;letter-spacing:.03em;
+.footer-credit{
+  color:var(--text-3);
+  font-size:.65rem;
+  opacity:.55;
+  padding-bottom:16px;
+  text-align:center;
 }
-.footer-colophon-credit strong{color:var(--text-3);font-weight:600}
+.footer-credit strong{font-weight:600}
 
 /* ─── Reveal animation ───────────────────────────────────────── */
 /* Y offset increased from 22 to 30px for more cinematic reveal */
@@ -1403,9 +1411,8 @@ textarea.form-control{min-height:122px;resize:vertical}
   .seo-route-item small{grid-column:2}
   .seo-app-cta-inner{align-items:flex-start;flex-direction:column}
   .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .footer-legal{grid-column:1/-1;align-items:flex-start}
-  .footer-legal p,.footer-legal-links{text-align:left;justify-content:flex-start}
+  .footer-main{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:1/-1}
 }
 @media(max-width:720px){
   .journey-grid{
@@ -1472,8 +1479,9 @@ textarea.form-control{min-height:122px;resize:vertical}
   }
   .contact-grid{grid-template-columns:1fr}
   .form-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr;gap:32px}
-  .footer-links{flex-direction:column;gap:28px}
+  .footer-main{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+  .footer-legal{justify-content:center}
   .arrival-section{padding:90px var(--pad-x) 60px}
   /* Mobile FAQ — slightly smaller question text for narrow screens */
   .faq-q{font-size:1rem;padding:20px 20px}
