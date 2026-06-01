@@ -2406,7 +2406,8 @@ textarea.form-control{min-height:122px;resize:vertical}
 }
 @media(max-width:900px){
   .hero-section{
-    padding-top:78px;
+    justify-content:flex-start;
+    padding-top:86px;
     padding-bottom:36px;
   }
   .hero-inner{gap:22px}
@@ -2440,7 +2441,7 @@ textarea.form-control{min-height:122px;resize:vertical}
 @media(max-width:600px){
   .hero-section{
     min-height:100svh;
-    padding-top:66px;
+    padding-top:80px;
     padding-bottom:22px;
   }
   .hero-inner{gap:16px}
