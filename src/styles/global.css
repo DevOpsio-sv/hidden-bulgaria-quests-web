@@ -2410,7 +2410,12 @@ textarea.form-control{min-height:122px;resize:vertical}
     padding-top:86px;
     padding-bottom:36px;
   }
-  .hero-inner{gap:22px}
+  .hero-inner{
+    align-items:center;
+    flex-direction:column;
+    gap:22px;
+  }
+  .hero-content{max-width:100%}
   .hero-eyebrow{margin-bottom:14px}
   .hero-headline{margin-bottom:14px}
   .hero-line{font-size:1.875rem}
