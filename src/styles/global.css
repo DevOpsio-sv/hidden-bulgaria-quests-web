@@ -2038,19 +2038,11 @@ textarea.form-control{min-height:122px;resize:vertical}
   transition:color var(--fast),border-color var(--fast);
 }
 .hero-lightbox-close:hover{border-color:var(--border);color:var(--text-1)}
-.hero-lightbox-placeholder{
-  align-items:center;
+.hero-lightbox-video{
   aspect-ratio:16/9;
-  background:var(--bg-2);
-  border:1px solid var(--border);
   border-radius:var(--r-lg);
-  color:var(--text-2);
-  display:flex;
-  font-family:var(--ff-display);
-  font-size:clamp(1rem,2vw,1.3rem);
-  font-style:italic;
-  justify-content:center;
-  text-align:center;
+  display:block;
+  width:100%;
 }
 
 /* ─── BAND (statement) ────────────────────────────────────────── */

@@ -212,27 +212,71 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   <!-- Hero: pause video for reduced-motion; lightbox toggle -->
   <script is:inline>
   (function(){
-    /* Pause hero video for reduced-motion users */
-    var vid=document.querySelector('.hero-video');
-    if(vid&&window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-      vid.pause();
-      vid.removeAttribute('autoplay');
+    /* Pause hero background video for reduced-motion users */
+    var bgVid=document.querySelector('.hero-video');
+    if(bgVid&&window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+      bgVid.pause();
+      bgVid.removeAttribute('autoplay');
     }
-    /* Lightbox open/close */
+
+    /* Lightbox elements */
     var openBtn=document.querySelector('[data-lightbox-btn]');
     var lightbox=document.getElementById('hero-lightbox');
     var closeBtn=document.querySelector('[data-lightbox-close]');
     if(!openBtn||!lightbox)return;
+
+    var lbVideo=lightbox.querySelector('.hero-lightbox-video');
+    var lbAudio=lightbox.querySelector('.hero-lightbox-audio');
+
+    function resetMedia(){
+      if(lbVideo){lbVideo.pause();lbVideo.currentTime=0;}
+      if(lbAudio){lbAudio.pause();lbAudio.currentTime=0;}
+    }
+
+    function startMedia(){
+      /* Play video — ignore AbortError from rapid open/close */
+      if(lbVideo){
+        var vp=lbVideo.play();
+        if(vp&&typeof vp.catch==='function')vp.catch(function(){});
+      }
+      /* Play audio in the same user-gesture tick */
+      if(lbAudio){
+        var ap=lbAudio.play();
+        if(ap&&typeof ap.catch==='function')ap.catch(function(){});
+      }
+    }
+
     function openLb(){
       lightbox.removeAttribute('hidden');
       lightbox.focus();
       openBtn.setAttribute('aria-expanded','true');
+      startMedia();
     }
+
     function closeLb(){
       lightbox.setAttribute('hidden','');
       openBtn.setAttribute('aria-expanded','false');
       openBtn.focus();
+      resetMedia();
     }
+
+    /* Audio ends last (12s) — video (10s) has already ended naturally;
+       modal stays open, nothing extra needed on audio 'ended'. */
+
+    /* Wire controls — user clicking the native video pause/play
+       should also mirror the audio state */
+    if(lbVideo){
+      lbVideo.addEventListener('pause',function(){
+        if(lbAudio&&!lbAudio.ended)lbAudio.pause();
+      });
+      lbVideo.addEventListener('play',function(){
+        if(lbAudio&&!lbAudio.ended){
+          var ap=lbAudio.play();
+          if(ap&&typeof ap.catch==='function')ap.catch(function(){});
+        }
+      });
+    }
+
     openBtn.addEventListener('click',openLb);
     if(closeBtn)closeBtn.addEventListener('click',closeLb);
     lightbox.addEventListener('click',function(e){if(e.target===lightbox)closeLb();});

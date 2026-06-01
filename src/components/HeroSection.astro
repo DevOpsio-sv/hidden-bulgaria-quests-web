@@ -147,8 +147,17 @@ const a = dict.arrival;
       type="button"
       data-lightbox-close
     >{h.videoClose} ✕</button>
-    <div class="hero-lightbox-placeholder" role="img" aria-label={h.videoTitle}>
-      <span>{h.videoTitle}</span>
-    </div>
+    <video
+      class="hero-lightbox-video"
+      controls
+      playsinline
+      preload="none"
+      aria-label={h.videoTitle}
+    >
+      <source src="/ub_intro_video.mp4" type="video/mp4" />
+    </video>
+    <audio class="hero-lightbox-audio" preload="none">
+      <source src="/intro_audio.mp3" type="audio/mpeg" />
+    </audio>
   </div>
 </div>
