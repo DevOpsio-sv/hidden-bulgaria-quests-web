@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import type { Dict } from "../i18n";
 import { SUPPORTED_LANGS } from "../i18n";
 import LivingBackground from "../components/LivingBackground.astro";
@@ -45,6 +46,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#030610" />
   <meta name="robots" content="index, follow" />
+  <ViewTransitions />
 
   <title>{metaTitle}</title>
   <meta name="description" content={metaDescription} />
@@ -92,9 +94,176 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   {jsonLd.map((schema) => (
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
+  <style is:global>
+    html{
+      max-width:100vw;
+      overflow-x:hidden;
+    }
+    body{
+      max-width:100vw;
+      overflow-x:hidden;
+    }
+    main,
+    section,
+    .wrap{
+      max-width:100%;
+    }
+    img,
+    video,
+    canvas,
+    svg{
+      max-width:100%;
+    }
+    ::view-transition{
+      background:var(--void);
+      max-width:100vw;
+      overflow:hidden;
+    }
+    ::view-transition-group(root){
+      animation-duration:.5s;
+      animation-timing-function:ease-in-out;
+      max-width:100vw;
+      overflow:hidden;
+    }
+    ::view-transition-old(root){
+      animation:ub-page-leave .5s ease-in-out both;
+      max-width:100vw;
+      overflow:hidden;
+      transform-origin:left center;
+    }
+    ::view-transition-new(root){
+      animation:ub-page-enter .5s ease-in-out both;
+      max-width:100vw;
+      overflow:hidden;
+      transform-origin:left center;
+    }
+    @keyframes ub-page-leave{
+      0%{opacity:1;filter:brightness(1);transform:scaleX(1)}
+      100%{opacity:0;filter:brightness(.75);transform:scaleX(0)}
+    }
+    @keyframes ub-page-enter{
+      0%{opacity:0;filter:brightness(.75);transform:scaleX(0)}
+      100%{opacity:1;filter:brightness(1);transform:scaleX(1)}
+    }
+    .ub-page-magic{
+      inset:0;
+      pointer-events:none;
+      position:fixed;
+      z-index:10000;
+    }
+    .shooting-stars-container{
+      contain:strict;
+      height:100vh;
+      left:0;
+      overflow:hidden;
+      pointer-events:none;
+      position:fixed;
+      top:0;
+      width:100vw;
+      z-index:0;
+    }
+    .shooting-stars-container span{
+      animation:magical-star-fall var(--star-duration,5s) ease-in-out var(--star-delay,0s) infinite;
+      background:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(212,175,55,.9) 14%,rgba(212,175,55,.38) 48%,rgba(212,175,55,0) 100%);
+      border-radius:999px;
+      box-shadow:0 0 8px rgba(212,175,55,.38),0 0 18px rgba(245,226,168,.14);
+      height:1px;
+      opacity:0;
+      position:absolute;
+      left:var(--star-left,auto);
+      right:var(--star-right,auto);
+      top:var(--star-top,12vh);
+      scale:var(--star-scale,1);
+      transform:rotate(-45deg);
+      transform-origin:left center;
+      width:var(--star-width,42px);
+      will-change:transform,opacity;
+    }
+    .shooting-stars-container span::before{
+      background:#fff;
+      border-radius:50%;
+      box-shadow:0 0 10px 2px rgba(255,255,255,.8),0 0 18px 5px rgba(212,175,55,.3);
+      content:"";
+      height:var(--star-head,4px);
+      left:-1px;
+      position:absolute;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:var(--star-head,4px);
+    }
+    .shooting-stars-container .star-1{--star-top:-5%;--star-left:30%;--star-width:42px;--star-head:3px;--star-duration:4.8s;--star-delay:0s;--star-scale:1}
+    .shooting-stars-container .star-2{--star-top:-5%;--star-left:80%;--star-width:36px;--star-head:3px;--star-duration:5.8s;--star-delay:2s;--star-scale:.6}
+    .shooting-stars-container .star-3{--star-top:20%;--star-right:-5%;--star-width:48px;--star-head:4px;--star-duration:4.2s;--star-delay:4s;--star-scale:1.2}
+    .shooting-stars-container .star-4{--star-top:60%;--star-right:-5%;--star-width:32px;--star-head:3px;--star-duration:5.4s;--star-delay:7s;--star-scale:.75}
+    .shooting-stars-container .star-5{--star-top:-10%;--star-left:120%;--star-width:44px;--star-head:3px;--star-duration:6s;--star-delay:9s;--star-scale:1.1}
+    @keyframes magical-star-fall{
+      0%{
+        opacity:0;
+        transform:rotate(-45deg) translateX(0);
+      }
+      10%{
+        opacity:1;
+      }
+      90%{
+        opacity:1;
+      }
+      100%{
+        transform:rotate(-45deg) translateX(-120vh);
+        opacity:0;
+      }
+    }
+    @media(max-width:767px){
+      ::view-transition-old(root){
+        animation-name:ub-page-leave-mobile;
+        transform-origin:center top;
+      }
+      ::view-transition-new(root){
+        animation-name:ub-page-enter-mobile;
+        transform-origin:center top;
+      }
+      @keyframes ub-page-leave-mobile{
+        0%{opacity:1;filter:brightness(1);transform:scaleY(1)}
+        100%{opacity:0;filter:brightness(.75);transform:scaleY(0)}
+      }
+      @keyframes ub-page-enter-mobile{
+        0%{opacity:0;filter:brightness(.75);transform:scaleY(0)}
+        100%{opacity:1;filter:brightness(1);transform:scaleY(1)}
+      }
+    }
+    @media(max-width:760px){
+      .wrap{
+        padding-left:clamp(16px,5vw,24px);
+        padding-right:clamp(16px,5vw,24px);
+      }
+      .section{
+        padding-bottom:clamp(56px,12vw,88px);
+        padding-top:clamp(56px,12vw,88px);
+      }
+      [class*="grid"],
+      [class*="layout"]{
+        min-width:0;
+      }
+    }
+    @media(prefers-reduced-motion:reduce){
+      ::view-transition-old(root),
+      ::view-transition-new(root){
+        animation:none;
+      }
+      .shooting-stars-container span{
+        animation:none;
+      }
+    }
+  </style>
 </head>
 <body>
   <LivingBackground />
+  <div class="shooting-stars-container" aria-hidden="true">
+    <span class="star-1"></span>
+    <span class="star-2"></span>
+    <span class="star-3"></span>
+    <span class="star-4"></span>
+    <span class="star-5"></span>
+  </div>
 
   <a class="skip" href="#main">{dict.skipLink}</a>
 
@@ -107,6 +276,88 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
     if(!h)return;
     var u=function(){h.toggleAttribute("data-scrolled",window.scrollY>60)};
     u();window.addEventListener("scroll",u,{passive:true});
+  })();
+  </script>
+
+  <!-- Book-flip transition sparks -->
+  <script is:inline>
+  (function(){
+    if(window.__ubBookMagicInit)return;
+    window.__ubBookMagicInit=true;
+    if(!("startViewTransition" in document))return;
+    if(window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+
+    function runBookMagic(){
+      var canvas=document.createElement("canvas");
+      var ctx=canvas.getContext("2d");
+      if(!ctx)return;
+      var dpr=Math.min(window.devicePixelRatio||1,2);
+      var w=window.innerWidth;
+      var h=window.innerHeight;
+      var mobile=window.matchMedia("(max-width:700px)").matches;
+      var originX=mobile?w/2:Math.max(18,w*.08);
+      var originY=mobile?h*.78:h/2;
+      var particles=[];
+      var started=performance.now();
+      var duration=850;
+
+      canvas.className="ub-page-magic";
+      canvas.width=Math.round(w*dpr);
+      canvas.height=Math.round(h*dpr);
+      canvas.style.width=w+"px";
+      canvas.style.height=h+"px";
+      ctx.scale(dpr,dpr);
+      document.body.appendChild(canvas);
+
+      for(var i=0;i<72;i++){
+        var a=mobile?(-Math.PI/2+(Math.random()-.5)*1.25):((Math.random()-.5)*1.6);
+        var speed=1.2+Math.random()*5.4;
+        particles.push({
+          x:originX+(Math.random()-.5)*18,
+          y:originY+(Math.random()-.5)*(mobile?18:h*.38),
+          vx:Math.cos(a)*speed+(mobile?(Math.random()-.5)*1.6:1.7+Math.random()*2.8),
+          vy:Math.sin(a)*speed+(mobile?-(1.8+Math.random()*2.6):(Math.random()-.5)*2.1),
+          r:.8+Math.random()*2.6,
+          life:.55+Math.random()*.45,
+          gold:Math.random()>.28
+        });
+      }
+
+      function tick(now){
+        var t=Math.min((now-started)/duration,1);
+        ctx.clearRect(0,0,w,h);
+
+        var mist=ctx.createRadialGradient(originX,originY,0,originX,originY,Math.max(w,h)*.58);
+        mist.addColorStop(0,"rgba(216,181,106,"+(0.16*(1-t))+")");
+        mist.addColorStop(.38,"rgba(245,226,168,"+(0.06*(1-t))+")");
+        mist.addColorStop(1,"rgba(216,181,106,0)");
+        ctx.fillStyle=mist;
+        ctx.fillRect(0,0,w,h);
+
+        particles.forEach(function(p){
+          p.x+=p.vx;
+          p.y+=p.vy;
+          p.vx*=.985;
+          p.vy*=.982;
+          p.vy+=mobile?.012:.006;
+          var alpha=Math.max(0,(1-t)*p.life);
+          ctx.beginPath();
+          ctx.fillStyle=p.gold?"rgba(232,200,120,"+alpha+")":"rgba(255,244,204,"+(alpha*.72)+")";
+          ctx.shadowBlur=18;
+          ctx.shadowColor="rgba(232,200,120,.55)";
+          ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+          ctx.fill();
+          ctx.shadowBlur=0;
+        });
+
+        if(t<1)requestAnimationFrame(tick);
+        else canvas.remove();
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    document.addEventListener("astro:before-preparation",runBookMagic);
   })();
   </script>
 
