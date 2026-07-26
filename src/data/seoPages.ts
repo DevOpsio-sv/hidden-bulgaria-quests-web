@@ -1,5 +1,6 @@
 import { DEFAULT_LANG, SUPPORTED_LANGS, type Lang } from "../i18n";
 import { geoToMap } from "../utils/geoToMap";
+import { getAppPlaceId, placeDeepLink } from "./placeIdentity";
 
 export type PageStatus = "draft" | "ready";
 export type PlaceType = "hero" | "standard" | "demo";
@@ -52,6 +53,8 @@ export interface SeoRoute {
 export interface SeoPlace {
   id: string;
   slug: string;
+  /** Application checkpoint id — language-independent bridge to the app. */
+  appPlaceId: string;
   domainId: string;
   routeId: string;
   type: PlaceType;
@@ -75,11 +78,8 @@ export interface SeoPlace {
   /**
    * Canonical `unlockingbulgaria://` URI for this place.
    *
-   * This is correct data and must not be deleted — the website-to-application
-   * identity bridge will consume it. It must never be used as a browser `href`:
-   * a custom scheme is inert on desktop and inert on mobile without the app
-   * installed, so an `href` here renders a CTA that silently does nothing.
-   * `AppCTASection.astro` emits it as a `data-app-deep-link` attribute instead.
+   * Derived from `placeIdentity.placeDeepLink(slug)`. Must never be used as a
+   * browser `href` — `AppCTASection.astro` emits `data-app-deep-link` instead.
    */
   appDeepLink: string;
   translations: Partial<Record<Lang, LocalizedSeoCopy>>;
@@ -310,6 +310,7 @@ function makeSeaPlace(index: number, row: (typeof seaPlaces)[number]): SeoPlace 
   return {
     id,
     slug: id,
+    appPlaceId: getAppPlaceId(id),
     domainId: SEA_DOMAIN_ID,
     routeId: SEA_ROUTE_ID,
     type: index === 0 || id === "kaliakra" || id === "sozopol" ? "hero" : "standard",
@@ -324,7 +325,7 @@ function makeSeaPlace(index: number, row: (typeof seaPlaces)[number]): SeoPlace 
     nearbyPlaces: [previousPlace, nextPlace].filter(Boolean) as string[],
     previousPlace,
     nextPlace,
-    appDeepLink: `unlockingbulgaria://places/${id}`,
+    appDeepLink: placeDeepLink(id),
     epoch: "before",
     map: geoToMap(lat, lng),
     translations: {
@@ -363,6 +364,7 @@ export const seoPlaces: SeoPlace[] = [
   {
     id: "prohodna-cave",
     slug: "prohodna-cave",
+    appPlaceId: getAppPlaceId("prohodna-cave"),
     domainId: CAVE_DOMAIN_ID,
     routeId: CAVE_DEMO_ROUTE_ID,
     type: "demo",
@@ -375,7 +377,7 @@ export const seoPlaces: SeoPlace[] = [
     images: [SEO_PAGE_IMAGE],
     audioUrl: "unlockingbulgaria://audio/prohodna-cave",
     nearbyPlaces: [],
-    appDeepLink: "unlockingbulgaria://places/prohodna-cave",
+    appDeepLink: placeDeepLink("prohodna-cave"),
     epoch: "before",
     map: geoToMap(43.173, 24.071),
     guardianSight: { overlayImage: "/media/prohodna/prohodna-overlay.png" },

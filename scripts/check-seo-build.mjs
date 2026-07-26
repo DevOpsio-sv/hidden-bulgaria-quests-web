@@ -143,14 +143,22 @@ for (const redirectsFile of [path.join(root, "public/_redirects"), path.join(roo
   }
 }
 
-// `appDeepLink` is correct data the identity bridge will consume. Only its use
-// as an href was removed — the field itself must survive.
+// `appDeepLink` is correct data the identity bridge consumes. Only its use
+// as an href was removed — the field itself must survive, derived from
+// placeIdentity.placeDeepLink(slug).
 const seoPagesSource = fs.readFileSync(path.join(root, "src/data/seoPages.ts"), "utf8");
+const placeIdentitySource = fs.readFileSync(path.join(root, "src/data/placeIdentity.ts"), "utf8");
 if (!seoPagesSource.includes("appDeepLink")) {
   fail("appDeepLink has been removed from src/data/seoPages.ts — it is required data.");
 }
-if (!seoPagesSource.includes('appDeepLink: "unlockingbulgaria://places/prohodna-cave"')) {
-  fail("Prohodna's appDeepLink value is no longer present in src/data/seoPages.ts.");
+if (!seoPagesSource.includes('placeDeepLink("prohodna-cave")') && !seoPagesSource.includes("placeDeepLink('prohodna-cave')")) {
+  fail("Prohodna's appDeepLink is no longer derived from placeDeepLink('prohodna-cave').");
+}
+if (!placeIdentitySource.includes('"prohodna-cave": "place-2-1-4"') && !placeIdentitySource.includes("'prohodna-cave': 'place-2-1-4'")) {
+  fail("placeIdentity.ts must bridge prohodna-cave → place-2-1-4.");
+}
+if (!seoPagesSource.includes("appPlaceId")) {
+  fail("seoPages.ts must carry appPlaceId on every place.");
 }
 for (const route of [`/en/places/prohodna-cave`, `/bg/places/prohodna-cave`]) {
   const html = readRoute(route);
