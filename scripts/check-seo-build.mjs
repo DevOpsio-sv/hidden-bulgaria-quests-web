@@ -159,6 +159,38 @@ for (const route of [`/en/places/prohodna-cave`, `/bg/places/prohodna-cave`]) {
   }
 }
 
+// PR-004: portal card must not load three.js from a CDN (or ship its string).
+const bannedRuntimeDeps = ["cdnjs.cloudflare.com", "three.min.js"];
+for (const route of langs.map((lang) => `/${lang}`)) {
+  const html = readRoute(route);
+  for (const banned of bannedRuntimeDeps) {
+    if (html.includes(banned)) fail(`Banned runtime dependency ${banned} found in ${route}`);
+  }
+}
+const assetDir = path.join(dist, "_assets");
+if (fs.existsSync(assetDir)) {
+  for (const file of fs.readdirSync(assetDir)) {
+    const full = path.join(assetDir, file);
+    if (!fs.statSync(full).isFile()) continue;
+    if (!/\.(js|css|html|mjs)$/i.test(file)) continue;
+    const contents = fs.readFileSync(full, "utf8");
+    for (const banned of bannedRuntimeDeps) {
+      if (contents.includes(banned)) {
+        fail(`Banned runtime dependency ${banned} found in _assets/${file}`);
+      }
+    }
+  }
+}
+
+// Portal card must be a real same-origin place link in every locale.
+for (const lang of langs) {
+  const html = readRoute(`/${lang}`);
+  const expected = `href="/${lang}/places/prohodna-cave"`;
+  if (!html.includes(expected)) {
+    fail(`Homepage portal link missing for ${lang}: expected ${expected}`);
+  }
+}
+
 if (!process.exitCode) {
   console.log(
     `SEO build checks passed for ${expectedRoutes.length + legalRoutes.length} localized routes.`

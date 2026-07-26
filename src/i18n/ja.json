@@ -35,11 +35,7 @@
     "mapLabel": "ブルガリアの秘められた記憶のインタラクティブマップ",
     "phoneDomain": "洞窟ポータル",
     "phoneTitle": "プロホドナ",
-    "phoneDesc": "名が生まれる前から大地が見つめていた場所へ入ろう。",
-    "phoneProgress": "ポータルの封印が目覚める",
-    "portalAwakenCta": "封印を目覚めさせる",
-    "portalUnlockedCta": "ポータルは目覚めた",
-    "portalFinalCta": "✨ 接続が確立されました！ライブAR視界を有効にするにはアプリをダウンロードしてください："
+    "phoneDesc": "名が生まれる前から大地が見つめていた場所へ入ろう。"
   },
   "band": {
     "sub": "ガイド以上。ゲーム以上。",

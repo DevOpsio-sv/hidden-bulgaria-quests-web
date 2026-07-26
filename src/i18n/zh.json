@@ -35,11 +35,7 @@
     "mapLabel": "保加利亚隐藏记忆互动地图",
     "phoneDomain": "洞穴门户",
     "phoneTitle": "普罗霍德纳",
-    "phoneDesc": "进入大地在名字之前就已凝望的地方。",
-    "phoneProgress": "门户封印正在苏醒",
-    "portalAwakenCta": "唤醒封印",
-    "portalUnlockedCta": "门户已苏醒",
-    "portalFinalCta": "✨ 连接已建立！若要激活实时 AR 视野，请下载应用："
+    "phoneDesc": "进入大地在名字之前就已凝望的地方。"
   },
   "band": {
     "sub": "不止是指南。不止是游戏。",

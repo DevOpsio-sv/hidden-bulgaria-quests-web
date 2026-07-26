@@ -35,11 +35,7 @@
     "mapLabel": "Interaktív térkép Bulgária rejtett emlékezetéről",
     "phoneDomain": "Barlangportál",
     "phoneTitle": "Prohodna",
-    "phoneDesc": "Lépj be arra a helyre, ahol a föld már a Név előtt figyelt.",
-    "phoneProgress": "A Portál pecsétje ébredezik",
-    "portalAwakenCta": "ÉBRESZD FEL A PECSÉTET",
-    "portalUnlockedCta": "A PORTÁL FELÉBREDT",
-    "portalFinalCta": "✨ A kapcsolat létrejött! Az élő AR-tekintet aktiválásához töltsd le az alkalmazást:"
+    "phoneDesc": "Lépj be arra a helyre, ahol a föld már a Név előtt figyelt."
   },
   "band": {
     "sub": "Több mint útikalauz. Több mint játék.",

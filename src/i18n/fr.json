@@ -35,11 +35,7 @@
     "mapLabel": "Carte interactive de la mémoire cachée de la Bulgarie",
     "phoneDomain": "Portail de la grotte",
     "phoneTitle": "Prohodna",
-    "phoneDesc": "Entre dans le lieu où la terre regardait avant le Nom.",
-    "phoneProgress": "Le Sceau du Portail s'éveille",
-    "portalAwakenCta": "ÉVEILLER LE SCEAU",
-    "portalUnlockedCta": "LE PORTAIL EST ÉVEILLÉ",
-    "portalFinalCta": "✨ La connexion est établie ! Pour activer la vision AR en direct, télécharge l'application :"
+    "phoneDesc": "Entre dans le lieu où la terre regardait avant le Nom."
   },
   "band": {
     "sub": "Plus qu'un guide. Plus qu'un jeu.",

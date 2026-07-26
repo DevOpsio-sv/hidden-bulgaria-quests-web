@@ -35,11 +35,7 @@
     "mapLabel": "Bulgaristan'ın gizli belleğinin interaktif haritası",
     "phoneDomain": "Mağara Portalı",
     "phoneTitle": "Prohodna",
-    "phoneDesc": "Toprağın İsimden önce baktığı yere gir.",
-    "phoneProgress": "Portal Mührü uyanıyor",
-    "portalAwakenCta": "MÜHRÜ UYANDIR",
-    "portalUnlockedCta": "PORTAL UYANDI",
-    "portalFinalCta": "✨ Bağlantı kuruldu! Canlı AR bakışını etkinleştirmek için uygulamayı indir:"
+    "phoneDesc": "Toprağın İsimden önce baktığı yere gir."
   },
   "band": {
     "sub": "Bir rehberden fazlası. Bir oyundan fazlası.",

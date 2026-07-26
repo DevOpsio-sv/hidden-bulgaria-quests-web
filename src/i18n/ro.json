@@ -35,11 +35,7 @@
     "mapLabel": "Harta interactivă a memoriei ascunse a Bulgariei",
     "phoneDomain": "Portalul peșterii",
     "phoneTitle": "Prohodna",
-    "phoneDesc": "Intră în locul unde pământul privea înainte de Nume.",
-    "phoneProgress": "Pecetea Portalului se trezește",
-    "portalAwakenCta": "TREZEȘTE PECETEA",
-    "portalUnlockedCta": "PORTALUL S-A TREZIT",
-    "portalFinalCta": "✨ Conexiunea este stabilită! Pentru a activa privirea AR live, descarcă aplicația:"
+    "phoneDesc": "Intră în locul unde pământul privea înainte de Nume."
   },
   "band": {
     "sub": "Mai mult decât un ghid. Mai mult decât un joc.",

@@ -35,11 +35,7 @@
     "mapLabel": "Mapa interactivo de la memoria oculta de Bulgaria",
     "phoneDomain": "Portal de la cueva",
     "phoneTitle": "Prohodna",
-    "phoneDesc": "Entra en el lugar donde la tierra miraba antes del Nombre.",
-    "phoneProgress": "El Sello del Portal despierta",
-    "portalAwakenCta": "DESPERTAR EL SELLO",
-    "portalUnlockedCta": "EL PORTAL ESTÁ DESPIERTO",
-    "portalFinalCta": "✨ ¡La conexión está establecida! Para activar la visión AR en vivo, descarga la aplicación:"
+    "phoneDesc": "Entra en el lugar donde la tierra miraba antes del Nombre."
   },
   "band": {
     "sub": "Más que una guía. Más que un juego.",

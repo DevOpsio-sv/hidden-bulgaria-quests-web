@@ -35,11 +35,7 @@
     "mapLabel": "Mappa interattiva della memoria nascosta della Bulgaria",
     "phoneDomain": "Portale della grotta",
     "phoneTitle": "Prohodna",
-    "phoneDesc": "Entra nel luogo in cui la terra guardava prima del Nome.",
-    "phoneProgress": "Il Sigillo del Portale si risveglia",
-    "portalAwakenCta": "RISVEGLIA IL SIGILLO",
-    "portalUnlockedCta": "IL PORTALE È RISVEGLIATO",
-    "portalFinalCta": "✨ La connessione è stabilita! Per attivare la vista AR dal vivo, scarica l'app:"
+    "phoneDesc": "Entra nel luogo in cui la terra guardava prima del Nome."
   },
   "band": {
     "sub": "Più di una guida. Più di un gioco.",

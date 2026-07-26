@@ -35,11 +35,7 @@
     "mapLabel": "Interaktive Karte von Bulgariens verborgenem Gedächtnis",
     "phoneDomain": "Höhlenportal",
     "phoneTitle": "Prohodna",
-    "phoneDesc": "Betritt den Ort, an dem die Erde schon vor dem Namen blickte.",
-    "phoneProgress": "Das Siegel des Portals erwacht",
-    "portalAwakenCta": "SIEGEL ERWECKEN",
-    "portalUnlockedCta": "DAS PORTAL IST ERWACHT",
-    "portalFinalCta": "✨ Die Verbindung ist hergestellt! Lade die App herunter, um den Live-AR-Blick zu aktivieren:"
+    "phoneDesc": "Betritt den Ort, an dem die Erde schon vor dem Namen blickte."
   },
   "band": {
     "sub": "Mehr als ein Reiseführer. Mehr als ein Spiel.",
