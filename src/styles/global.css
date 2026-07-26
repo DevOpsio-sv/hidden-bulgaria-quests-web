@@ -1087,6 +1087,49 @@ textarea.form-control{min-height:122px;resize:vertical}
 /* Form note — was .8rem, bumped to .92rem */
 .form-note{color:var(--text-3);font-size:.92rem;margin:0}
 
+/* ─── Partner form: validation, status and result states ─────── */
+.form-hint{color:var(--text-3);font-size:.92rem;margin:0 0 20px}
+.form-optional{
+  color:var(--text-3);font-weight:400;letter-spacing:.04em;text-transform:none;
+}
+
+/* Invalid controls carry a message and a glyph as well as a colour. */
+.form-control[aria-invalid="true"]{border-color:#e0864f}
+.form-control[aria-invalid="true"]:focus{box-shadow:0 0 0 3px rgba(224,134,79,.16)}
+
+.form-error{color:#f0a97a;font-size:.92rem;line-height:1.5;margin:0}
+.form-error::before{content:"✕ "}
+
+/*
+  Status and alert are permanent live regions so assistive technology can
+  observe them, but they occupy no space and carry no glyph until the script
+  sets data-state. Whitespace in the built markup makes :empty unreliable.
+*/
+.form-result{display:grid;gap:10px}
+.form-status:not([data-state]),
+.form-alert:not([data-state]){display:none}
+.form-status{color:var(--gold-lt);font-size:1rem;line-height:1.6;margin:0}
+.form-status[data-state="success"]::before{content:"✓ "}
+.form-alert{color:#f0a97a;font-size:1rem;line-height:1.6;margin:0}
+.form-alert[data-state="error"]::before{content:"✕ "}
+.form-status:focus-visible,.form-alert:focus-visible{
+  outline:2px solid var(--gold);outline-offset:4px;
+}
+.form-alternative{color:var(--text-2);font-size:.96rem;line-height:1.6;margin:0}
+.form-alternative a{color:var(--gold);text-decoration:underline}
+
+.btn-gold[disabled]{cursor:not-allowed;opacity:.55;transform:none}
+.btn-gold[disabled]:hover{box-shadow:none;transform:none}
+
+/* Honeypot — off-screen rather than display:none, and never focusable. */
+.form-honeypot{
+  height:1px;left:-9999px;overflow:hidden;position:absolute;
+  top:auto;width:1px;
+}
+
+.form-result-page .wrap{max-width:760px}
+.form-result-back{margin-top:32px}
+
 /* ─── FAQ ────────────────────────────────────────────────────── */
 .faq-list{display:grid;gap:10px}
 .faq-item{

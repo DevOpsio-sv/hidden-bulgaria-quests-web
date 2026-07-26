@@ -18,6 +18,8 @@ interface Props {
     type?: string;
   };
   jsonLd?: unknown[];
+  /** Transactional pages (e.g. form results) override this to stay out of search. */
+  robots?: string;
 }
 
 const OG_LOCALE_MAP: Record<string, string> = {
@@ -29,7 +31,10 @@ const OG_LOCALE_MAP: Record<string, string> = {
 const SITE_ORIGIN = "https://unlockingbulgaria.com";
 const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/og-image.png`;
 
-const { dict, lang, canonicalPath = "", seo, jsonLd = [] } = Astro.props;
+const {
+  dict, lang, canonicalPath = "", seo, jsonLd = [],
+  robots = "index, follow",
+} = Astro.props;
 const canonical = `${SITE_ORIGIN}/${lang}${canonicalPath}`;
 const metaTitle = seo?.title ?? dict.meta.title;
 const metaDescription = seo?.description ?? dict.meta.description;
@@ -45,7 +50,7 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#030610" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={robots} />
   <ViewTransitions />
 
   <title>{metaTitle}</title>
@@ -592,26 +597,9 @@ const ogLocale = OG_LOCALE_MAP[lang] ?? "en_US";
   })();
   </script>
 
-  <!-- Partner form -->
-  <script is:inline data-astro-rerun>
-  (function(){
-    var form=document.querySelector("[data-partner-form]");
-    var note=document.querySelector("[data-form-note]");
-    if(!form)return;
-    form.addEventListener("submit",function(e){
-      e.preventDefault();
-      var d=new FormData(form);
-      var org=String(d.get("org")||"").trim();
-      var email=String(d.get("email")||"").trim();
-      var type=String(d.get("type")||"").trim();
-      var region=String(d.get("region")||"").trim();
-      var msg=String(d.get("message")||"").trim();
-      var sub=encodeURIComponent("Partnership inquiry — "+(org||"Unlocking Bulgaria website"));
-      var body=encodeURIComponent(["Organization: "+org,"Email: "+email,"Type: "+type,"Region: "+region,"","Partnership interest:",msg].join("\n"));
-      window.location.href="mailto:partners@unlockingbulgaria.com?subject="+sub+"&body="+body;
-      if(note)note.textContent="Opening your email client with the inquiry.";
-    });
-  })();
-  </script>
+  <!--
+    The partner form script now lives in PartnersSection.astro, so it ships
+    only with the pages that render the form rather than with every page.
+  -->
 </body>
 </html>

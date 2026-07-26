@@ -1,0 +1,53 @@
+---
+/**
+ * Result surface for the no-JavaScript submission path.
+ *
+ * functions/api/partner-enquiry.js answers a native form POST with a 303 to
+ * /{lang}/partners/sent or /{lang}/partners/not-sent. Both are static pages,
+ * so the outcome is visible and honest with scripting disabled. The enhanced
+ * path never reaches here — it stays on the form and updates in place.
+ */
+import { SUPPORTED_LANGS, getDict, type Lang } from "../../../i18n";
+import Base from "../../../layouts/Base.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+
+// Declared inside the function: Astro hoists getStaticPaths into its own
+// scope, so it cannot close over a module-level constant.
+export function getStaticPaths() {
+  const statuses = ["sent", "not-sent"];
+  return SUPPORTED_LANGS.flatMap((lang) =>
+    statuses.map((status) => ({ params: { lang, status } })),
+  );
+}
+
+const { lang, status } = Astro.params;
+const dict = getDict(lang as Lang);
+const r = dict.partners.result;
+const doc = status === "sent" ? r.sent : r.notSent;
+---
+
+<Base
+  dict={dict}
+  lang={lang as string}
+  canonicalPath={`/partners/${status}`}
+  robots="noindex, follow"
+  seo={{ title: doc.seoTitle, description: doc.body, ogTitle: doc.heading, ogDescription: doc.body }}
+>
+  <Header dict={dict} lang={lang as string} />
+
+  <main id="main" transition:name="main-content" transition:animate="slide">
+    <section class="section form-result-page">
+      <div class="wrap">
+        <p class="eyebrow">{doc.eyebrow}</p>
+        <h1 class="legal-title">{doc.heading}</h1>
+        <p class="lede">{doc.body}</p>
+        <p class="form-result-back">
+          <a class="btn btn-ghost" href={`/${lang}#partners`}>{r.backLabel}</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer dict={dict} lang={lang as string} />
+</Base>

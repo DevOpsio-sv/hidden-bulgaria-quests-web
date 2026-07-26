@@ -1,9 +1,21 @@
 ---
 import type { Dict } from "../i18n";
-interface Props { dict: Dict; }
-const { dict } = Astro.props;
+import { FIELDS, TYPE_VALUES } from "../../functions/api/_validation.mjs";
+
+interface Props { dict: Dict; lang: string; }
+const { dict, lang } = Astro.props;
 const d = dict.partners;
 const f = d.fields;
+const form = d.form;
+
+// The alternative contact line carries a {email} placeholder so the address
+// can be rendered as a real link rather than as inert text.
+const [altBefore, altAfter] = form.alternative.split("{email}");
+const altEmail = form.alternativeEmail;
+
+// Error copy is handed to the inline script as data, so every user-visible
+// string still lives in src/i18n and none is written into the script itself.
+const formStrings = { errors: form.errors, status: form.status };
 ---
 
 <section class="section" id="partners" aria-labelledby="partners-heading">
@@ -30,38 +42,268 @@ const f = d.fields;
     <div class="form-wrap reveal">
       <h3>{d.formHeading}</h3>
       <p class="form-sub">{d.formSub}</p>
+      <p class="form-hint">{f.requiredHint}</p>
 
-      <form class="form-grid" data-partner-form novalidate aria-label={d.formHeading}>
+      <!--
+        method + action make this a working form without JavaScript: the
+        browser posts natively to the same endpoint the enhanced path fetches.
+        `novalidate` is set from script, not markup, so native validation stays
+        as the no-JavaScript backstop.
+      -->
+      <form
+        class="form-grid"
+        data-partner-form
+        method="post"
+        action="/api/partner-enquiry"
+        enctype="application/x-www-form-urlencoded"
+        aria-label={d.formHeading}
+      >
+        <input type="hidden" name="lang" value={lang} />
+        <input type="hidden" name="ts" value="" data-form-ts />
+
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="p-website">Website</label>
+          <input id="p-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
         <div class="form-group">
           <label class="form-label" for="p-org">{f.org}</label>
-          <input class="form-control" id="p-org" name="org" autocomplete="organization" required />
+          <input
+            class="form-control" id="p-org" name="org"
+            autocomplete="organization" required
+            maxlength={FIELDS.org.max}
+            aria-describedby="p-org-error"
+          />
+          <p class="form-error" id="p-org-error" data-error-for="org" hidden></p>
         </div>
+
         <div class="form-group">
           <label class="form-label" for="p-email">{f.email}</label>
-          <input class="form-control" id="p-email" name="email" type="email" autocomplete="email" required />
+          <input
+            class="form-control" id="p-email" name="email" type="email"
+            autocomplete="email" required
+            maxlength={FIELDS.email.max}
+            aria-describedby="p-email-error"
+          />
+          <p class="form-error" id="p-email-error" data-error-for="email" hidden></p>
         </div>
+
         <div class="form-group">
-          <label class="form-label" for="p-region">{f.region}</label>
-          <input class="form-control" id="p-region" name="region" />
+          <label class="form-label" for="p-region">
+            {f.region} <span class="form-optional">({f.optional})</span>
+          </label>
+          <input
+            class="form-control" id="p-region" name="region"
+            maxlength={FIELDS.region.max}
+            aria-describedby="p-region-error"
+          />
+          <p class="form-error" id="p-region-error" data-error-for="region" hidden></p>
         </div>
+
         <div class="form-group">
-          <label class="form-label" for="p-type">{f.type}</label>
-          <select class="form-control" id="p-type" name="type">
+          <label class="form-label" for="p-type">
+            {f.type} <span class="form-optional">({f.optional})</span>
+          </label>
+          <select class="form-control" id="p-type" name="type" aria-describedby="p-type-error">
             <option value="">{f.typePlaceholder}</option>
-            {f.typeOptions.map((opt: string) => (
-              <option value={opt}>{opt}</option>
+            {f.typeOptions.map((opt: string, i: number) => (
+              TYPE_VALUES[i] ? <option value={TYPE_VALUES[i]}>{opt}</option> : null
             ))}
           </select>
+          <p class="form-error" id="p-type-error" data-error-for="type" hidden></p>
         </div>
+
         <div class="form-group full">
           <label class="form-label" for="p-msg">{f.message}</label>
-          <textarea class="form-control" id="p-msg" name="message" rows={4} required></textarea>
+          <textarea
+            class="form-control" id="p-msg" name="message" rows={4} required
+            maxlength={FIELDS.message.max}
+            aria-describedby="p-msg-error"
+          ></textarea>
+          <p class="form-error" id="p-msg-error" data-error-for="message" hidden></p>
         </div>
+
         <div class="form-group actions">
           <button class="btn btn-gold" type="submit">{f.submit}</button>
           <p class="form-note" data-form-note>{f.note}</p>
+        </div>
+
+        <div class="form-group full form-result">
+          <p class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1"></p>
+          <p class="form-alert" data-form-alert role="alert" tabindex="-1"></p>
+          <p class="form-alternative" data-form-alternative hidden>
+            {altBefore}<a href={`mailto:${altEmail}`}>{altEmail}</a>{altAfter}
+          </p>
         </div>
       </form>
     </div>
   </div>
 </section>
+
+<script type="application/json" id="partner-form-strings" set:html={JSON.stringify(formStrings)}></script>
+
+<!--
+  Scoped to this section rather than to Base.astro, so the partner form script
+  is delivered only by the pages that actually contain the form.
+-->
+<script is:inline data-astro-rerun>
+(function () {
+  var form = document.querySelector("[data-partner-form]");
+  var stringsEl = document.getElementById("partner-form-strings");
+  if (!form || !stringsEl) return;
+
+  var strings;
+  try { strings = JSON.parse(stringsEl.textContent || "{}"); } catch (e) { return; }
+  if (!strings.errors || !strings.status) return;
+
+  var NAMES = ["org", "email", "region", "type", "message"];
+  var statusEl = form.querySelector("[data-form-status]");
+  var alertEl = form.querySelector("[data-form-alert]");
+  var altEl = form.querySelector("[data-form-alternative]");
+  var tsEl = form.querySelector("[data-form-ts]");
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var pending = false;
+
+  // Progressive enhancement: take over validation only now that we can
+  // render accessible, localised messages of our own.
+  form.noValidate = true;
+  function stampTime() { if (tsEl) tsEl.value = String(Date.now()); }
+  stampTime();
+
+  function control(name) { return form.querySelector('[name="' + name + '"]'); }
+  function errorFor(name) { return form.querySelector('[data-error-for="' + name + '"]'); }
+
+  // data-state drives both visibility and the non-colour glyph, so an idle
+  // form shows no stray tick or cross.
+  function setStatus(state, text) {
+    if (!statusEl) return;
+    if (state) { statusEl.setAttribute("data-state", state); statusEl.textContent = text; }
+    else { statusEl.removeAttribute("data-state"); statusEl.textContent = ""; }
+  }
+
+  function setAlert(text) {
+    if (!alertEl) return;
+    if (text) { alertEl.setAttribute("data-state", "error"); alertEl.textContent = text; }
+    else { alertEl.removeAttribute("data-state"); alertEl.textContent = ""; }
+  }
+
+  function clearErrors() {
+    for (var i = 0; i < NAMES.length; i++) {
+      var c = control(NAMES[i]), e = errorFor(NAMES[i]);
+      if (c) c.removeAttribute("aria-invalid");
+      if (e) { e.textContent = ""; e.hidden = true; }
+    }
+  }
+
+  function showErrors(errors) {
+    var first = null;
+    for (var i = 0; i < NAMES.length; i++) {
+      var name = NAMES[i];
+      if (!errors[name]) continue;
+      var c = control(name), e = errorFor(name);
+      if (c) { c.setAttribute("aria-invalid", "true"); if (!first) first = c; }
+      if (e) {
+        e.textContent = strings.errors[errors[name]] || strings.errors.required;
+        e.hidden = false;
+      }
+    }
+    if (first) first.focus();
+  }
+
+  function localErrors() {
+    var errors = {};
+    var required = ["org", "message"];
+    for (var i = 0; i < required.length; i++) {
+      var c = control(required[i]);
+      if (c && c.value.trim() === "") errors[required[i]] = "required";
+    }
+    var em = control("email");
+    var v = em ? em.value.trim() : "";
+    if (v === "") errors.email = "required";
+    else if (!/^[^@\s<>,;:"\\()[\]]+@[^@.\s]+(\.[^@.\s]+)+$/.test(v)) errors.email = "email";
+    return errors;
+  }
+
+  function setBusy(on) {
+    pending = on;
+    if (submitBtn) {
+      submitBtn.disabled = on;
+      submitBtn.setAttribute("aria-busy", on ? "true" : "false");
+    }
+  }
+
+  function fail() {
+    setStatus(null, "");
+    setAlert(strings.status.failure);
+    if (altEl) altEl.hidden = false;
+    if (alertEl) alertEl.focus();
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (pending) return;
+
+    setAlert("");
+    if (altEl) altEl.hidden = true;
+    clearErrors();
+
+    var errors = localErrors();
+    for (var key in errors) {
+      if (Object.prototype.hasOwnProperty.call(errors, key)) {
+        setStatus(null, "");
+        setAlert(strings.errors.summary);
+        showErrors(errors);
+        return;
+      }
+    }
+
+    setBusy(true);
+    setStatus("busy", strings.status.submitting);
+
+    fetch(form.action, {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function (res) {
+      return res.json().then(
+        function (data) { return data; },
+        function () { return { ok: false }; }
+      );
+    }).then(function (data) {
+      setBusy(false);
+
+      // Success is shown only for an explicit acceptance from the server.
+      if (data && data.ok === true) {
+        setAlert("");
+        setStatus("success", strings.status.success);
+        // Cleared only now that delivery is confirmed.
+        form.reset();
+        stampTime();
+        if (statusEl) statusEl.focus();
+        return;
+      }
+
+      if (data && data.errors) {
+        var serverErrors = data.errors, has = false;
+        for (var k in serverErrors) {
+          if (Object.prototype.hasOwnProperty.call(serverErrors, k)) { has = true; break; }
+        }
+        if (has) {
+          setStatus(null, "");
+          setAlert(strings.errors.summary);
+          showErrors(serverErrors);
+          return;
+        }
+      }
+
+      fail();
+    }).catch(function () {
+      setBusy(false);
+      fail();
+    });
+  });
+})();
+</script>

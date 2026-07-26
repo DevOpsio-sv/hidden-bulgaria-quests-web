@@ -11,6 +11,7 @@
     "typecheck": "astro check",
     "lint": "astro check",
     "check:seo-build": "node scripts/check-seo-build.mjs",
+    "test:partner-form": "node --test scripts/test-partner-enquiry.mjs",
     "check:routes": "node scripts/check-seo-build.mjs",
     "check:language": "node scripts/check-seo-build.mjs",
     "check:sitemap": "node scripts/check-seo-build.mjs",
