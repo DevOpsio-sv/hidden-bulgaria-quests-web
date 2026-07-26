@@ -470,15 +470,15 @@
     "legal": [
       {
         "label": "Πολιτική απορρήτου",
-        "href": "#privacy"
+        "href": "/privacy"
       },
       {
         "label": "Όροι χρήσης",
-        "href": "#terms"
+        "href": "/terms"
       },
       {
         "label": "Cookies",
-        "href": "#cookies"
+        "href": "/cookies"
       }
     ]
   },

@@ -9,7 +9,6 @@ import StoryTeaserSection from "./StoryTeaserSection.astro";
 import PracticalInfoSection from "./PracticalInfoSection.astro";
 import MapSection from "./MapSection.astro";
 import MediaSection from "./MediaSection.astro";
-import AudioPreviewSection from "./AudioPreviewSection.astro";
 import NearbyPlacesSection from "./NearbyPlacesSection.astro";
 import RoutePreviewSection from "./RoutePreviewSection.astro";
 import AppCTASection from "./AppCTASection.astro";
@@ -35,7 +34,7 @@ const duration = place.localizedDuration?.[lang as keyof typeof place.localizedD
   label={dict.seoPages.common.place}
   status={place.status}
   type={place.type}
-  primaryHref={place.appDeepLink}
+  primaryHref="#practical-heading"
   secondaryHref="#route"
 />
 <QuickFacts
@@ -51,8 +50,7 @@ const duration = place.localizedDuration?.[lang as keyof typeof place.localizedD
 <PracticalInfoSection dict={dict} copy={copy} />
 <MapSection dict={dict} coordinates={place.coordinates} title={copy.title} />
 <MediaSection dict={dict} title={copy.title} videoUrl={place.videoUrl} />
-<AudioPreviewSection dict={dict} audioUrl={place.audioUrl} />
 <NearbyPlacesSection dict={dict} lang={lang} places={nearbyPlaces} currentId={place.id} />
 <RoutePreviewSection dict={dict} lang={lang} route={route} places={routePlaces} currentId={place.id} />
-<AppCTASection dict={dict} appDeepLink={place.appDeepLink} />
+<AppCTASection dict={dict} lang={lang} appDeepLink={place.appDeepLink} />
 <FAQSection dict={dict} copy={copy} />

@@ -470,15 +470,15 @@
     "legal": [
       {
         "label": "プライバシーポリシー",
-        "href": "#privacy"
+        "href": "/privacy"
       },
       {
         "label": "利用規約",
-        "href": "#terms"
+        "href": "/terms"
       },
       {
         "label": "クッキー",
-        "href": "#cookies"
+        "href": "/cookies"
       }
     ]
   },

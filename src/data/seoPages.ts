@@ -29,6 +29,7 @@ export interface SeoDomain {
   status: PageStatus;
   coordinates: { lat: number; lng: number };
   images: string[];
+  /** Data, not a link. See the note on `SeoPlace.appDeepLink`. */
   appDeepLink: string;
   translations: Partial<Record<Lang, LocalizedSeoCopy>>;
   /** Which side of 681 CE this domain primarily represents */
@@ -62,10 +63,24 @@ export interface SeoPlace {
   childFriendly: boolean;
   images: string[];
   videoUrl?: string;
+  /**
+   * Custom-scheme URI for the place's narration. Data, not a link — no audio
+   * asset is published yet and the app has no `audio/` route, so nothing on the
+   * website renders this. Retained for the identity bridge.
+   */
   audioUrl?: string;
   nearbyPlaces: string[];
   previousPlace?: string;
   nextPlace?: string;
+  /**
+   * Canonical `unlockingbulgaria://` URI for this place.
+   *
+   * This is correct data and must not be deleted — the website-to-application
+   * identity bridge will consume it. It must never be used as a browser `href`:
+   * a custom scheme is inert on desktop and inert on mobile without the app
+   * installed, so an `href` here renders a CTA that silently does nothing.
+   * `AppCTASection.astro` emits it as a `data-app-deep-link` attribute instead.
+   */
   appDeepLink: string;
   translations: Partial<Record<Lang, LocalizedSeoCopy>>;
   /** Which side of 681 CE this place primarily belongs to */
@@ -139,7 +154,10 @@ export const seoDomains: SeoDomain[] = [
   // Index 1 — The Sea Gate / Soul Master Key
   {
     id: SEA_DOMAIN_ID,
-    slug: "sea-gate",
+    // Must match the built route `src/pages/[lang]/sea-domain.astro` and its
+    // `canonicalPath`. The sitemap derives the domain URL from this slug, so a
+    // mismatch published 14 URLs that returned 404 and omitted the 14 real ones.
+    slug: "sea-domain",
     routeIds: [SEA_ROUTE_ID],
     status: "draft",
     coordinates: { lat: 43.1, lng: 25.6 },

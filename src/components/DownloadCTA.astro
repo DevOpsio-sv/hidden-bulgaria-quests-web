@@ -1,9 +1,13 @@
 ---
 import type { Dict } from "../i18n";
-import { GOOGLE_PLAY_URL } from "../config/appLinks";
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "../config/appLinks";
 interface Props { dict: Dict; }
 const { dict } = Astro.props;
 const d = dict.download;
+const stores = [
+  { ...d.appStore, url: APP_STORE_URL },
+  { ...d.googlePlay, url: GOOGLE_PLAY_URL },
+];
 ---
 
 <div class="dl-band" id="download">
@@ -13,22 +17,29 @@ const d = dict.download;
     <p class="lede reveal reveal-d1">{d.lede}</p>
 
     <div class="store-row reveal reveal-d2">
-      <a
-        class="store-btn"
-        href="#"
-        aria-label={`${d.appStore.label} ${d.appStore.name} — ${d.comingSoon}`}
-      >
-        <span class="store-lbl">{d.appStore.label}</span>
-        <span class="store-name">{d.appStore.name}</span>
-      </a>
-      <a
-        class="store-btn"
-        href={GOOGLE_PLAY_URL}
-        aria-label={`${d.googlePlay.label} ${d.googlePlay.name} — ${d.comingSoon}`}
-      >
-        <span class="store-lbl">{d.googlePlay.label}</span>
-        <span class="store-name">{d.googlePlay.name}</span>
-      </a>
+      {stores.map((s) => (
+        s.url ? (
+          <a
+            class="store-btn"
+            href={s.url}
+            aria-label={`${s.label} ${s.name}`}
+          >
+            <span class="store-lbl">{s.label}</span>
+            <span class="store-name">{s.name}</span>
+          </a>
+        ) : (
+          <button
+            class="store-btn store-btn-soon"
+            type="button"
+            disabled
+            aria-label={`${s.label} ${s.name} — ${d.comingSoon}`}
+          >
+            <span class="store-lbl">{s.label}</span>
+            <span class="store-name">{s.name}</span>
+            <span class="store-soon">{d.comingSoon}</span>
+          </button>
+        )
+      ))}
     </div>
 
     <p class="dl-trust reveal reveal-d3">{d.trust}</p>

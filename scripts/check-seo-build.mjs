@@ -53,11 +53,18 @@ if (!fs.existsSync(dist)) {
 
 const expectedRoutes = langs.flatMap((lang) => [
   `/${lang}`,
+  `/${lang}/map`,
   `/${lang}/sea-domain`,
   ...places.map((slug) => `/${lang}/places/${slug}`),
 ]);
 
-for (const route of expectedRoutes) {
+// Legal routes must exist in every language — both app stores require a
+// reachable privacy policy. Not asserted against the sitemap.
+const legalRoutes = langs.flatMap((lang) =>
+  ["privacy", "terms", "cookies"].map((doc) => `/${lang}/${doc}`)
+);
+
+for (const route of [...expectedRoutes, ...legalRoutes]) {
   if (!existsRoute(route)) fail(`Missing built route: ${route}`);
 }
 
@@ -80,7 +87,7 @@ if (!fs.existsSync(sitemapFile)) {
 }
 
 const localHrefPattern = /href="(\/[^"#?]*)/g;
-for (const route of expectedRoutes) {
+for (const route of [...expectedRoutes, ...legalRoutes]) {
   const html = readRoute(route);
   for (const match of html.matchAll(localHrefPattern)) {
     const href = match[1];
@@ -91,6 +98,69 @@ for (const route of expectedRoutes) {
   }
 }
 
+// No control may promise a download that does not exist, and no control may
+// use a custom scheme as a browser href — inert on desktop, inert on mobile
+// without the app installed.
+const deadCtaPatterns = [
+  { pattern: 'href="#"', label: 'href="#"' },
+  { pattern: "apple.com/app-store", label: "apple.com/app-store" },
+  { pattern: 'href="unlockingbulgaria://', label: 'href="unlockingbulgaria://' },
+];
+for (const route of [...expectedRoutes, ...legalRoutes]) {
+  const html = readRoute(route);
+  for (const { pattern, label } of deadCtaPatterns) {
+    if (html.includes(pattern)) fail(`Dead CTA ${label} found in ${route}`);
+  }
+}
+
+// Every in-page anchor a built route links to must exist in that document.
+// A hero CTA pointing at a missing id scrolls to the top and reads as a no-op.
+for (const route of [...expectedRoutes, ...legalRoutes]) {
+  const html = readRoute(route);
+  for (const match of html.matchAll(/href="#([^"]+)"/g)) {
+    const id = match[1];
+    if (!html.includes(`id="${id}"`)) {
+      fail(`Broken in-page anchor on ${route}: #${id}`);
+    }
+  }
+}
+
+// No redirect rule may point at a homepage anchor that does not exist.
+// `public/_redirects` is the file Astro ships; the repository root holds a
+// pre-Astro duplicate. Both are checked so the two cannot drift apart again.
+const home = readRoute("/en");
+for (const redirectsFile of [path.join(root, "public/_redirects"), path.join(root, "_redirects")]) {
+  if (!fs.existsSync(redirectsFile)) continue;
+  for (const line of fs.readFileSync(redirectsFile, "utf8").split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const target = trimmed.split(/\s+/)[1];
+    const anchor = target?.match(/^\/(?:[a-z]{2})?#(.+)$/);
+    if (!anchor) continue;
+    if (!home.includes(`id="${anchor[1]}"`)) {
+      fail(`${path.relative(root, redirectsFile)} targets nonexistent homepage anchor: #${anchor[1]}`);
+    }
+  }
+}
+
+// `appDeepLink` is correct data the identity bridge will consume. Only its use
+// as an href was removed — the field itself must survive.
+const seoPagesSource = fs.readFileSync(path.join(root, "src/data/seoPages.ts"), "utf8");
+if (!seoPagesSource.includes("appDeepLink")) {
+  fail("appDeepLink has been removed from src/data/seoPages.ts — it is required data.");
+}
+if (!seoPagesSource.includes('appDeepLink: "unlockingbulgaria://places/prohodna-cave"')) {
+  fail("Prohodna's appDeepLink value is no longer present in src/data/seoPages.ts.");
+}
+for (const route of [`/en/places/prohodna-cave`, `/bg/places/prohodna-cave`]) {
+  const html = readRoute(route);
+  if (!html.includes('data-app-deep-link="unlockingbulgaria://places/prohodna-cave"')) {
+    fail(`Deep-link data is no longer emitted on ${route}`);
+  }
+}
+
 if (!process.exitCode) {
-  console.log(`SEO build checks passed for ${expectedRoutes.length} localized routes.`);
+  console.log(
+    `SEO build checks passed for ${expectedRoutes.length + legalRoutes.length} localized routes.`
+  );
 }

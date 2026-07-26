@@ -1,0 +1,55 @@
+---
+import { SUPPORTED_LANGS, getDict, type Lang } from "../../i18n";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+export function getStaticPaths() {
+  return SUPPORTED_LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const dict = getDict(lang as Lang);
+const l = dict.legal;
+const doc = l.cookies;
+---
+
+<Base
+  dict={dict}
+  lang={lang as string}
+  canonicalPath="/cookies"
+  seo={{
+    title: doc.seoTitle,
+    description: doc.seoDescription,
+    ogTitle: doc.title,
+    ogDescription: doc.seoDescription,
+  }}
+>
+  <Header dict={dict} lang={lang as string} />
+
+  <main id="main" transition:name="main-content" transition:animate="slide">
+    <section class="section legal-page">
+      <div class="wrap">
+        <p class="eyebrow">{l.eyebrow}</p>
+        <h1 class="legal-title">{doc.title}</h1>
+        <p class="lede">{doc.lede}</p>
+        <p class="legal-notice">{l.reviewNotice}</p>
+        <p class="legal-updated">{l.lastUpdatedLabel}: {l.lastUpdated}</p>
+
+        {doc.sections.map((s) => (
+          <section class="legal-block">
+            <h2 class="legal-heading">{s.heading}</h2>
+            <p class="legal-body">{s.body}</p>
+          </section>
+        ))}
+
+        <section class="legal-block">
+          <h2 class="legal-heading">{l.contactHeading}</h2>
+          <p class="legal-body">{l.contactBody}</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <Footer dict={dict} lang={lang as string} />
+</Base>

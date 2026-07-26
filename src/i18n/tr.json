@@ -470,15 +470,15 @@
     "legal": [
       {
         "label": "Gizlilik politikası",
-        "href": "#privacy"
+        "href": "/privacy"
       },
       {
         "label": "Kullanım koşulları",
-        "href": "#terms"
+        "href": "/terms"
       },
       {
         "label": "Çerezler",
-        "href": "#cookies"
+        "href": "/cookies"
       }
     ]
   },

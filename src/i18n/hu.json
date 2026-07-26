@@ -470,15 +470,15 @@
     "legal": [
       {
         "label": "Adatvédelmi irányelvek",
-        "href": "#privacy"
+        "href": "/privacy"
       },
       {
         "label": "Felhasználási feltételek",
-        "href": "#terms"
+        "href": "/terms"
       },
       {
         "label": "Sütik",
-        "href": "#cookies"
+        "href": "/cookies"
       }
     ]
   },

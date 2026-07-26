@@ -3,24 +3,28 @@ import type { Dict } from "../../i18n";
 
 interface Props {
   dict: Dict;
+  lang: string;
+  /**
+   * The canonical `unlockingbulgaria://` URI for this place or domain.
+   * Emitted as a data attribute only — never as an `href`. A custom scheme in
+   * an `href` is inert on desktop and inert on mobile without the app, so the
+   * value is carried here as data until an install-aware handoff exists to
+   * consume it. See `src/data/seoPages.ts`.
+   */
   appDeepLink: string;
 }
 
-const { dict, appDeepLink } = Astro.props;
+const { dict, lang, appDeepLink } = Astro.props;
 const c = dict.seoPages.common;
 ---
 
-<section class="seo-app-cta" aria-labelledby="app-cta-heading">
+<section class="seo-app-cta" aria-labelledby="app-cta-heading" data-app-deep-link={appDeepLink}>
   <div class="wrap seo-app-cta-inner reveal">
     <div>
       <p class="eyebrow">{c.onlyInApp}</p>
-      <h2 id="app-cta-heading">{c.downloadApp}</h2>
+      <h2 id="app-cta-heading">{c.appComingSoon}</h2>
       <p>{c.onlyInAppBody}</p>
     </div>
-    <a class="btn btn-gold" href={appDeepLink}>{c.openInApp}</a>
+    <a class="btn btn-gold" href={`/${lang}/map`}>{c.openLivingMap}</a>
   </div>
 </section>
-
-<div class="seo-sticky-cta">
-  <a class="btn btn-gold" href={appDeepLink}>{c.downloadApp}</a>
-</div>

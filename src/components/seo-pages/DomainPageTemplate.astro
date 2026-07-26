@@ -29,7 +29,7 @@ const routePlaces = getPlacesForRoute(route.id);
   label={dict.seoPages.common.domain}
   status={domain.status}
   type="hero"
-  primaryHref={domain.appDeepLink}
+  primaryHref="#practical-heading"
   secondaryHref="#route"
 />
 <TourismInfoSection dict={dict} copy={copy} />
@@ -37,5 +37,5 @@ const routePlaces = getPlacesForRoute(route.id);
 <PracticalInfoSection dict={dict} copy={copy} />
 <MapSection dict={dict} coordinates={domain.coordinates} title={copy.title} />
 <RoutePreviewSection dict={dict} lang={lang} route={route} places={routePlaces} />
-<AppCTASection dict={dict} appDeepLink={domain.appDeepLink} />
+<AppCTASection dict={dict} lang={lang} appDeepLink={domain.appDeepLink} />
 <FAQSection dict={dict} copy={copy} />

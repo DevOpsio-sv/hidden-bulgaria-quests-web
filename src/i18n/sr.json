@@ -470,15 +470,15 @@
     "legal": [
       {
         "label": "Политика приватности",
-        "href": "#privacy"
+        "href": "/privacy"
       },
       {
         "label": "Услови коришћења",
-        "href": "#terms"
+        "href": "/terms"
       },
       {
         "label": "Колачићи",
-        "href": "#cookies"
+        "href": "/cookies"
       }
     ]
   },

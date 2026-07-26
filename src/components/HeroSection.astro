@@ -1,6 +1,6 @@
 ---
 import type { Dict } from "../i18n";
-import { GOOGLE_PLAY_URL } from "../config/appLinks";
+import { firstPlacePath } from "../config/appLinks";
 import PortalCard from "./PortalCard.astro";
 interface Props { dict: Dict; lang: string; }
 const { dict, lang } = Astro.props;
@@ -98,7 +98,7 @@ const heroLine1Rest = line1Match?.[2] ?? h.line1;
       </ul>
 
       <div class="hero-ctas">
-        <a class="btn btn-gold" href={GOOGLE_PLAY_URL}>{h.ctaPrimary}</a>
+        <a class="btn btn-gold" href={firstPlacePath(lang)}>{h.ctaFirstPlace}</a>
         <button
           class="btn btn-ghost"
           type="button"

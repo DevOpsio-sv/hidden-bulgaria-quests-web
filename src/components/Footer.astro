@@ -32,7 +32,7 @@ const f = dict.footer;
       <span class="footer-copy">{f.copyright}</span>
       <nav class="footer-legal" aria-label={dict.ariaLangNav}>
         {f.legal.map((l) => (
-          <a href={l.href}>{l.label}</a>
+          <a href={`/${lang}${l.href}`}>{l.label}</a>
         ))}
       </nav>
     </div>

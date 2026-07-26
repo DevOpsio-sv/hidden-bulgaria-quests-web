@@ -470,15 +470,15 @@
     "legal": [
       {
         "label": "Datenschutzrichtlinie",
-        "href": "#privacy"
+        "href": "/privacy"
       },
       {
         "label": "Nutzungsbedingungen",
-        "href": "#terms"
+        "href": "/terms"
       },
       {
         "label": "Cookies",
-        "href": "#cookies"
+        "href": "/cookies"
       }
     ]
   },

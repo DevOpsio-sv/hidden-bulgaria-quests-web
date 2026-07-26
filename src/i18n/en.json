@@ -13,7 +13,7 @@
     "timeline": "Timeline",
     "partners": "Partners",
     "faq": "FAQ",
-    "download": "Download",
+    "firstPlace": "See the first place",
     "language": "Language",
     "menuLabel": "Menu"
   },
@@ -24,7 +24,7 @@
     "line3": "Survived.",
     "question": "How?",
     "lede": "Walk the path. Awaken memory. Become a Keeper.",
-    "ctaPrimary": "Download the App",
+    "ctaFirstPlace": "See the first place",
     "ctaSecondary": "Watch intro",
     "trust": [
       "AR live adventure",
@@ -475,6 +475,110 @@
       }
     ]
   },
+  "legal": {
+    "eyebrow": "Legal",
+    "reviewNotice": "Draft, pending legal review. This text describes our current practice in good faith. It has not yet been reviewed by a qualified lawyer and is not a substitute for professional legal advice.",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdated": "25 July 2026",
+    "contactHeading": "Questions",
+    "contactBody": "Write to support@unlockingbulgaria.com and we will answer.",
+    "privacy": {
+      "title": "Privacy Policy",
+      "seoTitle": "Privacy Policy | Unlocking Bulgaria",
+      "seoDescription": "How Unlocking Bulgaria handles personal data on unlockingbulgaria.com.",
+      "lede": "This website collects nothing about you unless you write to us.",
+      "sections": [
+        {
+          "heading": "Who this is",
+          "body": "Unlocking Bulgaria publishes unlockingbulgaria.com. You can reach us at support@unlockingbulgaria.com."
+        },
+        {
+          "heading": "What this policy covers",
+          "body": "This website only. The mobile application described here is not published in any app store, so no application data is collected. When the application is published, this policy will be extended before it is."
+        },
+        {
+          "heading": "What we collect",
+          "body": "No analytics, no advertising, no tracking pixels and no cookies run on this site. We do not build a profile of you and we do not know that you visited."
+        },
+        {
+          "heading": "The partner enquiry form",
+          "body": "If you submit the partner form, we receive the name, organisation, email address and message you typed. We use them only to answer you and to discuss a possible partnership. We do not sell them, and we do not add you to a mailing list."
+        },
+        {
+          "heading": "Hosting",
+          "body": "The site is served by Cloudflare Pages. Like any web host, Cloudflare processes connection data such as your IP address in order to deliver the page and protect the service. That processing is governed by Cloudflare's own privacy terms."
+        },
+        {
+          "heading": "Your rights",
+          "body": "Under the GDPR you may ask what we hold about you, ask us to correct or delete it, or object to our use of it. Write to support@unlockingbulgaria.com. If we hold nothing, we will tell you that."
+        },
+        {
+          "heading": "Changes",
+          "body": "If this policy changes, the date above changes with it."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "seoTitle": "Terms of Use | Unlocking Bulgaria",
+      "seoDescription": "The terms on which Unlocking Bulgaria publishes unlockingbulgaria.com.",
+      "lede": "This site describes real places. Going to them is your decision and your responsibility.",
+      "sections": [
+        {
+          "heading": "What this site is",
+          "body": "An informational website about real locations in Bulgaria and about a mobile application that is still in development. Nothing here is an offer to sell, and no purchase can be made on this site."
+        },
+        {
+          "heading": "The application",
+          "body": "The application is not published in any app store. Any description of it on this site describes intent, not an available product."
+        },
+        {
+          "heading": "Real places, real risk",
+          "body": "The places described are outdoors and largely unsupervised. Caves, cliffs, coastline and unpaved roads carry real risk. Check conditions, weather and access before you travel, judge your own capability honestly, and take responsibility for your own safety and for anyone with you."
+        },
+        {
+          "heading": "Accuracy",
+          "body": "We check what we publish and record our sources, but access hours, road conditions and ownership change without notice. Treat practical details as a starting point, not a guarantee. If you find something wrong, tell us at support@unlockingbulgaria.com."
+        },
+        {
+          "heading": "Content",
+          "body": "The text, photography, video and design on this site belong to Unlocking Bulgaria unless stated otherwise. You may link to any page and quote it with attribution. You may not republish it wholesale."
+        },
+        {
+          "heading": "Liability",
+          "body": "We provide this site as it is. To the extent the law allows, we are not liable for loss arising from your use of the site or from a visit to a place described on it."
+        },
+        {
+          "heading": "Governing law",
+          "body": "These terms are governed by the law of the Republic of Bulgaria."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookies",
+      "seoTitle": "Cookies | Unlocking Bulgaria",
+      "seoDescription": "Unlocking Bulgaria sets no cookies on unlockingbulgaria.com.",
+      "lede": "This site sets no cookies.",
+      "sections": [
+        {
+          "heading": "The short version",
+          "body": "We set no cookies, run no analytics and store nothing in your browser. That is why you have never seen a consent banner here: there is nothing to consent to."
+        },
+        {
+          "heading": "Language",
+          "body": "Your language is carried in the address of the page you are reading, for example /en or /bg. It is not remembered between visits."
+        },
+        {
+          "heading": "Hosting",
+          "body": "Cloudflare, which serves this site, may set a cookie of its own to protect the service against abuse. We do not read it and we receive nothing from it."
+        },
+        {
+          "heading": "If this changes",
+          "body": "If we ever add analytics or any other cookie, we will ask you first and this page will say so before it happens."
+        }
+      ]
+    }
+  },
   "footer": {
     "tagline": "A real-world journey through the hidden memory of Bulgaria.",
     "copyright": "© 2026 Unlocking Bulgaria. All rights reserved.",
@@ -546,15 +650,15 @@
     "legal": [
       {
         "label": "Privacy Policy",
-        "href": "#privacy"
+        "href": "/privacy"
       },
       {
         "label": "Terms of Use",
-        "href": "#terms"
+        "href": "/terms"
       },
       {
         "label": "Cookies",
-        "href": "#cookies"
+        "href": "/cookies"
       }
     ]
   },
@@ -668,7 +772,10 @@
       "comingSoon": "Coming soon",
       "watchPreview": "Watch preview",
       "listenPreview": "Listen preview",
-      "mapLabel": "Approximate location preview"
+      "mapLabel": "Approximate location preview",
+      "planVisit": "Plan your visit",
+      "openLivingMap": "Open the living map",
+      "appComingSoon": "The app is still being built"
     }
   }
 }

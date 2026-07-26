@@ -1,12 +1,11 @@
 ---
 import type { Dict } from "../i18n";
-import { GOOGLE_PLAY_URL } from "../config/appLinks";
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "../config/appLinks";
 
 interface Props { dict: Dict; }
 
 const { dict } = Astro.props;
 const h = dict.hero;
-const APP_STORE_URL = "https://www.apple.com/app-store/";
 ---
 
 <div
@@ -16,6 +15,7 @@ const APP_STORE_URL = "https://www.apple.com/app-store/";
   data-final-message={h.portalFinalCta}
   data-google-play-url={GOOGLE_PLAY_URL}
   data-app-store-url={APP_STORE_URL}
+  data-coming-soon={dict.download.comingSoon}
 >
   <video
     class="portal-cave-video"
@@ -381,8 +381,12 @@ const APP_STORE_URL = "https://www.apple.com/app-store/";
         if (!descriptionWrap) return;
 
         const message = card.dataset.finalMessage ?? "";
-        const googlePlayUrl = card.dataset.googlePlayUrl ?? "#";
-        const appStoreUrl = card.dataset.appStoreUrl ?? "#";
+        const comingSoon = card.dataset.comingSoon ?? "";
+        // No listing → a disabled label, never a link to nowhere.
+        const storeLink = (url: string | undefined, name: string) =>
+          url
+            ? `<a class="portal-store-link" href="${url}" target="_blank" rel="noopener">${name}</a>`
+            : `<span class="portal-store-link is-soon" role="link" aria-disabled="true">${name} · ${comingSoon}</span>`;
 
         descriptionWrap.classList.add("is-changing");
 
@@ -390,8 +394,8 @@ const APP_STORE_URL = "https://www.apple.com/app-store/";
           descriptionWrap.innerHTML = `
             <p class="portal-description">${message}</p>
             <div class="portal-download-links">
-              <a class="portal-store-link" href="${appStoreUrl}" target="_blank" rel="noopener">App Store</a>
-              <a class="portal-store-link" href="${googlePlayUrl}" target="_blank" rel="noopener">Google Play</a>
+              ${storeLink(card.dataset.appStoreUrl, "App Store")}
+              ${storeLink(card.dataset.googlePlayUrl, "Google Play")}
             </div>
           `;
           descriptionWrap.classList.remove("is-changing");
@@ -558,8 +562,15 @@ const APP_STORE_URL = "https://www.apple.com/app-store/";
     transition:background var(--fast) var(--ease),border-color var(--fast) var(--ease),transform var(--fast) var(--ease);
   }
 
-  .portal-store-link:hover,
-  .portal-store-link:focus-visible{
+  .portal-store-link.is-soon{
+    background:transparent;
+    border-style:dashed;
+    color:var(--text-3);
+    cursor:default;
+  }
+
+  .portal-store-link:not(.is-soon):hover,
+  .portal-store-link:not(.is-soon):focus-visible{
     background:rgba(216,181,106,.2);
     border-color:var(--gold-lt);
     transform:translateY(-2px);

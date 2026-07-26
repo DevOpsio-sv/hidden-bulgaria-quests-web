@@ -1002,8 +1002,36 @@ h3{
   color:var(--text-1);font-family:var(--ff-title);
   font-size:1.05rem;font-weight:600;letter-spacing:.04em;
 }
+/* No store listing yet — the button is present, inert and says so */
+.store-btn-soon{color:inherit;cursor:default;opacity:.7;text-align:left}
+.store-btn-soon:hover{
+  background:var(--bg-card);border-color:var(--border);
+  box-shadow:none;transform:none;
+}
+.store-soon{
+  color:var(--gold);font-family:var(--ff-title);
+  font-size:.78rem;letter-spacing:.1em;margin-top:4px;text-transform:uppercase;
+}
 /* Download trust text — was .82rem (~14px), bumped to .96rem */
 .dl-trust{color:var(--text-3);font-size:.96rem;margin-top:32px}
+
+/* ─── Legal pages (privacy / terms / cookies) ────────────────── */
+.legal-page .wrap{max-width:760px}
+.legal-title{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:20px}
+.legal-page .lede{margin-bottom:28px;max-width:none}
+.legal-notice{
+  background:var(--bg-card);border:1px dashed var(--border);
+  border-radius:var(--r-md);color:var(--text-2);
+  font-size:1rem;line-height:1.7;margin-bottom:16px;padding:18px 22px;
+}
+.legal-updated{color:var(--text-3);font-size:.96rem;margin-bottom:40px}
+.legal-block{margin-bottom:32px}
+.legal-heading{
+  color:var(--text-1);font-family:var(--ff-title);
+  font-size:1.15rem;font-weight:600;letter-spacing:.06em;
+  line-height:1.35;margin-bottom:12px;text-transform:none;
+}
+.legal-body{color:var(--text-2);font-size:1.05rem;line-height:1.75}
 
 /* ─── Partners ───────────────────────────────────────────────── */
 .partners-hd{margin-bottom:clamp(36px,5vw,56px)}
@@ -1194,7 +1222,7 @@ textarea.form-control{min-height:122px;resize:vertical}
   gap:clamp(32px,5vw,72px);
   grid-template-columns:.9fr 1.1fr;
 }
-.seo-copy-card,.seo-story-card,.seo-media-card,.seo-audio-card,.seo-app-cta-inner{
+.seo-copy-card,.seo-story-card,.seo-media-card,.seo-app-cta-inner{
   background:var(--bg-card);
   border:1px solid var(--border);
   border-radius:var(--r-lg);
@@ -1245,27 +1273,16 @@ textarea.form-control{min-height:122px;resize:vertical}
   margin-bottom:18px;
 }
 .seo-map-card p{color:var(--text-2);font-family:var(--ff-title);letter-spacing:.08em}
-.seo-media-card,.seo-audio-card{
+.seo-media-card{
   align-items:center;
-  display:flex;
+  display:block;
   gap:22px;
   justify-content:space-between;
+  text-align:center;
 }
-.seo-media-card{display:block;text-align:center}
-.seo-media-card h2,.seo-audio-card h2{
+.seo-media-card h2{
   font-size:clamp(1.8rem,3.4vw,3.4rem);
   font-weight:300;
-}
-.seo-audio-card > span{
-  align-items:center;
-  border:1px solid var(--border);
-  border-radius:50%;
-  color:var(--gold);
-  display:flex;
-  flex-shrink:0;
-  height:72px;
-  justify-content:center;
-  width:72px;
 }
 .seo-nearby-grid,.seo-route-list{
   display:grid;
@@ -1323,15 +1340,6 @@ textarea.form-control{min-height:122px;resize:vertical}
   margin-bottom:12px;
 }
 .seo-app-cta-inner p{color:var(--text-2);max-width:680px}
-.seo-sticky-cta{
-  bottom:14px;
-  display:none;
-  left:16px;
-  position:fixed;
-  right:16px;
-  z-index:45;
-}
-.seo-sticky-cta .btn{width:100%;box-shadow:var(--glow-md)}
 
 /* ─── Contact ────────────────────────────────────────────────── */
 .contact-grid{display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:44px}
@@ -1536,9 +1544,7 @@ textarea.form-control{min-height:122px;resize:vertical}
   .domain-cin{min-height:clamp(280px,60vw,360px)}
   .seo-device-card{min-height:auto}
   .seo-fact-grid{grid-template-columns:1fr}
-  .seo-media-card,.seo-audio-card{align-items:flex-start;flex-direction:column;text-align:left}
-  .seo-sticky-cta{display:block}
-  .site-footer{padding-bottom:104px}
+  .seo-media-card{align-items:flex-start;flex-direction:column;text-align:left}
   /* Journey grid items: bigger on mobile */
   .ji{padding:clamp(24px,5vw,32px) clamp(20px,5vw,28px)}
 }
