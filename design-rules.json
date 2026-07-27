@@ -1,0 +1,246 @@
+{
+  "$schema": "https://unlockingbulgaria.com/schema/design-rules-1.json",
+  "source": "DESIGN_BIBLE.md",
+  "version": "1.1",
+  "ratified": "2026-07-26",
+  "note": "Machine-readable subset of the canonical rule register (Chapter 8). Generated from the Bible, never authored here. CI failures MUST cite the rule id. Rules not present in this file are rubric- or judgement-enforced and are checked by humans.",
+
+  "layers": {
+    "told": "Surfaces whose purpose is to make the visitor feel something.",
+    "useful": "Surfaces whose purpose is to let the visitor accomplish something."
+  },
+
+  "tiers": {
+    "0": { "name": "Charter", "amendedBy": "owner + 2 stewards, unanimous" },
+    "1": { "name": "Standards", "amendedBy": "design lead + 1 reviewer, ADR" },
+    "2": { "name": "Specs", "amendedBy": "any lead, changelog" }
+  },
+
+  "rules": [
+    {
+      "id": "R-001", "tier": 2, "principle": "P14", "enforcement": "machine", "status": "active", "review": "2028-01",
+      "rule": "Every shipped locale is 100% complete for every surface reachable within it.",
+      "rationale": "A half-translated locale is a broken product, once per locale.",
+      "check": "locale-completeness",
+      "params": { "base": "en", "shipped": ["bg", "en", "de", "ro"], "maxMissingKeys": 0 }
+    },
+    {
+      "id": "R-004", "tier": 2, "principle": "P8", "enforcement": "machine", "status": "active", "review": "2027-07",
+      "rule": "Banned vocabulary never ships.",
+      "rationale": "These words belong to brochures and software, not to this world.",
+      "check": "banned-words",
+      "params": { "words": ["platform", "solution", "seamless", "immersive", "unlock your journey", "discover more", "learn more", "sign up now", "don't miss out", "breathtaking", "hidden gem", "must-see", "bucket list", "authentic experience", "off the beaten path", "coming soon", "placeholder", "draft", "TBD", "README"], "scope": "rendered-html", "caseSensitive": false }
+    },
+    {
+      "id": "R-008", "tier": 2, "principle": "P5", "enforcement": "machine", "status": "temporary", "review": "2027-01",
+      "rule": "No sentence is repeated on a page.",
+      "rationale": "The 2026 build printed 'Only in the app' three times on one surface.",
+      "evidence": "Audit 2026-07",
+      "check": "duplicate-sentence",
+      "params": { "minLength": 12 }
+    },
+    {
+      "id": "R-009", "tier": 2, "principle": "P5", "enforcement": "machine", "status": "temporary", "review": "2027-01",
+      "rule": "No h2 string is repeated on a page.",
+      "rationale": "Six of twelve h2s on the 2026 witness page were the page title.",
+      "evidence": "Audit 2026-07",
+      "check": "duplicate-heading",
+      "params": { "levels": ["h2"] }
+    },
+    {
+      "id": "R-010", "tier": 2, "principle": "P1", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "Exactly one h1 per document, and it is the place name.",
+      "check": "heading-structure",
+      "params": { "h1Count": 1 }
+    },
+    {
+      "id": "R-012", "tier": 0, "principle": "P10", "enforcement": "machine", "status": "active",
+      "rule": "No content marked draft, provisional, placeholder or unreviewed is published.",
+      "rationale": "Production pages telling visitors the product is unfinished is the defect this project is recovering from.",
+      "evidence": "Audit 2026-07 — all 9 content entries status:draft, rendered to visitors",
+      "check": "no-internal-status",
+      "params": { "forbiddenFields": ["status"], "forbiddenValues": ["draft", "provisional", "wip"] }
+    },
+    {
+      "id": "R-017", "tier": 1, "principle": "P11", "enforcement": "rubric", "status": "active", "review": "2029-01",
+      "rule": "No index, archive, tag page, catalogue or browse-all. No count of how many places exist.",
+      "rationale": "A directory is where exploration becomes browsing. Asking for a known name, answered with one place or silence, is permitted."
+    },
+    {
+      "id": "R-021", "tier": 2, "principle": "P15", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "Every navigational element is a real anchor with a real href.",
+      "rationale": "Script-only navigation is invisible to crawlers, middle-click, and assistive technology.",
+      "evidence": "Audit 2026-07 — map nodes navigated via window.location",
+      "check": "no-script-navigation"
+    },
+    {
+      "id": "R-026", "tier": 2, "principle": "P8", "enforcement": "machine", "status": "active", "review": "2028-01",
+      "rule": "Canonical URLs match served URLs byte-for-byte, including trailing slash.",
+      "evidence": "Audit 2026-07 — every page self-canonicalised to a 307",
+      "check": "canonical-parity"
+    },
+    {
+      "id": "R-027", "tier": 2, "principle": "P14", "enforcement": "machine", "status": "active", "review": "2028-01",
+      "rule": "hreflang lists only complete languages and always reciprocates.",
+      "check": "hreflang-reciprocity"
+    },
+    {
+      "id": "R-028", "tier": 2, "principle": "P10", "enforcement": "machine", "status": "active", "review": "2028-01",
+      "rule": "Sealed domains are absent from the sitemap and are not indexable.",
+      "check": "sitemap-excludes-sealed"
+    },
+    {
+      "id": "R-036", "tier": 2, "principle": "P1", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "Every image ships with explicit dimensions and authored alt text.",
+      "check": "image-attributes",
+      "params": { "requireWidth": true, "requireHeight": true, "requireAlt": true }
+    },
+    {
+      "id": "R-039", "tier": 0, "principle": "P1", "enforcement": "machine", "status": "active",
+      "rule": "Never reference a local asset that does not exist in the deploy.",
+      "rationale": "The 2026 hero referenced three files that returned 404, leaving the product with no first impression at all.",
+      "evidence": "Audit 2026-07",
+      "check": "asset-existence",
+      "params": { "attributes": ["src", "srcset", "poster", "href"], "root": "dist" }
+    },
+    {
+      "id": "R-047", "tier": 1, "principle": "P4", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "No animation-delay on any element containing content.",
+      "rationale": "The 2026 hero withheld its primary action for 3.5 seconds.",
+      "evidence": "Audit 2026-07",
+      "check": "no-content-animation-delay",
+      "params": { "maxDelayMs": 0 }
+    },
+    {
+      "id": "R-049", "tier": 0, "principle": "P4", "enforcement": "rubric", "status": "active",
+      "rule": "No ambient particle system, shooting stars, motes, auroras, sparkles or rotating decoration.",
+      "rationale": "Motion is weather or consequence. There is no third category."
+    },
+    {
+      "id": "R-050", "tier": 1, "principle": "P5", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "No custom cursor.",
+      "check": "no-custom-cursor"
+    },
+    {
+      "id": "R-062", "tier": 1, "principle": "P5", "enforcement": "rubric", "status": "active",
+      "rule": "Sound is field recording of the actual place. Never library music, never a bed."
+    },
+    {
+      "id": "R-073", "tier": 1, "principle": "P6", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "No emoji or geometric glyph sets in the product surface.",
+      "rationale": "The product's symbolic language is letters and light. The 2026 build rendered a musical note as the Cave Domain's symbol.",
+      "evidence": "Audit 2026-07",
+      "check": "no-glyph-sets",
+      "params": { "forbidden": ["emoji", "◉", "⌘", "◈", "✦", "◎", "♪", "🏛", "🌊", "⚔"] }
+    },
+    {
+      "id": "R-074", "tier": 2, "principle": "P1", "enforcement": "rubric", "status": "temporary", "review": "2027-01",
+      "rule": "Style is driven by content identity, never by array index.",
+      "rationale": "The 2026 Domains section index-mapped atmospheres onto reordered content; every card wore the wrong region's colour.",
+      "evidence": "Audit 2026-07"
+    },
+    {
+      "id": "R-075", "tier": 2, "principle": "P11", "enforcement": "machine", "status": "temporary", "review": "2027-01",
+      "rule": "Never render a link to the page the visitor is on.",
+      "evidence": "Audit 2026-07 — 'Nearby places' contained one card linking to itself",
+      "check": "no-self-link"
+    },
+    {
+      "id": "R-081", "tier": 0, "principle": "P15", "enforcement": "machine", "status": "active",
+      "rule": "Every interactive element has a visible focus indicator. Never outline:none without a superior visible replacement in the same rule.",
+      "evidence": "Audit 2026-07 — .mobile-lang-btn removed its outline entirely",
+      "check": "focus-visible"
+    },
+    {
+      "id": "R-082", "tier": 0, "principle": "P15", "enforcement": "machine", "status": "active",
+      "rule": "Never derive text colour from opacity on a compliant colour. Pre-blend and commit the value.",
+      "rationale": "Six WCAG failures in the 2026 build were all decorative opacity applied to compliant colours.",
+      "evidence": "Audit 2026-07",
+      "check": "no-opacity-text"
+    },
+    {
+      "id": "R-083", "tier": 0, "principle": "P15", "enforcement": "machine", "status": "active",
+      "rule": "Targets are at least 24x24 CSS px; interactive map Lights at least 44x44.",
+      "evidence": "Audit 2026-07 — map nodes were 10-16px",
+      "check": "target-size",
+      "params": { "min": 24, "mapLightMin": 44 }
+    },
+    {
+      "id": "R-085", "tier": 0, "principle": "P15", "enforcement": "machine", "status": "active",
+      "rule": "touch-action never blocks the page's primary scroll axis.",
+      "evidence": "Audit 2026-07 — the Guardian Sight stage trapped vertical scroll on mobile",
+      "check": "touch-action-scroll-axis"
+    },
+    {
+      "id": "R-087", "tier": 0, "principle": "P15", "enforcement": "rubric", "status": "active",
+      "rule": "Never aria-hidden content that carries meaning.",
+      "evidence": "Audit 2026-07 — four core product concepts were hidden from assistive technology"
+    },
+    {
+      "id": "R-088", "tier": 1, "principle": "P15", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "Text is never below the platform's comfortable reading minimum. On web, 16px.",
+      "check": "min-font-size",
+      "params": { "web": 16, "unit": "px-equivalent" }
+    },
+    {
+      "id": "R-089", "tier": 1, "principle": "P15", "enforcement": "machine", "status": "active", "review": "2029-01",
+      "rule": "Usable at 320px width and 200% text zoom.",
+      "check": "reflow"
+    },
+    {
+      "id": "R-095", "tier": 2, "principle": "P5", "enforcement": "machine", "status": "active", "review": "2027-01",
+      "rule": "Asset budgets. Reviewed quarterly; numbers rot.",
+      "evidence": "Audit 2026-07 — 580KB logo, 24MB intro video",
+      "check": "asset-budget",
+      "params": { "heroKB": 400, "imageKB": 200, "pageJsKB": 40, "initialPayloadKB": 1200 }
+    },
+    {
+      "id": "R-098", "tier": 2, "principle": "P5", "enforcement": "machine", "status": "active", "review": "2028-01",
+      "rule": "No dead code, unused tokens or unused locale keys ship.",
+      "check": "no-dead-code"
+    },
+    {
+      "id": "R-099", "tier": 0, "principle": "P16", "enforcement": "machine", "status": "active",
+      "rule": "Nothing requiring consent, identifying a person, joining visits, or involving a third party. Aggregate server-side counting is permitted and is published.",
+      "check": "no-third-party",
+      "params": { "allowedHosts": [], "forbidPatterns": ["gtag", "analytics", "pixel", "fbq", "hotjar", "clarity", "segment"] }
+    },
+    {
+      "id": "R-104", "tier": 0, "principle": "P16", "enforcement": "rubric", "status": "active",
+      "rule": "No AI-generated imagery, ever. Not as a placeholder, not for a comp, not temporarily.",
+      "rationale": "The photograph is the product. A generated photograph is a lie about a place that exists. This will be the most economically pressured rule in the document within five years."
+    },
+    {
+      "id": "R-106", "tier": 0, "principle": "P15", "enforcement": "machine", "status": "active",
+      "rule": "WCAG 2.2 AA is the floor.",
+      "check": "wcag",
+      "params": { "level": "AA", "version": "2.2" }
+    },
+    {
+      "id": "R-085b", "tier": 2, "principle": "P5", "enforcement": "machine", "status": "active", "review": "2028-01",
+      "rule": "No TODO, FIXME, HACK or XXX in the repository.",
+      "rationale": "If it isn't done, the Story isn't done.",
+      "check": "no-todo-markers"
+    }
+  ],
+
+  "driftDashboard": {
+    "cadence": "quarterly",
+    "note": "Ceilings set by judgement, not evidence. Recalibration is a Tier-1 ADR. Recalibrating upward three years running is drift with a spreadsheet.",
+    "haltCondition": "If three indicators exceed their ceiling in the same quarter, feature work stops until they are back under.",
+    "indicators": [
+      { "id": "D-01", "name": "Motion load", "measure": "distinct animated behaviours on the busiest surface", "ceiling": 3 },
+      { "id": "D-02", "name": "Ambient motion", "measure": "autonomous animations that are not weather", "ceiling": 0 },
+      { "id": "D-03", "name": "Colour load", "measure": "distinct hues rendered outside a photograph", "ceiling": 5 },
+      { "id": "D-04", "name": "Interface load", "measure": "persistent chrome elements on any surface", "ceiling": 3 },
+      { "id": "D-05", "name": "Explanation load", "measure": "words explaining the product rather than the land, per surface", "ceiling": 40 },
+      { "id": "D-06", "name": "Choice load", "measure": "forward paths on any narrative surface", "ceiling": 1 },
+      { "id": "D-07", "name": "Navigation load", "measure": "items in any persistent navigation", "ceiling": 2 },
+      { "id": "D-08", "name": "Commerce load", "measure": "commercial elements visible in the Told Layer", "ceiling": 0 },
+      { "id": "D-09", "name": "AI load — imagery", "measure": "published images with any generated content", "ceiling": 0 },
+      { "id": "D-10", "name": "Notification load", "measure": "messages sent unprompted", "ceiling": 0 },
+      { "id": "D-11", "name": "Convenience load", "measure": "affordances added that reduce effort and meaning together", "ceiling": 1, "period": "year" },
+      { "id": "D-12", "name": "Frame signature", "measure": "share of photographs identifiable as ours at thumbnail size", "floor": 0.95 }
+    ]
+  }
+}
