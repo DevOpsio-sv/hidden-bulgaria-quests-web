@@ -1531,16 +1531,15 @@ textarea.form-control{min-height:122px;resize:vertical}
     min-width:0;
   }
   .brand-logo{
+    flex-shrink:1;
     height:34px;
-    max-width:min(48vw,168px);
+    max-width:min(62vw,220px);
   }
   .header-actions{gap:6px}
-  .btn-dl{
-    font-size:.9rem;
-    letter-spacing:.08em;
-    min-height:48px;
-    padding:0 14px;
-  }
+  /* The header CTA is dropped on phones: it cannot shrink (white-space:nowrap)
+     so it overran the Mark and drew on top of it. The same action already lives
+     in the mobile nav (.mobile-nav-dl) and in the hero. */
+  .btn-dl{display:none}
   .btn-menu{
     font-size:1.1rem;
     justify-content:center;
@@ -2956,7 +2955,6 @@ textarea.form-control{min-height:122px;resize:vertical}
   .hero-section{padding-top:76px;padding-bottom:40px}
   .hero-ctas{flex-direction:column;align-items:stretch}
   .hero-ctas .btn{justify-content:center;width:100%}
-  .btn-dl{font-size:.8rem;letter-spacing:.07em;padding:8px 12px}
   .faq-q{font-size:.94rem;padding:18px 14px}
   .faq-a{font-size:.96rem;padding:14px 14px 18px}
   .band-statement{font-size:clamp(1.2rem,4vw,1.8rem)}
